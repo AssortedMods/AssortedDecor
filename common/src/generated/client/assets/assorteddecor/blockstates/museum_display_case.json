@@ -1,0 +1,94 @@
+{
+  "variants": {
+    "facing=east,half=lower,size=1": {
+      "model": "assorteddecor:block/museum_display_case_plinth",
+      "y": 90
+    },
+    "facing=east,half=lower,size=2": {
+      "model": "assorteddecor:block/museum_display_case_plinth",
+      "y": 90
+    },
+    "facing=east,half=lower,size=3": {
+      "model": "assorteddecor:block/museum_display_case_plinth",
+      "y": 90
+    },
+    "facing=east,half=upper,size=1": {
+      "model": "assorteddecor:block/museum_display_case_glass",
+      "y": 90
+    },
+    "facing=east,half=upper,size=2": {
+      "model": "assorteddecor:block/museum_display_case_glass_2x2",
+      "y": 90
+    },
+    "facing=east,half=upper,size=3": {
+      "model": "assorteddecor:block/museum_display_case_glass_3x3",
+      "y": 90
+    },
+    "facing=north,half=lower,size=1": {
+      "model": "assorteddecor:block/museum_display_case_plinth"
+    },
+    "facing=north,half=lower,size=2": {
+      "model": "assorteddecor:block/museum_display_case_plinth"
+    },
+    "facing=north,half=lower,size=3": {
+      "model": "assorteddecor:block/museum_display_case_plinth"
+    },
+    "facing=north,half=upper,size=1": {
+      "model": "assorteddecor:block/museum_display_case_glass"
+    },
+    "facing=north,half=upper,size=2": {
+      "model": "assorteddecor:block/museum_display_case_glass_2x2"
+    },
+    "facing=north,half=upper,size=3": {
+      "model": "assorteddecor:block/museum_display_case_glass_3x3"
+    },
+    "facing=south,half=lower,size=1": {
+      "model": "assorteddecor:block/museum_display_case_plinth",
+      "y": 180
+    },
+    "facing=south,half=lower,size=2": {
+      "model": "assorteddecor:block/museum_display_case_plinth",
+      "y": 180
+    },
+    "facing=south,half=lower,size=3": {
+      "model": "assorteddecor:block/museum_display_case_plinth",
+      "y": 180
+    },
+    "facing=south,half=upper,size=1": {
+      "model": "assorteddecor:block/museum_display_case_glass",
+      "y": 180
+    },
+    "facing=south,half=upper,size=2": {
+      "model": "assorteddecor:block/museum_display_case_glass_2x2",
+      "y": 180
+    },
+    "facing=south,half=upper,size=3": {
+      "model": "assorteddecor:block/museum_display_case_glass_3x3",
+      "y": 180
+    },
+    "facing=west,half=lower,size=1": {
+      "model": "assorteddecor:block/museum_display_case_plinth",
+      "y": 270
+    },
+    "facing=west,half=lower,size=2": {
+      "model": "assorteddecor:block/museum_display_case_plinth",
+      "y": 270
+    },
+    "facing=west,half=lower,size=3": {
+      "model": "assorteddecor:block/museum_display_case_plinth",
+      "y": 270
+    },
+    "facing=west,half=upper,size=1": {
+      "model": "assorteddecor:block/museum_display_case_glass",
+      "y": 270
+    },
+    "facing=west,half=upper,size=2": {
+      "model": "assorteddecor:block/museum_display_case_glass_2x2",
+      "y": 270
+    },
+    "facing=west,half=upper,size=3": {
+      "model": "assorteddecor:block/museum_display_case_glass_3x3",
+      "y": 270
+    }
+  }
+}

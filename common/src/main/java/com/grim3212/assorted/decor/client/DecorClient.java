@@ -2,6 +2,7 @@ package com.grim3212.assorted.decor.client;
 
 import com.grim3212.assorted.decor.client.blockentity.CageBlockEntityRenderer;
 import com.grim3212.assorted.decor.client.blockentity.CalendarBlockEntityRenderer;
+import com.grim3212.assorted.decor.client.blockentity.DisplayCaseBlockEntityRenderer;
 import com.grim3212.assorted.decor.client.blockentity.NeonSignBlockEntityRenderer;
 import com.grim3212.assorted.decor.client.color.BlockMapColorItemTintSource;
 import com.grim3212.assorted.decor.client.color.ColorizerItemTintSource;
@@ -46,6 +47,7 @@ public class DecorClient {
         ClientServices.CLIENT.registerBlockEntityRenderer(DecorBlockEntityTypes.NEON_SIGN::get, NeonSignBlockEntityRenderer::new);
         ClientServices.CLIENT.registerBlockEntityRenderer(DecorBlockEntityTypes.CALENDAR::get, CalendarBlockEntityRenderer::new);
         ClientServices.CLIENT.registerBlockEntityRenderer(DecorBlockEntityTypes.CAGE::get, CageBlockEntityRenderer::new);
+        ClientServices.CLIENT.registerBlockEntityRenderer(DecorBlockEntityTypes.DISPLAY_CASE::get, DisplayCaseBlockEntityRenderer::new);
 
         ClientServices.CLIENT.registerModelLoader(ColorizerUnbakedModel.LOADER_NAME, ColorizerUnbakedModel.Loader.INSTANCE);
         ClientServices.CLIENT.registerModelLoader(ColorizerObjModel.LOADER_NAME, ColorizerObjModel.Loader.INSTANCE);

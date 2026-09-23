@@ -23,6 +23,7 @@ public class DecorItems {
     public static final IRegistryObject<FrameItem> IRON_FRAME = register("iron_frame", props -> new FrameItem(FrameMaterial.IRON, props));
 
     public static final IRegistryObject<ColorizerBrush> COLORIZER_BRUSH = register("colorizer_brush", props -> new ColorizerBrush(props));
+    public static final IRegistryObject<ResizingToolItem> RESIZING_TOOL = register("resizing_tool", props -> new ResizingToolItem(props.stacksTo(1)));
     public static final IRegistryObject<Item> UNFIRED_PLANTER_POT = register("unfired_planter_pot", props -> new Item(props));
     public static final IRegistryObject<Item> UNFIRED_CLAY_DECORATION = register("unfired_clay_decoration", props -> new Item(props));
 

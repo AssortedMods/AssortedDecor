@@ -48,6 +48,9 @@ public class DecorBlockTagProvider extends LibBlockTagProvider {
         tagger.apply(BlockTags.MINEABLE_WITH_PICKAXE).add(DecorBlocks.CASTLE_GATE.get(), DecorBlocks.GARAGE_DOOR.get());
         tagger.apply(BlockTags.MINEABLE_WITH_PICKAXE).add(DecorBlocks.colorizerBlocks().stream().map(IRegistryObject::get).toArray(Block[]::new));
 
+        // Only the museum case is wooden; the other six are glass boxes and want no tool at all.
+        tagger.apply(BlockTags.MINEABLE_WITH_AXE).add(DecorBlocks.MUSEUM_DISPLAY_CASE.get());
+
         tagger.apply(DecorTags.Blocks.ROADWAYS).add(DecorBlocks.ROADWAY.get());
         DecorBlocks.ROADWAY_COLORS.forEach((color, roadway) -> {
             tagger.apply(DecorTags.Blocks.ROADWAYS_COLOR).add(roadway.get());

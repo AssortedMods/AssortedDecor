@@ -17,6 +17,7 @@ public class DecorCommonConfig {
     public final Supplier<Boolean> paintingEnabled;
     public final Supplier<Boolean> decorationsEnabled;
     public final Supplier<Boolean> cageEnabled;
+    public final Supplier<Boolean> displayCasesEnabled;
     public final Supplier<Boolean> planterPotEnabled;
     public final Supplier<Boolean> extrasEnabled;
     public final Supplier<Boolean> gatesEnabled;
@@ -45,6 +46,7 @@ public class DecorCommonConfig {
         paintingEnabled = builder.defineBoolean("parts.paintingEnabled", true, "Set this to true if Painting rollers and siding should be craftable and visible in the creative tab");
         decorationsEnabled = builder.defineBoolean("parts.decorationsEnabled", true, "Set this to true if the decoration blocks should be craftable and visible in the creative tab");
         cageEnabled = builder.defineBoolean("parts.cageEnabled", true, "Set this to true if the Cage should be craftable and visible in the creative tab");
+        displayCasesEnabled = builder.defineBoolean("parts.displayCasesEnabled", true, "Set this to true if the Display Cases should be craftable and visible in the creative tab");
         planterPotEnabled = builder.defineBoolean("parts.planterPotEnabled", true, "Set this to true if the Planter pot should be craftable and visible in the creative tab");
         extrasEnabled = builder.defineBoolean("parts.extrasEnabled", true, "Set this to true if the extras (chain link fence and new doors) should be craftable and visible in the creative tab");
         gatesEnabled = builder.defineBoolean("parts.gatesEnabled", true, "Set this to true if the castle gate and garage door, and the trumpet and remote that open them, should be craftable and visible in the creative tab");

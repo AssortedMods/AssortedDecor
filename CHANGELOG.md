@@ -1,5 +1,11 @@
 # Changelog
 
+## 11.1.2
+
+- Added Display Cases and Museum Display Cases from some old mods I used to maintain
+- Added the resizing tool. A case is placed showing one item on one shelf and the tool cycles it to
+  four on two shelves, nine on three, and back to one.
+
 ## 11.1.1
 
 Brought over from GrimPack:

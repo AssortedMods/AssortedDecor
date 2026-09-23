@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:function",
+  "environment": "minecraft:default",
+  "function": "assorteddecor:resizing_tool_cycles_the_case",
+  "structure": "assorteddecor:test_box",
+  "max_ticks": 60,
+  "setup_ticks": 0,
+  "required": true
+}

@@ -112,6 +112,73 @@
       ],
       "text": "manual.assorteddecor.chapter.decorations.cage",
       "title": "manual.assorteddecor.chapter.decorations.cage.title"
+    },
+    {
+      "type": "assortedlib:recipe",
+      "conditions": [
+        {
+          "type": "assortedlib:part_enabled",
+          "part": "display_cases"
+        }
+      ],
+      "id": "display_cases",
+      "interval": 50,
+      "recipes": [
+        "assorteddecor:wooden_display_case",
+        "assorteddecor:stone_display_case",
+        "assorteddecor:copper_display_case",
+        "assorteddecor:iron_display_case",
+        "assorteddecor:gold_display_case",
+        "assorteddecor:diamond_display_case"
+      ],
+      "text": "manual.assorteddecor.chapter.decorations.display_cases",
+      "title": "manual.assorteddecor.chapter.decorations.display_cases.title"
+    },
+    {
+      "type": "assortedlib:recipe",
+      "conditions": [
+        {
+          "type": "assortedlib:part_enabled",
+          "part": "display_cases"
+        }
+      ],
+      "id": "resizing_tool",
+      "recipes": [
+        "assorteddecor:resizing_tool"
+      ],
+      "text": "manual.assorteddecor.chapter.decorations.resizing_tool",
+      "title": "manual.assorteddecor.chapter.decorations.resizing_tool.title"
+    },
+    {
+      "type": "assortedlib:recipe",
+      "conditions": [
+        {
+          "type": "assortedlib:part_enabled",
+          "part": "display_cases"
+        }
+      ],
+      "id": "copper_display_cases",
+      "interval": 50,
+      "recipes": [
+        "assorteddecor:waxed_copper_display_case"
+      ],
+      "text": "manual.assorteddecor.chapter.decorations.copper_display_cases",
+      "title": "manual.assorteddecor.chapter.decorations.copper_display_cases.title"
+    },
+    {
+      "type": "assortedlib:recipe",
+      "conditions": [
+        {
+          "type": "assortedlib:part_enabled",
+          "part": "display_cases"
+        }
+      ],
+      "id": "museum_display_case",
+      "recipes": [
+        "assorteddecor:museum_display_case"
+      ],
+      "text": "manual.assorteddecor.chapter.decorations.museum_display_case",
+      "title": "manual.assorteddecor.chapter.decorations.museum_display_case.title"
     }
   ],
   "sort_order": 60

@@ -8,6 +8,7 @@ import com.grim3212.assorted.decor.common.blocks.blockentity.DecorBlockEntityTyp
 import com.grim3212.assorted.decor.data.DecorBlockLoot;
 import com.grim3212.assorted.decor.data.DecorBlockTagProvider;
 import com.grim3212.assorted.decor.data.DecorItemTagProvider;
+import com.grim3212.assorted.decor.data.DecorDataMapProvider;
 import com.grim3212.assorted.decor.data.DecorRecipes;
 import com.grim3212.assorted.lib.data.ForgeBlockTagProvider;
 import com.grim3212.assorted.lib.data.ForgeItemTagProvider;
@@ -52,6 +53,7 @@ public class AssortedDecorNeoForge {
 
         // Recipe providers are not data providers any more - the Runner owns the output.
         event.addProvider(new DecorRecipes.Runner(packOutput, lookupProvider));
+        event.addProvider(new DecorDataMapProvider(packOutput, lookupProvider));
         ForgeBlockTagProvider blockTagProvider = event.addProvider(new ForgeBlockTagProvider(packOutput, lookupProvider, Constants.MOD_ID, new DecorBlockTagProvider(packOutput, lookupProvider)));
         event.addProvider(new ForgeItemTagProvider(packOutput, lookupProvider, blockTagProvider.contentsGetter(), Constants.MOD_ID, new DecorItemTagProvider(packOutput, lookupProvider, blockTagProvider.contentsGetter())));
         event.addProvider(new LootTableProvider(packOutput, Collections.emptySet(), List.of(new LootTableProvider.SubProviderEntry(DecorBlockLoot::new, LootContextParamSets.BLOCK)), lookupProvider));

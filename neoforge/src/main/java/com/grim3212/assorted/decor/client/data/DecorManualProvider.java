@@ -175,6 +175,23 @@ public class DecorManualProvider extends LibManualProvider {
                 .whenPartEnabled(DecorConditions.Parts.DECORATIONS);
         decorations.recipes("cage", DecorBlocks.CAGE.get()).opens(DecorBlocks.CAGE.get())
                 .whenPartEnabled(DecorConditions.Parts.CAGE);
+
+        // The museum case has its own page, so it is not one of the blocks this one opens.
+        // Every case but the museum one, whose page is below. The copper eight open on the copper
+        // page rather than here, so no block is opened by two pages.
+        Block[] displayCases = {DecorBlocks.WOODEN_DISPLAY_CASE.get(), DecorBlocks.STONE_DISPLAY_CASE.get(),
+                DecorBlocks.IRON_DISPLAY_CASE.get(), DecorBlocks.GOLD_DISPLAY_CASE.get(), DecorBlocks.DIAMOND_DISPLAY_CASE.get()};
+        Block copper = DecorBlocks.COPPER_DISPLAY_CASES.weathering().unaffected().get();
+        decorations.recipes("display_cases", DecorBlocks.WOODEN_DISPLAY_CASE.get(), DecorBlocks.STONE_DISPLAY_CASE.get(), copper, DecorBlocks.IRON_DISPLAY_CASE.get(), DecorBlocks.GOLD_DISPLAY_CASE.get(), DecorBlocks.DIAMOND_DISPLAY_CASE.get()).every(50)
+                .opens(displayCases)
+                .whenPartEnabled(DecorConditions.Parts.DISPLAY_CASES);
+        decorations.recipes("resizing_tool", DecorItems.RESIZING_TOOL.get()).opens(DecorItems.RESIZING_TOOL.get())
+                .whenPartEnabled(DecorConditions.Parts.DISPLAY_CASES);
+        decorations.recipes("copper_display_cases", DecorBlocks.COPPER_DISPLAY_CASES.waxed().unaffected().get()).every(50)
+                .opens(DecorBlocks.COPPER_DISPLAY_CASES.asList().stream().map(IRegistryObject::get).toArray(Block[]::new))
+                .whenPartEnabled(DecorConditions.Parts.DISPLAY_CASES);
+        decorations.recipes("museum_display_case", DecorBlocks.MUSEUM_DISPLAY_CASE.get()).opens(DecorBlocks.MUSEUM_DISPLAY_CASE.get())
+                .whenPartEnabled(DecorConditions.Parts.DISPLAY_CASES);
     }
 
     private void addGates() {

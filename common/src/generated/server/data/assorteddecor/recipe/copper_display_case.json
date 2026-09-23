@@ -1,0 +1,27 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "display_cases"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "display_cases"
+    }
+  ],
+  "key": {
+    "F": "#c:ingots/copper",
+    "G": "#c:glass_blocks"
+  },
+  "pattern": [
+    "GGG",
+    "G G",
+    "GFG"
+  ],
+  "result": {
+    "id": "assorteddecor:copper_display_case"
+  }
+}

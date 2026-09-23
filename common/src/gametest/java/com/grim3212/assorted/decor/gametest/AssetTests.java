@@ -21,8 +21,10 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
@@ -43,6 +45,40 @@ final class AssetTests {
         out.accept("loader_models_are_read_on_both_loaders", AssetTests::loaderModelsAreReadOnBothLoaders);
         out.accept("every_recipe_loads_or_is_conditioned_off", AssetTests::everyRecipeLoadsOrIsConditionedOff);
         out.accept("every_item_tag_has_a_name", AssetTests::everyItemTagHasAName);
+        out.accept("display_case_blockstates_turn_with_their_facing", AssetTests::displayCaseBlockstatesTurnWithTheirFacing);
+    }
+
+
+    /**
+     * Every display case turns its model with {@code facing}. The case is a full cube and looked
+     * like one that needed no rotation, right up until the riser inside it was added - and the
+     * riser runs front to back. Nothing in the world model catches the mistake: the items still
+     * turn, because the renderer reads {@code facing} itself, so only the steps under them sit
+     * across the grain.
+     */
+    private static void displayCaseBlockstatesTurnWithTheirFacing(GameTestHelper helper) {
+        List<String> wrong = new ArrayList<>();
+
+        for (IRegistryObject<? extends Block> displayCase : DecorBlocks.displayCaseBlocks()) {
+            Identifier id = BuiltInRegistries.BLOCK.getKey(displayCase.get());
+            JsonObject blockstate = readJson("/assets/" + id.getNamespace() + "/blockstates/" + id.getPath() + ".json");
+            if (blockstate == null) {
+                wrong.add(id.getPath() + " has no blockstate");
+                continue;
+            }
+
+            Set<Integer> turns = new HashSet<>();
+            for (JsonObject variant : blockstateVariants(blockstate)) {
+                turns.add(variant.has("y") ? variant.get("y").getAsInt() : 0);
+            }
+
+            if (!turns.equals(Set.of(0, 90, 180, 270))) {
+                wrong.add(id.getPath() + " is drawn at " + new java.util.TreeSet<>(turns) + " rather than one rotation per facing");
+            }
+        }
+
+        helper.assertTrue(wrong.isEmpty(), wrong.size() + " display case(s) do not turn with their facing: " + String.join("; ", wrong));
+        helper.succeed();
     }
 
     /**

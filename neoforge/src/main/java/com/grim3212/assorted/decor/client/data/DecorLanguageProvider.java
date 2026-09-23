@@ -25,6 +25,7 @@ public class DecorLanguageProvider extends LibLanguageProvider {
 
         this.add("assorteddecor.container.cage", "Cage");
 
+        this.add("tooltip.resizing_tool", "Use on a display case to adjust the display size");
         this.add("tooltip.colorizer_brush.empty", "Empty");
         this.add("tooltip.colorizer_brush.stored", "Stored: %s");
 
@@ -282,6 +283,23 @@ public class DecorLanguageProvider extends LibLanguageProvider {
         this.add("manual.assorteddecor.chapter.decorations.cage.title", "Cage");
         this.add("manual.assorteddecor.chapter.decorations.cage",
                 "A cage displays whatever you put in it, turning slowly. Use it with a Pokeball from Assorted Tools to show the caught monster.");
+        this.add("manual.assorteddecor.chapter.decorations.display_cases.title", "Display Cases");
+        this.add("manual.assorteddecor.chapter.decorations.display_cases",
+                "A display case can hold 1, 4, or 9 items depending on the size setup in the display."
+                        + BREAK + "Right clicking on a position allows you to place an item in that spot. Use the Resizing Tool to change the size of the case."
+                        + BREAK + "Wooden, stone, copper, iron, gold and diamond cases differ only in the colour of their frame.");
+        this.add("manual.assorteddecor.chapter.decorations.resizing_tool.title", "Resizing Tool");
+        this.add("manual.assorteddecor.chapter.decorations.resizing_tool",
+                "A case is placed showing one item on one shelf, and that one item is drawn large. Use the resizing tool on it to grow it to four items on two shelves, again for nine on three, and once more to come back to one."
+                        + BREAK + "Shrinking a case hands back whatever it can no longer show.");
+        this.add("manual.assorteddecor.chapter.decorations.copper_display_cases.title", "Copper Display Cases");
+        this.add("manual.assorteddecor.chapter.decorations.copper_display_cases",
+                "A copper case weathers where it stands, through exposed, weathered and oxidized, like any other copper. What is on show stays on show through every step."
+                        + BREAK + "An axe scrapes a stage back off it, and a honeycomb waxes it to hold the stage it is at. Only the plain copper case is crafted.");
+        this.add("manual.assorteddecor.chapter.decorations.museum_display_case.title", "Museum Display Case");
+        this.add("manual.assorteddecor.chapter.decorations.museum_display_case",
+                "The museum edition stands two blocks tall. A carpeted plinth with the glass case on top of it. Everything goes in the glass half."
+                        + BREAK + "The plinth carries a placard. Name the case on an anvil before you place it, or right click the plinth with a named name tag.");
     }
 
     private void addGatesChapter() {

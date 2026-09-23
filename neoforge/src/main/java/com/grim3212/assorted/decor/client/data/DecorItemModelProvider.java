@@ -60,6 +60,8 @@ public class DecorItemModelProvider extends ModelProvider {
         handheldItem(itemModels, DecorItems.GATE_TRUMPET.get());
         generatedItem(itemModels, DecorItems.GARAGE_REMOTE.get());
 
+        handheldItem(itemModels, DecorItems.RESIZING_TOOL.get());
+
         handheldItem(itemModels, DecorItems.PAINT_ROLLER.get());
         DecorItems.PAINT_ROLLER_COLORS.forEach((color, roller) -> handheldItem(itemModels, roller.get()));
 

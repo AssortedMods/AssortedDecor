@@ -9,6 +9,7 @@ import com.grim3212.assorted.decor.common.crafting.DecorConditions;
 import com.grim3212.assorted.decor.common.items.DecorItems;
 import com.grim3212.assorted.decor.common.items.PaintRollerItem;
 import com.grim3212.assorted.lib.core.conditions.ConditionalRecipeProvider;
+import com.grim3212.assorted.lib.registry.IRegistryObject;
 import com.grim3212.assorted.lib.util.DyeHelper;
 import com.grim3212.assorted.lib.util.LibCommonTags;
 import net.minecraft.core.HolderGetter;
@@ -21,12 +22,14 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.tags.BlockItemTags;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStackTemplate;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.Recipe;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 
 import java.util.concurrent.CompletableFuture;
@@ -62,6 +65,8 @@ public class DecorRecipes extends ConditionalRecipeProvider {
         this.addConditions(partEnabled(DecorConditions.Parts.HANGEABLES), DecorItems.WALLPAPER.getId(), DecorItems.WOOD_FRAME.getId(), DecorItems.IRON_FRAME.getId(), DecorBlocks.CALENDAR.getId(), DecorBlocks.WALL_CLOCK.getId(), prefix("wall_clock_alt"));
         this.addConditions(partEnabled(DecorConditions.Parts.NEON_SIGN), DecorItems.NEON_SIGN.getId());
         this.addConditions(partEnabled(DecorConditions.Parts.CAGE), DecorBlocks.CAGE.getId());
+        this.addConditions(partEnabled(DecorConditions.Parts.DISPLAY_CASES), DecorBlocks.displayCaseBlocks().stream().map(IRegistryObject::getId).toArray(Identifier[]::new));
+        this.addConditions(partEnabled(DecorConditions.Parts.DISPLAY_CASES), DecorItems.RESIZING_TOOL.getId());
         this.addConditions(partEnabled(DecorConditions.Parts.PLANTER_POT), DecorBlocks.PLANTER_POT.getId(), DecorItems.UNFIRED_PLANTER_POT.getId());
         this.addConditions(partEnabled(DecorConditions.Parts.DECORATIONS), DecorItems.UNFIRED_CLAY_DECORATION.getId(), DecorBlocks.BONE_DECORATION.getId(), DecorBlocks.PAPER_LANTERN.getId(), DecorBlocks.BONE_LANTERN.getId(), DecorBlocks.IRON_LANTERN.getId(), DecorBlocks.CLAY_DECORATION.getId(), prefix("decorative_path_stonecutting"), prefix("stone_path_stonecutting"), prefix("fountain_aluminum"), prefix("fountain_steel"), DecorBlocks.FOUNTAIN.getId());
         this.addConditions(partEnabled(DecorConditions.Parts.GATES), DecorItems.GATE_GRATING.getId(), DecorItems.GARAGE_PANEL.getId(), DecorItems.GATE_TRUMPET.getId(), DecorItems.GARAGE_REMOTE.getId(), DecorBlocks.CASTLE_GATE.getId(), DecorBlocks.GARAGE_DOOR.getId());
@@ -81,6 +86,11 @@ public class DecorRecipes extends ConditionalRecipeProvider {
             this.addConditions(partEnabled(DecorConditions.Parts.COLORIZER), id(b.get()));
         });
 
+    }
+
+    /** Eight cases from eight glass and one of whatever the frame is made of, as in 1.4.6. */
+    private void displayCase(Block result, TagKey<Item> frame, String unlockName) {
+        ShapedRecipeBuilder.shaped(this.items, RecipeCategory.DECORATIONS, result, 1).define('G', LibCommonTags.Items.GLASS).define('F', frame).pattern("GGG").pattern("G G").pattern("GFG").unlockedBy(unlockName, has(frame)).save(this.output);
     }
 
     @Override
@@ -127,6 +137,22 @@ public class DecorRecipes extends ConditionalRecipeProvider {
 
         // Cage
         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.DECORATIONS, DecorBlocks.CAGE.get(), 1).define('X', Items.IRON_BARS).pattern("XXX").pattern("X X").pattern("XXX").unlockedBy("has_iron_bars", has(Items.IRON_BARS)).save(this.output);
+
+        // Display Cases
+        ShapedRecipeBuilder.shaped(this.items, RecipeCategory.DECORATIONS, DecorItems.RESIZING_TOOL.get()).define('I', LibCommonTags.Items.INGOTS_IRON).define('G', LibCommonTags.Items.NUGGETS_GOLD).define('S', LibCommonTags.Items.RODS_WOODEN)
+                .pattern("III").pattern("IG ").pattern("S  ").unlockedBy("has_iron", has(LibCommonTags.Items.INGOTS_IRON)).save(this.output);
+        displayCase(DecorBlocks.WOODEN_DISPLAY_CASE.get(), ItemTags.PLANKS, "has_planks");
+        displayCase(DecorBlocks.STONE_DISPLAY_CASE.get(), LibCommonTags.Items.STONE, "has_stone");
+        displayCase(DecorBlocks.COPPER_DISPLAY_CASES.weathering().unaffected().get(), LibCommonTags.Items.INGOTS_COPPER, "has_copper");
+        // Only waxing is craftable; the other three stages are weathered into, not made.
+        DecorBlocks.COPPER_DISPLAY_CASES.zipUnwaxedWaxed((unwaxed, waxed) ->
+                ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.DECORATIONS, waxed.get()).requires(unwaxed.get()).requires(Items.HONEYCOMB)
+                        .group("waxed_copper_display_case").unlockedBy("has_honeycomb", has(Items.HONEYCOMB)).save(this.output));
+        displayCase(DecorBlocks.IRON_DISPLAY_CASE.get(), LibCommonTags.Items.INGOTS_IRON, "has_iron");
+        displayCase(DecorBlocks.GOLD_DISPLAY_CASE.get(), LibCommonTags.Items.INGOTS_GOLD, "has_gold");
+        displayCase(DecorBlocks.DIAMOND_DISPLAY_CASE.get(), LibCommonTags.Items.GEMS_DIAMOND, "has_diamond");
+        // The museum case keeps the sign the 1.4.6 recipe asked for, as the plinth's placard.
+        ShapedRecipeBuilder.shaped(this.items, RecipeCategory.DECORATIONS, DecorBlocks.MUSEUM_DISPLAY_CASE.get()).define('G', LibCommonTags.Items.GLASS).define('I', LibCommonTags.Items.INGOTS_GOLD).define('S', LibCommonTags.Items.STONE).define('P', ItemTags.SIGNS).pattern("GGG").pattern("SIS").pattern("SPS").unlockedBy("has_sign", has(ItemTags.SIGNS)).save(this.output);
 
         // Planter Pot
         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.DECORATIONS, DecorItems.UNFIRED_PLANTER_POT.get()).define('X', Items.CLAY_BALL).pattern("X X").pattern("XXX").unlockedBy("has_clay", has(Items.CLAY_BALL)).save(this.output);

@@ -284,6 +284,41 @@
     },
     {
       "blocks": [
+        "assorteddecor:wooden_display_case",
+        "assorteddecor:stone_display_case",
+        "assorteddecor:iron_display_case",
+        "assorteddecor:gold_display_case",
+        "assorteddecor:diamond_display_case"
+      ],
+      "page": "assorteddecor:decorations/display_cases"
+    },
+    {
+      "items": [
+        "assorteddecor:resizing_tool"
+      ],
+      "page": "assorteddecor:decorations/resizing_tool"
+    },
+    {
+      "blocks": [
+        "assorteddecor:copper_display_case",
+        "assorteddecor:exposed_copper_display_case",
+        "assorteddecor:weathered_copper_display_case",
+        "assorteddecor:oxidized_copper_display_case",
+        "assorteddecor:waxed_copper_display_case",
+        "assorteddecor:waxed_exposed_copper_display_case",
+        "assorteddecor:waxed_weathered_copper_display_case",
+        "assorteddecor:waxed_oxidized_copper_display_case"
+      ],
+      "page": "assorteddecor:decorations/copper_display_cases"
+    },
+    {
+      "blocks": [
+        "assorteddecor:museum_display_case"
+      ],
+      "page": "assorteddecor:decorations/museum_display_case"
+    },
+    {
+      "blocks": [
         "assorteddecor:chain_link_door",
         "assorteddecor:chain_link_fence"
       ],

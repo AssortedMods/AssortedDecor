@@ -17,6 +17,7 @@ public class DecorBlockEntityTypes {
     public static final IRegistryObject<BlockEntityType<CalendarBlockEntity>> CALENDAR = BLOCK_ENTITIES.register("calendar", () -> Services.PLATFORM.createBlockEntityType(CalendarBlockEntity::new, DecorBlocks.CALENDAR.get()));
     public static final IRegistryObject<BlockEntityType<WallClockBlockEntity>> WALL_CLOCK = BLOCK_ENTITIES.register("wall_clock", () -> Services.PLATFORM.createBlockEntityType(WallClockBlockEntity::new, DecorBlocks.WALL_CLOCK.get()));
     public static final IRegistryObject<BlockEntityType<CageBlockEntity>> CAGE = BLOCK_ENTITIES.register("cage", () -> Services.PLATFORM.createBlockEntityType(CageBlockEntity::new, DecorBlocks.CAGE.get()));
+    public static final IRegistryObject<BlockEntityType<DisplayCaseBlockEntity>> DISPLAY_CASE = BLOCK_ENTITIES.register("display_case", () -> Services.PLATFORM.createBlockEntityType(DisplayCaseBlockEntity::new, DecorBlocks.displayCaseBlocks().stream().map(IRegistryObject::get).toArray(Block[]::new)));
 
     public static void init() {
     }

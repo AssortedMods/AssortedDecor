@@ -19,12 +19,14 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.WeatheringCopper.WeatherState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -126,6 +128,20 @@ public class DecorBlocks {
     public static final IRegistryObject<Block> SIDEWALK = register("sidewalk", props -> new Block(props.mapColor(MapColor.COLOR_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(1.0F, 15.0F).requiresCorrectToolForDrops().speedFactor(SIDEWALK_SPEED_FACTOR)));
     public static final IRegistryObject<CageBlock> CAGE = register("cage", props -> new CageBlock(props.mapColor(MapColor.METAL).sound(SoundType.METAL).strength(0.8F, 5.0F).requiresCorrectToolForDrops().noOcclusion().isValidSpawn(DecorBlocks::never).isRedstoneConductor(DecorBlocks::never).isSuffocating(DecorBlocks::never).isViewBlocking(DecorBlocks::never)));
 
+    public static final IRegistryObject<DisplayCaseBlock> WOODEN_DISPLAY_CASE = register("wooden_display_case", props -> new DisplayCaseBlock(displayCase(props).mapColor(MapColor.WOOD)));
+    public static final IRegistryObject<DisplayCaseBlock> STONE_DISPLAY_CASE = register("stone_display_case", props -> new DisplayCaseBlock(displayCase(props).mapColor(MapColor.STONE)));
+    public static final IRegistryObject<DisplayCaseBlock> IRON_DISPLAY_CASE = register("iron_display_case", props -> new DisplayCaseBlock(displayCase(props).mapColor(MapColor.METAL)));
+    public static final IRegistryObject<DisplayCaseBlock> GOLD_DISPLAY_CASE = register("gold_display_case", props -> new DisplayCaseBlock(displayCase(props).mapColor(MapColor.GOLD)));
+    public static final IRegistryObject<DisplayCaseBlock> DIAMOND_DISPLAY_CASE = register("diamond_display_case", props -> new DisplayCaseBlock(displayCase(props).mapColor(MapColor.DIAMOND)));
+    /**
+     * Copper comes in eight, as it does everywhere in vanilla: four oxidation stages, waxed and
+     * unwaxed. Only the four unwaxed ones tick; a waxed case never changes, so it is a plain
+     * display case and is not given {@code randomTicks}.
+     */
+    public static final WeatheringCopperCollection<IRegistryObject<DisplayCaseBlock>> COPPER_DISPLAY_CASES = registerCopperDisplayCases();
+
+    public static final IRegistryObject<MuseumDisplayCaseBlock> MUSEUM_DISPLAY_CASE = register("museum_display_case", props -> new MuseumDisplayCaseBlock(displayCase(props).mapColor(MapColor.WOOD).sound(SoundType.WOOD).strength(1.0F, 5.0F)));
+
     public static final IRegistryObject<ColorChangingBlock> SIDING_VERTICAL = registerColorChanging("siding_vertical", props -> new ColorChangingBlock(props.mapColor(MapColor.METAL).sound(SoundType.STONE).strength(1.0F, 10.0F).requiresCorrectToolForDrops()));
     public static final IRegistryObject<ColorChangingBlock> SIDING_HORIZONTAL = registerColorChanging("siding_horizontal", props -> new ColorChangingBlock(props.mapColor(MapColor.METAL).sound(SoundType.STONE).strength(1.0F, 10.0F).requiresCorrectToolForDrops()));
 
@@ -145,6 +161,41 @@ public class DecorBlocks {
      */
     private static BlockBehaviour.Properties colorizer(BlockBehaviour.Properties props) {
         return props.mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).strength(1.5f, 12.0f).sound(SoundType.STONE).dynamicShape().noOcclusion();
+    }
+
+    private static WeatheringCopperCollection<IRegistryObject<DisplayCaseBlock>> registerCopperDisplayCases() {
+        WeatheringCopperCollection<String> names = WeatheringCopperCollection.prefixWithState(WeatheringCopperCollection.create("copper_display_case"));
+        return names.apply(
+                weathering -> WeatheringCopperCollection.zipMap(WeatheringCopperCollection.STATES, weathering,
+                        (age, name) -> register(name, props -> new WeatheringDisplayCaseBlock(age, copperDisplayCase(props, age, age != WeatherState.OXIDIZED)))),
+                waxed -> WeatheringCopperCollection.zipMap(WeatheringCopperCollection.STATES, waxed,
+                        (age, name) -> register(name, props -> new DisplayCaseBlock(copperDisplayCase(props, age, false)))));
+    }
+
+    /**
+     * A copper case sounds and colours like vanilla's copper of the same stage. Only a case with a
+     * stage left to reach is randomly ticked; ticking an oxidized one would roll a change that can
+     * never happen.
+     */
+    private static BlockBehaviour.Properties copperDisplayCase(BlockBehaviour.Properties props, WeatherState age, boolean weathers) {
+        if (weathers) {
+            props.randomTicks();
+        }
+
+        return displayCase(props).sound(SoundType.COPPER).mapColor(switch (age) {
+            case UNAFFECTED -> MapColor.COLOR_ORANGE;
+            case EXPOSED -> MapColor.TERRACOTTA_LIGHT_GRAY;
+            case WEATHERED -> MapColor.WARPED_STEM;
+            case OXIDIZED -> MapColor.WARPED_NYLIUM;
+        });
+    }
+
+    /**
+     * Display cases are glass boxes: they hold their own light and their own spawns out, so what is
+     * behind one stays lit and nothing wanders into the shelf.
+     */
+    private static BlockBehaviour.Properties displayCase(BlockBehaviour.Properties props) {
+        return props.instrument(NoteBlockInstrument.HAT).sound(SoundType.GLASS).strength(0.5F, 3.0F).noOcclusion().isValidSpawn(DecorBlocks::never).isRedstoneConductor(DecorBlocks::never).isSuffocating(DecorBlocks::never).isViewBlocking(DecorBlocks::never);
     }
 
     private static BlockBehaviour.Properties fluro(BlockBehaviour.Properties props) {
@@ -190,6 +241,14 @@ public class DecorBlocks {
         return Arrays.asList(COLORIZER, COLORIZER_CHAIR, COLORIZER_TABLE, COLORIZER_COUNTER, COLORIZER_STOOL, COLORIZER_FENCE, COLORIZER_FENCE_GATE, COLORIZER_WALL, COLORIZER_TRAP_DOOR, COLORIZER_DOOR, COLORIZER_SLAB, COLORIZER_VERTICAL_SLAB, COLORIZER_STAIRS, COLORIZER_LAMP_POST, COLORIZER_SLOPE, COLORIZER_SLOPED_ANGLE, COLORIZER_SLOPED_INTERSECTION, COLORIZER_SLOPED_POST,
                 COLORIZER_OBLIQUE_SLOPE, COLORIZER_CORNER, COLORIZER_SLANTED_CORNER, COLORIZER_PYRAMID, COLORIZER_FULL_PYRAMID, COLORIZER_FIREPLACE, COLORIZER_CHIMNEY, COLORIZER_FIRERING, COLORIZER_FIREPIT, COLORIZER_FIREPIT_COVERED, COLORIZER_STOVE
         );
+    }
+
+    /** Every display case, the museum one last; the rest differ only in their frame. */
+    public static List<IRegistryObject<? extends DisplayCaseBlock>> displayCaseBlocks() {
+        List<IRegistryObject<? extends DisplayCaseBlock>> cases = new ArrayList<>(List.of(WOODEN_DISPLAY_CASE, STONE_DISPLAY_CASE));
+        COPPER_DISPLAY_CASES.forEach(cases::add);
+        cases.addAll(List.of(IRON_DISPLAY_CASE, GOLD_DISPLAY_CASE, DIAMOND_DISPLAY_CASE, MUSEUM_DISPLAY_CASE));
+        return cases;
     }
 
     private static boolean never(BlockState state, BlockGetter getter, BlockPos pos, EntityType<?> type) {

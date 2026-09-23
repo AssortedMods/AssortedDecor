@@ -67,6 +67,11 @@ public class DecorCreativeItems {
             items.add(DecorBlocks.CAGE.get());
         }
 
+        if (DecorCommonMod.COMMON_CONFIG.displayCasesEnabled.get()) {
+            items.add(DecorItems.RESIZING_TOOL.get());
+            DecorBlocks.displayCaseBlocks().forEach(x -> items.add(x.get()));
+        }
+
         if (DecorCommonMod.COMMON_CONFIG.planterPotEnabled.get()) {
             items.add(DecorBlocks.PLANTER_POT.get());
             items.add(DecorItems.UNFIRED_PLANTER_POT.get());
