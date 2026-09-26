@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:function",
+  "environment": "minecraft:default",
+  "function": "assortedbuildingblocks:siding_item_keeps_color",
+  "structure": "assortedbuildingblocks:test_box",
+  "max_ticks": 1,
+  "setup_ticks": 0,
+  "required": true
+}

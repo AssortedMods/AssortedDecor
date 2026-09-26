@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:function",
+  "environment": "minecraft:default",
+  "function": "assortedgates:crafting_recipes_answer_for_no_other",
+  "structure": "assortedgates:test_box",
+  "max_ticks": 1,
+  "setup_ticks": 0,
+  "required": true
+}

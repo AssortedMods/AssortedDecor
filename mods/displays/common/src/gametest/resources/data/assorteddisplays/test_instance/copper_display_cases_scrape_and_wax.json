@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:function",
+  "environment": "minecraft:default",
+  "function": "assorteddisplays:copper_display_cases_scrape_and_wax",
+  "structure": "assorteddisplays:test_box",
+  "max_ticks": 40,
+  "setup_ticks": 0,
+  "required": true
+}

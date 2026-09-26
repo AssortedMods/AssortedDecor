@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:function",
+  "environment": "minecraft:default",
+  "function": "assortedcolorizer:colorizer_emits_light_like_its_block",
+  "structure": "assortedcolorizer:test_box",
+  "max_ticks": 400,
+  "setup_ticks": 0,
+  "required": true
+}

@@ -1,0 +1,80 @@
+package com.grim3212.assorted.buildingblocks.gametest;
+
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import com.grim3212.assorted.buildingblocks.common.blocks.ColorChangingBlock;
+import net.minecraft.core.BlockPos;
+import net.minecraft.gametest.framework.GameTestHelper;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
+import java.util.Map;
+
+import static com.grim3212.assorted.lib.test.TestSupport.hitTop;
+
+/**
+ * Helpers, constants and fixtures shared by Assorted Building Blocks' gametest classes, which import
+ * them statically, alongside AssortedLib's {@code TestSupport}.
+ */
+final class BuildingBlocksTestSupport {
+
+    private BuildingBlocksTestSupport() {
+    }
+
+    static final BlockPos MAIN = new BlockPos(4, 1, 4);
+
+    /** Places one dyed siding on top of {@code floor} and checks it kept both its block and its colour. */
+    static void placeSidingFromItem(GameTestHelper helper, Player player, BlockPos floor, Block siding, DyeColor color) {
+        BlockPos placed = floor.above();
+        helper.setBlock(floor, Blocks.STONE);
+
+        ItemStack stack = ColorChangingBlock.getColorStack(new ItemStack(siding), color);
+        player.setItemInHand(InteractionHand.MAIN_HAND, stack);
+        stack.useOn(new UseOnContext(player, InteractionHand.MAIN_HAND, hitTop(helper.absolutePos(floor))));
+
+        helper.assertBlockPresent(siding, placed);
+        helper.assertBlockProperty(placed, ColorChangingBlock.COLOR, color);
+    }
+
+    /**
+     * Whether {@code key} names something in the language file. A suffixed key counts: a colour
+     * changing item like siding overrides {@code getName} to translate
+     * {@code <descriptionId>_<colour>}, so its bare description id is never meant to be there.
+     */
+    static boolean hasName(JsonObject lang, String key) {
+        if (lang.has(key)) {
+            return true;
+        }
+        String prefix = key + "_";
+        for (Map.Entry<String, JsonElement> entry : lang.entrySet()) {
+            if (entry.getKey().startsWith(prefix)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    static JsonObject readJson(String path) {
+        try (InputStream in = BuildingBlocksTestSupport.class.getResourceAsStream(path)) {
+            return in == null ? null : JsonParser.parseReader(new InputStreamReader(in, StandardCharsets.UTF_8)).getAsJsonObject();
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    static boolean resourceExists(String path) {
+        try (InputStream in = BuildingBlocksTestSupport.class.getResourceAsStream(path)) {
+            return in != null;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+}

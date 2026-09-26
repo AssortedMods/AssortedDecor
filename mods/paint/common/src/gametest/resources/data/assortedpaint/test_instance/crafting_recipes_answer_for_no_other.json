@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:function",
+  "environment": "minecraft:default",
+  "function": "assortedpaint:crafting_recipes_answer_for_no_other",
+  "structure": "assortedpaint:test_box",
+  "max_ticks": 1,
+  "setup_ticks": 0,
+  "required": true
+}

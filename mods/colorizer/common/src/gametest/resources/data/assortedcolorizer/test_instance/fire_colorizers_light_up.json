@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:function",
+  "environment": "minecraft:default",
+  "function": "assortedcolorizer:fire_colorizers_light_up",
+  "structure": "assortedcolorizer:test_box",
+  "max_ticks": 100,
+  "setup_ticks": 0,
+  "required": true
+}

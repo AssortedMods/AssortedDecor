@@ -1,0 +1,87 @@
+package com.grim3212.assorted.hangeables.common.blocks;
+
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.ScheduledTickAccess;
+import net.minecraft.util.RandomSource;
+import com.grim3212.assorted.hangeables.common.blocks.blockentity.NeonSignBlockEntity;
+import com.grim3212.assorted.hangeables.common.items.HangeablesItems;
+import com.grim3212.assorted.hangeables.common.network.NeonOpenPacket;
+import com.grim3212.assorted.lib.platform.Services;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.EntityBlock;
+import net.minecraft.world.level.block.SignBlock;
+import net.minecraft.world.level.block.SimpleWaterloggedBlock;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
+
+public class NeonSignBlock extends Block implements SimpleWaterloggedBlock, EntityBlock {
+
+    protected static final VoxelShape SHAPE = Block.box(4.0D, 0.0D, 4.0D, 12.0D, 16.0D, 12.0D);
+
+    public NeonSignBlock(Properties properties) {
+        super(properties);
+    }
+
+    @Override
+    protected BlockState updateShape(BlockState stateIn, LevelReader worldIn, ScheduledTickAccess ticks, BlockPos currentPos,
+            Direction facing, BlockPos facingPos, BlockState facingState, RandomSource random) {
+        if (stateIn.getValue(SignBlock.WATERLOGGED)) {
+            ticks.scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(worldIn));
+        }
+
+        return super.updateShape(stateIn, worldIn, ticks, currentPos, facing, facingPos, facingState, random);
+    }
+
+    @Override
+    protected VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context) {
+        return SHAPE;
+    }
+
+    @Override
+    public boolean isPossibleToRespawnInThis(BlockState state) {
+        return true;
+    }
+
+    @Override
+    public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
+        return new NeonSignBlockEntity(pos, state);
+    }
+
+    @Override
+    protected ItemStack getCloneItemStack(LevelReader worldIn, BlockPos pos, BlockState state, boolean includeData) {
+        return new ItemStack(HangeablesItems.NEON_SIGN.get());
+    }
+
+    @Override
+    protected InteractionResult useWithoutItem(BlockState state, Level worldIn, BlockPos pos, Player player, BlockHitResult hit) {
+        if (!worldIn.isClientSide()) {
+            Services.NETWORK.sendTo(player, new NeonOpenPacket(pos));
+
+            BlockEntity tileentity = worldIn.getBlockEntity(pos);
+            if (tileentity instanceof NeonSignBlockEntity) {
+                NeonSignBlockEntity sign = (NeonSignBlockEntity) tileentity;
+                return sign.executeCommand(player) ? InteractionResult.SUCCESS : InteractionResult.FAIL;
+            }
+            return InteractionResult.FAIL;
+        }
+        return InteractionResult.SUCCESS;
+    }
+
+    @Override
+    protected FluidState getFluidState(BlockState state) {
+        return state.getValue(SignBlock.WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
+    }
+}

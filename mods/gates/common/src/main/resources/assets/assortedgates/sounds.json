@@ -1,0 +1,16 @@
+{
+	"gate_trumpet": {
+		"category": "player",
+		"subtitle": "assortedgates.subtitle.gate_trumpet",
+		"sounds": [
+			"assortedgates:gate_trumpet"
+		]
+	},
+	"garage_remote": {
+		"category": "player",
+		"subtitle": "assortedgates.subtitle.garage_remote",
+		"sounds": [
+			"assortedgates:garage_remote"
+		]
+	}
+}

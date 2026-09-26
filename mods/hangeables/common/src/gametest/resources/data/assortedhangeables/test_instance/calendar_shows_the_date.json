@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:function",
+  "environment": "minecraft:default",
+  "function": "assortedhangeables:calendar_shows_the_date",
+  "structure": "assortedhangeables:test_box",
+  "max_ticks": 1,
+  "setup_ticks": 0,
+  "required": true
+}

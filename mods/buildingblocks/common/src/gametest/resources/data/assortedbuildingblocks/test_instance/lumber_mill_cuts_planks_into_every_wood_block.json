@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:function",
+  "environment": "minecraft:default",
+  "function": "assortedbuildingblocks:lumber_mill_cuts_planks_into_every_wood_block",
+  "structure": "assortedbuildingblocks:test_box",
+  "max_ticks": 1,
+  "setup_ticks": 0,
+  "required": true
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:function",
+  "environment": "minecraft:default",
+  "function": "assorteddisplays:resizing_down_hands_back_what_it_cannot_show",
+  "structure": "assorteddisplays:test_box",
+  "max_ticks": 60,
+  "setup_ticks": 0,
+  "required": true
+}
