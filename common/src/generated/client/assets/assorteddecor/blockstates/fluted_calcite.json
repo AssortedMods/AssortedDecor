@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "assorteddecor:block/fluted_calcite",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "assorteddecor:block/fluted_calcite"
+    },
+    "axis=z": {
+      "model": "assorteddecor:block/fluted_calcite",
+      "x": 90
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "assorteddecor:block/tuff_tile_slab"
+    },
+    "type=double": {
+      "model": "assorteddecor:block/tuff_tiles"
+    },
+    "type=top": {
+      "model": "assorteddecor:block/tuff_tile_slab_top"
+    }
+  }
+}

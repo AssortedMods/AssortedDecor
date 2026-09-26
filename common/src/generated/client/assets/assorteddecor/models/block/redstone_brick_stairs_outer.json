@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "assorteddecor:block/building/redstone_bricks",
+    "side": "assorteddecor:block/building/redstone_bricks",
+    "top": "assorteddecor:block/building/redstone_bricks"
+  }
+}

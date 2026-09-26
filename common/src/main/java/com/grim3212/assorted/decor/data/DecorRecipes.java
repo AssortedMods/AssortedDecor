@@ -58,7 +58,7 @@ public class DecorRecipes extends ConditionalRecipeProvider {
         // Painting
         this.addConditions(partEnabled(DecorConditions.Parts.PAINTING), DecorItems.PAINT_ROLLER.getId());
         DecorItems.PAINT_ROLLER_COLORS.forEach((c, r) -> {
-            this.addConditions(partEnabled(DecorConditions.Parts.PAINTING), r.getId(), prefix(name(DyeHelper.WOOL_BY_DYE.get(c).asItem()) + "_paint_roll"), prefix(name(DyeHelper.CONCRETE_BY_DYE.get(c).asItem()) + "_paint_roll"), prefix(name(DyeHelper.CONCRETE_POWDER_BY_DYE.get(c).asItem()) + "_paint_roll"), prefix(name(DyeHelper.CARPET_BY_DYE.get(c).asItem()) + "_paint_roll"), prefix(name(FluroBlock.FLURO_BY_DYE.get(c).get()) + "_paint_roll"), prefix("siding_vertical_" + c.getName()), prefix("siding_horizontal_" + c.getName()));
+            this.addConditions(partEnabled(DecorConditions.Parts.PAINTING), r.getId(), prefix(name(DyeHelper.CONCRETE_BY_DYE.get(c).asItem()) + "_paint_roll"), prefix(name(DyeHelper.CONCRETE_POWDER_BY_DYE.get(c).asItem()) + "_paint_roll"), prefix(name(FluroBlock.FLURO_BY_DYE.get(c).get()) + "_paint_roll"), prefix("siding_vertical_" + c.getName()), prefix("siding_horizontal_" + c.getName()));
         });
 
         // Self-explanatory
@@ -81,7 +81,8 @@ public class DecorRecipes extends ConditionalRecipeProvider {
         // Colorizer
         this.addConditions(partEnabled(DecorConditions.Parts.COLORIZER), prefix("clean_colorizer_brush"), DecorItems.COLORIZER_BRUSH.getId(), prefix("colorizer_slab_stonecutting"), prefix("colorizer_vertical_slab_stonecutting"), prefix("colorizer_stairs_stonecutting"),
                 prefix("colorizer_walls_stonecutting"), prefix("colorizer_chair_stonecutting"), prefix("colorizer_table_stonecutting"), prefix("colorizer_slope_stonecutting"), prefix("colorizer_sloped_angle_stonecutting"), prefix("colorizer_sloped_intersection_stonecutting"),
-                prefix("colorizer_sloped_post_stonecutting"), prefix("colorizer_oblique_slope_stonecutting"), prefix("colorizer_corner_stonecutting"), prefix("colorizer_slanted_corner_stonecutting"), prefix("colorizer_pyramid_stonecutting"), prefix("colorizer_full_pyramid_stonecutting"));
+                prefix("colorizer_sloped_post_stonecutting"), prefix("colorizer_oblique_slope_stonecutting"), prefix("colorizer_corner_stonecutting"), prefix("colorizer_slanted_corner_stonecutting"), prefix("colorizer_pyramid_stonecutting"), prefix("colorizer_full_pyramid_stonecutting"),
+                prefix("colorizer_panel_stonecutting"), prefix("colorizer_beam_stonecutting"), prefix("colorizer_column_stonecutting"));
         DecorBlocks.colorizerBlocks().forEach(b -> {
             this.addConditions(partEnabled(DecorConditions.Parts.COLORIZER), id(b.get()));
         });
@@ -98,7 +99,8 @@ public class DecorRecipes extends ConditionalRecipeProvider {
         super.buildRecipes();
 
         // Roadways
-        ShapedRecipeBuilder.shaped(this.items, RecipeCategory.DECORATIONS, DecorBlocks.SIDEWALK.get(), 6).define('X', LibCommonTags.Items.STONE).pattern("XXX").pattern("XXX").unlockedBy("has_stone", has(LibCommonTags.Items.STONE)).save(this.output);
+        // Stonecut, not crafted: six stones in two rows are already a wall for most of #c:stones.
+        SingleItemRecipeBuilder.stonecutting(this.tag(LibCommonTags.Items.STONE), RecipeCategory.DECORATIONS, DecorBlocks.SIDEWALK.get(), 1).unlockedBy("has_stone", has(LibCommonTags.Items.STONE)).save(this.output, key(DecorBlocks.SIDEWALK.getId()));
         SimpleCookingRecipeBuilder.smelting(this.tag(DecorTags.Items.TAR), RecipeCategory.DECORATIONS, CookingBookCategory.MISC, DecorItems.ASPHALT.get(), 0.35f, 200).unlockedBy("has_tar", has(DecorTags.Items.TAR)).save(this.output);
         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.DECORATIONS, DecorBlocks.ROADWAY.get()).define('A', DecorItems.ASPHALT.get()).define('X', LibCommonTags.Items.STONE).pattern("A").pattern("X").unlockedBy("has_asphalt", has(DecorItems.ASPHALT.get())).save(this.output);
         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.DECORATIONS, DecorBlocks.ROADWAY_MANHOLE.get()).define('M', LibCommonTags.Items.INGOTS_IRON).define('X', DecorBlocks.ROADWAY.get()).pattern("M").pattern("X").unlockedBy("has_roadway", has(DecorBlocks.ROADWAY.get())).save(this.output);
@@ -113,11 +115,10 @@ public class DecorRecipes extends ConditionalRecipeProvider {
 
         // Painting
         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.DECORATIONS, DecorItems.PAINT_ROLLER.get()).define('S', LibCommonTags.Items.RODS_WOODEN).define('W', ItemTags.WOOL).pattern("WWW").pattern(" S ").pattern(" S ").unlockedBy("has_wool", has(ItemTags.WOOL)).save(this.output);
+        // Wool and carpet need no recipe here: the rollers are dyes, so vanilla's dyeing takes them and hands them back worn.
         DecorItems.PAINT_ROLLER_COLORS.forEach((c, r) -> {
-            ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.DECORATIONS, DyeHelper.WOOL_BY_DYE.get(c)).requires(r.get()).requires(ItemTags.WOOL).unlockedBy("has_wool", has(ItemTags.WOOL)).save(this.output, key(name(DyeHelper.WOOL_BY_DYE.get(c).asItem()) + "_paint_roll"));
             ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.DECORATIONS, DyeHelper.CONCRETE_BY_DYE.get(c)).requires(r.get()).requires(LibCommonTags.Items.CONCRETE).unlockedBy("has_concrete", has(LibCommonTags.Items.CONCRETE)).save(this.output, key(name(DyeHelper.CONCRETE_BY_DYE.get(c).asItem()) + "_paint_roll"));
             ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.DECORATIONS, DyeHelper.CONCRETE_POWDER_BY_DYE.get(c)).requires(r.get()).requires(LibCommonTags.Items.CONCRETE_POWDER).unlockedBy("has_concrete_powder", has(LibCommonTags.Items.CONCRETE_POWDER)).save(this.output, key(name(DyeHelper.CONCRETE_POWDER_BY_DYE.get(c).asItem()) + "_paint_roll"));
-            ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.DECORATIONS, DyeHelper.CARPET_BY_DYE.get(c)).requires(r.get()).requires(ItemTags.WOOL_CARPETS).unlockedBy("has_carpet", has(ItemTags.WOOL_CARPETS)).save(this.output, key(name(DyeHelper.CARPET_BY_DYE.get(c).asItem()) + "_paint_roll"));
             ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.DECORATIONS, FluroBlock.FLURO_BY_DYE.get(c).get()).requires(r.get()).requires(DecorTags.Items.FLURO).unlockedBy("has_fluro", has(DecorTags.Items.FLURO)).save(this.output, key(name(FluroBlock.FLURO_BY_DYE.get(c).get()) + "_paint_roll"));
             ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.DECORATIONS, sidingResult(DecorBlocks.SIDING_VERTICAL.get().asItem(), c)).requires(DecorTags.Items.TAR).requires(LibCommonTags.Items.COBBLESTONE).requires(r.get()).unlockedBy("has_tar", has(DecorTags.Items.TAR)).save(this.output, key("siding_vertical_" + c.getName()));
             ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.DECORATIONS, sidingResult(DecorBlocks.SIDING_HORIZONTAL.get().asItem(), c)).requires(DecorTags.Items.TAR).requires(ItemTags.PLANKS).requires(r.get()).unlockedBy("has_tar", has(DecorTags.Items.TAR)).save(this.output, key("siding_horizontal_" + c.getName()));
@@ -215,7 +216,7 @@ public class DecorRecipes extends ConditionalRecipeProvider {
         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.DECORATIONS, DecorBlocks.COLORIZER_DOOR.get(), 3).define('X', DecorBlocks.COLORIZER.get()).pattern("XX").pattern("XX").pattern("XX").unlockedBy("has_colorizer", has(DecorBlocks.COLORIZER.get())).save(this.output);
         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.DECORATIONS, DecorBlocks.COLORIZER_TRAP_DOOR.get(), 2).define('X', DecorBlocks.COLORIZER.get()).pattern("XXX").pattern("XXX").unlockedBy("has_colorizer", has(DecorBlocks.COLORIZER.get())).save(this.output);
         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.DECORATIONS, DecorBlocks.COLORIZER_LAMP_POST.get(), 2).define('X', DecorBlocks.COLORIZER.get()).define('G', Blocks.GLOWSTONE).pattern("XGX").pattern("XXX").pattern(" X ").unlockedBy("has_colorizer", has(DecorBlocks.COLORIZER.get())).unlockedBy("has_glowstone", has(Blocks.GLOWSTONE)).save(this.output);
-        ShapedRecipeBuilder.shaped(this.items, RecipeCategory.DECORATIONS, DecorBlocks.COLORIZER_SLOPE.get(), 4).define('X', DecorBlocks.COLORIZER.get()).pattern("  X").pattern(" XX").pattern("XXX").unlockedBy("has_colorizer", has(DecorBlocks.COLORIZER.get())).save(this.output);
+        ShapedRecipeBuilder.shaped(this.items, RecipeCategory.DECORATIONS, DecorBlocks.COLORIZER_SLOPE.get(), 4).define('X', DecorBlocks.COLORIZER.get()).pattern("X ").pattern("XX").unlockedBy("has_colorizer", has(DecorBlocks.COLORIZER.get())).save(this.output);
         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.DECORATIONS, DecorBlocks.COLORIZER_SLOPED_ANGLE.get(), 4).define('X', DecorBlocks.COLORIZER.get()).pattern(" XX").pattern("XXX").unlockedBy("has_colorizer", has(DecorBlocks.COLORIZER.get())).save(this.output);
         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.DECORATIONS, DecorBlocks.COLORIZER_SLOPED_INTERSECTION.get(), 4).define('X', DecorBlocks.COLORIZER.get()).pattern("XX ").pattern("X X").unlockedBy("has_colorizer", has(DecorBlocks.COLORIZER.get())).save(this.output);
         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.DECORATIONS, DecorBlocks.COLORIZER_SLOPED_POST.get(), 4).define('X', DecorBlocks.COLORIZER.get()).pattern("X ").pattern("XX").pattern("XX").unlockedBy("has_colorizer", has(DecorBlocks.COLORIZER.get())).save(this.output);
@@ -244,7 +245,13 @@ public class DecorRecipes extends ConditionalRecipeProvider {
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(DecorBlocks.COLORIZER.get()), RecipeCategory.DECORATIONS, DecorBlocks.COLORIZER_CORNER.get(), 1).unlockedBy("has_colorizer", has(DecorBlocks.COLORIZER.get())).save(this.output, key("colorizer_corner_stonecutting"));
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(DecorBlocks.COLORIZER.get()), RecipeCategory.DECORATIONS, DecorBlocks.COLORIZER_SLANTED_CORNER.get(), 1).unlockedBy("has_colorizer", has(DecorBlocks.COLORIZER.get())).save(this.output, key("colorizer_slanted_corner_stonecutting"));
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(DecorBlocks.COLORIZER.get()), RecipeCategory.DECORATIONS, DecorBlocks.COLORIZER_PYRAMID.get(), 1).unlockedBy("has_colorizer", has(DecorBlocks.COLORIZER.get())).save(this.output, key("colorizer_pyramid_stonecutting"));
+        // The building shapes come off the stonecutter only, as the building blocks they copy do.
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(DecorBlocks.COLORIZER.get()), RecipeCategory.DECORATIONS, DecorBlocks.COLORIZER_PANEL.get(), 8).unlockedBy("has_colorizer", has(DecorBlocks.COLORIZER.get())).save(this.output, key("colorizer_panel_stonecutting"));
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(DecorBlocks.COLORIZER.get()), RecipeCategory.DECORATIONS, DecorBlocks.COLORIZER_BEAM.get(), 4).unlockedBy("has_colorizer", has(DecorBlocks.COLORIZER.get())).save(this.output, key("colorizer_beam_stonecutting"));
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(DecorBlocks.COLORIZER.get()), RecipeCategory.DECORATIONS, DecorBlocks.COLORIZER_COLUMN.get(), 1).unlockedBy("has_colorizer", has(DecorBlocks.COLORIZER.get())).save(this.output, key("colorizer_column_stonecutting"));
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(DecorBlocks.COLORIZER.get()), RecipeCategory.DECORATIONS, DecorBlocks.COLORIZER_FULL_PYRAMID.get(), 1).unlockedBy("has_colorizer", has(DecorBlocks.COLORIZER.get())).save(this.output, key("colorizer_full_pyramid_stonecutting"));
+
+        new BuildingBlockRecipes(this, this.items, this.output).build();
     }
 
 

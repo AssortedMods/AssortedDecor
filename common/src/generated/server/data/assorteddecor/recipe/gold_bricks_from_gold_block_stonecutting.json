@@ -1,0 +1,19 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "building_blocks"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "fabric:load_conditions": [
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "building_blocks"
+    }
+  ],
+  "ingredient": "minecraft:gold_block",
+  "result": {
+    "id": "assorteddecor:gold_bricks"
+  }
+}

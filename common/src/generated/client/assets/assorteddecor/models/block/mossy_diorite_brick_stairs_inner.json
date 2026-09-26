@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "assorteddecor:block/building/mossy_diorite_bricks",
+    "side": "assorteddecor:block/building/mossy_diorite_bricks",
+    "top": "assorteddecor:block/building/mossy_diorite_bricks"
+  }
+}

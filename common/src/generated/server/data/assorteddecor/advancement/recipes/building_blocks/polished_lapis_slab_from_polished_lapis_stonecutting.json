@@ -1,0 +1,44 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "building_blocks"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_polished_lapis": {
+      "conditions": {
+        "items": [
+          {
+            "items": "assorteddecor:polished_lapis"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "assorteddecor:polished_lapis_slab_from_polished_lapis_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "building_blocks"
+    }
+  ],
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_polished_lapis"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "assorteddecor:polished_lapis_slab_from_polished_lapis_stonecutting"
+    ]
+  }
+}

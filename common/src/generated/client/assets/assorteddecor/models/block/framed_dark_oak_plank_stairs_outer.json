@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "assorteddecor:block/building/framed_dark_oak_planks",
+    "side": "assorteddecor:block/building/framed_dark_oak_planks",
+    "top": "assorteddecor:block/building/framed_dark_oak_planks"
+  }
+}

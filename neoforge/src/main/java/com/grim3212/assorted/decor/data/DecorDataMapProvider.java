@@ -1,5 +1,9 @@
 package com.grim3212.assorted.decor.data;
 
+import com.grim3212.assorted.decor.common.blocks.building.BuildingBlocks;
+import net.minecraft.world.item.Item;
+import net.neoforged.neoforge.registries.datamaps.builtin.FurnaceFuel;
+
 import com.grim3212.assorted.decor.common.blocks.DecorBlocks;
 import com.grim3212.assorted.lib.registry.IRegistryObject;
 import net.minecraft.core.HolderLookup;
@@ -16,8 +20,8 @@ import net.neoforged.neoforge.registries.datamaps.builtin.Waxable;
 import java.util.concurrent.CompletableFuture;
 
 /**
- * Axe scraping and honeycomb waxing for the copper cases. Mirror of the {@code OxidizableBlocksRegistry}
- * calls in {@code AssortedDecorFabric} - a change here needs the same change there.
+ * Axe scraping and honeycomb waxing for the copper cases, and the building blocks' burn times. Mirror of
+ * the {@code OxidizableBlocksRegistry} and {@code FuelValueEvents} calls in {@code AssortedDecorFabric}.
  */
 public class DecorDataMapProvider extends DataMapProvider {
 
@@ -34,6 +38,9 @@ public class DecorDataMapProvider extends DataMapProvider {
         Builder<Waxable, Block> waxables = builder(NeoForgeDataMaps.WAXABLES);
         DecorBlocks.COPPER_DISPLAY_CASES.zipUnwaxedWaxed((unwaxed, waxed) ->
                 waxables.add(key(unwaxed), new Waxable(waxed.get()), false));
+
+        Builder<FurnaceFuel, Item> fuels = builder(NeoForgeDataMaps.FURNACE_FUELS);
+        BuildingBlocks.fuels().forEach((block, ticks) -> fuels.add(ResourceKey.create(Registries.ITEM, BuiltInRegistries.ITEM.getKey(block.get().asItem())), new FurnaceFuel(ticks), false));
     }
 
     private static ResourceKey<Block> key(IRegistryObject<? extends Block> block) {

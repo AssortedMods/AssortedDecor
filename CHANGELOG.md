@@ -1,5 +1,13 @@
 # Changelog
 
+## 11.1.3
+
+- Added the building blocks from an old mod I maintained
+  - Includes a Lumber Mill that works just like the Stonecutter from vanilla
+- Add colorizer column, panel, and frame as new blocks
+- Fixed some clashing recipes.
+- Requires Assorted Lib 4.3.0.
+
 ## 11.1.2
 
 - Added Display Cases and Museum Display Cases from some old mods I used to maintain

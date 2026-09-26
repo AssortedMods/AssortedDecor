@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "assorteddecor:block/mossy_sandstone_brick_slab"
+    },
+    "type=double": {
+      "model": "assorteddecor:block/mossy_sandstone_bricks"
+    },
+    "type=top": {
+      "model": "assorteddecor:block/mossy_sandstone_brick_slab_top"
+    }
+  }
+}

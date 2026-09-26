@@ -1,0 +1,23 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "building_blocks"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "fabric:load_conditions": [
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "building_blocks"
+    }
+  ],
+  "ingredients": [
+    "assorteddecor:diorite_bricks",
+    "minecraft:moss_block"
+  ],
+  "result": {
+    "id": "assorteddecor:mossy_diorite_bricks"
+  }
+}

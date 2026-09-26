@@ -2,15 +2,23 @@ package com.grim3212.assorted.decor.client.data;
 
 import com.grim3212.assorted.decor.Constants;
 import com.grim3212.assorted.decor.common.blocks.DecorBlocks;
+import com.grim3212.assorted.decor.common.blocks.building.BuildingBlocks;
+import com.grim3212.assorted.decor.common.blocks.building.GemBrickSet;
+import com.grim3212.assorted.decor.common.blocks.building.StoneFamily;
+import com.grim3212.assorted.decor.common.blocks.building.WoodSet;
 import com.grim3212.assorted.decor.common.crafting.DecorConditions;
 import com.grim3212.assorted.decor.common.items.DecorItems;
 import com.grim3212.assorted.lib.data.LibManualProvider;
 import com.grim3212.assorted.lib.registry.IRegistryObject;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,6 +47,92 @@ public class DecorManualProvider extends LibManualProvider {
         this.addDecorations();
         this.addDoors();
         this.addGates();
+        this.addBuildingBlocks();
+    }
+
+    private void addBuildingBlocks() {
+        ChapterBuilder chapter = this.chapter("building_blocks").whenPartEnabled(DecorConditions.Parts.BUILDING_BLOCKS);
+        chapter.recipes("lumber_mill", DecorBlocks.LUMBER_MILL.get()).opens(DecorBlocks.LUMBER_MILL.get());
+
+        chapter.recipesById("cut_shapes", stonecut(BuildingBlocks.cuts().get(BuildingBlocks.LAPIS.bricks()).slab().get(), BuildingBlocks.LAPIS.bricks().get()),
+                stonecut(BuildingBlocks.cuts().get(BuildingBlocks.LAPIS.bricks()).stairs().get(), BuildingBlocks.LAPIS.bricks().get()),
+                stonecut(BuildingBlocks.cuts().get(BuildingBlocks.LAPIS.bricks()).wall().get(), BuildingBlocks.LAPIS.bricks().get()),
+                mill(BuildingBlocks.cuts().get(BuildingBlocks.OAK.parquet()).stairs().get(), BuildingBlocks.OAK.parquet().get())).every(50);
+
+        chapter.recipesById("glowstone_bricks", stonecut(BuildingBlocks.GLOWSTONE_BRICKS.get(), Blocks.GLOWSTONE))
+                .opens(withCuts(BuildingBlocks.GLOWSTONE_BRICKS));
+
+        List<Block> gems = new ArrayList<>(List.of(withCuts(BuildingBlocks.POLISHED_OBSIDIAN)));
+        List<Identifier> gemRecipes = new ArrayList<>(List.of(stonecut(BuildingBlocks.POLISHED_OBSIDIAN.get(), Blocks.OBSIDIAN)));
+        Map<GemBrickSet, Block> gemBases = Map.of(BuildingBlocks.LAPIS, Blocks.LAPIS_BLOCK, BuildingBlocks.REDSTONE, Blocks.REDSTONE_BLOCK);
+        for (GemBrickSet set : List.of(BuildingBlocks.LAPIS, BuildingBlocks.REDSTONE)) {
+            gems.addAll(List.of(withCuts(set.bricks(), set.tiles(), set.polished())));
+            Block base = gemBases.get(set);
+            gemRecipes.addAll(List.of(stonecut(set.bricks().get(), base), stonecut(set.tiles().get(), base), stonecut(set.polished().get(), base)));
+        }
+        chapter.recipesById("gem_bricks", gemRecipes.toArray(Identifier[]::new)).every(50).opens(gems.toArray(Block[]::new));
+
+        chapter.recipesById("metal_bricks", stonecut(BuildingBlocks.IRON_BRICKS.get(), Blocks.IRON_BLOCK), stonecut(BuildingBlocks.GOLD_BRICKS.get(), Blocks.GOLD_BLOCK),
+                        stonecut(BuildingBlocks.DIAMOND_BRICKS.get(), Blocks.DIAMOND_BLOCK))
+                .opens(withCuts(BuildingBlocks.IRON_BRICKS, BuildingBlocks.GOLD_BRICKS, BuildingBlocks.DIAMOND_BRICKS));
+
+        chapter.recipesById("bricks", stonecut(BuildingBlocks.BASKETWEAVE_BRICKS.get(), Blocks.BRICKS), stonecut(BuildingBlocks.HERRINGBONE_BRICKS.get(), Blocks.BRICKS))
+                .opens(withCuts(BuildingBlocks.BASKETWEAVE_BRICKS, BuildingBlocks.HERRINGBONE_BRICKS));
+
+        chapter.recipes("cobblestone", BuildingBlocks.REINFORCED_COBBLESTONE.get(), BuildingBlocks.FRAMED_COBBLESTONE.get(), BuildingBlocks.CHECKERED_STONE.get())
+                .opens(withCuts(BuildingBlocks.REINFORCED_COBBLESTONE, BuildingBlocks.FRAMED_COBBLESTONE, BuildingBlocks.CHECKERED_STONE));
+
+        // Every stone's patterns share one page; the granite recipes stand for them all.
+        List<Block> stones = new ArrayList<>();
+        List<Block> columns = new ArrayList<>();
+        for (StoneFamily family : BuildingBlocks.stones()) {
+            columns.add(family.fluted().get());
+            columns.add(family.column().get());
+            BuildingBlocks.blocksOf(family).stream().filter(block -> !columns.contains(block)).forEach(stones::add);
+        }
+        StoneFamily granite = BuildingBlocks.GRANITE;
+        chapter.recipesById("stone_patterns", stonecut(granite.bricks().plain().get(), Blocks.GRANITE), stonecut(granite.tiles().get(), Blocks.GRANITE),
+                        stonecut(granite.carved().get(), Blocks.GRANITE)).every(50)
+                .opens(stones.toArray(Block[]::new));
+
+        chapter.recipesById("weathering", this.recipeId("mossy_granite_bricks_from_vine"), this.recipeId("mossy_granite_bricks_from_moss_block"),
+                this.recipeId("cracked_granite_bricks"));
+
+        chapter.recipesById("columns", stonecut(BuildingBlocks.STONE.fluted().get(), Blocks.STONE), stonecut(BuildingBlocks.STONE.column().get(), Blocks.STONE),
+                        stonecut(BuildingBlocks.DEEPSLATE.column().get(), Blocks.COBBLED_DEEPSLATE)).every(50)
+                .opens(columns.toArray(Block[]::new));
+
+        List<Block> timber = new ArrayList<>();
+        List<Block> panels = new ArrayList<>();
+        List<Block> beams = new ArrayList<>(List.of(BuildingBlocks.IRON_BEAM.get()));
+        for (WoodSet wood : BuildingBlocks.woods()) {
+            panels.add(wood.panel().get());
+            beams.add(wood.beam().get());
+            BuildingBlocks.blocksOf(wood).stream().filter(block -> !panels.contains(block) && !beams.contains(block)).forEach(timber::add);
+        }
+        WoodSet oak = BuildingBlocks.OAK;
+        chapter.recipesById("timber", mill(oak.parquet().get(), Blocks.OAK_PLANKS), mill(oak.framed().get(), Blocks.OAK_PLANKS)).every(50).opens(timber.toArray(Block[]::new));
+        chapter.recipesById("panels", mill(oak.panel().get(), Blocks.OAK_PLANKS), mill(BuildingBlocks.CHERRY.panel().get(), Blocks.CHERRY_PLANKS)).every(50).opens(panels.toArray(Block[]::new));
+        chapter.recipesById("beams", mill(oak.beam().get(), Blocks.OAK_PLANKS), stonecut(BuildingBlocks.IRON_BEAM.get(), Items.IRON_INGOT)).every(50).opens(beams.toArray(Block[]::new));
+
+        chapter.recipes("meat_block", BuildingBlocks.MEAT_BLOCK.get()).opens(BuildingBlocks.MEAT_BLOCK.get());
+    }
+
+    private Identifier mill(Block result, Block base) {
+        return this.recipeId(name(result) + "_from_" + name(base) + "_lumber_mill");
+    }
+
+    private Identifier stonecut(Block result, ItemLike base) {
+        return this.recipeId(name(result) + "_from_" + BuiltInRegistries.ITEM.getKey(base.asItem()).getPath() + "_stonecutting");
+    }
+
+    private static String name(Block block) {
+        return BuiltInRegistries.BLOCK.getKey(block).getPath();
+    }
+
+    @SafeVarargs
+    private static Block[] withCuts(IRegistryObject<Block>... blocks) {
+        return BuildingBlocks.withCuts(blocks).toArray(Block[]::new);
     }
 
     private void addColorizer() {
@@ -59,6 +153,8 @@ public class DecorManualProvider extends LibManualProvider {
         colorizer.recipes("slopes", DecorBlocks.COLORIZER_SLOPE.get(), DecorBlocks.COLORIZER_OBLIQUE_SLOPE.get(), DecorBlocks.COLORIZER_SLANTED_CORNER.get(), DecorBlocks.COLORIZER_SLOPED_ANGLE.get(), DecorBlocks.COLORIZER_SLOPED_INTERSECTION.get(), DecorBlocks.COLORIZER_SLOPED_POST.get(), DecorBlocks.COLORIZER_CORNER.get()).every(50).opens(slopes);
         colorizer.recipes("pyramids", DecorBlocks.COLORIZER_PYRAMID.get(), DecorBlocks.COLORIZER_FULL_PYRAMID.get()).every(50).opens(pyramids);
         colorizer.recipes("doors", DecorBlocks.COLORIZER_DOOR.get(), DecorBlocks.COLORIZER_TRAP_DOOR.get()).every(50).opens(doors);
+        colorizer.recipesById("building", recipeId("colorizer_panel_stonecutting"), recipeId("colorizer_beam_stonecutting"), recipeId("colorizer_column_stonecutting")).every(50)
+                .opens(DecorBlocks.COLORIZER_PANEL.get(), DecorBlocks.COLORIZER_BEAM.get(), DecorBlocks.COLORIZER_COLUMN.get());
     }
 
     private void addFurniture() {
@@ -145,7 +241,7 @@ public class DecorManualProvider extends LibManualProvider {
         roads.recipesById("stone_path", recipeId("stone_path_stonecutting"))
                 .whenPartEnabled(DecorConditions.Parts.DECORATIONS)
                 .opens(DecorBlocks.STONE_PATH.get());
-        roads.recipesById("rollers", recipeId(DecorItems.PAINT_ROLLER.get()), recipeId("white_wool_paint_roll"), recipeId("white_concrete_paint_roll")).every(60)
+        roads.recipesById("rollers", recipeId(DecorItems.PAINT_ROLLER.get()), recipeId("white_concrete_powder_paint_roll"), recipeId("white_concrete_paint_roll")).every(60)
                 .opens(rollers.toArray(Item[]::new))
                 .whenPartEnabled(DecorConditions.Parts.PAINTING);
     }

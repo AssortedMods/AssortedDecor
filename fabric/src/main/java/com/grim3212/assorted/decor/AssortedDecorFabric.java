@@ -1,5 +1,8 @@
 package com.grim3212.assorted.decor;
 
+import com.grim3212.assorted.decor.common.blocks.building.BuildingBlocks;
+import net.fabricmc.fabric.api.registry.FuelValueEvents;
+
 import com.grim3212.assorted.decor.common.blocks.DecorBlocks;
 import com.grim3212.assorted.decor.common.blocks.blockentity.DecorBlockEntityTypes;
 import com.grim3212.assorted.lib.core.inventory.IInventoryBlockEntity;
@@ -24,6 +27,8 @@ public class AssortedDecorFabric implements ModInitializer {
         );
 
         registerCopperDisplayCaseOxidation();
+        // NeoForge's half is the neoforge:furnace_fuels data map in DecorDataMapProvider.
+        FuelValueEvents.BUILD.register((builder, context) -> BuildingBlocks.fuels().forEach((block, ticks) -> builder.add(block.get(), ticks)));
     }
 
     /**

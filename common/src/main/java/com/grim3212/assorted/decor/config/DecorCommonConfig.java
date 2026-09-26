@@ -21,6 +21,7 @@ public class DecorCommonConfig {
     public final Supplier<Boolean> planterPotEnabled;
     public final Supplier<Boolean> extrasEnabled;
     public final Supplier<Boolean> gatesEnabled;
+    public final Supplier<Boolean> buildingBlocksEnabled;
 
     public final Supplier<Boolean> colorizerConsumeBlock;
     public final Supplier<Integer> colorizerBrushCount;
@@ -50,6 +51,7 @@ public class DecorCommonConfig {
         planterPotEnabled = builder.defineBoolean("parts.planterPotEnabled", true, "Set this to true if the Planter pot should be craftable and visible in the creative tab");
         extrasEnabled = builder.defineBoolean("parts.extrasEnabled", true, "Set this to true if the extras (chain link fence and new doors) should be craftable and visible in the creative tab");
         gatesEnabled = builder.defineBoolean("parts.gatesEnabled", true, "Set this to true if the castle gate and garage door, and the trumpet and remote that open them, should be craftable and visible in the creative tab");
+        buildingBlocksEnabled = builder.defineBoolean("parts.buildingBlocksEnabled", true, "Set this to true if the building blocks (bricks, tiles, columns, beams and panels) should be craftable and visible in the creative tab");
 
         colorizerConsumeBlock = builder.defineBoolean("colorizer.colorizerConsumeBlock", true, "Set this to true if the colorizer brush should consume a block when using them");
         colorizerBrushCount = builder.defineInteger("colorizer.colorizerBrushCount", 16, 1, 400, "Set this to the amount of blocks that a brush will be able to colorize after grabbing a block");

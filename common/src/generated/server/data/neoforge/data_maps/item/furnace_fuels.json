@@ -1,0 +1,244 @@
+{
+  "values": {
+    "assorteddecor:acacia_beam": {
+      "burn_time": 75
+    },
+    "assorteddecor:acacia_panel": {
+      "burn_time": 37
+    },
+    "assorteddecor:acacia_parquet": {
+      "burn_time": 300
+    },
+    "assorteddecor:acacia_parquet_slab": {
+      "burn_time": 150
+    },
+    "assorteddecor:acacia_parquet_stairs": {
+      "burn_time": 300
+    },
+    "assorteddecor:bamboo_beam": {
+      "burn_time": 75
+    },
+    "assorteddecor:bamboo_panel": {
+      "burn_time": 37
+    },
+    "assorteddecor:bamboo_parquet": {
+      "burn_time": 300
+    },
+    "assorteddecor:bamboo_parquet_slab": {
+      "burn_time": 150
+    },
+    "assorteddecor:bamboo_parquet_stairs": {
+      "burn_time": 300
+    },
+    "assorteddecor:birch_beam": {
+      "burn_time": 75
+    },
+    "assorteddecor:birch_panel": {
+      "burn_time": 37
+    },
+    "assorteddecor:birch_parquet": {
+      "burn_time": 300
+    },
+    "assorteddecor:birch_parquet_slab": {
+      "burn_time": 150
+    },
+    "assorteddecor:birch_parquet_stairs": {
+      "burn_time": 300
+    },
+    "assorteddecor:cherry_beam": {
+      "burn_time": 75
+    },
+    "assorteddecor:cherry_panel": {
+      "burn_time": 37
+    },
+    "assorteddecor:cherry_parquet": {
+      "burn_time": 300
+    },
+    "assorteddecor:cherry_parquet_slab": {
+      "burn_time": 150
+    },
+    "assorteddecor:cherry_parquet_stairs": {
+      "burn_time": 300
+    },
+    "assorteddecor:dark_oak_beam": {
+      "burn_time": 75
+    },
+    "assorteddecor:dark_oak_panel": {
+      "burn_time": 37
+    },
+    "assorteddecor:dark_oak_parquet": {
+      "burn_time": 300
+    },
+    "assorteddecor:dark_oak_parquet_slab": {
+      "burn_time": 150
+    },
+    "assorteddecor:dark_oak_parquet_stairs": {
+      "burn_time": 300
+    },
+    "assorteddecor:framed_acacia_plank_slab": {
+      "burn_time": 150
+    },
+    "assorteddecor:framed_acacia_plank_stairs": {
+      "burn_time": 300
+    },
+    "assorteddecor:framed_acacia_planks": {
+      "burn_time": 300
+    },
+    "assorteddecor:framed_bamboo_plank_slab": {
+      "burn_time": 150
+    },
+    "assorteddecor:framed_bamboo_plank_stairs": {
+      "burn_time": 300
+    },
+    "assorteddecor:framed_bamboo_planks": {
+      "burn_time": 300
+    },
+    "assorteddecor:framed_birch_plank_slab": {
+      "burn_time": 150
+    },
+    "assorteddecor:framed_birch_plank_stairs": {
+      "burn_time": 300
+    },
+    "assorteddecor:framed_birch_planks": {
+      "burn_time": 300
+    },
+    "assorteddecor:framed_cherry_plank_slab": {
+      "burn_time": 150
+    },
+    "assorteddecor:framed_cherry_plank_stairs": {
+      "burn_time": 300
+    },
+    "assorteddecor:framed_cherry_planks": {
+      "burn_time": 300
+    },
+    "assorteddecor:framed_dark_oak_plank_slab": {
+      "burn_time": 150
+    },
+    "assorteddecor:framed_dark_oak_plank_stairs": {
+      "burn_time": 300
+    },
+    "assorteddecor:framed_dark_oak_planks": {
+      "burn_time": 300
+    },
+    "assorteddecor:framed_jungle_plank_slab": {
+      "burn_time": 150
+    },
+    "assorteddecor:framed_jungle_plank_stairs": {
+      "burn_time": 300
+    },
+    "assorteddecor:framed_jungle_planks": {
+      "burn_time": 300
+    },
+    "assorteddecor:framed_mangrove_plank_slab": {
+      "burn_time": 150
+    },
+    "assorteddecor:framed_mangrove_plank_stairs": {
+      "burn_time": 300
+    },
+    "assorteddecor:framed_mangrove_planks": {
+      "burn_time": 300
+    },
+    "assorteddecor:framed_oak_plank_slab": {
+      "burn_time": 150
+    },
+    "assorteddecor:framed_oak_plank_stairs": {
+      "burn_time": 300
+    },
+    "assorteddecor:framed_oak_planks": {
+      "burn_time": 300
+    },
+    "assorteddecor:framed_pale_oak_plank_slab": {
+      "burn_time": 150
+    },
+    "assorteddecor:framed_pale_oak_plank_stairs": {
+      "burn_time": 300
+    },
+    "assorteddecor:framed_pale_oak_planks": {
+      "burn_time": 300
+    },
+    "assorteddecor:framed_spruce_plank_slab": {
+      "burn_time": 150
+    },
+    "assorteddecor:framed_spruce_plank_stairs": {
+      "burn_time": 300
+    },
+    "assorteddecor:framed_spruce_planks": {
+      "burn_time": 300
+    },
+    "assorteddecor:jungle_beam": {
+      "burn_time": 75
+    },
+    "assorteddecor:jungle_panel": {
+      "burn_time": 37
+    },
+    "assorteddecor:jungle_parquet": {
+      "burn_time": 300
+    },
+    "assorteddecor:jungle_parquet_slab": {
+      "burn_time": 150
+    },
+    "assorteddecor:jungle_parquet_stairs": {
+      "burn_time": 300
+    },
+    "assorteddecor:mangrove_beam": {
+      "burn_time": 75
+    },
+    "assorteddecor:mangrove_panel": {
+      "burn_time": 37
+    },
+    "assorteddecor:mangrove_parquet": {
+      "burn_time": 300
+    },
+    "assorteddecor:mangrove_parquet_slab": {
+      "burn_time": 150
+    },
+    "assorteddecor:mangrove_parquet_stairs": {
+      "burn_time": 300
+    },
+    "assorteddecor:oak_beam": {
+      "burn_time": 75
+    },
+    "assorteddecor:oak_panel": {
+      "burn_time": 37
+    },
+    "assorteddecor:oak_parquet": {
+      "burn_time": 300
+    },
+    "assorteddecor:oak_parquet_slab": {
+      "burn_time": 150
+    },
+    "assorteddecor:oak_parquet_stairs": {
+      "burn_time": 300
+    },
+    "assorteddecor:pale_oak_beam": {
+      "burn_time": 75
+    },
+    "assorteddecor:pale_oak_panel": {
+      "burn_time": 37
+    },
+    "assorteddecor:pale_oak_parquet": {
+      "burn_time": 300
+    },
+    "assorteddecor:pale_oak_parquet_slab": {
+      "burn_time": 150
+    },
+    "assorteddecor:pale_oak_parquet_stairs": {
+      "burn_time": 300
+    },
+    "assorteddecor:spruce_beam": {
+      "burn_time": 75
+    },
+    "assorteddecor:spruce_panel": {
+      "burn_time": 37
+    },
+    "assorteddecor:spruce_parquet": {
+      "burn_time": 300
+    },
+    "assorteddecor:spruce_parquet_slab": {
+      "burn_time": 150
+    },
+    "assorteddecor:spruce_parquet_stairs": {
+      "burn_time": 300
+    }
+  }
+}

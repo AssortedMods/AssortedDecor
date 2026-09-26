@@ -1,0 +1,44 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "building_blocks"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_checkered_stone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "assorteddecor:checkered_stone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "assorteddecor:checkered_stone_slab_from_checkered_stone_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "building_blocks"
+    }
+  ],
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_checkered_stone"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "assorteddecor:checkered_stone_slab_from_checkered_stone_stonecutting"
+    ]
+  }
+}

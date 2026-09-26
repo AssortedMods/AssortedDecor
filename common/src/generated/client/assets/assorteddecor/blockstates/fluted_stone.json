@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "assorteddecor:block/fluted_stone",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "assorteddecor:block/fluted_stone"
+    },
+    "axis=z": {
+      "model": "assorteddecor:block/fluted_stone",
+      "x": 90
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "assorteddecor:block/building/fluted_calcite_top",
+    "side": "assorteddecor:block/building/fluted_calcite"
+  }
+}

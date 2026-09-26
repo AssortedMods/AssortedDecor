@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "assorteddecor:block/dripstone_brick_slab"
+    },
+    "type=double": {
+      "model": "assorteddecor:block/dripstone_bricks"
+    },
+    "type=top": {
+      "model": "assorteddecor:block/dripstone_brick_slab_top"
+    }
+  }
+}

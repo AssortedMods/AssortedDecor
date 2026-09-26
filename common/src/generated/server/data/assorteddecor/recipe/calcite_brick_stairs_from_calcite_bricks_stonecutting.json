@@ -1,0 +1,19 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "building_blocks"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "fabric:load_conditions": [
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "building_blocks"
+    }
+  ],
+  "ingredient": "assorteddecor:calcite_bricks",
+  "result": {
+    "id": "assorteddecor:calcite_brick_stairs"
+  }
+}

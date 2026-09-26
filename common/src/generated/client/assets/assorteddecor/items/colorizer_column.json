@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "assorteddecor:colorizer",
+    "model": "assorteddecor:block/colorizer_column_single",
+    "tints": [
+      {
+        "type": "assorteddecor:colorizer"
+      }
+    ]
+  }
+}

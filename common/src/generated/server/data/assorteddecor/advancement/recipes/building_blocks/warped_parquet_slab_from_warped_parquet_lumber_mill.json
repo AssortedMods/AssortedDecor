@@ -1,0 +1,44 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "building_blocks"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "assorteddecor:warped_parquet_slab_from_warped_parquet_lumber_mill"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_warped_parquet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "assorteddecor:warped_parquet"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "building_blocks"
+    }
+  ],
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_warped_parquet"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "assorteddecor:warped_parquet_slab_from_warped_parquet_lumber_mill"
+    ]
+  }
+}

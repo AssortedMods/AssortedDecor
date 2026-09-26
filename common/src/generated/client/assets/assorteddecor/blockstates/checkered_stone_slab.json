@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "assorteddecor:block/checkered_stone_slab"
+    },
+    "type=double": {
+      "model": "assorteddecor:block/checkered_stone"
+    },
+    "type=top": {
+      "model": "assorteddecor:block/checkered_stone_slab_top"
+    }
+  }
+}

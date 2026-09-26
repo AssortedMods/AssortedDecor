@@ -19,6 +19,9 @@
     ],
     "client": [
       "com.grim3212.assorted.decor.AssortedDecorFabricClient"
+    ],
+    "jei_mod_plugin": [
+      "com.grim3212.assorted.decor.compat.jei.JEIAssortedDecor"
     ]
   },
   "mixins": [

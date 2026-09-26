@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "assorteddecor:block/building/dripstone_tiles",
+    "side": "assorteddecor:block/building/dripstone_tiles",
+    "top": "assorteddecor:block/building/dripstone_tiles"
+  }
+}

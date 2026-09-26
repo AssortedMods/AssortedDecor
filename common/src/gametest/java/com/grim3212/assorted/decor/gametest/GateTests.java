@@ -159,7 +159,8 @@ final class GateTests {
 
         ServerPlayer player = survivalPlayer(helper, new ItemStack(DecorItems.GARAGE_REMOTE.get()));
         stand(helper, player, new BlockPos(4, 0, 1));
-        player.setYRot(0.0F);
+        // A player looks where its head faces, which otherwise keeps whatever it had at login.
+        player.setYHeadRot(0.0F);
         player.getMainHandItem().use(helper.getLevel(), player, InteractionHand.MAIN_HAND);
         assertColumn(helper, door, 4, 7, true);
 

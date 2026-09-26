@@ -5,22 +5,15 @@
       "part": "roadways"
     }
   ],
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:stonecutting",
   "fabric:load_conditions": [
     {
       "condition": "assortedlib:part_enabled",
       "part": "roadways"
     }
   ],
-  "key": {
-    "X": "#c:stones"
-  },
-  "pattern": [
-    "XXX",
-    "XXX"
-  ],
+  "ingredient": "#c:stones",
   "result": {
-    "count": 6,
     "id": "assorteddecor:sidewalk"
   }
 }

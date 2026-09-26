@@ -1,0 +1,11 @@
+{
+  "parent": "assorteddecor:block/colorizer_panel_wall_short_under_ceiling_over_floor_template",
+  "colorizer": {
+    "parent": "assorteddecor:block/colorizer_panel_wall_short_under_ceiling_over_floor_template"
+  },
+  "fabric:type": "assorteddecor:colorizer",
+  "loader": "assorteddecor:colorizer",
+  "textures": {
+    "particle": "assorteddecor:block/colorizer"
+  }
+}

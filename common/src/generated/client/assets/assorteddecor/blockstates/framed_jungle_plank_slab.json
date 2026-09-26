@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "assorteddecor:block/framed_jungle_plank_slab"
+    },
+    "type=double": {
+      "model": "assorteddecor:block/framed_jungle_planks"
+    },
+    "type=top": {
+      "model": "assorteddecor:block/framed_jungle_plank_slab_top"
+    }
+  }
+}

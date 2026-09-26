@@ -13,6 +13,7 @@ import com.grim3212.assorted.decor.client.model.obj.ColorizerObjModel;
 import com.grim3212.assorted.decor.client.render.entity.FrameRenderer;
 import com.grim3212.assorted.decor.client.render.entity.WallpaperRenderer;
 import com.grim3212.assorted.decor.client.screen.CageScreen;
+import com.grim3212.assorted.decor.client.screen.LumberMillScreen;
 import com.grim3212.assorted.decor.common.blocks.ColorChangingBlock;
 import com.grim3212.assorted.decor.common.blocks.DecorBlocks;
 import com.grim3212.assorted.decor.common.blocks.FluroBlock;
@@ -39,6 +40,7 @@ public class DecorClient {
 
     public static void init() {
         ClientServices.CLIENT.registerScreen(DecorContainerTypes.CAGE::get, CageScreen::new);
+        ClientServices.CLIENT.registerScreen(DecorContainerTypes.LUMBER_MILL::get, LumberMillScreen::new);
 
         ClientServices.CLIENT.registerEntityRenderer(DecorEntityTypes.WALLPAPER::get, WallpaperRenderer::new);
         ClientServices.CLIENT.registerEntityRenderer(DecorEntityTypes.WOOD_FRAME::get, FrameRenderer::new);

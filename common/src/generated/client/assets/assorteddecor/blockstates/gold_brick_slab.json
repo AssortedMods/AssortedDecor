@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "assorteddecor:block/gold_brick_slab"
+    },
+    "type=double": {
+      "model": "assorteddecor:block/gold_bricks"
+    },
+    "type=top": {
+      "model": "assorteddecor:block/gold_brick_slab_top"
+    }
+  }
+}

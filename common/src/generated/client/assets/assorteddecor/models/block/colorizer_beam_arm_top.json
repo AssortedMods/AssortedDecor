@@ -1,0 +1,11 @@
+{
+  "parent": "assorteddecor:block/colorizer_beam_arm_top_template",
+  "colorizer": {
+    "parent": "assorteddecor:block/colorizer_beam_arm_top_template"
+  },
+  "fabric:type": "assorteddecor:colorizer",
+  "loader": "assorteddecor:colorizer",
+  "textures": {
+    "particle": "assorteddecor:block/colorizer"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "building_blocks"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "fabric:load_conditions": [
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "building_blocks"
+    }
+  ],
+  "ingredients": [
+    "minecraft:deepslate_bricks",
+    "minecraft:vine"
+  ],
+  "result": {
+    "id": "assorteddecor:mossy_deepslate_bricks"
+  }
+}

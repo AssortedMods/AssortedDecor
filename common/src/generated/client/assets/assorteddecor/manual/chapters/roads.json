@@ -75,7 +75,7 @@
       "interval": 60,
       "recipes": [
         "assorteddecor:paint_roller",
-        "assorteddecor:white_wool_paint_roll",
+        "assorteddecor:white_concrete_powder_paint_roll",
         "assorteddecor:white_concrete_paint_roll"
       ],
       "text": "manual.assorteddecor.chapter.roads.rollers",

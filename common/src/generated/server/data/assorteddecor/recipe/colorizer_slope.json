@@ -16,9 +16,8 @@
     "X": "assorteddecor:colorizer"
   },
   "pattern": [
-    "  X",
-    " XX",
-    "XXX"
+    "X ",
+    "XX"
   ],
   "result": {
     "count": 4,

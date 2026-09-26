@@ -160,6 +160,7 @@ public class DecorClientGameTests implements FabricClientGameTest {
             });
 
             displayCases(context, world);
+            BuildingBlockClientTests.run(context, world);
         }
     }
 

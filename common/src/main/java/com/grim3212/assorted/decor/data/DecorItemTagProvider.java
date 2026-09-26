@@ -2,6 +2,7 @@ package com.grim3212.assorted.decor.data;
 
 import com.grim3212.assorted.decor.api.DecorTags;
 import com.grim3212.assorted.decor.common.blocks.DecorBlocks;
+import com.grim3212.assorted.decor.common.blocks.building.BuildingBlocks;
 import com.grim3212.assorted.decor.common.items.DecorItems;
 import com.grim3212.assorted.lib.data.LibItemTagProvider;
 import com.grim3212.assorted.lib.util.DyeHelper;
@@ -11,6 +12,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.TagAppender;
 import net.minecraft.tags.BlockItemTags;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
@@ -40,6 +42,18 @@ public class DecorItemTagProvider extends LibItemTagProvider {
         tagger.apply(BlockItemTags.TRAPDOORS.item()).add(DecorBlocks.COLORIZER_TRAP_DOOR.get().asItem());
         tagger.apply(BlockItemTags.STAIRS.item()).add(DecorBlocks.COLORIZER_STAIRS.get().asItem());
         tagger.apply(BlockItemTags.SLABS.item()).add(DecorBlocks.COLORIZER_SLAB.get().asItem());
+        BuildingBlocks.cuts().values().forEach(cuts -> {
+            tagger.apply(BlockItemTags.SLABS.item()).add(cuts.slab().get().asItem());
+            tagger.apply(BlockItemTags.STAIRS.item()).add(cuts.stairs().get().asItem());
+            if (cuts.wall() != null) {
+                tagger.apply(BlockItemTags.WALLS.item()).add(cuts.wall().get().asItem());
+            }
+        });
+        // Vanilla's burn times read these, and leave the nether woods out of the furnace.
+        copier.accept(BlockTags.WOODEN_SLABS, ItemTags.WOODEN_SLABS);
+        copier.accept(BlockTags.WOODEN_STAIRS, ItemTags.WOODEN_STAIRS);
+        BuildingBlocks.woods().stream().filter(wood -> !wood.flammable())
+                .forEach(wood -> BuildingBlocks.blocksOf(wood).forEach(block -> tagger.apply(ItemTags.NON_FLAMMABLE_WOOD).add(block.asItem())));
 
         tagger.apply(ItemTags.SIGNS).add(DecorItems.NEON_SIGN.get());
 

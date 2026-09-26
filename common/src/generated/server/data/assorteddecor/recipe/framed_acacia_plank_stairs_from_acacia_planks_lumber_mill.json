@@ -1,0 +1,19 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "building_blocks"
+    }
+  ],
+  "type": "assorteddecor:lumber_mill",
+  "fabric:load_conditions": [
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "building_blocks"
+    }
+  ],
+  "ingredient": "minecraft:acacia_planks",
+  "result": {
+    "id": "assorteddecor:framed_acacia_plank_stairs"
+  }
+}

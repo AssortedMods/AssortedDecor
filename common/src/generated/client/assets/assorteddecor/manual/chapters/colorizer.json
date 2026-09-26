@@ -76,6 +76,18 @@
       ],
       "text": "manual.assorteddecor.chapter.colorizer.doors",
       "title": "manual.assorteddecor.chapter.colorizer.doors.title"
+    },
+    {
+      "type": "assortedlib:recipe",
+      "id": "building",
+      "interval": 50,
+      "recipes": [
+        "assorteddecor:colorizer_panel_stonecutting",
+        "assorteddecor:colorizer_beam_stonecutting",
+        "assorteddecor:colorizer_column_stonecutting"
+      ],
+      "text": "manual.assorteddecor.chapter.colorizer.building",
+      "title": "manual.assorteddecor.chapter.colorizer.building.title"
     }
   ]
 }

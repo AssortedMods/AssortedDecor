@@ -5,6 +5,7 @@ import com.grim3212.assorted.decor.DecorCommonMod;
 import com.grim3212.assorted.decor.common.blocks.ColorChangingBlock;
 import com.grim3212.assorted.decor.common.blocks.DecorBlocks;
 import com.grim3212.assorted.decor.common.blocks.FluroBlock;
+import com.grim3212.assorted.decor.common.blocks.building.BuildingBlocks;
 import com.grim3212.assorted.decor.common.items.DecorItems;
 import com.grim3212.assorted.lib.core.creative.CreativeTabItems;
 import com.grim3212.assorted.lib.registry.IRegistryObject;
@@ -124,6 +125,12 @@ public class DecorCreativeItems {
                 items.add(ColorChangingBlock.getColorStack(new ItemStack(DecorBlocks.SIDING_VERTICAL.get()), x));
                 items.add(ColorChangingBlock.getColorStack(new ItemStack(DecorBlocks.SIDING_HORIZONTAL.get()), x));
             });
+        }
+
+        // Last, as there are hundreds of them and they would bury everything else.
+        if (DecorCommonMod.COMMON_CONFIG.buildingBlocksEnabled.get()) {
+            items.add(DecorBlocks.LUMBER_MILL.get());
+            BuildingBlocks.all().forEach(x -> items.add(x.get()));
         }
 
         return items.getItems();

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "assorteddecor:block/building/herringbone_bricks",
+    "side": "assorteddecor:block/building/herringbone_bricks",
+    "top": "assorteddecor:block/building/herringbone_bricks"
+  }
+}

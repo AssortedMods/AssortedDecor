@@ -1,0 +1,44 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "building_blocks"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_polished_dripstone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "assorteddecor:polished_dripstone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "assorteddecor:carved_dripstone_from_polished_dripstone_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "building_blocks"
+    }
+  ],
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_polished_dripstone"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "assorteddecor:carved_dripstone_from_polished_dripstone_stonecutting"
+    ]
+  }
+}

@@ -64,6 +64,10 @@ public class DecorBlocks {
     public static final IRegistryObject<ColorizerBlock> COLORIZER_FULL_PYRAMID = register("colorizer_full_pyramid", props -> new ColorizerSlopeSideBlock(SlopeType.FULL_PYRAMID, colorizer(props)));
     public static final IRegistryObject<ColorizerBlock> COLORIZER_SLOPED_POST = register("colorizer_sloped_post", props -> new ColorizerSlopeSideBlock(SlopeType.SLOPED_POST, colorizer(props)));
 
+    public static final IRegistryObject<ColorizerPanelBlock> COLORIZER_PANEL = register("colorizer_panel", props -> new ColorizerPanelBlock(colorizer(props)));
+    public static final IRegistryObject<ColorizerBeamBlock> COLORIZER_BEAM = register("colorizer_beam", props -> new ColorizerBeamBlock(colorizer(props)));
+    public static final IRegistryObject<ColorizerColumnBlock> COLORIZER_COLUMN = register("colorizer_column", props -> new ColorizerColumnBlock(colorizer(props)));
+
     public static final IRegistryObject<ColorizerBlock> COLORIZER_CHIMNEY = register("colorizer_chimney", props -> new ColorizerChimneyBlock(colorizer(props).lightLevel(BlockState::getLightEmission)));
     public static final IRegistryObject<ColorizerBlock> COLORIZER_FIREPLACE = register("colorizer_fireplace", props -> new ColorizerFireplaceBlock(colorizer(props)));
     public static final IRegistryObject<ColorizerBlock> COLORIZER_FIRERING = register("colorizer_firering", props -> new ColorizerFireringBlock(colorizer(props)));
@@ -124,6 +128,8 @@ public class DecorBlocks {
      * velocity every tick, settling a walk at {@code s / (1 - 0.546 * s)} times the base speed.
      */
     public static final float SIDEWALK_SPEED_FACTOR = 1.35F;
+
+    public static final IRegistryObject<LumberMillBlock> LUMBER_MILL = register("lumber_mill", props -> new LumberMillBlock(props.mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS).strength(2.5F).sound(SoundType.WOOD).ignitedByLava()));
 
     public static final IRegistryObject<Block> SIDEWALK = register("sidewalk", props -> new Block(props.mapColor(MapColor.COLOR_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(1.0F, 15.0F).requiresCorrectToolForDrops().speedFactor(SIDEWALK_SPEED_FACTOR)));
     public static final IRegistryObject<CageBlock> CAGE = register("cage", props -> new CageBlock(props.mapColor(MapColor.METAL).sound(SoundType.METAL).strength(0.8F, 5.0F).requiresCorrectToolForDrops().noOcclusion().isValidSpawn(DecorBlocks::never).isRedstoneConductor(DecorBlocks::never).isSuffocating(DecorBlocks::never).isViewBlocking(DecorBlocks::never)));
@@ -202,7 +208,7 @@ public class DecorBlocks {
         return props.instrument(NoteBlockInstrument.HAT).sound(SoundType.GLASS).strength(0.2F, 1.0F).lightLevel(state -> 15);
     }
 
-    private static <T extends Block> IRegistryObject<T> register(String name, Function<BlockBehaviour.Properties, ? extends T> factory) {
+    public static <T extends Block> IRegistryObject<T> register(String name, Function<BlockBehaviour.Properties, ? extends T> factory) {
         return register(name, factory, block -> item(name, block));
     }
 
@@ -239,7 +245,8 @@ public class DecorBlocks {
 
     public static List<IRegistryObject<? extends Block>> colorizerBlocks() {
         return Arrays.asList(COLORIZER, COLORIZER_CHAIR, COLORIZER_TABLE, COLORIZER_COUNTER, COLORIZER_STOOL, COLORIZER_FENCE, COLORIZER_FENCE_GATE, COLORIZER_WALL, COLORIZER_TRAP_DOOR, COLORIZER_DOOR, COLORIZER_SLAB, COLORIZER_VERTICAL_SLAB, COLORIZER_STAIRS, COLORIZER_LAMP_POST, COLORIZER_SLOPE, COLORIZER_SLOPED_ANGLE, COLORIZER_SLOPED_INTERSECTION, COLORIZER_SLOPED_POST,
-                COLORIZER_OBLIQUE_SLOPE, COLORIZER_CORNER, COLORIZER_SLANTED_CORNER, COLORIZER_PYRAMID, COLORIZER_FULL_PYRAMID, COLORIZER_FIREPLACE, COLORIZER_CHIMNEY, COLORIZER_FIRERING, COLORIZER_FIREPIT, COLORIZER_FIREPIT_COVERED, COLORIZER_STOVE
+                COLORIZER_OBLIQUE_SLOPE, COLORIZER_CORNER, COLORIZER_SLANTED_CORNER, COLORIZER_PYRAMID, COLORIZER_FULL_PYRAMID, COLORIZER_FIREPLACE, COLORIZER_CHIMNEY, COLORIZER_FIRERING, COLORIZER_FIREPIT, COLORIZER_FIREPIT_COVERED, COLORIZER_STOVE,
+                COLORIZER_PANEL, COLORIZER_BEAM, COLORIZER_COLUMN
         );
     }
 

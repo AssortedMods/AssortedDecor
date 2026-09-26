@@ -1,0 +1,120 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "assorteddecor:block/jungle_beam_top"
+      },
+      "when": {
+        "axis": "z",
+        "half": "top"
+      }
+    },
+    {
+      "apply": {
+        "model": "assorteddecor:block/jungle_beam_top",
+        "y": 90
+      },
+      "when": {
+        "axis": "x",
+        "half": "top"
+      }
+    },
+    {
+      "apply": {
+        "model": "assorteddecor:block/jungle_beam_arm_top"
+      },
+      "when": {
+        "half": "top",
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "assorteddecor:block/jungle_beam_arm_top",
+        "y": 90
+      },
+      "when": {
+        "east": "true",
+        "half": "top"
+      }
+    },
+    {
+      "apply": {
+        "model": "assorteddecor:block/jungle_beam_arm_top",
+        "y": 180
+      },
+      "when": {
+        "half": "top",
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "assorteddecor:block/jungle_beam_arm_top",
+        "y": 270
+      },
+      "when": {
+        "half": "top",
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "assorteddecor:block/jungle_beam_bottom"
+      },
+      "when": {
+        "axis": "z",
+        "half": "bottom"
+      }
+    },
+    {
+      "apply": {
+        "model": "assorteddecor:block/jungle_beam_bottom",
+        "y": 90
+      },
+      "when": {
+        "axis": "x",
+        "half": "bottom"
+      }
+    },
+    {
+      "apply": {
+        "model": "assorteddecor:block/jungle_beam_arm_bottom"
+      },
+      "when": {
+        "half": "bottom",
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "assorteddecor:block/jungle_beam_arm_bottom",
+        "y": 90
+      },
+      "when": {
+        "east": "true",
+        "half": "bottom"
+      }
+    },
+    {
+      "apply": {
+        "model": "assorteddecor:block/jungle_beam_arm_bottom",
+        "y": 180
+      },
+      "when": {
+        "half": "bottom",
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "assorteddecor:block/jungle_beam_arm_bottom",
+        "y": 270
+      },
+      "when": {
+        "half": "bottom",
+        "west": "true"
+      }
+    }
+  ]
+}

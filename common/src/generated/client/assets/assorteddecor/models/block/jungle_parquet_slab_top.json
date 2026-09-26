@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "assorteddecor:block/building/jungle_parquet",
+    "side": "assorteddecor:block/building/jungle_parquet",
+    "top": "assorteddecor:block/building/jungle_parquet"
+  }
+}

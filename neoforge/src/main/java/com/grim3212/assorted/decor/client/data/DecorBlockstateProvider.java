@@ -88,7 +88,7 @@ public class DecorBlockstateProvider extends ModelProvider {
      * The slot every colorizer shape reads its face texture from. {@link TextureSlot} has no
      * {@code equals}, so it has to be created exactly once and shared.
      */
-    private static final TextureSlot STORED = TextureSlot.create("stored");
+    static final TextureSlot STORED = TextureSlot.create("stored");
 
     /** The museum plinth's name plate, drawn a hair in front of its front face. */
     private static final TextureSlot PLACARD = TextureSlot.create("placard");
@@ -100,7 +100,7 @@ public class DecorBlockstateProvider extends ModelProvider {
     private static final Identifier TINTED_CUBE = resource("block/tinted_cube");
 
     /** Every colorizer model draws {@code block/colorizer} as its particle. */
-    private static final Material COLORIZER_PARTICLE = texture("block/colorizer");
+    static final Material COLORIZER_PARTICLE = texture("block/colorizer");
 
     /**
      * The shape {@code colorizer} itself inherits: a full cube whose faces all read {@code #stored}
@@ -475,6 +475,8 @@ public class DecorBlockstateProvider extends ModelProvider {
         calendar(blockModels);
         wallClock(blockModels);
         fountain(blockModels);
+
+        new BuildingBlockModels(blockModels).run();
     }
 
     // ------------------------------------------------------------------ plain blocks
@@ -1249,7 +1251,7 @@ public class DecorBlockstateProvider extends ModelProvider {
      * the blockstate layer, the only one that sees the block entity. A plain variant bakes once,
      * and every colorizer would draw its empty state.
      */
-    private static MultiVariant colorizerVariant(Identifier model) {
+    static MultiVariant colorizerVariant(Identifier model) {
         return SpecificationBlockStateModelBuilder.specificationVariant(model);
     }
 
@@ -1258,16 +1260,16 @@ public class DecorBlockstateProvider extends ModelProvider {
      * stored block where a {@code minecraft:model} would always draw the empty state. The tint
      * colours a stored grass or leaf block.
      */
-    private void colorizerItem(BlockModelGenerators blockModels, Block b, Identifier model) {
+    static void colorizerItem(BlockModelGenerators blockModels, Block b, Identifier model) {
         blockModels.itemModelOutput.accept(b.asItem(),
                 new ColorizerItemModel.Unbaked(model, List.of(new ColorizerItemTintSource())));
     }
 
-    private Identifier colorizerModel(BlockModelGenerators blockModels, String path, Identifier parent, Consumer<ColorizerModelBuilder> extra) {
+    static Identifier colorizerModel(BlockModelGenerators blockModels, String path, Identifier parent, Consumer<ColorizerModelBuilder> extra) {
         return colorizerModel(blockModels, path, parent, extra, Function.identity());
     }
 
-    private Identifier colorizerModel(BlockModelGenerators blockModels, String path, Identifier parent, Consumer<ColorizerModelBuilder> extra,
+    static Identifier colorizerModel(BlockModelGenerators blockModels, String path, Identifier parent, Consumer<ColorizerModelBuilder> extra,
                                       Function<ExtendedModelTemplateBuilder, ExtendedModelTemplateBuilder> perspective) {
         return perspective.apply(colorizerBuilder(parent, extra)).build().create(resource(path), colorizerParticle(), blockModels.modelOutput);
     }

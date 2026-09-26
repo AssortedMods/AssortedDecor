@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "assorteddecor:block/andesite_tile_slab"
+    },
+    "type=double": {
+      "model": "assorteddecor:block/andesite_tiles"
+    },
+    "type=top": {
+      "model": "assorteddecor:block/andesite_tile_slab_top"
+    }
+  }
+}

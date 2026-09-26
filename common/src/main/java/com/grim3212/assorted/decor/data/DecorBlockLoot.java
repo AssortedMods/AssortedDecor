@@ -6,6 +6,8 @@ import com.grim3212.assorted.decor.common.blocks.DecorBlocks;
 import com.grim3212.assorted.decor.common.blocks.FluroBlock;
 import com.grim3212.assorted.decor.common.blocks.GateBlock;
 import com.grim3212.assorted.decor.common.blocks.MuseumDisplayCaseBlock;
+import com.grim3212.assorted.decor.common.blocks.building.BuildingBlocks;
+import com.grim3212.assorted.decor.common.blocks.building.PanelBlock;
 import com.grim3212.assorted.decor.common.blocks.colorizer.ColorizerVerticalSlabBlock;
 import com.grim3212.assorted.lib.data.LibBlockLootProvider;
 import com.grim3212.assorted.lib.registry.IRegistryObject;
@@ -13,6 +15,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.advancements.predicates.StatePropertiesPredicate;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
@@ -54,6 +57,7 @@ public class DecorBlockLoot extends LibBlockLootProvider {
         blocks.add(DecorBlocks.DECORATIVE_STONE.get());
         blocks.add(DecorBlocks.STONE_PATH.get());
         blocks.add(DecorBlocks.CAGE.get());
+        blocks.add(DecorBlocks.LUMBER_MILL.get());
 
         DecorBlocks.ROADWAY_COLORS.forEach((c, r) -> blocks.add(r.get()));
 
@@ -84,6 +88,8 @@ public class DecorBlockLoot extends LibBlockLootProvider {
         blocks.add(DecorBlocks.COLORIZER_FIREPIT_COVERED.get());
         blocks.add(DecorBlocks.COLORIZER_FIRERING.get());
         blocks.add(DecorBlocks.COLORIZER_STOVE.get());
+        blocks.add(DecorBlocks.COLORIZER_BEAM.get());
+        blocks.add(DecorBlocks.COLORIZER_COLUMN.get());
 
         blocks.add(DecorBlocks.NEON_SIGN.get());
 
@@ -93,6 +99,8 @@ public class DecorBlockLoot extends LibBlockLootProvider {
         blocks.add(DecorBlocks.WALL_CLOCK.get());
 
         FluroBlock.FLURO_BY_DYE.entrySet().stream().forEach((x) -> blocks.add(x.getValue().get()));
+
+        BuildingBlocks.all().stream().map(IRegistryObject::get).filter(b -> !(b instanceof SlabBlock) && !(b instanceof PanelBlock)).forEach(blocks::add);
     }
 
     @Override
@@ -108,6 +116,9 @@ public class DecorBlockLoot extends LibBlockLootProvider {
         this.add(DecorBlocks.STEEL_DOOR.get(), createDoorTable(DecorBlocks.STEEL_DOOR.get()));
 
         this.add(DecorBlocks.COLORIZER_SLAB.get(), createSlabItemTable(DecorBlocks.COLORIZER_SLAB.get()));
+        BuildingBlocks.cuts().values().forEach(cuts -> this.add(cuts.slab().get(), createSlabItemTable(cuts.slab().get())));
+        BuildingBlocks.woods().forEach(wood -> this.add(wood.panel().get(), createMultifaceBlockDrops(wood.panel().get())));
+        this.add(DecorBlocks.COLORIZER_PANEL.get(), createMultifaceBlockDrops(DecorBlocks.COLORIZER_PANEL.get()));
         this.add(DecorBlocks.COLORIZER_VERTICAL_SLAB.get(), createVerticalSlabItemTable(DecorBlocks.COLORIZER_VERTICAL_SLAB.get()));
 
         this.add(DecorBlocks.CASTLE_GATE.get(), createGateTable(DecorBlocks.CASTLE_GATE.get()));

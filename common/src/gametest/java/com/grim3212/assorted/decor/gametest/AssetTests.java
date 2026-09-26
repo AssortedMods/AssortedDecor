@@ -20,6 +20,14 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.core.Holder;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.CraftingInput;
+import net.minecraft.world.item.crafting.CraftingRecipe;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.RecipeHolder;
+import net.minecraft.world.item.crafting.ShapedRecipe;
+import java.util.Optional;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -46,6 +54,7 @@ final class AssetTests {
         out.accept("every_recipe_loads_or_is_conditioned_off", AssetTests::everyRecipeLoadsOrIsConditionedOff);
         out.accept("every_item_tag_has_a_name", AssetTests::everyItemTagHasAName);
         out.accept("display_case_blockstates_turn_with_their_facing", AssetTests::displayCaseBlockstatesTurnWithTheirFacing);
+        out.accept("crafting_recipes_answer_for_no_other", AssetTests::craftingRecipesAnswerForNoOther);
     }
 
 
@@ -248,5 +257,72 @@ final class AssetTests {
                 .toList();
         helper.assertTrue(missing.isEmpty(), "item tags with no name in any lang file: " + missing);
         helper.succeed();
+    }
+
+    /**
+     * Each of this mod's crafting recipes, laid out in the grid, is answered by that recipe alone.
+     * Vanilla matches shaped recipes mirrored too, so a mirror image of another recipe counts.
+     */
+    private static void craftingRecipesAnswerForNoOther(GameTestHelper helper) {
+        List<RecipeHolder<CraftingRecipe>> crafting = new ArrayList<>();
+        for (RecipeHolder<?> holder : helper.getLevel().getServer().getRecipeManager().getRecipes()) {
+            if (holder.value() instanceof CraftingRecipe) {
+                crafting.add(castCrafting(holder));
+            }
+        }
+
+        List<String> clashes = new ArrayList<>();
+        int checked = 0;
+        for (RecipeHolder<CraftingRecipe> ours : crafting) {
+            if (!Constants.MOD_ID.equals(ours.id().identifier().getNamespace())) {
+                continue;
+            }
+            Optional<CraftingInput> grid = grid(ours.value());
+            if (grid.isEmpty()) {
+                continue;
+            }
+            checked++;
+            for (RecipeHolder<CraftingRecipe> other : crafting) {
+                if (other != ours && other.value().matches(grid.get(), helper.getLevel())) {
+                    clashes.add(ours.id().identifier() + " is also " + other.id().identifier());
+                }
+            }
+        }
+        helper.assertTrue(checked > 150, "only " + checked + " of this mod's crafting recipes were laid out to check");
+        helper.assertTrue(clashes.isEmpty(), clashes.size() + " recipe clash(es): " + String.join("; ", clashes));
+        helper.succeed();
+    }
+
+    /** The grid a recipe asks for, filled with the first item each ingredient takes. */
+    private static Optional<CraftingInput> grid(CraftingRecipe recipe) {
+        List<ItemStack> items = new ArrayList<>();
+        if (recipe instanceof ShapedRecipe shaped) {
+            for (Optional<Ingredient> ingredient : shaped.getIngredients()) {
+                items.add(ingredient.map(AssetTests::first).orElse(ItemStack.EMPTY));
+            }
+            return Optional.of(CraftingInput.of(shaped.getWidth(), shaped.getHeight(), items));
+        }
+        if (recipe.placementInfo().isImpossibleToPlace()) {
+            return Optional.empty();
+        }
+        recipe.placementInfo().ingredients().forEach(ingredient -> items.add(first(ingredient)));
+        if (items.isEmpty() || items.size() > 9) {
+            return Optional.empty();
+        }
+        int width = Math.min(3, items.size());
+        int height = (items.size() + 2) / 3;
+        while (items.size() < width * height) {
+            items.add(ItemStack.EMPTY);
+        }
+        return Optional.of(CraftingInput.of(width, height, items));
+    }
+
+    private static ItemStack first(Ingredient ingredient) {
+        return ingredient.items().findFirst().map(Holder::value).map(ItemStack::new).orElse(ItemStack.EMPTY);
+    }
+
+    @SuppressWarnings("unchecked")
+    private static RecipeHolder<CraftingRecipe> castCrafting(RecipeHolder<?> holder) {
+        return (RecipeHolder<CraftingRecipe>) holder;
     }
 }
