@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_sandstone_tiles": {
+      "conditions": {
+        "items": [
+          {
+            "items": "assortedbuildingblocks:sandstone_tiles"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "assortedbuildingblocks:sandstone_tile_wall_from_sandstone_tiles_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_sandstone_tiles"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "assortedbuildingblocks:sandstone_tile_wall_from_sandstone_tiles_stonecutting"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "type": "assortedbuildingblocks:lumber_mill",
+  "ingredient": "#minecraft:pale_oak_logs",
+  "result": {
+    "id": "minecraft:pale_oak_fence_gate"
+  }
+}

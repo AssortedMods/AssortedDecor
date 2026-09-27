@@ -1,0 +1,8 @@
+{
+  "type": "assortedbuildingblocks:lumber_mill",
+  "ingredient": "#minecraft:mangrove_logs",
+  "result": {
+    "count": 4,
+    "id": "assortedbuildingblocks:mangrove_parquet_stairs"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "assortedbuildingblocks:lumber_mill",
+  "ingredient": "#minecraft:dark_oak_logs",
+  "result": {
+    "count": 4,
+    "id": "assortedbuildingblocks:dark_oak_parquet"
+  }
+}

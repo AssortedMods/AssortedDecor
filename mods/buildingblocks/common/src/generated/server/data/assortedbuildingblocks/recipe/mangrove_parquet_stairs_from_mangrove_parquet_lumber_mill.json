@@ -1,0 +1,7 @@
+{
+  "type": "assortedbuildingblocks:lumber_mill",
+  "ingredient": "assortedbuildingblocks:mangrove_parquet",
+  "result": {
+    "id": "assortedbuildingblocks:mangrove_parquet_stairs"
+  }
+}

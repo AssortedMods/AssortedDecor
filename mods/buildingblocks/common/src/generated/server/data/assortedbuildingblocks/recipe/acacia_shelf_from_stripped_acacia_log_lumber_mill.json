@@ -1,0 +1,7 @@
+{
+  "type": "assortedbuildingblocks:lumber_mill",
+  "ingredient": "minecraft:stripped_acacia_log",
+  "result": {
+    "id": "minecraft:acacia_shelf"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "assortedbuildingblocks:block/building/mossy_diorite_bricks"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "F": "#c:stones",
+    "G": "#c:glass_blocks"
+  },
+  "pattern": [
+    "GGG",
+    "G G",
+    "GFG"
+  ],
+  "result": {
+    "id": "assorteddisplays:stone_display_case"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "type": "assortedbuildingblocks:lumber_mill",
+  "ingredient": "minecraft:dark_oak_planks",
+  "result": {
+    "id": "assortedbuildingblocks:framed_dark_oak_planks"
+  }
+}

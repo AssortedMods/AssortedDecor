@@ -1,0 +1,8 @@
+{
+  "type": "assortedbuildingblocks:lumber_mill",
+  "ingredient": "#minecraft:pale_oak_logs",
+  "result": {
+    "count": 4,
+    "id": "assortedbuildingblocks:pale_oak_parquet"
+  }
+}

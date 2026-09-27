@@ -1,0 +1,8 @@
+{
+  "type": "assortedbuildingblocks:lumber_mill",
+  "ingredient": "#minecraft:oak_logs",
+  "result": {
+    "count": 8,
+    "id": "minecraft:oak_slab"
+  }
+}

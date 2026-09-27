@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "assortedbuildingblocks:dripstone_bricks",
+  "result": {
+    "id": "assortedbuildingblocks:dripstone_brick_wall"
+  }
+}

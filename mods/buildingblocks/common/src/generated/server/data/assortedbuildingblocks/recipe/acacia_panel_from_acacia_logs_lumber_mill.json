@@ -1,0 +1,8 @@
+{
+  "type": "assortedbuildingblocks:lumber_mill",
+  "ingredient": "#minecraft:acacia_logs",
+  "result": {
+    "count": 32,
+    "id": "assortedbuildingblocks:acacia_panel"
+  }
+}

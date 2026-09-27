@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "assortedbuildingblocks:warped_parquet_slab_from_warped_parquet_lumber_mill"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_warped_parquet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "assortedbuildingblocks:warped_parquet"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_warped_parquet"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "assortedbuildingblocks:warped_parquet_slab_from_warped_parquet_lumber_mill"
+    ]
+  }
+}

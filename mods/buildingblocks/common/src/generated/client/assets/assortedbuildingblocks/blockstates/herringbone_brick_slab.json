@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "assortedbuildingblocks:block/herringbone_brick_slab"
+    },
+    "type=double": {
+      "model": "assortedbuildingblocks:block/herringbone_bricks"
+    },
+    "type=top": {
+      "model": "assortedbuildingblocks:block/herringbone_brick_slab_top"
+    }
+  }
+}

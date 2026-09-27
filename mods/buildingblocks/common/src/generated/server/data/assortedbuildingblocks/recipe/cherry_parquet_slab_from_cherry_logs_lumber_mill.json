@@ -1,0 +1,8 @@
+{
+  "type": "assortedbuildingblocks:lumber_mill",
+  "ingredient": "#minecraft:cherry_logs",
+  "result": {
+    "count": 8,
+    "id": "assortedbuildingblocks:cherry_parquet_slab"
+  }
+}

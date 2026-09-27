@@ -1,0 +1,16 @@
+{
+  "values": {
+    "assorteddisplays:copper_display_case": {
+      "waxed": "assorteddisplays:waxed_copper_display_case"
+    },
+    "assorteddisplays:exposed_copper_display_case": {
+      "waxed": "assorteddisplays:waxed_exposed_copper_display_case"
+    },
+    "assorteddisplays:oxidized_copper_display_case": {
+      "waxed": "assorteddisplays:waxed_oxidized_copper_display_case"
+    },
+    "assorteddisplays:weathered_copper_display_case": {
+      "waxed": "assorteddisplays:waxed_weathered_copper_display_case"
+    }
+  }
+}

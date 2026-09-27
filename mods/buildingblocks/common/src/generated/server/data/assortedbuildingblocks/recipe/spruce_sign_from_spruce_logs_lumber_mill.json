@@ -1,0 +1,7 @@
+{
+  "type": "assortedbuildingblocks:lumber_mill",
+  "ingredient": "#minecraft:spruce_logs",
+  "result": {
+    "id": "minecraft:spruce_sign"
+  }
+}

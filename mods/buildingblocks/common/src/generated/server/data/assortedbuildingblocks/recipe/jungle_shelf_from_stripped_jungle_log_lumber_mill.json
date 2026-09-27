@@ -1,0 +1,7 @@
+{
+  "type": "assortedbuildingblocks:lumber_mill",
+  "ingredient": "minecraft:stripped_jungle_log",
+  "result": {
+    "id": "minecraft:jungle_shelf"
+  }
+}

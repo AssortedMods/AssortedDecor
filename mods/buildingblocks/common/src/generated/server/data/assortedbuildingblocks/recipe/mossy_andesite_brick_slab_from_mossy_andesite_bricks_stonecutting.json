@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "assortedbuildingblocks:mossy_andesite_bricks",
+  "result": {
+    "count": 2,
+    "id": "assortedbuildingblocks:mossy_andesite_brick_slab"
+  }
+}

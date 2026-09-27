@@ -1,0 +1,7 @@
+{
+  "type": "assortedbuildingblocks:lumber_mill",
+  "ingredient": "assortedbuildingblocks:bamboo_parquet",
+  "result": {
+    "id": "assortedbuildingblocks:bamboo_parquet_stairs"
+  }
+}

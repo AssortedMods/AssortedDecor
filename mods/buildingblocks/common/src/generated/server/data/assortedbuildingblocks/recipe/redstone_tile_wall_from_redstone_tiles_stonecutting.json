@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "assortedbuildingblocks:redstone_tiles",
+  "result": {
+    "id": "assortedbuildingblocks:redstone_tile_wall"
+  }
+}

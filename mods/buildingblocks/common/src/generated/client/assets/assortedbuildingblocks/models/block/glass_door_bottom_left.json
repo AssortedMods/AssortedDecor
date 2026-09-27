@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_left",
+  "textures": {
+    "bottom": "assortedbuildingblocks:block/glass_door_bottom",
+    "top": "assortedbuildingblocks:block/glass_door_top"
+  }
+}

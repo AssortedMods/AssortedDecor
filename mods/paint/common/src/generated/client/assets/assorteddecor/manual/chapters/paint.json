@@ -1,0 +1,74 @@
+{
+  "pages": [
+    {
+      "type": "assortedlib:recipe",
+      "id": "rollers",
+      "interval": 60,
+      "recipes": [
+        "assortedpaint:paint_roller",
+        "assortedpaint:white_concrete_powder_paint_roll",
+        "assortedpaint:white_concrete_paint_roll"
+      ],
+      "text": "manual.assorteddecor.chapter.paint.rollers",
+      "title": "manual.assorteddecor.chapter.paint.rollers.title"
+    },
+    {
+      "type": "assortedlib:recipe",
+      "conditions": [
+        {
+          "type": "assortedlib:mod_loaded",
+          "mod": "assortedroads"
+        }
+      ],
+      "id": "roadways",
+      "interval": 60,
+      "recipes": [
+        "assortedpaint:roadway_red",
+        "assortedpaint:roadway_white",
+        "assortedpaint:roadway_yellow"
+      ],
+      "text": "manual.assorteddecor.chapter.paint.roadways",
+      "title": "manual.assorteddecor.chapter.paint.roadways.title"
+    },
+    {
+      "type": "assortedlib:recipe",
+      "conditions": [
+        {
+          "type": "assortedlib:mod_loaded",
+          "mod": "assortedlights"
+        }
+      ],
+      "id": "fluro",
+      "interval": 60,
+      "recipes": [
+        "assortedpaint:fluro_red_paint_roll",
+        "assortedpaint:fluro_blue_paint_roll",
+        "assortedpaint:fluro_green_paint_roll"
+      ],
+      "text": "manual.assorteddecor.chapter.paint.fluro",
+      "title": "manual.assorteddecor.chapter.paint.fluro.title"
+    },
+    {
+      "type": "assortedlib:recipe",
+      "conditions": [
+        {
+          "type": "assortedlib:mod_loaded",
+          "mod": "assortedbuildingblocks"
+        },
+        {
+          "type": "assortedlib:mod_loaded",
+          "mod": "assortedroads"
+        }
+      ],
+      "id": "siding",
+      "interval": 60,
+      "recipes": [
+        "assortedpaint:siding_horizontal_white",
+        "assortedpaint:siding_vertical_white"
+      ],
+      "text": "manual.assorteddecor.chapter.paint.siding",
+      "title": "manual.assorteddecor.chapter.paint.siding.title"
+    }
+  ],
+  "sort_order": 11
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": "assortedroads:asphalt",
+    "X": "#c:stones"
+  },
+  "pattern": [
+    "A",
+    "X"
+  ],
+  "result": {
+    "id": "assortedroads:roadway"
+  }
+}

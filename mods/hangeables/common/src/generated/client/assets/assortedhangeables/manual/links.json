@@ -1,0 +1,36 @@
+{
+  "links": [
+    {
+      "items": [
+        "assortedhangeables:wallpaper"
+      ],
+      "page": "assorteddecor:hanging/wallpaper"
+    },
+    {
+      "items": [
+        "assortedhangeables:wood_frame",
+        "assortedhangeables:iron_frame"
+      ],
+      "page": "assorteddecor:hanging/frames"
+    },
+    {
+      "blocks": [
+        "assortedhangeables:calendar"
+      ],
+      "page": "assorteddecor:hanging/calendar"
+    },
+    {
+      "blocks": [
+        "assortedhangeables:wall_clock"
+      ],
+      "page": "assorteddecor:hanging/clock"
+    },
+    {
+      "blocks": [
+        "assortedhangeables:neon_sign",
+        "assortedhangeables:neon_sign_wall"
+      ],
+      "page": "assorteddecor:hanging/neon_sign"
+    }
+  ]
+}

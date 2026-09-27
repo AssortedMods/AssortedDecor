@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "assortedpaint:paint_roller_cyan",
+    "#c:concretes"
+  ],
+  "result": {
+    "id": "minecraft:cyan_concrete"
+  }
+}

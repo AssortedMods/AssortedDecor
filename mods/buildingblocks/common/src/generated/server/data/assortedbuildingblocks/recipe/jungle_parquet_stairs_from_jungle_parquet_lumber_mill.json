@@ -1,0 +1,7 @@
+{
+  "type": "assortedbuildingblocks:lumber_mill",
+  "ingredient": "assortedbuildingblocks:jungle_parquet",
+  "result": {
+    "id": "assortedbuildingblocks:jungle_parquet_stairs"
+  }
+}

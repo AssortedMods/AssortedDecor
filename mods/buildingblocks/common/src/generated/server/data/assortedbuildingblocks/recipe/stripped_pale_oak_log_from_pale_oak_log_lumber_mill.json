@@ -1,0 +1,7 @@
+{
+  "type": "assortedbuildingblocks:lumber_mill",
+  "ingredient": "minecraft:pale_oak_log",
+  "result": {
+    "id": "minecraft:stripped_pale_oak_log"
+  }
+}

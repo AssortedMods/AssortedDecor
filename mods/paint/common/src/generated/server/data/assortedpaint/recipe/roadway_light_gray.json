@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "assortedroads"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "assortedroads"
+      ]
+    }
+  ],
+  "ingredients": [
+    "assortedroads:roadway",
+    "assortedpaint:paint_roller_light_gray"
+  ],
+  "result": {
+    "id": "assortedroads:roadway_light_gray"
+  }
+}

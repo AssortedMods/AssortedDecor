@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": "assortedcolorizer:colorizer"
+  },
+  "pattern": [
+    "  X",
+    "XXX"
+  ],
+  "result": {
+    "count": 4,
+    "id": "assortedcolorizer:colorizer_oblique_slope"
+  }
+}

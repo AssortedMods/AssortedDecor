@@ -1,0 +1,11 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "assortedbuildingblocks:block/meat_block"
+    },
+    "axis=z": {
+      "model": "assortedbuildingblocks:block/meat_block",
+      "y": 90
+    }
+  }
+}

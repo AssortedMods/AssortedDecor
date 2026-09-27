@@ -1,0 +1,8 @@
+{
+  "type": "assortedbuildingblocks:lumber_mill",
+  "ingredient": "#minecraft:cherry_logs",
+  "result": {
+    "count": 16,
+    "id": "assortedbuildingblocks:cherry_beam"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "C": "#assortedlights:lantern_source",
+    "P": "minecraft:paper"
+  },
+  "pattern": [
+    " P ",
+    "PCP"
+  ],
+  "result": {
+    "id": "assortedlights:paper_lantern"
+  }
+}

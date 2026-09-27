@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "assortedbuildingblocks:mossy_calcite_bricks",
+  "result": {
+    "id": "assortedbuildingblocks:mossy_calcite_brick_wall"
+  }
+}

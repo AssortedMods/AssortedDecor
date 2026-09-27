@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "assortedbuildingblocks:granite_bricks",
+    "minecraft:vine"
+  ],
+  "result": {
+    "id": "assortedbuildingblocks:mossy_granite_bricks"
+  }
+}

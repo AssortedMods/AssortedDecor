@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "#c:stones",
+  "result": {
+    "id": "assortedroads:sidewalk"
+  }
+}

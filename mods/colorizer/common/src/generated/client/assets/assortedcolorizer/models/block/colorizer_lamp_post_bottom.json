@@ -1,0 +1,11 @@
+{
+  "parent": "assortedcolorizer:block/lamp_post_bottom",
+  "colorizer": {
+    "parent": "assortedcolorizer:block/lamp_post_bottom"
+  },
+  "fabric:type": "assortedcolorizer:colorizer",
+  "loader": "assortedcolorizer:colorizer",
+  "textures": {
+    "particle": "assortedcolorizer:block/colorizer"
+  }
+}

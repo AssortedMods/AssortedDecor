@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "assortedbuildingblocks:block/building/cherry_parquet",
+    "side": "assortedbuildingblocks:block/building/cherry_parquet",
+    "top": "assortedbuildingblocks:block/building/cherry_parquet"
+  }
+}

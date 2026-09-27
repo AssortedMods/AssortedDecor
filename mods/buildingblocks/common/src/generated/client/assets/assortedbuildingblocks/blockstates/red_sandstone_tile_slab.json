@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "assortedbuildingblocks:block/red_sandstone_tile_slab"
+    },
+    "type=double": {
+      "model": "assortedbuildingblocks:block/red_sandstone_tiles"
+    },
+    "type=top": {
+      "model": "assortedbuildingblocks:block/red_sandstone_tile_slab_top"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "assortedbuildingblocks:block/warped_parquet_slab"
+    },
+    "type=double": {
+      "model": "assortedbuildingblocks:block/warped_parquet"
+    },
+    "type=top": {
+      "model": "assortedbuildingblocks:block/warped_parquet_slab_top"
+    }
+  }
+}

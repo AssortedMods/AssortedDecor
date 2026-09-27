@@ -1,0 +1,11 @@
+{
+  "parent": "assortedcolorizer:block/fence_gate_wall",
+  "colorizer": {
+    "parent": "assortedcolorizer:block/fence_gate_wall"
+  },
+  "fabric:type": "assortedcolorizer:colorizer",
+  "loader": "assortedcolorizer:colorizer",
+  "textures": {
+    "particle": "assortedcolorizer:block/colorizer"
+  }
+}

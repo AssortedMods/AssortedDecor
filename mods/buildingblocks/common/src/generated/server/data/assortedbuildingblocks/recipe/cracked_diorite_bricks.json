@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "experience": 0.1,
+  "ingredient": "assortedbuildingblocks:diorite_bricks",
+  "result": {
+    "id": "assortedbuildingblocks:cracked_diorite_bricks"
+  }
+}

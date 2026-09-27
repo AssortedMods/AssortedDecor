@@ -1,0 +1,8 @@
+{
+  "type": "assortedbuildingblocks:lumber_mill",
+  "ingredient": "minecraft:pale_oak_planks",
+  "result": {
+    "count": 8,
+    "id": "assortedbuildingblocks:pale_oak_panel"
+  }
+}

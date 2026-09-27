@@ -1,0 +1,8 @@
+{
+  "type": "assortedbuildingblocks:lumber_mill",
+  "ingredient": "minecraft:jungle_planks",
+  "result": {
+    "count": 8,
+    "id": "assortedbuildingblocks:jungle_panel"
+  }
+}

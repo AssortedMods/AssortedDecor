@@ -1,0 +1,7 @@
+{
+  "type": "assortedbuildingblocks:lumber_mill",
+  "ingredient": "minecraft:warped_planks",
+  "result": {
+    "id": "assortedbuildingblocks:warped_parquet_stairs"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "assortedbuildingblocks:block/siding_vertical",
+    "tints": [
+      {
+        "type": "assortedbuildingblocks:siding"
+      }
+    ]
+  }
+}

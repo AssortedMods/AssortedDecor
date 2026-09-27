@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "F": "#c:ingots/iron",
+    "G": "#c:glass_blocks"
+  },
+  "pattern": [
+    "GGG",
+    "G G",
+    "GFG"
+  ],
+  "result": {
+    "id": "assorteddisplays:iron_display_case"
+  }
+}

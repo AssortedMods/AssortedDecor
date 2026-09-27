@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "#assortedroads:roadways/color",
+    {
+      "neoforge:ingredient_type": "assortedlib:stored_fluid_ingredient",
+      "fabric:type": "assortedlib:stored_fluid_ingredient",
+      "fluid": "minecraft:water"
+    }
+  ],
+  "result": {
+    "id": "assortedroads:roadway"
+  }
+}

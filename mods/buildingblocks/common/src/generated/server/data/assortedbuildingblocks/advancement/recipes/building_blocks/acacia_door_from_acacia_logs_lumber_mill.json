@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_acacia_logs": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#minecraft:acacia_logs"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "assortedbuildingblocks:acacia_door_from_acacia_logs_lumber_mill"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_acacia_logs"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "assortedbuildingblocks:acacia_door_from_acacia_logs_lumber_mill"
+    ]
+  }
+}

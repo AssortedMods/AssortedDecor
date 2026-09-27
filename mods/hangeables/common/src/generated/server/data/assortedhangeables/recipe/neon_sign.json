@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "C": "#c:dusts/redstone",
+    "G": "#minecraft:planks",
+    "X": "#c:obsidians"
+  },
+  "pattern": [
+    "XXX",
+    "XCX",
+    " G "
+  ],
+  "result": {
+    "count": 3,
+    "id": "assortedhangeables:neon_sign"
+  }
+}

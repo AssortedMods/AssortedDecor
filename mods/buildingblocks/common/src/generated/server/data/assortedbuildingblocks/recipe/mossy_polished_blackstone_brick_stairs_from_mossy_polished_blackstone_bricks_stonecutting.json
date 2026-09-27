@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "assortedbuildingblocks:mossy_polished_blackstone_bricks",
+  "result": {
+    "id": "assortedbuildingblocks:mossy_polished_blackstone_brick_stairs"
+  }
+}

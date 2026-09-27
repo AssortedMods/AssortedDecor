@@ -137,7 +137,8 @@ public class PlanterPotBlock extends Block implements IPlantSustainable {
 
     private boolean isStool(BlockGetter worldIn, BlockPos pos) {
         BlockState stoolState = worldIn.getBlockState(pos.below());
-        if (stoolState.is(DecorationsTags.Blocks.PLANTER_POT_STOOLS) && stoolState.hasProperty(BlockStateProperties.ATTACH_FACE)) {
+        // Property first: the shape cache asks during registration, before tags are bound.
+        if (stoolState.hasProperty(BlockStateProperties.ATTACH_FACE) && stoolState.is(DecorationsTags.Blocks.PLANTER_POT_STOOLS)) {
             return stoolState.getValue(BlockStateProperties.ATTACH_FACE) == AttachFace.FLOOR;
         }
 

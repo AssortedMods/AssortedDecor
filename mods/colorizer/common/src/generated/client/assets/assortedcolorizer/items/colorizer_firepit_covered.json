@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "assortedcolorizer:colorizer",
+    "model": "assortedcolorizer:block/colorizer_firepit_covered",
+    "tints": [
+      {
+        "type": "assortedcolorizer:colorizer"
+      }
+    ]
+  }
+}

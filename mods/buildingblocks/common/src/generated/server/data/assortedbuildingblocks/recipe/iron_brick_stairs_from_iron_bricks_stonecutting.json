@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "assortedbuildingblocks:iron_bricks",
+  "result": {
+    "id": "assortedbuildingblocks:iron_brick_stairs"
+  }
+}

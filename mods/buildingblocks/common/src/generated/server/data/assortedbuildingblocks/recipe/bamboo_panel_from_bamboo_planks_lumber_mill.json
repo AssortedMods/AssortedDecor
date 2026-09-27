@@ -1,0 +1,8 @@
+{
+  "type": "assortedbuildingblocks:lumber_mill",
+  "ingredient": "minecraft:bamboo_planks",
+  "result": {
+    "count": 8,
+    "id": "assortedbuildingblocks:bamboo_panel"
+  }
+}

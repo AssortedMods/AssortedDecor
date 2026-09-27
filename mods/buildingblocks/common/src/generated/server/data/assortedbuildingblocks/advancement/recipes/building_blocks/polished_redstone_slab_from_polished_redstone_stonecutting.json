@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_polished_redstone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "assortedbuildingblocks:polished_redstone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "assortedbuildingblocks:polished_redstone_slab_from_polished_redstone_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_polished_redstone"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "assortedbuildingblocks:polished_redstone_slab_from_polished_redstone_stonecutting"
+    ]
+  }
+}

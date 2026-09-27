@@ -1,0 +1,7 @@
+{
+  "type": "assortedbuildingblocks:lumber_mill",
+  "ingredient": "minecraft:cherry_planks",
+  "result": {
+    "id": "minecraft:cherry_stairs"
+  }
+}

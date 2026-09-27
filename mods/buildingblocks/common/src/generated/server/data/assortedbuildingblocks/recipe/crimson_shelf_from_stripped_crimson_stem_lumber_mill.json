@@ -1,0 +1,7 @@
+{
+  "type": "assortedbuildingblocks:lumber_mill",
+  "ingredient": "minecraft:stripped_crimson_stem",
+  "result": {
+    "id": "minecraft:crimson_shelf"
+  }
+}

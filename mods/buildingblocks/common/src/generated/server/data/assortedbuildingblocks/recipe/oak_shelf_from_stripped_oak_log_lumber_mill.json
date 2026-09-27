@@ -1,0 +1,7 @@
+{
+  "type": "assortedbuildingblocks:lumber_mill",
+  "ingredient": "minecraft:stripped_oak_log",
+  "result": {
+    "id": "minecraft:oak_shelf"
+  }
+}

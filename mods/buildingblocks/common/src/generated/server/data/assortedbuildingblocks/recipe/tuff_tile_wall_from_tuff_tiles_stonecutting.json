@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "assortedbuildingblocks:tuff_tiles",
+  "result": {
+    "id": "assortedbuildingblocks:tuff_tile_wall"
+  }
+}

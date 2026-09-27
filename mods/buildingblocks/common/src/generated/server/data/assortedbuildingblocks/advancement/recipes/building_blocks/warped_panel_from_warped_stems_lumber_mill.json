@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "assortedbuildingblocks:warped_panel_from_warped_stems_lumber_mill"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_warped_stems": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#minecraft:warped_stems"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_warped_stems"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "assortedbuildingblocks:warped_panel_from_warped_stems_lumber_mill"
+    ]
+  }
+}

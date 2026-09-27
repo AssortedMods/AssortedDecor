@@ -1,0 +1,7 @@
+{
+  "type": "assortedbuildingblocks:lumber_mill",
+  "ingredient": "minecraft:oak_planks",
+  "result": {
+    "id": "minecraft:oak_button"
+  }
+}

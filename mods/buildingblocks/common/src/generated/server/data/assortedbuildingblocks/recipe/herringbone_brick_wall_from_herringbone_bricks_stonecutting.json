@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "assortedbuildingblocks:herringbone_bricks",
+  "result": {
+    "id": "assortedbuildingblocks:herringbone_brick_wall"
+  }
+}

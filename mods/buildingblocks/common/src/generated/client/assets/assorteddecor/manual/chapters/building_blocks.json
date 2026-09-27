@@ -1,0 +1,180 @@
+{
+  "pages": [
+    {
+      "type": "assortedlib:recipe",
+      "id": "lumber_mill",
+      "recipes": [
+        "assortedbuildingblocks:lumber_mill"
+      ],
+      "text": "manual.assorteddecor.chapter.building_blocks.lumber_mill",
+      "title": "manual.assorteddecor.chapter.building_blocks.lumber_mill.title"
+    },
+    {
+      "type": "assortedlib:recipe",
+      "id": "cut_shapes",
+      "interval": 50,
+      "recipes": [
+        "assortedbuildingblocks:lapis_brick_slab_from_lapis_bricks_stonecutting",
+        "assortedbuildingblocks:lapis_brick_stairs_from_lapis_bricks_stonecutting",
+        "assortedbuildingblocks:lapis_brick_wall_from_lapis_bricks_stonecutting",
+        "assortedbuildingblocks:oak_parquet_stairs_from_oak_parquet_lumber_mill"
+      ],
+      "text": "manual.assorteddecor.chapter.building_blocks.cut_shapes",
+      "title": "manual.assorteddecor.chapter.building_blocks.cut_shapes.title"
+    },
+    {
+      "type": "assortedlib:recipe",
+      "id": "glowstone_bricks",
+      "recipes": [
+        "assortedbuildingblocks:glowstone_bricks_from_glowstone_stonecutting"
+      ],
+      "text": "manual.assorteddecor.chapter.building_blocks.glowstone_bricks",
+      "title": "manual.assorteddecor.chapter.building_blocks.glowstone_bricks.title"
+    },
+    {
+      "type": "assortedlib:recipe",
+      "id": "gem_bricks",
+      "interval": 50,
+      "recipes": [
+        "assortedbuildingblocks:polished_obsidian_from_obsidian_stonecutting",
+        "assortedbuildingblocks:lapis_bricks_from_lapis_block_stonecutting",
+        "assortedbuildingblocks:lapis_tiles_from_lapis_block_stonecutting",
+        "assortedbuildingblocks:polished_lapis_from_lapis_block_stonecutting",
+        "assortedbuildingblocks:redstone_bricks_from_redstone_block_stonecutting",
+        "assortedbuildingblocks:redstone_tiles_from_redstone_block_stonecutting",
+        "assortedbuildingblocks:polished_redstone_from_redstone_block_stonecutting"
+      ],
+      "text": "manual.assorteddecor.chapter.building_blocks.gem_bricks",
+      "title": "manual.assorteddecor.chapter.building_blocks.gem_bricks.title"
+    },
+    {
+      "type": "assortedlib:recipe",
+      "id": "metal_bricks",
+      "recipes": [
+        "assortedbuildingblocks:iron_bricks_from_iron_block_stonecutting",
+        "assortedbuildingblocks:gold_bricks_from_gold_block_stonecutting",
+        "assortedbuildingblocks:diamond_bricks_from_diamond_block_stonecutting"
+      ],
+      "text": "manual.assorteddecor.chapter.building_blocks.metal_bricks",
+      "title": "manual.assorteddecor.chapter.building_blocks.metal_bricks.title"
+    },
+    {
+      "type": "assortedlib:recipe",
+      "id": "bricks",
+      "recipes": [
+        "assortedbuildingblocks:basketweave_bricks_from_bricks_stonecutting",
+        "assortedbuildingblocks:herringbone_bricks_from_bricks_stonecutting"
+      ],
+      "text": "manual.assorteddecor.chapter.building_blocks.bricks",
+      "title": "manual.assorteddecor.chapter.building_blocks.bricks.title"
+    },
+    {
+      "type": "assortedlib:recipe",
+      "id": "cobblestone",
+      "recipes": [
+        "assortedbuildingblocks:reinforced_cobblestone",
+        "assortedbuildingblocks:framed_cobblestone",
+        "assortedbuildingblocks:checkered_stone"
+      ],
+      "text": "manual.assorteddecor.chapter.building_blocks.cobblestone",
+      "title": "manual.assorteddecor.chapter.building_blocks.cobblestone.title"
+    },
+    {
+      "type": "assortedlib:recipe",
+      "id": "stone_patterns",
+      "interval": 50,
+      "recipes": [
+        "assortedbuildingblocks:granite_bricks_from_granite_stonecutting",
+        "assortedbuildingblocks:granite_tiles_from_granite_stonecutting",
+        "assortedbuildingblocks:carved_granite_from_granite_stonecutting"
+      ],
+      "text": "manual.assorteddecor.chapter.building_blocks.stone_patterns",
+      "title": "manual.assorteddecor.chapter.building_blocks.stone_patterns.title"
+    },
+    {
+      "type": "assortedlib:recipe",
+      "id": "weathering",
+      "recipes": [
+        "assortedbuildingblocks:mossy_granite_bricks_from_vine",
+        "assortedbuildingblocks:mossy_granite_bricks_from_moss_block",
+        "assortedbuildingblocks:cracked_granite_bricks"
+      ],
+      "text": "manual.assorteddecor.chapter.building_blocks.weathering",
+      "title": "manual.assorteddecor.chapter.building_blocks.weathering.title"
+    },
+    {
+      "type": "assortedlib:recipe",
+      "id": "columns",
+      "interval": 50,
+      "recipes": [
+        "assortedbuildingblocks:fluted_stone_from_stone_stonecutting",
+        "assortedbuildingblocks:stone_column_from_stone_stonecutting",
+        "assortedbuildingblocks:deepslate_column_from_cobbled_deepslate_stonecutting"
+      ],
+      "text": "manual.assorteddecor.chapter.building_blocks.columns",
+      "title": "manual.assorteddecor.chapter.building_blocks.columns.title"
+    },
+    {
+      "type": "assortedlib:recipe",
+      "id": "timber",
+      "interval": 50,
+      "recipes": [
+        "assortedbuildingblocks:oak_parquet_from_oak_planks_lumber_mill",
+        "assortedbuildingblocks:framed_oak_planks_from_oak_planks_lumber_mill"
+      ],
+      "text": "manual.assorteddecor.chapter.building_blocks.timber",
+      "title": "manual.assorteddecor.chapter.building_blocks.timber.title"
+    },
+    {
+      "type": "assortedlib:recipe",
+      "id": "panels",
+      "interval": 50,
+      "recipes": [
+        "assortedbuildingblocks:oak_panel_from_oak_planks_lumber_mill",
+        "assortedbuildingblocks:cherry_panel_from_cherry_planks_lumber_mill"
+      ],
+      "text": "manual.assorteddecor.chapter.building_blocks.panels",
+      "title": "manual.assorteddecor.chapter.building_blocks.panels.title"
+    },
+    {
+      "type": "assortedlib:recipe",
+      "id": "beams",
+      "interval": 50,
+      "recipes": [
+        "assortedbuildingblocks:oak_beam_from_oak_planks_lumber_mill",
+        "assortedbuildingblocks:iron_beam_from_iron_ingot_stonecutting"
+      ],
+      "text": "manual.assorteddecor.chapter.building_blocks.beams",
+      "title": "manual.assorteddecor.chapter.building_blocks.beams.title"
+    },
+    {
+      "type": "assortedlib:recipe",
+      "id": "meat_block",
+      "recipes": [
+        "assortedbuildingblocks:meat_block"
+      ],
+      "text": "manual.assorteddecor.chapter.building_blocks.meat_block",
+      "title": "manual.assorteddecor.chapter.building_blocks.meat_block.title"
+    },
+    {
+      "type": "assortedlib:recipe",
+      "id": "decorative_stone",
+      "recipes": [
+        "assortedbuildingblocks:decorative_path_stonecutting"
+      ],
+      "text": "manual.assorteddecor.chapter.building_blocks.decorative_stone",
+      "title": "manual.assorteddecor.chapter.building_blocks.decorative_stone.title"
+    },
+    {
+      "type": "assortedlib:item",
+      "id": "siding",
+      "interval": 60,
+      "items": [
+        "assortedbuildingblocks:siding_horizontal",
+        "assortedbuildingblocks:siding_vertical"
+      ],
+      "text": "manual.assorteddecor.chapter.building_blocks.siding",
+      "title": "manual.assorteddecor.chapter.building_blocks.siding.title"
+    }
+  ]
+}

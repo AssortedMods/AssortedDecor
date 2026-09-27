@@ -1,0 +1,15 @@
+{
+  "parent": "assortedcolorizer:block/stove",
+  "colorizer": {
+    "parent": "assortedcolorizer:block/stove",
+    "textures": {
+      "net": "assortedcolorizer:block/net",
+      "wood": "minecraft:block/oak_planks"
+    }
+  },
+  "fabric:type": "assortedcolorizer:colorizer",
+  "loader": "assortedcolorizer:colorizer",
+  "textures": {
+    "particle": "assortedcolorizer:block/colorizer"
+  }
+}

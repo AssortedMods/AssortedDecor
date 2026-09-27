@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": "assortedcolorizer:colorizer"
+  },
+  "pattern": [
+    "  X",
+    "  X",
+    "XXX"
+  ],
+  "result": {
+    "count": 4,
+    "id": "assortedcolorizer:colorizer_slanted_corner"
+  }
+}

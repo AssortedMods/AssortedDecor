@@ -1,0 +1,11 @@
+{
+  "parent": "assortedcolorizer:block/slab_top",
+  "colorizer": {
+    "parent": "assortedcolorizer:block/slab_top"
+  },
+  "fabric:type": "assortedcolorizer:colorizer",
+  "loader": "assortedcolorizer:colorizer",
+  "textures": {
+    "particle": "assortedcolorizer:block/colorizer"
+  }
+}

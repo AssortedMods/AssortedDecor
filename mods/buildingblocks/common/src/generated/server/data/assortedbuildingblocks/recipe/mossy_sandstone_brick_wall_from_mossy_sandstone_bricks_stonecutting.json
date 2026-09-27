@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "assortedbuildingblocks:mossy_sandstone_bricks",
+  "result": {
+    "id": "assortedbuildingblocks:mossy_sandstone_brick_wall"
+  }
+}

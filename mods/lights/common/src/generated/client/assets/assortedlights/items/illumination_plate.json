@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "assortedlights:block/illumination_plate_wall"
+  }
+}

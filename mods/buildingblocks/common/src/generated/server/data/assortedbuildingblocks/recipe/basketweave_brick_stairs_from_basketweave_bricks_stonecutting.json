@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "assortedbuildingblocks:basketweave_bricks",
+  "result": {
+    "id": "assortedbuildingblocks:basketweave_brick_stairs"
+  }
+}

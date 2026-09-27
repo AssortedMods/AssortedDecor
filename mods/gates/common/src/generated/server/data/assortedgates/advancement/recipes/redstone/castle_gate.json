@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_gate_grating": {
+      "conditions": {
+        "items": [
+          {
+            "items": "assortedgates:gate_grating"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "assortedgates:castle_gate"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_gate_grating"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "assortedgates:castle_gate"
+    ]
+  }
+}

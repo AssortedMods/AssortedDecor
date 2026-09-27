@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "assortedbuildingblocks:block/building/fluted_deepslate_top",
+    "side": "assortedbuildingblocks:block/building/fluted_deepslate"
+  }
+}

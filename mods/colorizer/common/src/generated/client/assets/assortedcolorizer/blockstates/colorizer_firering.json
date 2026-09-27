@@ -1,0 +1,17 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "assortedcolorizer:block/colorizer_firering"
+      }
+    },
+    {
+      "apply": {
+        "model": "assortedcolorizer:block/fire"
+      },
+      "when": {
+        "active": "true"
+      }
+    }
+  ]
+}

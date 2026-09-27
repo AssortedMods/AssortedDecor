@@ -1,0 +1,7 @@
+{
+  "type": "assortedbuildingblocks:lumber_mill",
+  "ingredient": "minecraft:stripped_birch_log",
+  "result": {
+    "id": "minecraft:birch_shelf"
+  }
+}

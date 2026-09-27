@@ -1,0 +1,7 @@
+{
+  "type": "assortedbuildingblocks:lumber_mill",
+  "ingredient": "minecraft:mangrove_planks",
+  "result": {
+    "id": "assortedbuildingblocks:framed_mangrove_plank_stairs"
+  }
+}

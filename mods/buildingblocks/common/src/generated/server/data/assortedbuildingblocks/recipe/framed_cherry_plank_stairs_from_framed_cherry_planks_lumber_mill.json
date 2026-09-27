@@ -1,0 +1,7 @@
+{
+  "type": "assortedbuildingblocks:lumber_mill",
+  "ingredient": "assortedbuildingblocks:framed_cherry_planks",
+  "result": {
+    "id": "assortedbuildingblocks:framed_cherry_plank_stairs"
+  }
+}

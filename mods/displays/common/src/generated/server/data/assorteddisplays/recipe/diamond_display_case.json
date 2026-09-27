@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "F": "#c:gems/diamond",
+    "G": "#c:glass_blocks"
+  },
+  "pattern": [
+    "GGG",
+    "G G",
+    "GFG"
+  ],
+  "result": {
+    "id": "assorteddisplays:diamond_display_case"
+  }
+}

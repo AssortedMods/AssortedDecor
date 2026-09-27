@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": "#c:dyes/light_blue",
+    "G": "#c:glass_blocks",
+    "L": "assortedlights:illumination_tube"
+  },
+  "pattern": [
+    "GAG",
+    "ALA",
+    "GAG"
+  ],
+  "result": {
+    "count": 4,
+    "id": "assortedlights:fluro_light_blue"
+  }
+}

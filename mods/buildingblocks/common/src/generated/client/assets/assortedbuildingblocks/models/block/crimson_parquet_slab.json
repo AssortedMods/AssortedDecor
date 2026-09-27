@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "assortedbuildingblocks:block/building/crimson_parquet",
+    "side": "assortedbuildingblocks:block/building/crimson_parquet",
+    "top": "assortedbuildingblocks:block/building/crimson_parquet"
+  }
+}

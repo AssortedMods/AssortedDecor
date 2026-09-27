@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "assortedbuildingblocks:block/fluted_red_sandstone",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "assortedbuildingblocks:block/fluted_red_sandstone"
+    },
+    "axis=z": {
+      "model": "assortedbuildingblocks:block/fluted_red_sandstone",
+      "x": 90
+    }
+  }
+}

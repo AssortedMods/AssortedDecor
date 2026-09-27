@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "assortedpaint:paint_roller",
+    {
+      "neoforge:ingredient_type": "neoforge:difference",
+      "base": "#c:dyes/light_gray",
+      "fabric:type": "fabric:difference",
+      "subtracted": "#assortedpaint:paint_rollers"
+    }
+  ],
+  "result": {
+    "id": "assortedpaint:paint_roller_light_gray"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "assortedgates:garage_door",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "top": "true"
+              }
+            }
+          ],
+          "name": "assortedgates:garage_door"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "assortedgates:blocks/garage_door"
+}

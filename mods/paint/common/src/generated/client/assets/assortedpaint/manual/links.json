@@ -1,0 +1,26 @@
+{
+  "links": [
+    {
+      "items": [
+        "assortedpaint:paint_roller",
+        "assortedpaint:paint_roller_white",
+        "assortedpaint:paint_roller_orange",
+        "assortedpaint:paint_roller_magenta",
+        "assortedpaint:paint_roller_light_blue",
+        "assortedpaint:paint_roller_yellow",
+        "assortedpaint:paint_roller_lime",
+        "assortedpaint:paint_roller_pink",
+        "assortedpaint:paint_roller_gray",
+        "assortedpaint:paint_roller_light_gray",
+        "assortedpaint:paint_roller_cyan",
+        "assortedpaint:paint_roller_purple",
+        "assortedpaint:paint_roller_blue",
+        "assortedpaint:paint_roller_brown",
+        "assortedpaint:paint_roller_green",
+        "assortedpaint:paint_roller_red",
+        "assortedpaint:paint_roller_black"
+      ],
+      "page": "assorteddecor:paint/rollers"
+    }
+  ]
+}

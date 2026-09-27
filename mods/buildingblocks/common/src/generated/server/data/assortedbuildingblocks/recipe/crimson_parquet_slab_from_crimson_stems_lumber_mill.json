@@ -1,0 +1,8 @@
+{
+  "type": "assortedbuildingblocks:lumber_mill",
+  "ingredient": "#minecraft:crimson_stems",
+  "result": {
+    "count": 8,
+    "id": "assortedbuildingblocks:crimson_parquet_slab"
+  }
+}

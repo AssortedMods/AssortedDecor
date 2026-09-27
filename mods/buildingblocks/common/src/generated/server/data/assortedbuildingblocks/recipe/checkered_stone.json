@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "D": "minecraft:cobbled_deepslate",
+    "L": "minecraft:calcite"
+  },
+  "pattern": [
+    "LD",
+    "DL"
+  ],
+  "result": {
+    "count": 4,
+    "id": "assortedbuildingblocks:checkered_stone"
+  }
+}

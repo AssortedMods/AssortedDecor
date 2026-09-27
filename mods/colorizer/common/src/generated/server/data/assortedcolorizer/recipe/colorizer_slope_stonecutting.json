@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "assortedcolorizer:colorizer",
+  "result": {
+    "id": "assortedcolorizer:colorizer_slope"
+  }
+}

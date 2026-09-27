@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "assortedbuildingblocks:sandstone_bricks",
+  "result": {
+    "id": "assortedbuildingblocks:sandstone_brick_stairs"
+  }
+}

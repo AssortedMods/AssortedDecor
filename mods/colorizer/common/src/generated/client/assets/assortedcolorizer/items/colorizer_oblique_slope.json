@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "assortedcolorizer:colorizer",
+    "model": "assortedcolorizer:block/colorizer_oblique_slope",
+    "tints": [
+      {
+        "type": "assortedcolorizer:colorizer"
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "minecraft:polished_blackstone_bricks",
+    "minecraft:moss_block"
+  ],
+  "result": {
+    "id": "assortedbuildingblocks:mossy_polished_blackstone_bricks"
+  }
+}

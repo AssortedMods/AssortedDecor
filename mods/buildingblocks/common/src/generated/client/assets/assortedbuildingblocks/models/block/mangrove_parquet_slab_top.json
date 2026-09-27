@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "assortedbuildingblocks:block/building/mangrove_parquet",
+    "side": "assortedbuildingblocks:block/building/mangrove_parquet",
+    "top": "assortedbuildingblocks:block/building/mangrove_parquet"
+  }
+}

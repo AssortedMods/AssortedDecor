@@ -1,0 +1,8 @@
+{
+  "type": "assortedbuildingblocks:lumber_mill",
+  "ingredient": "#minecraft:spruce_logs",
+  "result": {
+    "count": 8,
+    "id": "minecraft:stick"
+  }
+}

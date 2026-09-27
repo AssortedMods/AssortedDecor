@@ -1,0 +1,11 @@
+{
+  "parent": "assortedcolorizer:item/wall_inventory",
+  "colorizer": {
+    "parent": "assortedcolorizer:item/wall_inventory"
+  },
+  "fabric:type": "assortedcolorizer:colorizer",
+  "loader": "assortedcolorizer:colorizer",
+  "textures": {
+    "particle": "assortedcolorizer:block/colorizer"
+  }
+}

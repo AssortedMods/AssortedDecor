@@ -1,0 +1,8 @@
+{
+  "type": "assortedbuildingblocks:lumber_mill",
+  "ingredient": "minecraft:crimson_planks",
+  "result": {
+    "count": 8,
+    "id": "assortedbuildingblocks:crimson_panel"
+  }
+}

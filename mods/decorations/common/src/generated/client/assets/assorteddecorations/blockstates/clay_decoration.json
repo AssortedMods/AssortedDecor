@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "decoration=0": {
+      "model": "assorteddecorations:block/clay_decoration_0"
+    },
+    "decoration=1": {
+      "model": "assorteddecorations:block/clay_decoration_1"
+    },
+    "decoration=2": {
+      "model": "assorteddecorations:block/clay_decoration_2"
+    },
+    "decoration=3": {
+      "model": "assorteddecorations:block/clay_decoration_3"
+    },
+    "decoration=4": {
+      "model": "assorteddecorations:block/clay_decoration_4"
+    },
+    "decoration=5": {
+      "model": "assorteddecorations:block/clay_decoration_5"
+    },
+    "decoration=6": {
+      "model": "assorteddecorations:block/clay_decoration_6"
+    },
+    "decoration=7": {
+      "model": "assorteddecorations:block/clay_decoration_7"
+    }
+  }
+}

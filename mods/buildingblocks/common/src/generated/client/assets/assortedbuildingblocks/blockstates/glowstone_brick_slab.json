@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "assortedbuildingblocks:block/glowstone_brick_slab"
+    },
+    "type=double": {
+      "model": "assortedbuildingblocks:block/glowstone_bricks"
+    },
+    "type=top": {
+      "model": "assortedbuildingblocks:block/glowstone_brick_slab_top"
+    }
+  }
+}

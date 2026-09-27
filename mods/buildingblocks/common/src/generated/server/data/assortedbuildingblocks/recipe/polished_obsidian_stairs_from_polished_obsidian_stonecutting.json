@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "assortedbuildingblocks:polished_obsidian",
+  "result": {
+    "id": "assortedbuildingblocks:polished_obsidian_stairs"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "F": "#c:ingots/copper",
+    "G": "#c:glass_blocks"
+  },
+  "pattern": [
+    "GGG",
+    "G G",
+    "GFG"
+  ],
+  "result": {
+    "id": "assorteddisplays:copper_display_case"
+  }
+}

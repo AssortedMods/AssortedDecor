@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "assorteddecorations:item/unfired_planter_pot"
+  }
+}

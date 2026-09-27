@@ -1,0 +1,7 @@
+{
+  "type": "assortedbuildingblocks:lumber_mill",
+  "ingredient": "minecraft:stripped_bamboo_block",
+  "result": {
+    "id": "minecraft:bamboo_shelf"
+  }
+}

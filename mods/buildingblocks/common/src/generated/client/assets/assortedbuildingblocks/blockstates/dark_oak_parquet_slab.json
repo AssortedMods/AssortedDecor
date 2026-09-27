@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "assortedbuildingblocks:block/dark_oak_parquet_slab"
+    },
+    "type=double": {
+      "model": "assortedbuildingblocks:block/dark_oak_parquet"
+    },
+    "type=top": {
+      "model": "assortedbuildingblocks:block/dark_oak_parquet_slab_top"
+    }
+  }
+}

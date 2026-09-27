@@ -1,0 +1,7 @@
+{
+  "type": "assortedbuildingblocks:lumber_mill",
+  "ingredient": "minecraft:birch_planks",
+  "result": {
+    "id": "assortedbuildingblocks:birch_parquet_stairs"
+  }
+}

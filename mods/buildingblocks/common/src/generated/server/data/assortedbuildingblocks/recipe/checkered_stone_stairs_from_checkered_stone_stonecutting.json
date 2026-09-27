@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "assortedbuildingblocks:checkered_stone",
+  "result": {
+    "id": "assortedbuildingblocks:checkered_stone_stairs"
+  }
+}

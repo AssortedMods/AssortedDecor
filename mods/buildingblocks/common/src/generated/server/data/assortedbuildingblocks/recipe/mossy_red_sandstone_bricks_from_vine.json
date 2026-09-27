@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "assortedbuildingblocks:red_sandstone_bricks",
+    "minecraft:vine"
+  ],
+  "result": {
+    "id": "assortedbuildingblocks:mossy_red_sandstone_bricks"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "assortedbuildingblocks:lumber_mill",
+  "ingredient": "assortedbuildingblocks:mangrove_parquet",
+  "result": {
+    "count": 2,
+    "id": "assortedbuildingblocks:mangrove_parquet_slab"
+  }
+}

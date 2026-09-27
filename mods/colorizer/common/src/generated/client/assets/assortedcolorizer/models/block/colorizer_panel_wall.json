@@ -1,0 +1,11 @@
+{
+  "parent": "assortedcolorizer:block/colorizer_panel_wall_template",
+  "colorizer": {
+    "parent": "assortedcolorizer:block/colorizer_panel_wall_template"
+  },
+  "fabric:type": "assortedcolorizer:colorizer",
+  "loader": "assortedcolorizer:colorizer",
+  "textures": {
+    "particle": "assortedcolorizer:block/colorizer"
+  }
+}

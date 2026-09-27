@@ -1,0 +1,52 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:and",
+      "values": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "assortedbuildingblocks"
+        },
+        {
+          "type": "assortedlib:item_tag_populated",
+          "tag": "c:tar"
+        }
+      ]
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:and",
+      "values": [
+        {
+          "condition": "fabric:all_mods_loaded",
+          "values": [
+            "assortedbuildingblocks"
+          ]
+        },
+        {
+          "condition": "fabric:tags_populated",
+          "registry": "minecraft:item",
+          "values": [
+            "c:tar"
+          ]
+        }
+      ]
+    }
+  ],
+  "ingredients": [
+    "#c:tar",
+    "#minecraft:planks",
+    "assortedpaint:paint_roller_red"
+  ],
+  "result": {
+    "components": {
+      "minecraft:block_state": {
+        "color": "red"
+      }
+    },
+    "count": 4,
+    "id": "assortedbuildingblocks:siding_horizontal"
+  }
+}

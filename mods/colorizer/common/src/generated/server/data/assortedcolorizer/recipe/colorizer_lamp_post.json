@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "G": "minecraft:glowstone",
+    "X": "assortedcolorizer:colorizer"
+  },
+  "pattern": [
+    "XGX",
+    "XXX",
+    " X "
+  ],
+  "result": {
+    "count": 2,
+    "id": "assortedcolorizer:colorizer_lamp_post"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "type": "assortedbuildingblocks:lumber_mill",
+  "ingredient": "assortedbuildingblocks:dark_oak_parquet",
+  "result": {
+    "id": "assortedbuildingblocks:dark_oak_parquet_stairs"
+  }
+}

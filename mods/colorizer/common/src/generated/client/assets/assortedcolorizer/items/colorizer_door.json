@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "assortedcolorizer:colorizer",
+    "model": "assortedcolorizer:item/colorizer_door",
+    "tints": [
+      {
+        "type": "assortedcolorizer:colorizer"
+      }
+    ]
+  }
+}

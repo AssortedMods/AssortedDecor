@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "assortedbuildingblocks:granite_bricks",
+  "result": {
+    "id": "assortedbuildingblocks:granite_brick_wall"
+  }
+}

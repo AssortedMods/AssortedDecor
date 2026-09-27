@@ -1,0 +1,14 @@
+{
+  "parent": "assortedcolorizer:block/fireplace_n",
+  "colorizer": {
+    "parent": "assortedcolorizer:block/fireplace_n",
+    "textures": {
+      "wood": "minecraft:block/oak_planks"
+    }
+  },
+  "fabric:type": "assortedcolorizer:colorizer",
+  "loader": "assortedcolorizer:colorizer",
+  "textures": {
+    "particle": "assortedcolorizer:block/colorizer"
+  }
+}

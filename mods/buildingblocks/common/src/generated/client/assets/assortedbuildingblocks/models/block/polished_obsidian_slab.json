@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "assortedbuildingblocks:block/building/polished_obsidian",
+    "side": "assortedbuildingblocks:block/building/polished_obsidian",
+    "top": "assortedbuildingblocks:block/building/polished_obsidian"
+  }
+}

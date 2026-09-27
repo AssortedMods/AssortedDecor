@@ -1,0 +1,7 @@
+{
+  "type": "assortedbuildingblocks:lumber_mill",
+  "ingredient": "assortedbuildingblocks:cherry_parquet",
+  "result": {
+    "id": "assortedbuildingblocks:cherry_parquet_stairs"
+  }
+}

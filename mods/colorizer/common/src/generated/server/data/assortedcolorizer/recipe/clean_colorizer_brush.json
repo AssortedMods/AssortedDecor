@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "neoforge:ingredient_type": "assortedlib:stored_fluid_ingredient",
+      "fabric:type": "assortedlib:stored_fluid_ingredient",
+      "fluid": "minecraft:water"
+    },
+    "assortedcolorizer:colorizer_brush"
+  ],
+  "result": {
+    "id": "assortedcolorizer:colorizer_brush"
+  }
+}

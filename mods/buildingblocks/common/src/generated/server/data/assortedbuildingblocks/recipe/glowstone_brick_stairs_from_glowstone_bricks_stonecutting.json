@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "assortedbuildingblocks:glowstone_bricks",
+  "result": {
+    "id": "assortedbuildingblocks:glowstone_brick_stairs"
+  }
+}

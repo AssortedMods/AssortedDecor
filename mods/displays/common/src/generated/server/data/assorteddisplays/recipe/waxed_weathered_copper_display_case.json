@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "waxed_copper_display_case",
+  "ingredients": [
+    "assorteddisplays:weathered_copper_display_case",
+    "minecraft:honeycomb"
+  ],
+  "result": {
+    "id": "assorteddisplays:waxed_weathered_copper_display_case"
+  }
+}

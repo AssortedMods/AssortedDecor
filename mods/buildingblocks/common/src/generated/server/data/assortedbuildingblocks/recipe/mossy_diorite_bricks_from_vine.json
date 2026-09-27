@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "assortedbuildingblocks:diorite_bricks",
+    "minecraft:vine"
+  ],
+  "result": {
+    "id": "assortedbuildingblocks:mossy_diorite_bricks"
+  }
+}

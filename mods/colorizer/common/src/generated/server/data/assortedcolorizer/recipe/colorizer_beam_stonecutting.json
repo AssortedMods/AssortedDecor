@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "assortedcolorizer:colorizer",
+  "result": {
+    "count": 4,
+    "id": "assortedcolorizer:colorizer_beam"
+  }
+}

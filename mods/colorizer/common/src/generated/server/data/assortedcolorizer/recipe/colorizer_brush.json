@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "R": "#c:rods/wooden",
+    "S": "#c:strings",
+    "X": "assortedcolorizer:colorizer"
+  },
+  "pattern": [
+    " SX",
+    " RS",
+    "R  "
+  ],
+  "result": {
+    "id": "assortedcolorizer:colorizer_brush"
+  }
+}

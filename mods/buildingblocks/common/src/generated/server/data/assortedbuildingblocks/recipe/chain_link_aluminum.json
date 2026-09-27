@@ -1,0 +1,31 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:item_tag_populated",
+      "tag": "c:ingots/aluminum"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:ingots/aluminum"
+      ]
+    }
+  ],
+  "key": {
+    "N": "#c:nuggets/aluminum",
+    "X": "#c:ingots/aluminum"
+  },
+  "pattern": [
+    " N ",
+    "NXN",
+    " N "
+  ],
+  "result": {
+    "count": 4,
+    "id": "assortedbuildingblocks:chain_link"
+  }
+}

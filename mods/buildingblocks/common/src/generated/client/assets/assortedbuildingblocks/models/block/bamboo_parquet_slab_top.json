@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "assortedbuildingblocks:block/building/bamboo_parquet",
+    "side": "assortedbuildingblocks:block/building/bamboo_parquet",
+    "top": "assortedbuildingblocks:block/building/bamboo_parquet"
+  }
+}

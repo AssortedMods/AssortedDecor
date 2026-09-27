@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "assortedbuildingblocks:polished_blackstone_tiles",
+  "result": {
+    "id": "assortedbuildingblocks:polished_blackstone_tile_wall"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "assortedbuildingblocks:calcite_tiles",
+  "result": {
+    "id": "assortedbuildingblocks:calcite_tile_stairs"
+  }
+}

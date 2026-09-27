@@ -1,0 +1,7 @@
+{
+  "type": "assortedbuildingblocks:lumber_mill",
+  "ingredient": "minecraft:spruce_planks",
+  "result": {
+    "id": "assortedbuildingblocks:framed_spruce_plank_stairs"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "assortedbuildingblocks:lumber_mill",
+  "ingredient": "minecraft:oak_planks",
+  "result": {
+    "count": 2,
+    "id": "assortedbuildingblocks:oak_parquet_slab"
+  }
+}

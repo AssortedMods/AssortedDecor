@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "assortedbuildingblocks:block/framed_warped_plank_slab"
+    },
+    "type=double": {
+      "model": "assortedbuildingblocks:block/framed_warped_planks"
+    },
+    "type=top": {
+      "model": "assortedbuildingblocks:block/framed_warped_plank_slab_top"
+    }
+  }
+}

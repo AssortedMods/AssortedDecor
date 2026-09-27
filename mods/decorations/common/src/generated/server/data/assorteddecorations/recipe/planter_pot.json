@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:smelting",
+  "experience": 0.35,
+  "ingredient": "assorteddecorations:unfired_planter_pot",
+  "result": {
+    "id": "assorteddecorations:planter_pot"
+  }
+}

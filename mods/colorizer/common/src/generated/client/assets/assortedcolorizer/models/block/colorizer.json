@@ -1,0 +1,11 @@
+{
+  "parent": "assortedcolorizer:block/tinted_cube",
+  "colorizer": {
+    "parent": "assortedcolorizer:block/tinted_cube"
+  },
+  "fabric:type": "assortedcolorizer:colorizer",
+  "loader": "assortedcolorizer:colorizer",
+  "textures": {
+    "particle": "assortedcolorizer:block/colorizer"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "type": "assortedbuildingblocks:lumber_mill",
+  "ingredient": "minecraft:acacia_planks",
+  "result": {
+    "id": "assortedbuildingblocks:acacia_parquet_stairs"
+  }
+}
