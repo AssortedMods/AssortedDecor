@@ -2,6 +2,7 @@ package com.grim3212.assorted.paint.data;
 
 import com.grim3212.assorted.paint.Constants;
 import com.grim3212.assorted.paint.api.PaintTags;
+import com.grim3212.assorted.paint.common.crafting.RollerDyeingRecipe;
 import com.grim3212.assorted.paint.common.items.PaintItems;
 import com.grim3212.assorted.paint.common.items.PaintRollerItem;
 import com.grim3212.assorted.lib.core.conditions.ConditionalRecipeProvider;
@@ -19,6 +20,7 @@ import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
+import net.minecraft.data.recipes.SpecialRecipeBuilder;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.ItemTags;
@@ -57,8 +59,7 @@ public class PaintRecipes extends ConditionalRecipeProvider {
         for (DyeColor color : DyeColor.values()) {
             this.addConditions(modLoaded(ROADS), prefix("roadway_" + color.getName()));
             this.addConditions(modLoaded(LIGHTS), prefix("fluro_" + color.getName() + "_paint_roll"));
-            // Siding is made with tar, which Assorted Roads or another mod has to supply.
-            this.addConditions(and(modLoaded(BUILDING_BLOCKS), itemTagExists(PaintTags.Items.TAR)), prefix("siding_vertical_" + color.getName()), prefix("siding_horizontal_" + color.getName()));
+            this.addConditions(modLoaded(BUILDING_BLOCKS), prefix("siding_vertical_" + color.getName()), prefix("siding_horizontal_" + color.getName()));
         }
     }
 
@@ -68,7 +69,9 @@ public class PaintRecipes extends ConditionalRecipeProvider {
 
         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.DECORATIONS, PaintItems.PAINT_ROLLER.get()).define('S', LibCommonTags.Items.RODS_WOODEN).define('W', ItemTags.WOOL).pattern("WWW").pattern(" S ").pattern(" S ").unlockedBy("has_wool", has(ItemTags.WOOL)).save(this.output);
 
-        // Wool and carpet need no recipe here: the rollers are dyes, so vanilla's dyeing takes them and hands them back worn.
+        // Wool and carpet go through one special recipe, as a per-color copy would clash with NeoForge's own dyeing.
+        SpecialRecipeBuilder.special(() -> RollerDyeingRecipe.INSTANCE).save(this.output, Identifier.fromNamespaceAndPath(Constants.MOD_ID, "roller_dyeing").toString());
+
         PaintItems.PAINT_ROLLER_COLORS.forEach((c, r) -> {
             PaintRollerItem roller = r.get();
             String color = c.getName();
@@ -82,8 +85,8 @@ public class PaintRecipes extends ConditionalRecipeProvider {
 
             ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.DECORATIONS, result(ROADS, "roadway_" + color, 1, DataComponentPatch.EMPTY)).requires(byId(ROADS, "roadway")).requires(roller).unlockedBy("has_paint", has(roller)).save(this.output, key("roadway_" + color));
 
-            ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.DECORATIONS, result(BUILDING_BLOCKS, "siding_vertical", 4, sidingColor(c))).requires(PaintTags.Items.TAR).requires(LibCommonTags.Items.COBBLESTONE).requires(roller).unlockedBy("has_tar", has(PaintTags.Items.TAR)).save(this.output, key("siding_vertical_" + color));
-            ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.DECORATIONS, result(BUILDING_BLOCKS, "siding_horizontal", 4, sidingColor(c))).requires(PaintTags.Items.TAR).requires(ItemTags.PLANKS).requires(roller).unlockedBy("has_tar", has(PaintTags.Items.TAR)).save(this.output, key("siding_horizontal_" + color));
+            ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.DECORATIONS, result(BUILDING_BLOCKS, "siding_vertical", 4, sidingColor(c))).requires(PaintTags.Items.SIDING_BINDERS).requires(LibCommonTags.Items.COBBLESTONE).requires(roller).unlockedBy("has_binder", has(PaintTags.Items.SIDING_BINDERS)).save(this.output, key("siding_vertical_" + color));
+            ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.DECORATIONS, result(BUILDING_BLOCKS, "siding_horizontal", 4, sidingColor(c))).requires(PaintTags.Items.SIDING_BINDERS).requires(ItemTags.PLANKS).requires(roller).unlockedBy("has_binder", has(PaintTags.Items.SIDING_BINDERS)).save(this.output, key("siding_horizontal_" + color));
         });
     }
 

@@ -54,10 +54,6 @@
         {
           "type": "assortedlib:mod_loaded",
           "mod": "assortedbuildingblocks"
-        },
-        {
-          "type": "assortedlib:mod_loaded",
-          "mod": "assortedroads"
         }
       ],
       "id": "siding",

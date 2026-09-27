@@ -4,7 +4,7 @@
 
 - Added the building blocks from an old mod I maintained
   - Includes a Lumber Mill that works just like the Stonecutter from vanilla
-- Add colorizer column, panel, and frame as new blocks
+- Add colorizer column, panel, and beam as new blocks
 - Fixed some clashing recipes.
 - Requires Assorted Lib 4.3.0.
 

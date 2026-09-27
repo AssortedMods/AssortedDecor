@@ -12,6 +12,7 @@ import net.minecraft.data.tags.TagAppender;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 
 import java.util.concurrent.CompletableFuture;
@@ -33,5 +34,8 @@ public class PaintItemTagProvider extends LibItemTagProvider {
             appender.apply(LibCommonTags.Items.DYES).add(key);
             appender.apply(DyeHelper.getDyeTag(color)).add(key);
         });
+
+        appender.apply(PaintTags.Items.SIDING_BINDERS).add(Items.HONEYCOMB.builtInRegistryHolder().key(), Items.HONEY_BOTTLE.builtInRegistryHolder().key(), Items.RESIN_CLUMP.builtInRegistryHolder().key())
+                .addOptionalTag(LibCommonTags.Items.SLIMEBALLS).addOptionalTag(PaintTags.Items.TAR);
     }
 }

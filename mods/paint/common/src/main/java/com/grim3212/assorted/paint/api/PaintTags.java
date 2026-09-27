@@ -12,6 +12,8 @@ public class PaintTags {
     public static class Items {
         public static final TagKey<Item> PAINT_ROLLERS = paintTag("paint_rollers");
         public static final TagKey<Item> TAR = commonTag("tar");
+        /** Anything sticky enough to hold siding together, tar from Assorted Roads among them. */
+        public static final TagKey<Item> SIDING_BINDERS = paintTag("siding_binders");
         /** Assorted Lights' fluro blocks, named here so recoloring them needs no code from that mod. */
         public static final TagKey<Item> FLURO = TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("assortedlights", "fluro"));
 

@@ -24,9 +24,10 @@
   "manual.assorteddecor.chapter.paint.roadways.title": "Road Markings",
   "manual.assorteddecor.chapter.paint.rollers": "A paint roller loaded with a dye is how road markings and siding get their color. Use it on wool, carpet, concrete or concrete powder to recolor it as well.\n\nThere is a roller for every color.",
   "manual.assorteddecor.chapter.paint.rollers.title": "Paint Rollers",
-  "manual.assorteddecor.chapter.paint.siding": "Siding boards a wall in horizontal or vertical planking, in any of the sixteen colors. The color comes from the paint roller in the recipe.",
+  "manual.assorteddecor.chapter.paint.siding": "Siding boards a wall in horizontal or vertical planking, in any of the sixteen colors. The color comes from the paint roller in the recipe, held together with honeycomb, slime, honey, resin or tar.",
   "manual.assorteddecor.chapter.paint.siding.title": "Siding",
   "manual.assorteddecor.description": "Blocks that take on the look of other blocks, plus furniture, lights, decorations, wall art, roads and more.",
   "manual.assorteddecor.title": "Assorted Decor",
-  "tag.item.assortedpaint.paint_rollers": "Paint Rollers"
+  "tag.item.assortedpaint.paint_rollers": "Paint Rollers",
+  "tag.item.assortedpaint.siding_binders": "Siding Binders"
 }

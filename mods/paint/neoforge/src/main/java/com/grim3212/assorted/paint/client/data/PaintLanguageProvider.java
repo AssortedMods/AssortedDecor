@@ -22,6 +22,7 @@ public class PaintLanguageProvider extends LibLanguageProvider {
         this.add("itemGroup.assorteddecor", "Assorted Decor");
 
         this.add("tag.item.assortedpaint.paint_rollers", "Paint Rollers");
+        this.add("tag.item.assortedpaint.siding_binders", "Siding Binders");
 
         this.nameItems("paint_roller_" + dyeColors(), m -> titleCase(m.group(1)) + " Paint Roller");
 
@@ -54,6 +55,7 @@ public class PaintLanguageProvider extends LibLanguageProvider {
         this.add("manual.assorteddecor.chapter.paint.siding.title", "Siding");
         this.add("manual.assorteddecor.chapter.paint.siding",
                 "Siding boards a wall in horizontal or vertical planking, in any of the sixteen colors. The "
-                        + "color comes from the paint roller in the recipe.");
+                        + "color comes from the paint roller in the recipe, held together with honeycomb, slime, honey, "
+                        + "resin or tar.");
     }
 }

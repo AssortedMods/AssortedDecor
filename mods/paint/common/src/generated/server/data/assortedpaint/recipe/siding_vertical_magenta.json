@@ -1,42 +1,21 @@
 {
   "neoforge:conditions": [
     {
-      "type": "neoforge:and",
-      "values": [
-        {
-          "type": "neoforge:mod_loaded",
-          "modid": "assortedbuildingblocks"
-        },
-        {
-          "type": "assortedlib:item_tag_populated",
-          "tag": "c:tar"
-        }
-      ]
+      "type": "neoforge:mod_loaded",
+      "modid": "assortedbuildingblocks"
     }
   ],
   "type": "minecraft:crafting_shapeless",
   "fabric:load_conditions": [
     {
-      "condition": "fabric:and",
+      "condition": "fabric:all_mods_loaded",
       "values": [
-        {
-          "condition": "fabric:all_mods_loaded",
-          "values": [
-            "assortedbuildingblocks"
-          ]
-        },
-        {
-          "condition": "fabric:tags_populated",
-          "registry": "minecraft:item",
-          "values": [
-            "c:tar"
-          ]
-        }
+        "assortedbuildingblocks"
       ]
     }
   ],
   "ingredients": [
-    "#c:tar",
+    "#assortedpaint:siding_binders",
     "#c:cobblestones",
     "assortedpaint:paint_roller_magenta"
   ],

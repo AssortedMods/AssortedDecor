@@ -1,0 +1,15 @@
+{
+  "values": [
+    "minecraft:honeycomb",
+    "minecraft:honey_bottle",
+    "minecraft:resin_clump",
+    {
+      "id": "#c:slime_balls",
+      "required": false
+    },
+    {
+      "id": "#c:tar",
+      "required": false
+    }
+  ]
+}

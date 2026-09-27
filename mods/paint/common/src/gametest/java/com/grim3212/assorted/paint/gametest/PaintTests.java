@@ -6,6 +6,7 @@ import com.grim3212.assorted.lib.core.block.ICanColor;
 import com.grim3212.assorted.lib.util.DyeHelper;
 import com.grim3212.assorted.lib.util.LibCommonTags;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.NonNullList;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.gametest.framework.GameTestHelper;
 import net.minecraft.server.level.ServerLevel;
@@ -16,12 +17,17 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.item.crafting.CraftingInput;
+import net.minecraft.world.item.crafting.CraftingRecipe;
+import net.minecraft.world.item.crafting.RecipeHolder;
+import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
@@ -41,6 +47,7 @@ final class PaintTests {
         out.accept("paint_rollers_recolor_every_color", PaintTests::paintRollersRecolorEveryColor);
         out.accept("paint_roller_dyes_a_sheep", PaintTests::paintRollerDyesASheep);
         out.accept("paint_rollers_are_dyes_of_their_color", PaintTests::paintRollersAreDyesOfTheirColor);
+        out.accept("paint_roller_dyes_wool_and_carpet_in_the_grid", PaintTests::paintRollerDyesWoolAndCarpetInTheGrid);
     }
 
     /**
@@ -145,6 +152,25 @@ final class PaintTests {
         });
 
         helper.assertTrue(untagged.isEmpty(), "rollers missing from their dye tags: " + untagged);
+        helper.succeed();
+    }
+
+    /** On both loaders a roller dyes wool and carpet in the crafting grid like a dye, and comes back worn by one. */
+    private static void paintRollerDyesWoolAndCarpetInTheGrid(GameTestHelper helper) {
+        ItemStack roller = new ItemStack(PaintItems.PAINT_ROLLER_COLORS.get(DyeColor.BLUE).get());
+        for (Block white : List.of(DyeHelper.WOOL_BY_DYE.get(DyeColor.WHITE), DyeHelper.CARPET_BY_DYE.get(DyeColor.WHITE))) {
+            CraftingInput input = CraftingInput.of(2, 1, List.of(roller.copy(), new ItemStack(white)));
+            Optional<RecipeHolder<CraftingRecipe>> found = helper.getLevel().recipeAccess().getRecipeFor(RecipeType.CRAFTING, input, helper.getLevel());
+            helper.assertTrue(found.isPresent(), "no recipe dyes " + BuiltInRegistries.BLOCK.getKey(white) + " with a roller");
+
+            CraftingRecipe recipe = found.get().value();
+            Block expected = white == DyeHelper.WOOL_BY_DYE.get(DyeColor.WHITE) ? DyeHelper.WOOL_BY_DYE.get(DyeColor.BLUE) : DyeHelper.CARPET_BY_DYE.get(DyeColor.BLUE);
+            helper.assertTrue(recipe.assemble(input).is(expected.asItem()), BuiltInRegistries.BLOCK.getKey(white) + " did not come out blue");
+
+            NonNullList<ItemStack> remaining = recipe.getRemainingItems(input);
+            helper.assertTrue(remaining.get(0).getItem() == roller.getItem(), "the roller was not handed back");
+            helper.assertValueEqual(remaining.get(0).getDamageValue(), 1, "durability the roller spent in the grid");
+        }
         helper.succeed();
     }
 }

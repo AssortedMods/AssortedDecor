@@ -3,7 +3,12 @@
     "assortedhangeables:wallpaper",
     "assortedcolorizer:colorizer",
     "assortedlights:fluro_white",
-    "assortedroads:roadway"
+    "assortedroads:roadway",
+    "assortedbuildingblocks:lumber_mill",
+    "assorteddisplays:diamond_display_case",
+    "assortedgates:castle_gate",
+    "assorteddecorations:planter_pot",
+    "assortedpaint:paint_roller_red"
   ],
   "sort_order": 60
 }
