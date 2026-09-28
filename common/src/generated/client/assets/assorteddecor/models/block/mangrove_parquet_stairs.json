@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "assorteddecor:block/building/mangrove_parquet",
-    "side": "assorteddecor:block/building/mangrove_parquet",
-    "top": "assorteddecor:block/building/mangrove_parquet"
-  }
-}

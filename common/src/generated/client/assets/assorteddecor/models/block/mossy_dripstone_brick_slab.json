@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "assorteddecor:block/building/mossy_dripstone_bricks",
-    "side": "assorteddecor:block/building/mossy_dripstone_bricks",
-    "top": "assorteddecor:block/building/mossy_dripstone_bricks"
-  }
-}

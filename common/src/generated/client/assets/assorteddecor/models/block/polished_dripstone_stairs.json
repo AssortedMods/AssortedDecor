@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "assorteddecor:block/building/polished_dripstone",
-    "side": "assorteddecor:block/building/polished_dripstone",
-    "top": "assorteddecor:block/building/polished_dripstone"
-  }
-}

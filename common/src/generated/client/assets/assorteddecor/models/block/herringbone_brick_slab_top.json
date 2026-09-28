@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "assorteddecor:block/building/herringbone_bricks",
-    "side": "assorteddecor:block/building/herringbone_bricks",
-    "top": "assorteddecor:block/building/herringbone_bricks"
-  }
-}

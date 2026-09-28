@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "assorteddecor:block/building/polished_blackstone_tiles",
-    "side": "assorteddecor:block/building/polished_blackstone_tiles",
-    "top": "assorteddecor:block/building/polished_blackstone_tiles"
-  }
-}

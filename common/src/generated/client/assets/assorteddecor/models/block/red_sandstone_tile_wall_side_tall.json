@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/template_wall_side_tall",
-  "textures": {
-    "wall": "assorteddecor:block/building/red_sandstone_tiles"
-  }
-}

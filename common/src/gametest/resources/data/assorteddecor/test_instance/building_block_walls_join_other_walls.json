@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:function",
-  "environment": "minecraft:default",
-  "function": "assorteddecor:building_block_walls_join_other_walls",
-  "structure": "assorteddecor:test_box",
-  "max_ticks": 1,
-  "setup_ticks": 0,
-  "required": true
-}

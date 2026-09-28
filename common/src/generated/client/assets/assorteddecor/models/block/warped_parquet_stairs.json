@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "assorteddecor:block/building/warped_parquet",
-    "side": "assorteddecor:block/building/warped_parquet",
-    "top": "assorteddecor:block/building/warped_parquet"
-  }
-}

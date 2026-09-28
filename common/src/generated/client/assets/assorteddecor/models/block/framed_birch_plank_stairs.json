@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "assorteddecor:block/building/framed_birch_planks",
-    "side": "assorteddecor:block/building/framed_birch_planks",
-    "top": "assorteddecor:block/building/framed_birch_planks"
-  }
-}

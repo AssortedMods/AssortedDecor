@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "assorteddecor:block/building/mossy_polished_blackstone_bricks"
-  }
-}

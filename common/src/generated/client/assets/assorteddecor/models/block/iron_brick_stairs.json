@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "assorteddecor:block/building/iron_bricks",
-    "side": "assorteddecor:block/building/iron_bricks",
-    "top": "assorteddecor:block/building/iron_bricks"
-  }
-}

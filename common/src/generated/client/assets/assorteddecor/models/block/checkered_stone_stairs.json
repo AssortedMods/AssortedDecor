@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "assorteddecor:block/building/checkered_stone",
-    "side": "assorteddecor:block/building/checkered_stone",
-    "top": "assorteddecor:block/building/checkered_stone"
-  }
-}

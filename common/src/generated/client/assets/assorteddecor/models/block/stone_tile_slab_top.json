@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "assorteddecor:block/building/stone_tiles",
-    "side": "assorteddecor:block/building/stone_tiles",
-    "top": "assorteddecor:block/building/stone_tiles"
-  }
-}

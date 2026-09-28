@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "assorteddecor:block/building/red_sandstone_tiles",
-    "side": "assorteddecor:block/building/red_sandstone_tiles",
-    "top": "assorteddecor:block/building/red_sandstone_tiles"
-  }
-}

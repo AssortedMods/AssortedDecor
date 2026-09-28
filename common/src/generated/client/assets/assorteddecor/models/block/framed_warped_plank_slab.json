@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "assorteddecor:block/building/framed_warped_planks",
-    "side": "assorteddecor:block/building/framed_warped_planks",
-    "top": "assorteddecor:block/building/framed_warped_planks"
-  }
-}

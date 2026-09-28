@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "assorteddecor:block/building/framed_bamboo_planks",
-    "side": "assorteddecor:block/building/framed_bamboo_planks",
-    "top": "assorteddecor:block/building/framed_bamboo_planks"
-  }
-}

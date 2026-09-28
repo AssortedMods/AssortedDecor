@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:function",
-  "environment": "minecraft:default",
-  "function": "assorteddecor:wood_building_blocks_burn_as_their_planks_do",
-  "structure": "assorteddecor:test_box",
-  "max_ticks": 1,
-  "setup_ticks": 0,
-  "required": true
-}

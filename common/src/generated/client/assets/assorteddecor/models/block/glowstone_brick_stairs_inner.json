@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "assorteddecor:block/building/glowstone_bricks",
-    "side": "assorteddecor:block/building/glowstone_bricks",
-    "top": "assorteddecor:block/building/glowstone_bricks"
-  }
-}
