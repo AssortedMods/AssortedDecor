@@ -19,5 +19,6 @@ public final class RoadsGameTests {
         CrossLoaderDataTests.register(out);
         AssetTests.register(out);
         AliasTests.register(out);
+        FamilyTests.register(out);
     }
 }

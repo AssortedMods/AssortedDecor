@@ -1,7 +1,6 @@
 package com.grim3212.assorted.displays.common.blocks;
 
 import com.grim3212.assorted.displays.Constants;
-import com.grim3212.assorted.displays.Family;
 import com.grim3212.assorted.lib.registry.IRegistryObject;
 import com.grim3212.assorted.lib.registry.RegistryProvider;
 import net.minecraft.core.BlockPos;
@@ -26,9 +25,9 @@ import java.util.function.Supplier;
 
 public class DisplaysBlocks {
 
-    public static final RegistryProvider<Block> BLOCKS = RegistryProvider.create(Registries.BLOCK, Constants.MOD_ID).aliasFrom(Family.ID);
+    public static final RegistryProvider<Block> BLOCKS = RegistryProvider.create(Registries.BLOCK, Constants.MOD_ID).aliasFrom(Constants.FAMILY_ID);
     // Blocks and their item forms get registered before other items
-    public static final RegistryProvider<Item> ITEMS = RegistryProvider.create(Registries.ITEM, Constants.MOD_ID).aliasFrom(Family.ID);
+    public static final RegistryProvider<Item> ITEMS = RegistryProvider.create(Registries.ITEM, Constants.MOD_ID).aliasFrom(Constants.FAMILY_ID);
 
     public static final IRegistryObject<CageBlock> CAGE = register("cage", props -> new CageBlock(props.mapColor(MapColor.METAL).sound(SoundType.METAL).strength(0.8F, 5.0F).requiresCorrectToolForDrops().noOcclusion().isValidSpawn(DisplaysBlocks::never).isRedstoneConductor(DisplaysBlocks::never).isSuffocating(DisplaysBlocks::never).isViewBlocking(DisplaysBlocks::never)));
 

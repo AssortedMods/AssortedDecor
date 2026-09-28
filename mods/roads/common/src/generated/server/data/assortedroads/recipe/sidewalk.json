@@ -1,5 +1,17 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "assortedroads"
+    }
+  ],
   "type": "minecraft:stonecutting",
+  "fabric:load_conditions": [
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "assortedroads"
+    }
+  ],
   "ingredient": "#c:stones",
   "result": {
     "id": "assortedroads:sidewalk"

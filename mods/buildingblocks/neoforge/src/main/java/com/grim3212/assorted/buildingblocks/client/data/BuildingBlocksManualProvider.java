@@ -1,7 +1,6 @@
 package com.grim3212.assorted.buildingblocks.client.data;
 
 import com.grim3212.assorted.buildingblocks.Constants;
-import com.grim3212.assorted.buildingblocks.Family;
 import com.grim3212.assorted.buildingblocks.common.blocks.BuildingBlocksBlocks;
 import com.grim3212.assorted.buildingblocks.common.blocks.building.BuildingBlocks;
 import com.grim3212.assorted.buildingblocks.common.blocks.building.GemBrickSet;
@@ -29,13 +28,11 @@ import java.util.Map;
 public class BuildingBlocksManualProvider extends LibManualProvider {
 
     public BuildingBlocksManualProvider(PackOutput output) {
-        super(output, Constants.MOD_ID, Family.ID);
+        super(output, Constants.MOD_ID, Constants.FAMILY_ID);
     }
 
     @Override
     protected void addChapters() {
-        this.section(Family.MANUAL_ORDER, Family.ICONS.toArray(Identifier[]::new));
-
         this.addBuildingBlocks();
         this.addDoors();
     }

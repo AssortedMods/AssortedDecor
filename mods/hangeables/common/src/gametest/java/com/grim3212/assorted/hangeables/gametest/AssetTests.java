@@ -10,7 +10,6 @@ import com.grim3212.assorted.lib.platform.Services;
 import java.io.BufferedReader;
 import java.io.IOException;
 import com.grim3212.assorted.hangeables.Constants;
-import com.grim3212.assorted.hangeables.Family;
 import com.grim3212.assorted.hangeables.common.helpers.HangeablesCreativeItems;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.gametest.framework.GameTestHelper;
@@ -59,7 +58,7 @@ final class AssetTests {
 
         JsonObject lang = readJson("/assets/" + Constants.MOD_ID + "/lang/en_us.json");
         helper.assertTrue(lang != null, "/assets/" + Constants.MOD_ID + "/lang/en_us.json is not on the classpath");
-        helper.assertTrue(lang.has("itemGroup." + Family.ID), "the creative tab has no name in en_us.json");
+        helper.assertTrue(lang.has("itemGroup." + Constants.FAMILY_ID), "the creative tab has no name in en_us.json");
 
         List<String> missing = new ArrayList<>();
 

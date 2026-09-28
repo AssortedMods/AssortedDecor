@@ -1,7 +1,6 @@
 package com.grim3212.assorted.hangeables.common.blocks;
 
 import com.grim3212.assorted.hangeables.Constants;
-import com.grim3212.assorted.hangeables.Family;
 import com.grim3212.assorted.lib.registry.IRegistryObject;
 import com.grim3212.assorted.lib.registry.RegistryProvider;
 import net.minecraft.core.registries.Registries;
@@ -20,9 +19,9 @@ import java.util.function.Supplier;
 
 public class HangeablesBlocks {
 
-    public static final RegistryProvider<Block> BLOCKS = RegistryProvider.create(Registries.BLOCK, Constants.MOD_ID).aliasFrom(Family.ID);
+    public static final RegistryProvider<Block> BLOCKS = RegistryProvider.create(Registries.BLOCK, Constants.MOD_ID).aliasFrom(Constants.FAMILY_ID);
     // Blocks and their item forms get registered before other items
-    public static final RegistryProvider<Item> ITEMS = RegistryProvider.create(Registries.ITEM, Constants.MOD_ID).aliasFrom(Family.ID);
+    public static final RegistryProvider<Item> ITEMS = RegistryProvider.create(Registries.ITEM, Constants.MOD_ID).aliasFrom(Constants.FAMILY_ID);
 
     public static final IRegistryObject<NeonSignBlock> NEON_SIGN = registerNoItem("neon_sign", props -> new NeonSignStandingBlock(props.mapColor(MapColor.COLOR_BLACK).instrument(NoteBlockInstrument.BASEDRUM).strength(10f).noCollision()));
     public static final IRegistryObject<NeonSignBlock> NEON_SIGN_WALL = registerNoItem("neon_sign_wall", props -> new NeonSignWallBlock(props.mapColor(MapColor.COLOR_BLACK).instrument(NoteBlockInstrument.BASEDRUM).strength(10f).noCollision().overrideLootTable(NEON_SIGN.get().getLootTable()).overrideDescription(NEON_SIGN.get().getDescriptionId())));

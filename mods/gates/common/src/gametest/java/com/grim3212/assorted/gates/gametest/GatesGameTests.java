@@ -19,5 +19,6 @@ public final class GatesGameTests {
         AliasTests.register(out);
         CrossLoaderDataTests.register(out);
         GateTests.register(out);
+        FamilyTests.register(out);
     }
 }

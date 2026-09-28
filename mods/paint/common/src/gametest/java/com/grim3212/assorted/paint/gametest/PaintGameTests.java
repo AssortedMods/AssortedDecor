@@ -19,5 +19,6 @@ public final class PaintGameTests {
         AliasTests.register(out);
         CrossLoaderDataTests.register(out);
         PaintTests.register(out);
+        FamilyTests.register(out);
     }
 }

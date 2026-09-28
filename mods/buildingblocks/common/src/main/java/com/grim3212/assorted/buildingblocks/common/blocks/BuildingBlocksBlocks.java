@@ -1,7 +1,6 @@
 package com.grim3212.assorted.buildingblocks.common.blocks;
 
 import com.grim3212.assorted.buildingblocks.Constants;
-import com.grim3212.assorted.buildingblocks.Family;
 import com.grim3212.assorted.buildingblocks.common.items.ColorChangingItem;
 import com.grim3212.assorted.lib.registry.IRegistryObject;
 import com.grim3212.assorted.lib.registry.RegistryProvider;
@@ -22,9 +21,9 @@ import java.util.function.Supplier;
 
 public class BuildingBlocksBlocks {
 
-    public static final RegistryProvider<Block> BLOCKS = RegistryProvider.create(Registries.BLOCK, Constants.MOD_ID).aliasFrom(Family.ID);
+    public static final RegistryProvider<Block> BLOCKS = RegistryProvider.create(Registries.BLOCK, Constants.MOD_ID).aliasFrom(Constants.FAMILY_ID);
     // Blocks and their item forms get registered before other items
-    public static final RegistryProvider<Item> ITEMS = RegistryProvider.create(Registries.ITEM, Constants.MOD_ID).aliasFrom(Family.ID);
+    public static final RegistryProvider<Item> ITEMS = RegistryProvider.create(Registries.ITEM, Constants.MOD_ID).aliasFrom(Constants.FAMILY_ID);
 
     public static final IRegistryObject<BuildingBlocksDoorBlock> QUARTZ_DOOR = register("quartz_door", props -> new BuildingBlocksDoorBlock(props.mapColor(MapColor.QUARTZ).requiresCorrectToolForDrops().strength(5.0F).sound(SoundType.METAL).noOcclusion()));
     public static final IRegistryObject<BuildingBlocksDoorBlock> GLASS_DOOR = register("glass_door", props -> new BuildingBlocksDoorBlock(props.mapColor(Blocks.GLASS.defaultMapColor()).instrument(NoteBlockInstrument.HAT).strength(0.75F, 7.5F).sound(SoundType.GLASS).noOcclusion()));

@@ -1,5 +1,17 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "assorteddisplays"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "assorteddisplays"
+    }
+  ],
   "key": {
     "G": "#c:glass_blocks",
     "I": "#c:ingots/gold",

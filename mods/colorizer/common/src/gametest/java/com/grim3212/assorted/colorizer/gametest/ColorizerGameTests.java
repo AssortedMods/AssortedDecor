@@ -22,5 +22,6 @@ public final class ColorizerGameTests {
         LightTests.register(out);
         LightBenchmark.register(out);
         TooltipTests.register(out);
+        FamilyTests.register(out);
     }
 }

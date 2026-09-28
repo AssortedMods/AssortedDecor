@@ -3,7 +3,6 @@ package com.grim3212.assorted.lights.common.blocks;
 import com.grim3212.assorted.lib.registry.IRegistryObject;
 import com.grim3212.assorted.lib.registry.RegistryProvider;
 import com.grim3212.assorted.lights.Constants;
-import com.grim3212.assorted.lights.Family;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
@@ -22,8 +21,8 @@ import java.util.function.Supplier;
 
 public class LightsBlocks {
 
-    public static final RegistryProvider<Block> BLOCKS = RegistryProvider.create(Registries.BLOCK, Constants.MOD_ID).aliasFrom(Family.ID);
-    public static final RegistryProvider<Item> ITEMS = RegistryProvider.create(Registries.ITEM, Constants.MOD_ID).aliasFrom(Family.ID);
+    public static final RegistryProvider<Block> BLOCKS = RegistryProvider.create(Registries.BLOCK, Constants.MOD_ID).aliasFrom(Constants.FAMILY_ID);
+    public static final RegistryProvider<Item> ITEMS = RegistryProvider.create(Registries.ITEM, Constants.MOD_ID).aliasFrom(Constants.FAMILY_ID);
 
     public static final IRegistryObject<IlluminationTubeBlock> ILLUMINATION_TUBE = register("illumination_tube", props -> new IlluminationTubeBlock(props.pushReaction(PushReaction.DESTROY).isRedstoneConductor((state, getter, pos) -> false).noCollision().instabreak().lightLevel(state -> 15).sound(SoundType.GLASS)));
     public static final IRegistryObject<IlluminationPlateBlock> ILLUMINATION_PLATE = register("illumination_plate", props -> new IlluminationPlateBlock(props.pushReaction(PushReaction.DESTROY).isRedstoneConductor((state, getter, pos) -> false).noCollision().strength(0.5F).lightLevel(state -> 15).sound(SoundType.GLASS)));

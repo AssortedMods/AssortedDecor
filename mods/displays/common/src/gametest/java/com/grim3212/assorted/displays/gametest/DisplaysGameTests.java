@@ -20,5 +20,6 @@ public final class DisplaysGameTests {
         CrossLoaderDataTests.register(out);
         CageTests.register(out);
         DisplayCaseTests.register(out);
+        FamilyTests.register(out);
     }
 }

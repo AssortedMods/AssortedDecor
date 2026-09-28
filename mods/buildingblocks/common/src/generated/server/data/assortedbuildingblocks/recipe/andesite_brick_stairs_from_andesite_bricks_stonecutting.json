@@ -1,5 +1,17 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "assortedbuildingblocks"
+    }
+  ],
   "type": "minecraft:stonecutting",
+  "fabric:load_conditions": [
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "assortedbuildingblocks"
+    }
+  ],
   "ingredient": "assortedbuildingblocks:andesite_bricks",
   "result": {
     "id": "assortedbuildingblocks:andesite_brick_stairs"

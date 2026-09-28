@@ -2,10 +2,10 @@ package com.grim3212.assorted.roads.common.helpers;
 
 import com.grim3212.assorted.lib.core.creative.CreativeTabItems;
 import com.grim3212.assorted.lib.core.creative.SharedCreativeTabs;
-import com.grim3212.assorted.roads.Family;
+import com.grim3212.assorted.lib.family.Families;
+import com.grim3212.assorted.roads.Constants;
 import com.grim3212.assorted.roads.common.blocks.RoadsBlocks;
 import com.grim3212.assorted.roads.common.items.RoadsItems;
-import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
@@ -17,7 +17,7 @@ import java.util.function.Supplier;
 /** This part's share of the Assorted Decor tab, which every part asks for and the first to load registers. */
 public class RoadsCreativeItems {
 
-    public static final ResourceKey<CreativeModeTab> TAB = SharedCreativeTabs.tab(Identifier.fromNamespaceAndPath(Family.ID, "tab"), Family.ICONS);
+    public static final ResourceKey<CreativeModeTab> TAB = Families.tab(Constants.FAMILY_ID);
 
     private static List<ItemStack> getRoadwayItems() {
         CreativeTabItems items = new CreativeTabItems();

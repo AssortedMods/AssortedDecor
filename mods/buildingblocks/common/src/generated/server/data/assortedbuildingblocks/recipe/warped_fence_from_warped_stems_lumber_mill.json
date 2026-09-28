@@ -1,5 +1,17 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "assortedbuildingblocks"
+    }
+  ],
   "type": "assortedbuildingblocks:lumber_mill",
+  "fabric:load_conditions": [
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "assortedbuildingblocks"
+    }
+  ],
   "ingredient": "#minecraft:warped_stems",
   "result": {
     "count": 2,

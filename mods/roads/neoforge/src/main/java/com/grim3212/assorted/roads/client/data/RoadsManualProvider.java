@@ -3,11 +3,9 @@ package com.grim3212.assorted.roads.client.data;
 import com.grim3212.assorted.lib.data.LibManualProvider;
 import com.grim3212.assorted.lib.registry.IRegistryObject;
 import com.grim3212.assorted.roads.Constants;
-import com.grim3212.assorted.roads.Family;
 import com.grim3212.assorted.roads.common.blocks.RoadsBlocks;
 import com.grim3212.assorted.roads.common.items.RoadsItems;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.block.Block;
 
 import java.util.ArrayList;
@@ -17,13 +15,11 @@ import java.util.List;
 public class RoadsManualProvider extends LibManualProvider {
 
     public RoadsManualProvider(PackOutput output) {
-        super(output, Constants.MOD_ID, Family.ID);
+        super(output, Constants.MOD_ID, Constants.FAMILY_ID);
     }
 
     @Override
     protected void addChapters() {
-        this.section(Family.MANUAL_ORDER, Family.ICONS.toArray(Identifier[]::new));
-
         List<Block> roadway = new ArrayList<>(List.of(RoadsBlocks.ROADWAY.get(), RoadsBlocks.ROADWAY_LIGHT.get(),
                 RoadsBlocks.ROADWAY_MANHOLE.get()));
         RoadsBlocks.ROADWAY_COLORS.values().stream().map(IRegistryObject::get).forEach(roadway::add);

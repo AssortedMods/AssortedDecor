@@ -20,5 +20,6 @@ public final class HangeablesGameTests {
         CrossLoaderDataTests.register(out);
         EntityDecorationTests.register(out);
         BlockDecorationTests.register(out);
+        FamilyTests.register(out);
     }
 }

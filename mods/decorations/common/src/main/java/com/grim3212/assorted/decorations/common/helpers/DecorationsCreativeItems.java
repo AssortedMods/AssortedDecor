@@ -1,10 +1,10 @@
 package com.grim3212.assorted.decorations.common.helpers;
 
-import com.grim3212.assorted.decorations.Family;
+import com.grim3212.assorted.decorations.Constants;
 import com.grim3212.assorted.decorations.common.blocks.DecorationsBlocks;
 import com.grim3212.assorted.decorations.common.items.DecorationsItems;
 import com.grim3212.assorted.lib.core.creative.SharedCreativeTabs;
-import net.minecraft.resources.Identifier;
+import com.grim3212.assorted.lib.family.Families;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
@@ -16,7 +16,7 @@ import java.util.List;
 /** This part's share of the Assorted Decor tab, which every part asks for and the first to load registers. */
 public class DecorationsCreativeItems {
 
-    public static final ResourceKey<CreativeModeTab> TAB = SharedCreativeTabs.tab(Identifier.fromNamespaceAndPath(Family.ID, "tab"), Family.ICONS);
+    public static final ResourceKey<CreativeModeTab> TAB = Families.tab(Constants.FAMILY_ID);
 
     public static void init() {
         // Three places in the tab, as it was when this was all one mod, with the lanterns and paths of other parts between them.

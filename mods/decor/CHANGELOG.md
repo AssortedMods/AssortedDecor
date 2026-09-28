@@ -5,7 +5,7 @@
 - Split into nine mods that can also be installed on their own. Assorted Colorizer, Assorted Building Blocks, Assorted Lights, Assorted Roads, Assorted Displays, Assorted Gates, Assorted Hangeables, Assorted Decorations and Assorted Paint
 - Assorted Decor still includes all of them
 - Worlds from 11.x keep all your blocks, items and recipes
-- Removed the config options for turning parts off. Install only the mods you want instead
+- Each part can be turned off again in config/assorteddecor-parts.toml
 - Each mod has its own config file now, so settings from assorteddecor-common.toml need setting again
 - Requires Assorted Lib 4.3.0
 

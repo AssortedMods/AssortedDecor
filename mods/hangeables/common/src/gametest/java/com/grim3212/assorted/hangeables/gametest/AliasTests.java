@@ -1,7 +1,7 @@
 package com.grim3212.assorted.hangeables.gametest;
 
 import com.google.gson.JsonParser;
-import com.grim3212.assorted.hangeables.Family;
+import com.grim3212.assorted.hangeables.Constants;
 import com.grim3212.assorted.hangeables.common.blocks.HangeablesBlocks;
 import com.grim3212.assorted.hangeables.common.blocks.blockentity.HangeablesBlockEntityTypes;
 import com.grim3212.assorted.hangeables.common.entity.HangeablesEntityTypes;
@@ -52,6 +52,6 @@ final class AliasTests {
     }
 
     private static Identifier old(Identifier id) {
-        return Identifier.fromNamespaceAndPath(Family.ID, id.getPath());
+        return Identifier.fromNamespaceAndPath(Constants.FAMILY_ID, id.getPath());
     }
 }

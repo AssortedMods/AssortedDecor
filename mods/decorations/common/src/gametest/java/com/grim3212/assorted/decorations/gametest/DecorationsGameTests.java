@@ -19,5 +19,6 @@ public final class DecorationsGameTests {
         AliasTests.register(out);
         CrossLoaderDataTests.register(out);
         BlockDecorationTests.register(out);
+        FamilyTests.register(out);
     }
 }

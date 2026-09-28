@@ -1,7 +1,6 @@
 package com.grim3212.assorted.hangeables.common.entity;
 
 import com.grim3212.assorted.hangeables.Constants;
-import com.grim3212.assorted.hangeables.Family;
 import com.grim3212.assorted.lib.registry.IRegistryObject;
 import com.grim3212.assorted.lib.registry.RegistryProvider;
 import net.minecraft.core.registries.Registries;
@@ -13,7 +12,7 @@ import net.minecraft.world.entity.MobCategory;
 
 public class HangeablesEntityTypes {
 
-    public static final RegistryProvider<EntityType<?>> ENTITIES = RegistryProvider.create(Registries.ENTITY_TYPE, Constants.MOD_ID).aliasFrom(Family.ID);
+    public static final RegistryProvider<EntityType<?>> ENTITIES = RegistryProvider.create(Registries.ENTITY_TYPE, Constants.MOD_ID).aliasFrom(Constants.FAMILY_ID);
 
     public static final IRegistryObject<EntityType<WallpaperEntity>> WALLPAPER = register("wallpaper", EntityType.Builder.<WallpaperEntity>of(WallpaperEntity::new, MobCategory.MISC).sized(0.5f, 0.5f).clientTrackingRange(250).updateInterval(2147483647));
     public static final IRegistryObject<EntityType<WoodFrameEntity>> WOOD_FRAME = register("wood_frame", EntityType.Builder.<WoodFrameEntity>of(WoodFrameEntity::new, MobCategory.MISC).sized(0.5f, 0.5f).clientTrackingRange(250).updateInterval(2147483647));

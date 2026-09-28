@@ -1,7 +1,6 @@
 package com.grim3212.assorted.hangeables.client.data;
 
 import com.grim3212.assorted.hangeables.Constants;
-import com.grim3212.assorted.hangeables.Family;
 import com.grim3212.assorted.hangeables.common.blocks.HangeablesBlocks;
 import com.grim3212.assorted.hangeables.common.items.HangeablesItems;
 import com.grim3212.assorted.lib.data.LibManualProvider;
@@ -15,13 +14,11 @@ import net.minecraft.resources.Identifier;
 public class HangeablesManualProvider extends LibManualProvider {
 
     public HangeablesManualProvider(PackOutput output) {
-        super(output, Constants.MOD_ID, Family.ID);
+        super(output, Constants.MOD_ID, Constants.FAMILY_ID);
     }
 
     @Override
     protected void addChapters() {
-        this.section(Family.MANUAL_ORDER, Family.ICONS.toArray(Identifier[]::new));
-
         ChapterBuilder hanging = this.chapter("hanging", 5);
         hanging.recipes("wallpaper", HangeablesItems.WALLPAPER.get()).opens(HangeablesItems.WALLPAPER.get());
         hanging.recipes("frames", HangeablesItems.WOOD_FRAME.get(), HangeablesItems.IRON_FRAME.get()).every(50)

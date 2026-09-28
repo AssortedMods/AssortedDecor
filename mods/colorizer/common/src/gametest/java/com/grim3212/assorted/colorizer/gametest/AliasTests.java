@@ -1,7 +1,7 @@
 package com.grim3212.assorted.colorizer.gametest;
 
 import com.google.gson.JsonParser;
-import com.grim3212.assorted.colorizer.Family;
+import com.grim3212.assorted.colorizer.Constants;
 import com.grim3212.assorted.colorizer.common.blocks.ColorizerBlocks;
 import com.grim3212.assorted.colorizer.common.blocks.blockentity.ColorizerBlockEntityTypes;
 import com.grim3212.assorted.colorizer.common.items.ColorizerDataComponents;
@@ -52,6 +52,6 @@ final class AliasTests {
     }
 
     private static Identifier old(Identifier id) {
-        return Identifier.fromNamespaceAndPath(Family.ID, id.getPath());
+        return Identifier.fromNamespaceAndPath(Constants.FAMILY_ID, id.getPath());
     }
 }

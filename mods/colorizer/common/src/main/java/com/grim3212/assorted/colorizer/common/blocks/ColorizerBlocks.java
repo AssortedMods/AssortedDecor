@@ -1,7 +1,6 @@
 package com.grim3212.assorted.colorizer.common.blocks;
 
 import com.grim3212.assorted.colorizer.Constants;
-import com.grim3212.assorted.colorizer.Family;
 import com.grim3212.assorted.colorizer.api.colorizer.SlopeType;
 import com.grim3212.assorted.colorizer.common.blocks.colorizer.*;
 import com.grim3212.assorted.lib.registry.IRegistryObject;
@@ -25,9 +24,9 @@ import java.util.function.Supplier;
 
 public class ColorizerBlocks {
 
-    public static final RegistryProvider<Block> BLOCKS = RegistryProvider.create(Registries.BLOCK, Constants.MOD_ID).aliasFrom(Family.ID);
+    public static final RegistryProvider<Block> BLOCKS = RegistryProvider.create(Registries.BLOCK, Constants.MOD_ID).aliasFrom(Constants.FAMILY_ID);
     // Blocks and their item forms get registered before other items
-    public static final RegistryProvider<Item> ITEMS = RegistryProvider.create(Registries.ITEM, Constants.MOD_ID).aliasFrom(Family.ID);
+    public static final RegistryProvider<Item> ITEMS = RegistryProvider.create(Registries.ITEM, Constants.MOD_ID).aliasFrom(Constants.FAMILY_ID);
 
     public static final IRegistryObject<ColorizerBlock> COLORIZER = register("colorizer", props -> new ColorizerFullCubeBlock(colorizer(props).lightLevel(BlockState::getLightEmission)));
     public static final IRegistryObject<ColorizerBlock> COLORIZER_CHAIR = register("colorizer_chair", props -> new ColorizerChairBlock(colorizer(props)));

@@ -1,6 +1,18 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "assortedbuildingblocks"
+    }
+  ],
   "type": "minecraft:crafting_shapeless",
   "category": "building",
+  "fabric:load_conditions": [
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "assortedbuildingblocks"
+    }
+  ],
   "ingredients": [
     "assortedbuildingblocks:dripstone_bricks",
     "minecraft:moss_block"

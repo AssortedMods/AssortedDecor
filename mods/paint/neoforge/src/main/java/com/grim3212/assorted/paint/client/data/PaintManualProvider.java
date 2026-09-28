@@ -1,12 +1,10 @@
 package com.grim3212.assorted.paint.client.data;
 
 import com.grim3212.assorted.paint.Constants;
-import com.grim3212.assorted.paint.Family;
 import com.grim3212.assorted.paint.common.items.PaintItems;
 import com.grim3212.assorted.lib.data.LibManualProvider;
 import com.grim3212.assorted.lib.registry.IRegistryObject;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.Item;
 
 import java.util.ArrayList;
@@ -19,13 +17,11 @@ import java.util.List;
 public class PaintManualProvider extends LibManualProvider {
 
     public PaintManualProvider(PackOutput output) {
-        super(output, Constants.MOD_ID, Family.ID);
+        super(output, Constants.MOD_ID, Constants.FAMILY_ID);
     }
 
     @Override
     protected void addChapters() {
-        this.section(Family.MANUAL_ORDER, Family.ICONS.toArray(Identifier[]::new));
-
         List<Item> rollers = new ArrayList<>();
         rollers.add(PaintItems.PAINT_ROLLER.get());
         PaintItems.PAINT_ROLLER_COLORS.values().stream().map(IRegistryObject::get).forEach(rollers::add);

@@ -3,6 +3,10 @@
     {
       "type": "neoforge:mod_loaded",
       "modid": "assortedlights"
+    },
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "assortedpaint"
     }
   ],
   "parent": "minecraft:recipes/root",
@@ -30,6 +34,10 @@
       "values": [
         "assortedlights"
       ]
+    },
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "assortedpaint"
     }
   ],
   "requirements": [

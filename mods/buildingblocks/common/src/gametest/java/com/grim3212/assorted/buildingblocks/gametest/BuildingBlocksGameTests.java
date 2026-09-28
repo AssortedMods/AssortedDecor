@@ -22,5 +22,6 @@ public final class BuildingBlocksGameTests {
         BuildingBlockTests.register(out);
         DoorAndFenceTests.register(out);
         SidingTests.register(out);
+        FamilyTests.register(out);
     }
 }
