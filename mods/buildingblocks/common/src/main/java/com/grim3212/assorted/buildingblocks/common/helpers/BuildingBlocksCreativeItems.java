@@ -1,6 +1,7 @@
 package com.grim3212.assorted.buildingblocks.common.helpers;
 
 import com.grim3212.assorted.buildingblocks.Constants;
+import com.grim3212.assorted.buildingblocks.api.BuildingBlocksTags;
 import com.grim3212.assorted.buildingblocks.common.blocks.BuildingBlocksBlocks;
 import com.grim3212.assorted.buildingblocks.common.blocks.ColorChangingBlock;
 import com.grim3212.assorted.buildingblocks.common.blocks.building.BuildingBlocks;
@@ -34,7 +35,7 @@ public class BuildingBlocksCreativeItems {
         items.add(BuildingBlocksBlocks.CHAIN_LINK_DOOR.get());
         items.add(BuildingBlocksBlocks.QUARTZ_DOOR.get());
         items.add(BuildingBlocksBlocks.GLASS_DOOR.get());
-        items.add(BuildingBlocksBlocks.STEEL_DOOR.get());
+        items.addIfObtainable(BuildingBlocksBlocks.STEEL_DOOR.get(), BuildingBlocksTags.Items.INGOTS_STEEL);
         return items.getItems();
     }
 
