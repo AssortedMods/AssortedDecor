@@ -12,7 +12,11 @@ import com.grim3212.assorted.lib.platform.Services;
 import com.grim3212.assorted.lib.util.NBTHelper;
 import com.mojang.logging.LogUtils;
 import net.minecraft.core.BlockPos;
+import com.mojang.serialization.Codec;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.component.TypedDataComponent;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.nbt.NbtOps;
 import net.minecraft.network.chat.ComponentSerialization;
 import net.minecraft.util.ProblemReporter;
 import net.minecraft.world.entity.EntitySpawnReason;
@@ -40,10 +44,15 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Optional;
+
 
 public class CageBlockEntity extends BlockEntity implements IInventoryBlockEntity, MenuProvider, Nameable {
 
     private static final Logger LOGGER = LogUtils.getLogger();
+    private static final String STORED_ENTITY = "StoredEntity";
+    /** What isValidCage answers for a mob held in a tagged component rather than in custom data. */
+    private static final String TAGGED_COMPONENT = "#cage_entity_data";
 
     private Entity cachedEntity;
     private Component customName;
@@ -234,9 +243,34 @@ public class CageBlockEntity extends BlockEntity implements IInventoryBlockEntit
         }
 
         try (ProblemReporter.ScopedCollector reporter = new ProblemReporter.ScopedCollector(this.problemPath(), LOGGER)) {
-            ValueInput storedEntity = TagValueInput.create(reporter, this.level.registryAccess(), NBTHelper.getTag(stack, tag));
+            ValueInput storedEntity = TagValueInput.create(reporter, this.level.registryAccess(), entityData(stack, tag));
             this.cachedEntity = EntityType.loadEntityRecursive(storedEntity, this.level, new EntitySpawnRequest(EntitySpawnReason.LOAD, false), BaseSpawner.SET_DISPLAY_ENTITY_ID);
         }
+    }
+
+    private static CompoundTag entityData(ItemStack stack, String tag) {
+        return TAGGED_COMPONENT.equals(tag) ? taggedEntityData(stack).orElseGet(CompoundTag::new) : NBTHelper.getTag(stack, tag);
+    }
+
+    /** The mob in a component tagged #cage_entity_data, saved the way the stack itself would save it. */
+    private static Optional<CompoundTag> taggedEntityData(ItemStack stack) {
+        for (TypedDataComponent<?> component : stack.getComponents()) {
+            if (BuiltInRegistries.DATA_COMPONENT_TYPE.wrapAsHolder(component.type()).is(DisplaysTags.DataComponents.CAGE_ENTITY_DATA)) {
+                Optional<CompoundTag> entity = encode(component).filter(data -> data.contains("id"));
+                if (entity.isPresent()) {
+                    return entity;
+                }
+            }
+        }
+        return Optional.empty();
+    }
+
+    private static <T> Optional<CompoundTag> encode(TypedDataComponent<T> component) {
+        Codec<T> codec = component.type().codec();
+        if (codec == null) {
+            return Optional.empty();
+        }
+        return codec.encodeStart(NbtOps.INSTANCE, component.value()).result().filter(CompoundTag.class::isInstance).map(CompoundTag.class::cast);
     }
 
     public static String isValidCage(ItemStack stack) {
@@ -244,12 +278,16 @@ public class CageBlockEntity extends BlockEntity implements IInventoryBlockEntit
             return "EntityTag";
         }
 
+        if (taggedEntityData(stack).isPresent()) {
+            return TAGGED_COMPONENT;
+        }
+
         if (!stack.is(DisplaysTags.Items.CAGE_SUPPORTED)) {
             return null;
         }
 
-        if (NBTHelper.hasTag(stack, "StoredEntity")) {
-            return "StoredEntity";
+        if (NBTHelper.hasTag(stack, STORED_ENTITY)) {
+            return STORED_ENTITY;
         }
 
         if (NBTHelper.hasTag(stack, "EntityTag")) {

@@ -6,6 +6,8 @@ import com.grim3212.assorted.lib.core.inventory.IMenuDataProvider;
 import com.grim3212.assorted.lib.core.inventory.MenuData;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.gametest.framework.GameTestHelper;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.MenuProvider;
@@ -15,6 +17,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.component.TypedEntityData;
 import net.minecraft.world.level.GameType;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
@@ -32,6 +35,7 @@ final class CageTests {
     static void register(BiConsumer<String, Consumer<GameTestHelper>> out) {
         out.accept("cage_holds_mob_and_drops_it", CageTests::cageHoldsMobAndDropsIt);
         out.accept("cage_menu_rebuilds_on_the_client", CageTests::cageMenuRebuildsOnTheClient);
+        out.accept("cage_shows_a_mob_from_a_tagged_component", CageTests::cageShowsAMobFromATaggedComponent);
     }
 
     /**
@@ -62,6 +66,25 @@ final class CageTests {
 
         helper.destroyBlock(MAIN);
         helper.succeedWhen(() -> helper.assertItemEntityPresent(Items.PIG_SPAWN_EGG, MAIN, 3.0D));
+    }
+
+    /**
+     * Any item whose mob sits in a component tagged #cage_entity_data goes in a cage, the way a filled pokeball does. The
+     * test data tags vanilla's entity data, so a plain stick carrying a pig stands in for an item from another mod.
+     */
+    private static void cageShowsAMobFromATaggedComponent(GameTestHelper helper) {
+        helper.setBlock(MAIN, DisplaysBlocks.CAGE.get());
+        CageBlockEntity cage = helper.getBlockEntity(MAIN, CageBlockEntity.class);
+
+        ItemStack stick = new ItemStack(Items.STICK);
+        helper.assertTrue(CageBlockEntity.isValidCage(stick) == null, "cage took a stick with no mob in it");
+        stick.set(DataComponents.ENTITY_DATA, TypedEntityData.of(EntityTypes.PIG, new CompoundTag()));
+        helper.assertTrue(CageBlockEntity.isValidCage(stick) != null, "cage rejected an item holding a mob in a tagged component");
+
+        cage.getItemStackStorageHandler().setStackInSlot(0, stick);
+        Entity caged = cage.getCachedEntity();
+        helper.assertTrue(caged != null && caged.getType() == EntityTypes.PIG, "cage did not build a pig out of the tagged component");
+        helper.succeed();
     }
 
     /**
