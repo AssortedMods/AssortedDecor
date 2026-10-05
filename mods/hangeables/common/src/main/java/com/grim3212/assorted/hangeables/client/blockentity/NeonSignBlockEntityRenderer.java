@@ -24,6 +24,7 @@ import net.minecraft.client.renderer.state.level.CameraRenderState;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.resources.Identifier;
 import net.minecraft.util.FormattedCharSequence;
+import net.minecraft.util.LightCoordsUtil;
 import net.minecraft.world.level.block.StandingSignBlock;
 import net.minecraft.world.level.block.WallSignBlock;
 import net.minecraft.world.level.block.state.BlockState;
@@ -158,7 +159,8 @@ public class NeonSignBlockEntityRenderer implements BlockEntityRenderer<NeonSign
                 continue;
             }
 
-            submitNodeCollector.submitText(poseStack, state.lineOffsets[line], (float) (line * 10 - j1), state.lines[line], false, Font.DisplayMode.POLYGON_OFFSET, state.lightCoords, TEXT_COLOR, 0, 0);
+            // Full bright whatever the light around it, so the text glows in the dark.
+            submitNodeCollector.submitText(poseStack, state.lineOffsets[line], (float) (line * 10 - j1), state.lines[line], false, Font.DisplayMode.POLYGON_OFFSET, LightCoordsUtil.FULL_BRIGHT, TEXT_COLOR, 0, 0);
         }
     }
 
