@@ -1,0 +1,6 @@
+{
+  "parent": "assortedhangeables:block/wall_clock",
+  "textures": {
+    "front": "assortedhangeables:block/wall_clock/wall_clock_19"
+  }
+}

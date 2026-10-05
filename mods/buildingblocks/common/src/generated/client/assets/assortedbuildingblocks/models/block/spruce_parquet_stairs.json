@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "assortedbuildingblocks:block/building/spruce_parquet",
+    "side": "assortedbuildingblocks:block/building/spruce_parquet",
+    "top": "assortedbuildingblocks:block/building/spruce_parquet"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "values": {
+    "assorteddisplays:copper_display_case": {
+      "next_oxidation_stage": "assorteddisplays:exposed_copper_display_case"
+    },
+    "assorteddisplays:exposed_copper_display_case": {
+      "next_oxidation_stage": "assorteddisplays:weathered_copper_display_case"
+    },
+    "assorteddisplays:weathered_copper_display_case": {
+      "next_oxidation_stage": "assorteddisplays:oxidized_copper_display_case"
+    }
+  }
+}

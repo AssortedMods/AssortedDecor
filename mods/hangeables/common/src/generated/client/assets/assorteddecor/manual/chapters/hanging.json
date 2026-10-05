@@ -1,0 +1,67 @@
+{
+  "conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "assortedhangeables"
+    }
+  ],
+  "pages": [
+    {
+      "type": "assortedlib:recipe",
+      "id": "wallpaper",
+      "recipes": [
+        "assortedhangeables:wallpaper"
+      ],
+      "text": "manual.assorteddecor.chapter.hanging.wallpaper",
+      "title": "manual.assorteddecor.chapter.hanging.wallpaper.title"
+    },
+    {
+      "type": "assortedlib:recipe",
+      "id": "frames",
+      "interval": 50,
+      "recipes": [
+        "assortedhangeables:wood_frame",
+        "assortedhangeables:iron_frame"
+      ],
+      "text": "manual.assorteddecor.chapter.hanging.frames",
+      "title": "manual.assorteddecor.chapter.hanging.frames.title"
+    },
+    {
+      "type": "assortedlib:image",
+      "height": 104,
+      "id": "frame_info",
+      "image": "assortedhangeables:textures/gui/manual/frames.png",
+      "text": "manual.assorteddecor.chapter.hanging.frame_info",
+      "title": "manual.assorteddecor.chapter.hanging.frame_info.title",
+      "width": 108
+    },
+    {
+      "type": "assortedlib:recipe",
+      "id": "calendar",
+      "recipes": [
+        "assortedhangeables:calendar"
+      ],
+      "text": "manual.assorteddecor.chapter.hanging.calendar",
+      "title": "manual.assorteddecor.chapter.hanging.calendar.title"
+    },
+    {
+      "type": "assortedlib:recipe",
+      "id": "clock",
+      "recipes": [
+        "assortedhangeables:wall_clock"
+      ],
+      "text": "manual.assorteddecor.chapter.hanging.clock",
+      "title": "manual.assorteddecor.chapter.hanging.clock.title"
+    },
+    {
+      "type": "assortedlib:recipe",
+      "id": "neon_sign",
+      "recipes": [
+        "assortedhangeables:neon_sign"
+      ],
+      "text": "manual.assorteddecor.chapter.hanging.neon_sign",
+      "title": "manual.assorteddecor.chapter.hanging.neon_sign.title"
+    }
+  ],
+  "sort_order": 5
+}

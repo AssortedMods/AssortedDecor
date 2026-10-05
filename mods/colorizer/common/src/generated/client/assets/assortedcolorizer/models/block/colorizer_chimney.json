@@ -1,0 +1,14 @@
+{
+  "parent": "assortedcolorizer:block/chimney",
+  "colorizer": {
+    "parent": "assortedcolorizer:block/chimney",
+    "textures": {
+      "top": "assortedcolorizer:block/chimney_top"
+    }
+  },
+  "fabric:type": "assortedcolorizer:colorizer",
+  "loader": "assortedcolorizer:colorizer",
+  "textures": {
+    "particle": "assortedcolorizer:block/colorizer"
+  }
+}

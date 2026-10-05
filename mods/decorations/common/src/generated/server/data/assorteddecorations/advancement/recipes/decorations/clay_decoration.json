@@ -1,0 +1,44 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "assorteddecorations"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "assorteddecorations:clay_decoration"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_unfired_clay_decoration": {
+      "conditions": {
+        "items": [
+          {
+            "items": "assorteddecorations:unfired_clay_decoration"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "assorteddecorations"
+    }
+  ],
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_unfired_clay_decoration"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "assorteddecorations:clay_decoration"
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:function",
+  "environment": "minecraft:default",
+  "function": "assortedbuildingblocks:lumber_mill_recipes_reach_the_recipe_book",
+  "structure": "assortedbuildingblocks:test_box",
+  "max_ticks": 1,
+  "setup_ticks": 0,
+  "required": true
+}

@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "assortedcolorizer:colorizer",
+    "model": "assortedcolorizer:item/colorizer_brush",
+    "tints": [
+      {
+        "type": "assortedcolorizer:colorizer"
+      }
+    ]
+  }
+}

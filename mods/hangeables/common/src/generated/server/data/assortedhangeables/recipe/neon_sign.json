@@ -1,0 +1,29 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "assortedhangeables"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "assortedhangeables"
+    }
+  ],
+  "key": {
+    "C": "#c:dusts/redstone",
+    "G": "#minecraft:planks",
+    "X": "#c:obsidians"
+  },
+  "pattern": [
+    "XXX",
+    "XCX",
+    " G "
+  ],
+  "result": {
+    "count": 3,
+    "id": "assortedhangeables:neon_sign"
+  }
+}

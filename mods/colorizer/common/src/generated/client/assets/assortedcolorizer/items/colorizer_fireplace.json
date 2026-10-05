@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "assortedcolorizer:colorizer",
+    "model": "assortedcolorizer:block/colorizer_fireplace",
+    "tints": [
+      {
+        "type": "assortedcolorizer:colorizer"
+      }
+    ]
+  }
+}

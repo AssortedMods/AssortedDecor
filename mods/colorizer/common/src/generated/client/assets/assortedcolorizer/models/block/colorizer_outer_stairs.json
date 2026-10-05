@@ -1,0 +1,11 @@
+{
+  "parent": "assortedcolorizer:block/outer_stairs",
+  "colorizer": {
+    "parent": "assortedcolorizer:block/outer_stairs"
+  },
+  "fabric:type": "assortedcolorizer:colorizer",
+  "loader": "assortedcolorizer:colorizer",
+  "textures": {
+    "particle": "assortedcolorizer:block/colorizer"
+  }
+}

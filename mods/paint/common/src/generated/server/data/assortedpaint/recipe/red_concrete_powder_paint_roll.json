@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "assortedpaint"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "fabric:load_conditions": [
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "assortedpaint"
+    }
+  ],
+  "ingredients": [
+    "assortedpaint:paint_roller_red",
+    "#c:concrete_powders"
+  ],
+  "result": {
+    "id": "minecraft:red_concrete_powder"
+  }
+}

@@ -1,0 +1,34 @@
+package com.grim3212.assorted.colorizer.common.blocks.colorizer;
+
+
+import com.grim3212.assorted.colorizer.api.colorizer.SlopeType;
+import com.grim3212.assorted.colorizer.api.util.ColorizerUtil;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
+
+public class ColorizerSlopeSideBlock extends ColorizerSideBlock {
+
+    private final SlopeType type;
+
+    public ColorizerSlopeSideBlock(SlopeType type, Properties props) {
+        super(props);
+        this.type = type;
+    }
+
+    /**
+     * The shape family. Kept on the instance because shapes are baked while the {@code ColorizerBlocks}
+     * entries are still null.
+     */
+    public SlopeType getSlopeType() {
+        return this.type;
+    }
+
+    @Override
+    public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context) {
+        return ColorizerUtil.addAxisAlignedBoxes(state, worldIn, pos, context, this.type.getNumPieces());
+    }
+
+}

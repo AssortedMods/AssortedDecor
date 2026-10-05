@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "assortedbuildingblocks:block/framed_mangrove_plank_slab"
+    },
+    "type=double": {
+      "model": "assortedbuildingblocks:block/framed_mangrove_planks"
+    },
+    "type=top": {
+      "model": "assortedbuildingblocks:block/framed_mangrove_plank_slab_top"
+    }
+  }
+}

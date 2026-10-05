@@ -1,0 +1,19 @@
+{
+  "values": [
+    "assortedbuildingblocks:lapis_bricks",
+    "assortedbuildingblocks:lapis_brick_slab",
+    "assortedbuildingblocks:lapis_brick_stairs",
+    "assortedbuildingblocks:lapis_brick_wall",
+    "assortedbuildingblocks:lapis_tiles",
+    "assortedbuildingblocks:lapis_tile_slab",
+    "assortedbuildingblocks:lapis_tile_stairs",
+    "assortedbuildingblocks:lapis_tile_wall",
+    "assortedbuildingblocks:polished_lapis",
+    "assortedbuildingblocks:polished_lapis_slab",
+    "assortedbuildingblocks:polished_lapis_stairs",
+    "assortedbuildingblocks:iron_bricks",
+    "assortedbuildingblocks:iron_brick_slab",
+    "assortedbuildingblocks:iron_brick_stairs",
+    "assortedbuildingblocks:iron_beam"
+  ]
+}

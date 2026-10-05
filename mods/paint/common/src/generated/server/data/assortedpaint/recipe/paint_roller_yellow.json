@@ -1,0 +1,27 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "assortedpaint"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "fabric:load_conditions": [
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "assortedpaint"
+    }
+  ],
+  "ingredients": [
+    "assortedpaint:paint_roller",
+    {
+      "neoforge:ingredient_type": "neoforge:difference",
+      "base": "#c:dyes/yellow",
+      "fabric:type": "fabric:difference",
+      "subtracted": "#assortedpaint:paint_rollers"
+    }
+  ],
+  "result": {
+    "id": "assortedpaint:paint_roller_yellow"
+  }
+}

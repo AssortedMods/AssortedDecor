@@ -1,0 +1,64 @@
+{
+  "conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "assortedroads"
+    }
+  ],
+  "pages": [
+    {
+      "type": "assortedlib:recipe",
+      "id": "roadway",
+      "interval": 50,
+      "recipes": [
+        "assortedroads:roadway",
+        "assortedroads:roadway_manhole"
+      ],
+      "text": "manual.assorteddecor.chapter.roads.roadway",
+      "title": "manual.assorteddecor.chapter.roads.roadway.title"
+    },
+    {
+      "type": "assortedlib:recipe",
+      "conditions": [
+        {
+          "type": "assortedlib:mod_loaded",
+          "mod": "assortedlights"
+        }
+      ],
+      "id": "roadway_light",
+      "recipes": [
+        "assortedroads:roadway_light"
+      ],
+      "text": "manual.assorteddecor.chapter.roads.roadway_light",
+      "title": "manual.assorteddecor.chapter.roads.roadway_light.title"
+    },
+    {
+      "type": "assortedlib:recipe",
+      "id": "asphalt",
+      "recipes": [
+        "assortedroads:asphalt"
+      ],
+      "text": "manual.assorteddecor.chapter.roads.asphalt",
+      "title": "manual.assorteddecor.chapter.roads.asphalt.title"
+    },
+    {
+      "type": "assortedlib:recipe",
+      "id": "sidewalk",
+      "recipes": [
+        "assortedroads:sidewalk"
+      ],
+      "text": "manual.assorteddecor.chapter.roads.sidewalk",
+      "title": "manual.assorteddecor.chapter.roads.sidewalk.title"
+    },
+    {
+      "type": "assortedlib:recipe",
+      "id": "stone_path",
+      "recipes": [
+        "assortedroads:stone_path_stonecutting"
+      ],
+      "text": "manual.assorteddecor.chapter.roads.stone_path",
+      "title": "manual.assorteddecor.chapter.roads.stone_path.title"
+    }
+  ],
+  "sort_order": 6
+}

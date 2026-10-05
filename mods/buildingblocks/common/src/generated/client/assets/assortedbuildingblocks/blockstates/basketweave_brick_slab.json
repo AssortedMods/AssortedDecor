@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "assortedbuildingblocks:block/basketweave_brick_slab"
+    },
+    "type=double": {
+      "model": "assortedbuildingblocks:block/basketweave_bricks"
+    },
+    "type=top": {
+      "model": "assortedbuildingblocks:block/basketweave_brick_slab_top"
+    }
+  }
+}

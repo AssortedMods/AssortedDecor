@@ -1,0 +1,44 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "assortedgates"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_gate_grating": {
+      "conditions": {
+        "items": [
+          {
+            "items": "assortedgates:gate_grating"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "assortedgates:gate_trumpet"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "assortedgates"
+    }
+  ],
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_gate_grating"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "assortedgates:gate_trumpet"
+    ]
+  }
+}

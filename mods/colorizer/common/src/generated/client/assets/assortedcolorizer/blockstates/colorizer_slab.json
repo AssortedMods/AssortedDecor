@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "type=bottom": {
+      "type": "assortedlib:specification",
+      "fabric:type": "assortedlib:specification",
+      "model": "assortedcolorizer:block/colorizer_slab"
+    },
+    "type=double": {
+      "type": "assortedlib:specification",
+      "fabric:type": "assortedlib:specification",
+      "model": "assortedcolorizer:block/colorizer"
+    },
+    "type=top": {
+      "type": "assortedlib:specification",
+      "fabric:type": "assortedlib:specification",
+      "model": "assortedcolorizer:block/colorizer_slab_top"
+    }
+  }
+}

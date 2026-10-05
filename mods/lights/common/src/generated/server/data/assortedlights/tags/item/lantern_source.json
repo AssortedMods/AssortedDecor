@@ -1,0 +1,11 @@
+{
+  "values": [
+    {
+      "id": "#minecraft:candles",
+      "required": false
+    },
+    "assortedlights:illumination_tube",
+    "minecraft:torch",
+    "minecraft:soul_torch"
+  ]
+}

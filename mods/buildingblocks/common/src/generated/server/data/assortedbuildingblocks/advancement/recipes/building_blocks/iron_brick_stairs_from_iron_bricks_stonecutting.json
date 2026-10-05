@@ -1,0 +1,44 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "assortedbuildingblocks"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_iron_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "assortedbuildingblocks:iron_bricks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "assortedbuildingblocks:iron_brick_stairs_from_iron_bricks_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "assortedbuildingblocks"
+    }
+  ],
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_iron_bricks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "assortedbuildingblocks:iron_brick_stairs_from_iron_bricks_stonecutting"
+    ]
+  }
+}

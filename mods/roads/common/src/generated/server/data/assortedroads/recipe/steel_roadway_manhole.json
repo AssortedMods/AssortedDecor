@@ -1,0 +1,37 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:item_tag_populated",
+      "tag": "c:ingots/steel"
+    },
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "assortedroads"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:ingots/steel"
+      ]
+    },
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "assortedroads"
+    }
+  ],
+  "key": {
+    "M": "#c:ingots/steel",
+    "X": "assortedroads:roadway"
+  },
+  "pattern": [
+    "M",
+    "X"
+  ],
+  "result": {
+    "id": "assortedroads:roadway_manhole"
+  }
+}

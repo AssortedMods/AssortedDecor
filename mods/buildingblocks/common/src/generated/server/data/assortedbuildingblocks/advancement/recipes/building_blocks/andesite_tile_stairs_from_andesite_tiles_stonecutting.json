@@ -1,0 +1,44 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "assortedbuildingblocks"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_andesite_tiles": {
+      "conditions": {
+        "items": [
+          {
+            "items": "assortedbuildingblocks:andesite_tiles"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "assortedbuildingblocks:andesite_tile_stairs_from_andesite_tiles_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "assortedbuildingblocks"
+    }
+  ],
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_andesite_tiles"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "assortedbuildingblocks:andesite_tile_stairs_from_andesite_tiles_stonecutting"
+    ]
+  }
+}

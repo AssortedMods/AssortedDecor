@@ -1,0 +1,23 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "assorteddisplays"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "fabric:load_conditions": [
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "assorteddisplays"
+    }
+  ],
+  "group": "waxed_copper_display_case",
+  "ingredients": [
+    "assorteddisplays:oxidized_copper_display_case",
+    "minecraft:honeycomb"
+  ],
+  "result": {
+    "id": "assorteddisplays:waxed_oxidized_copper_display_case"
+  }
+}

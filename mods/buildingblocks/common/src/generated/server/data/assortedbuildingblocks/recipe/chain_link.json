@@ -1,0 +1,28 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "assortedbuildingblocks"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "assortedbuildingblocks"
+    }
+  ],
+  "key": {
+    "N": "#c:nuggets/iron",
+    "X": "#c:ingots/iron"
+  },
+  "pattern": [
+    " N ",
+    "NXN",
+    " N "
+  ],
+  "result": {
+    "count": 4,
+    "id": "assortedbuildingblocks:chain_link"
+  }
+}

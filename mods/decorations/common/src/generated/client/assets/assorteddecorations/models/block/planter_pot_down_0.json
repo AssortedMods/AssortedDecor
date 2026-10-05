@@ -1,0 +1,6 @@
+{
+  "parent": "assorteddecorations:block/planter_pot_down",
+  "textures": {
+    "top": "minecraft:block/dirt"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:function",
+  "environment": "minecraft:default",
+  "function": "assortedroads:roadway_light_follows_redstone",
+  "structure": "assortedroads:test_box",
+  "max_ticks": 100,
+  "setup_ticks": 0,
+  "required": true
+}

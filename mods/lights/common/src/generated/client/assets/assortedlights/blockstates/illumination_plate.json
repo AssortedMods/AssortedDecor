@@ -1,0 +1,26 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "assortedlights:block/illumination_plate",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "assortedlights:block/illumination_plate_wall"
+    },
+    "facing=north": {
+      "model": "assortedlights:block/illumination_plate_wall",
+      "y": 270
+    },
+    "facing=south": {
+      "model": "assortedlights:block/illumination_plate_wall",
+      "y": 90
+    },
+    "facing=up": {
+      "model": "assortedlights:block/illumination_plate"
+    },
+    "facing=west": {
+      "model": "assortedlights:block/illumination_plate_wall",
+      "y": 180
+    }
+  }
+}

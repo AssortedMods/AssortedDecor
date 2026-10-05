@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "assortedhangeables:block/calendar",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "assortedhangeables:block/calendar",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "assortedhangeables:block/calendar"
+    },
+    "facing=west": {
+      "model": "assortedhangeables:block/calendar",
+      "y": 90
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "assortedbuildingblocks"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_spruce_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:spruce_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "assortedbuildingblocks:stripped_spruce_log_from_spruce_log_lumber_mill"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "assortedbuildingblocks"
+    }
+  ],
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_spruce_log"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "assortedbuildingblocks:stripped_spruce_log_from_spruce_log_lumber_mill"
+    ]
+  }
+}

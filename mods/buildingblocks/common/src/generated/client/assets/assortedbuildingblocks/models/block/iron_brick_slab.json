@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "assortedbuildingblocks:block/building/iron_bricks",
+    "side": "assortedbuildingblocks:block/building/iron_bricks",
+    "top": "assortedbuildingblocks:block/building/iron_bricks"
+  }
+}

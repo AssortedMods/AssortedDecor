@@ -1,0 +1,24 @@
+{
+  "links": [
+    {
+      "blocks": [
+        "assortedgates:castle_gate"
+      ],
+      "items": [
+        "assortedgates:gate_grating",
+        "assortedgates:gate_trumpet"
+      ],
+      "page": "assorteddecor:gates/castle_gate"
+    },
+    {
+      "blocks": [
+        "assortedgates:garage_door"
+      ],
+      "items": [
+        "assortedgates:garage_panel",
+        "assortedgates:garage_remote"
+      ],
+      "page": "assorteddecor:gates/garage_door"
+    }
+  ]
+}

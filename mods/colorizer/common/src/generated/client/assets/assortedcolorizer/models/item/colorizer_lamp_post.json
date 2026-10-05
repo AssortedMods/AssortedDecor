@@ -1,0 +1,14 @@
+{
+  "parent": "assortedcolorizer:item/lamp_post_inventory",
+  "colorizer": {
+    "parent": "assortedcolorizer:item/lamp_post_inventory",
+    "textures": {
+      "lamp": "minecraft:block/glowstone"
+    }
+  },
+  "fabric:type": "assortedcolorizer:colorizer",
+  "loader": "assortedcolorizer:colorizer",
+  "textures": {
+    "particle": "assortedcolorizer:block/colorizer"
+  }
+}

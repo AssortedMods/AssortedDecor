@@ -1,0 +1,59 @@
+{
+  "conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "assortedlights"
+    }
+  ],
+  "pages": [
+    {
+      "type": "assortedlib:recipe",
+      "id": "fluro",
+      "interval": 30,
+      "recipes": [
+        "assortedlights:fluro_white",
+        "assortedlights:fluro_orange",
+        "assortedlights:fluro_magenta",
+        "assortedlights:fluro_light_blue",
+        "assortedlights:fluro_yellow",
+        "assortedlights:fluro_lime",
+        "assortedlights:fluro_pink",
+        "assortedlights:fluro_gray",
+        "assortedlights:fluro_light_gray",
+        "assortedlights:fluro_cyan",
+        "assortedlights:fluro_purple",
+        "assortedlights:fluro_blue",
+        "assortedlights:fluro_brown",
+        "assortedlights:fluro_green",
+        "assortedlights:fluro_red",
+        "assortedlights:fluro_black"
+      ],
+      "text": "manual.assorteddecor.chapter.lights.fluro",
+      "title": "manual.assorteddecor.chapter.lights.fluro.title"
+    },
+    {
+      "type": "assortedlib:recipe",
+      "id": "illumination",
+      "interval": 50,
+      "recipes": [
+        "assortedlights:illumination_tube",
+        "assortedlights:illumination_plate"
+      ],
+      "text": "manual.assorteddecor.chapter.lights.illumination",
+      "title": "manual.assorteddecor.chapter.lights.illumination.title"
+    },
+    {
+      "type": "assortedlib:recipe",
+      "id": "lanterns",
+      "interval": 50,
+      "recipes": [
+        "assortedlights:bone_lantern",
+        "assortedlights:iron_lantern",
+        "assortedlights:paper_lantern"
+      ],
+      "text": "manual.assorteddecor.chapter.lights.lanterns",
+      "title": "manual.assorteddecor.chapter.lights.lanterns.title"
+    }
+  ],
+  "sort_order": 4
+}

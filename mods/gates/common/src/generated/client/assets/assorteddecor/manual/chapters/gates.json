@@ -1,0 +1,35 @@
+{
+  "conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "assortedgates"
+    }
+  ],
+  "pages": [
+    {
+      "type": "assortedlib:recipe",
+      "id": "castle_gate",
+      "interval": 60,
+      "recipes": [
+        "assortedgates:gate_grating",
+        "assortedgates:castle_gate",
+        "assortedgates:gate_trumpet"
+      ],
+      "text": "manual.assorteddecor.chapter.gates.castle_gate",
+      "title": "manual.assorteddecor.chapter.gates.castle_gate.title"
+    },
+    {
+      "type": "assortedlib:recipe",
+      "id": "garage_door",
+      "interval": 60,
+      "recipes": [
+        "assortedgates:garage_panel",
+        "assortedgates:garage_door",
+        "assortedgates:garage_remote"
+      ],
+      "text": "manual.assorteddecor.chapter.gates.garage_door",
+      "title": "manual.assorteddecor.chapter.gates.garage_door.title"
+    }
+  ],
+  "sort_order": 8
+}

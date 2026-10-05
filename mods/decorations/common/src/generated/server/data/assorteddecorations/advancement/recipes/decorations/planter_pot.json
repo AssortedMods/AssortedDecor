@@ -1,0 +1,44 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "assorteddecorations"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "assorteddecorations:planter_pot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_unfired_planter_pot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "assorteddecorations:unfired_planter_pot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "assorteddecorations"
+    }
+  ],
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_unfired_planter_pot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "assorteddecorations:planter_pot"
+    ]
+  }
+}

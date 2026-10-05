@@ -1,0 +1,44 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "assortedpaint"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_concrete_powder": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:concrete_powders"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "assortedpaint:cyan_concrete_powder_paint_roll"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "assortedpaint"
+    }
+  ],
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_concrete_powder"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "assortedpaint:cyan_concrete_powder_paint_roll"
+    ]
+  }
+}

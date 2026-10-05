@@ -1,0 +1,26 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "assortedlights:block/illumination_tube",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "assortedlights:block/illumination_tube_wall"
+    },
+    "facing=north": {
+      "model": "assortedlights:block/illumination_tube_wall",
+      "y": 270
+    },
+    "facing=south": {
+      "model": "assortedlights:block/illumination_tube_wall",
+      "y": 90
+    },
+    "facing=up": {
+      "model": "assortedlights:block/illumination_tube"
+    },
+    "facing=west": {
+      "model": "assortedlights:block/illumination_tube_wall",
+      "y": 180
+    }
+  }
+}

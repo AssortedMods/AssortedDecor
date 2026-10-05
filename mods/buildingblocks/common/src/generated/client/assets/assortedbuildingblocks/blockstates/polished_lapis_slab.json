@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "assortedbuildingblocks:block/polished_lapis_slab"
+    },
+    "type=double": {
+      "model": "assortedbuildingblocks:block/polished_lapis"
+    },
+    "type=top": {
+      "model": "assortedbuildingblocks:block/polished_lapis_slab_top"
+    }
+  }
+}

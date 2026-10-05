@@ -1,0 +1,11 @@
+{
+  "parent": "assortedcolorizer:item/door",
+  "colorizer": {
+    "parent": "assortedcolorizer:item/door"
+  },
+  "fabric:type": "assortedcolorizer:colorizer",
+  "loader": "assortedcolorizer:colorizer",
+  "textures": {
+    "particle": "assortedcolorizer:block/colorizer"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "assortedbuildingblocks:block/polished_obsidian_slab"
+    },
+    "type=double": {
+      "model": "assortedbuildingblocks:block/polished_obsidian"
+    },
+    "type=top": {
+      "model": "assortedbuildingblocks:block/polished_obsidian_slab_top"
+    }
+  }
+}

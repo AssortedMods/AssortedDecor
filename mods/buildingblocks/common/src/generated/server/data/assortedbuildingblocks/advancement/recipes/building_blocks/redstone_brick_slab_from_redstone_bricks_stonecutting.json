@@ -1,0 +1,44 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "assortedbuildingblocks"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_redstone_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "assortedbuildingblocks:redstone_bricks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "assortedbuildingblocks:redstone_brick_slab_from_redstone_bricks_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "assortedbuildingblocks"
+    }
+  ],
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_redstone_bricks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "assortedbuildingblocks:redstone_brick_slab_from_redstone_bricks_stonecutting"
+    ]
+  }
+}

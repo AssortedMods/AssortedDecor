@@ -1,0 +1,25 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "assorteddecorations"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "assorteddecorations"
+    }
+  ],
+  "key": {
+    "X": "minecraft:clay_ball"
+  },
+  "pattern": [
+    "X X",
+    "XXX"
+  ],
+  "result": {
+    "id": "assorteddecorations:unfired_planter_pot"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "links": [
+    {
+      "blocks": [
+        "assortedlights:fluro_white",
+        "assortedlights:fluro_orange",
+        "assortedlights:fluro_magenta",
+        "assortedlights:fluro_light_blue",
+        "assortedlights:fluro_yellow",
+        "assortedlights:fluro_lime",
+        "assortedlights:fluro_pink",
+        "assortedlights:fluro_gray",
+        "assortedlights:fluro_light_gray",
+        "assortedlights:fluro_cyan",
+        "assortedlights:fluro_purple",
+        "assortedlights:fluro_blue",
+        "assortedlights:fluro_brown",
+        "assortedlights:fluro_green",
+        "assortedlights:fluro_red",
+        "assortedlights:fluro_black"
+      ],
+      "page": "assorteddecor:lights/fluro"
+    },
+    {
+      "blocks": [
+        "assortedlights:illumination_tube",
+        "assortedlights:illumination_plate"
+      ],
+      "page": "assorteddecor:lights/illumination"
+    },
+    {
+      "blocks": [
+        "assortedlights:bone_lantern",
+        "assortedlights:iron_lantern",
+        "assortedlights:paper_lantern"
+      ],
+      "page": "assorteddecor:lights/lanterns"
+    }
+  ]
+}

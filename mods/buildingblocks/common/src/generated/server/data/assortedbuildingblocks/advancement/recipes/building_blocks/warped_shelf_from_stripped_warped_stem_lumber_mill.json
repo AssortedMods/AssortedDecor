@@ -1,0 +1,44 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "assortedbuildingblocks"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_stripped_warped_stem": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:stripped_warped_stem"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "assortedbuildingblocks:warped_shelf_from_stripped_warped_stem_lumber_mill"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "assortedbuildingblocks"
+    }
+  ],
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_stripped_warped_stem"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "assortedbuildingblocks:warped_shelf_from_stripped_warped_stem_lumber_mill"
+    ]
+  }
+}

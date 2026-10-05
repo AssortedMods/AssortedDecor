@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "assorteddisplays:item/resizing_tool"
+  }
+}

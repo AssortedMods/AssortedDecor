@@ -1,0 +1,19 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "assortedbuildingblocks"
+    }
+  ],
+  "type": "assortedbuildingblocks:lumber_mill",
+  "fabric:load_conditions": [
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "assortedbuildingblocks"
+    }
+  ],
+  "ingredient": "assortedbuildingblocks:jungle_parquet",
+  "result": {
+    "id": "assortedbuildingblocks:jungle_parquet_stairs"
+  }
+}

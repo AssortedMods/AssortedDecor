@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "assortedpaint"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "fabric:load_conditions": [
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "assortedpaint"
+    }
+  ],
+  "ingredients": [
+    "assortedpaint:paint_roller_orange",
+    "#c:concretes"
+  ],
+  "result": {
+    "id": "minecraft:orange_concrete"
+  }
+}

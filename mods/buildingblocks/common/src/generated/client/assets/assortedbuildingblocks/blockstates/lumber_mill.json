@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "assortedbuildingblocks:block/lumber_mill",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "assortedbuildingblocks:block/lumber_mill"
+    },
+    "facing=south": {
+      "model": "assortedbuildingblocks:block/lumber_mill",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "assortedbuildingblocks:block/lumber_mill",
+      "y": 270
+    }
+  }
+}

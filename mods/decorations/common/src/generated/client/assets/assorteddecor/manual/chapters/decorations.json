@@ -1,0 +1,51 @@
+{
+  "conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "assorteddecorations"
+    }
+  ],
+  "pages": [
+    {
+      "type": "assortedlib:recipe",
+      "id": "clay",
+      "interval": 50,
+      "recipes": [
+        "assorteddecorations:unfired_clay_decoration",
+        "assorteddecorations:clay_decoration"
+      ],
+      "text": "manual.assorteddecor.chapter.decorations.clay",
+      "title": "manual.assorteddecor.chapter.decorations.clay.title"
+    },
+    {
+      "type": "assortedlib:recipe",
+      "id": "planter_pot",
+      "interval": 50,
+      "recipes": [
+        "assorteddecorations:unfired_planter_pot",
+        "assorteddecorations:planter_pot"
+      ],
+      "text": "manual.assorteddecor.chapter.decorations.planter_pot",
+      "title": "manual.assorteddecor.chapter.decorations.planter_pot.title"
+    },
+    {
+      "type": "assortedlib:recipe",
+      "id": "bone",
+      "recipes": [
+        "assorteddecorations:bone_decoration"
+      ],
+      "text": "manual.assorteddecor.chapter.decorations.bone",
+      "title": "manual.assorteddecor.chapter.decorations.bone.title"
+    },
+    {
+      "type": "assortedlib:recipe",
+      "id": "fountain",
+      "recipes": [
+        "assorteddecorations:fountain"
+      ],
+      "text": "manual.assorteddecor.chapter.decorations.fountain",
+      "title": "manual.assorteddecor.chapter.decorations.fountain.title"
+    }
+  ],
+  "sort_order": 7
+}

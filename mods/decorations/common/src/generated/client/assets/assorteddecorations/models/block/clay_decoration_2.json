@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "assorteddecorations:block/decorations/clay_decoration_2"
+  }
+}

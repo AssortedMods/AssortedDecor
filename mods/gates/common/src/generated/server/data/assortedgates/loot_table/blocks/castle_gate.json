@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "assortedgates:castle_gate",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "top": "true"
+              }
+            }
+          ],
+          "name": "assortedgates:castle_gate"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "assortedgates:blocks/castle_gate"
+}

@@ -1,6 +1,0 @@
-{
-  "parent": "assorteddecor:block/wall_clock",
-  "textures": {
-    "front": "assorteddecor:block/wall_clock/wall_clock_34"
-  }
-}

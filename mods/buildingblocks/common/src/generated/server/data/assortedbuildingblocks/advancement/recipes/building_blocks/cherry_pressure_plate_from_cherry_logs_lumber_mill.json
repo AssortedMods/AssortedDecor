@@ -1,0 +1,44 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "assortedbuildingblocks"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cherry_logs": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#minecraft:cherry_logs"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "assortedbuildingblocks:cherry_pressure_plate_from_cherry_logs_lumber_mill"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "assortedbuildingblocks"
+    }
+  ],
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cherry_logs"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "assortedbuildingblocks:cherry_pressure_plate_from_cherry_logs_lumber_mill"
+    ]
+  }
+}

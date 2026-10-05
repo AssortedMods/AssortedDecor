@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:function",
+  "environment": "minecraft:default",
+  "function": "assorteddecorations:planter_pot_holds_a_plant",
+  "structure": "assorteddecorations:test_box",
+  "max_ticks": 1,
+  "setup_ticks": 0,
+  "required": true
+}

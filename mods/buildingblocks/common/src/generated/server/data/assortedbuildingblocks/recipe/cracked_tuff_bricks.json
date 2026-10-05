@@ -1,0 +1,21 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "assortedbuildingblocks"
+    }
+  ],
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "experience": 0.1,
+  "fabric:load_conditions": [
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "assortedbuildingblocks"
+    }
+  ],
+  "ingredient": "minecraft:tuff_bricks",
+  "result": {
+    "id": "assortedbuildingblocks:cracked_tuff_bricks"
+  }
+}

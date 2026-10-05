@@ -1,0 +1,11 @@
+{
+  "parent": "assortedcolorizer:block/wall_post",
+  "colorizer": {
+    "parent": "assortedcolorizer:block/wall_post"
+  },
+  "fabric:type": "assortedcolorizer:colorizer",
+  "loader": "assortedcolorizer:colorizer",
+  "textures": {
+    "particle": "assortedcolorizer:block/colorizer"
+  }
+}

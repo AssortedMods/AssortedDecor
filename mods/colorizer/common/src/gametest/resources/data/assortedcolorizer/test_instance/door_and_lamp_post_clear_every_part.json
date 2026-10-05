@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:function",
+  "environment": "minecraft:default",
+  "function": "assortedcolorizer:door_and_lamp_post_clear_every_part",
+  "structure": "assortedcolorizer:test_box",
+  "max_ticks": 1,
+  "setup_ticks": 0,
+  "required": true
+}

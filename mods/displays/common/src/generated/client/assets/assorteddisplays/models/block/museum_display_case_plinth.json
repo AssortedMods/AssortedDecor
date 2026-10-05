@@ -1,0 +1,67 @@
+{
+  "parent": "minecraft:block/block",
+  "elements": [
+    {
+      "faces": {
+        "down": {
+          "cullface": "down",
+          "texture": "#side"
+        },
+        "east": {
+          "cullface": "east",
+          "texture": "#side"
+        },
+        "north": {
+          "cullface": "north",
+          "texture": "#side"
+        },
+        "south": {
+          "cullface": "south",
+          "texture": "#side"
+        },
+        "up": {
+          "cullface": "up",
+          "texture": "#top"
+        },
+        "west": {
+          "cullface": "west",
+          "texture": "#side"
+        }
+      },
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ]
+    },
+    {
+      "faces": {
+        "north": {
+          "texture": "#placard"
+        }
+      },
+      "from": [
+        1,
+        4,
+        -0.01
+      ],
+      "shade": false,
+      "to": [
+        15,
+        12,
+        -0.01
+      ]
+    }
+  ],
+  "textures": {
+    "particle": "assorteddisplays:block/museum_display_case_base",
+    "placard": "assorteddisplays:block/museum_display_case_placard",
+    "side": "assorteddisplays:block/museum_display_case_base",
+    "top": "assorteddisplays:block/museum_display_case_base_top"
+  }
+}

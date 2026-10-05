@@ -1,0 +1,55 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "assortedlights"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_dye": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:dyes"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "assortedlights:fluro_white"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tube": {
+      "conditions": {
+        "items": [
+          {
+            "items": "assortedlights:illumination_tube"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "assortedlights"
+    }
+  ],
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_dye",
+      "has_tube"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "assortedlights:fluro_white"
+    ]
+  }
+}

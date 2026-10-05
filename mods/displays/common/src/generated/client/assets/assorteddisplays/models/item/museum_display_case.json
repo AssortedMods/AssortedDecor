@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "assorteddisplays:item/museum_display_case"
+  }
+}

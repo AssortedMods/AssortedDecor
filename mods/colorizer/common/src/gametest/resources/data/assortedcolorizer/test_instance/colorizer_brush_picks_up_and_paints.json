@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:function",
+  "environment": "minecraft:default",
+  "function": "assortedcolorizer:colorizer_brush_picks_up_and_paints",
+  "structure": "assortedcolorizer:test_box",
+  "max_ticks": 1,
+  "setup_ticks": 0,
+  "required": true
+}

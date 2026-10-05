@@ -1,0 +1,17 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "assortedcolorizer:block/colorizer_firepit_covered"
+      }
+    },
+    {
+      "apply": {
+        "model": "assortedcolorizer:block/fire_high"
+      },
+      "when": {
+        "active": "true"
+      }
+    }
+  ]
+}

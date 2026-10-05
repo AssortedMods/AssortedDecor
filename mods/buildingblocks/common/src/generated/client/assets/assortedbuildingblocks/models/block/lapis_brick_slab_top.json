@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "assortedbuildingblocks:block/building/lapis_bricks",
+    "side": "assortedbuildingblocks:block/building/lapis_bricks",
+    "top": "assortedbuildingblocks:block/building/lapis_bricks"
+  }
+}

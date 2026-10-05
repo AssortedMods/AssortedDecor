@@ -1,0 +1,27 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "assortedcolorizer"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "assortedcolorizer"
+    }
+  ],
+  "key": {
+    "X": "assortedcolorizer:colorizer"
+  },
+  "pattern": [
+    "X ",
+    "XX",
+    "XX"
+  ],
+  "result": {
+    "count": 4,
+    "id": "assortedcolorizer:colorizer_sloped_post"
+  }
+}

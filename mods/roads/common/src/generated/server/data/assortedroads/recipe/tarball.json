@@ -1,0 +1,33 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "assortedroads"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "assortedroads"
+    }
+  ],
+  "key": {
+    "G": "#c:gravels",
+    "W": {
+      "neoforge:ingredient_type": "assortedlib:stored_fluid_ingredient",
+      "fabric:type": "assortedlib:stored_fluid_ingredient",
+      "fluid": "minecraft:water"
+    },
+    "X": "#minecraft:coals"
+  },
+  "pattern": [
+    "X",
+    "G",
+    "W"
+  ],
+  "result": {
+    "count": 16,
+    "id": "assortedroads:tarball"
+  }
+}

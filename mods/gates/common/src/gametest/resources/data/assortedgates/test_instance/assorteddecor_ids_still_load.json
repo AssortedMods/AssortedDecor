@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:function",
+  "environment": "minecraft:default",
+  "function": "assortedgates:assorteddecor_ids_still_load",
+  "structure": "assortedgates:test_box",
+  "max_ticks": 1,
+  "setup_ticks": 0,
+  "required": true
+}

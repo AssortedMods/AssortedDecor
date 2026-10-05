@@ -1,0 +1,27 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "assortedcolorizer"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "assortedcolorizer"
+    }
+  ],
+  "key": {
+    "S": "#c:rods/wooden",
+    "X": "assortedcolorizer:colorizer"
+  },
+  "pattern": [
+    "XXX",
+    " S "
+  ],
+  "result": {
+    "count": 4,
+    "id": "assortedcolorizer:colorizer_counter"
+  }
+}

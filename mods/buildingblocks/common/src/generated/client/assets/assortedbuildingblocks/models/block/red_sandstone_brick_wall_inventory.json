@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "assortedbuildingblocks:block/building/red_sandstone_bricks"
+  }
+}

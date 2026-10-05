@@ -1,0 +1,52 @@
+{
+  "variants": {
+    "axis=x,part=base": {
+      "model": "assortedbuildingblocks:block/stone_column_base",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,part=capital": {
+      "model": "assortedbuildingblocks:block/stone_column_capital",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,part=shaft": {
+      "model": "assortedbuildingblocks:block/stone_column_shaft",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,part=single": {
+      "model": "assortedbuildingblocks:block/stone_column_single",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y,part=base": {
+      "model": "assortedbuildingblocks:block/stone_column_base"
+    },
+    "axis=y,part=capital": {
+      "model": "assortedbuildingblocks:block/stone_column_capital"
+    },
+    "axis=y,part=shaft": {
+      "model": "assortedbuildingblocks:block/stone_column_shaft"
+    },
+    "axis=y,part=single": {
+      "model": "assortedbuildingblocks:block/stone_column_single"
+    },
+    "axis=z,part=base": {
+      "model": "assortedbuildingblocks:block/stone_column_base",
+      "x": 90
+    },
+    "axis=z,part=capital": {
+      "model": "assortedbuildingblocks:block/stone_column_capital",
+      "x": 90
+    },
+    "axis=z,part=shaft": {
+      "model": "assortedbuildingblocks:block/stone_column_shaft",
+      "x": 90
+    },
+    "axis=z,part=single": {
+      "model": "assortedbuildingblocks:block/stone_column_single",
+      "x": 90
+    }
+  }
+}

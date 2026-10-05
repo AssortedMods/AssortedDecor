@@ -1,0 +1,11 @@
+{
+  "parent": "assortedcolorizer:block/wall_side_tall",
+  "colorizer": {
+    "parent": "assortedcolorizer:block/wall_side_tall"
+  },
+  "fabric:type": "assortedcolorizer:colorizer",
+  "loader": "assortedcolorizer:colorizer",
+  "textures": {
+    "particle": "assortedcolorizer:block/colorizer"
+  }
+}

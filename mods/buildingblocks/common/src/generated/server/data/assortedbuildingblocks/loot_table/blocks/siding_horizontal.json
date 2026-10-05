@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "assortedbuildingblocks:siding_horizontal"
+        }
+      ],
+      "functions": [
+        {
+          "block": "assortedbuildingblocks:siding_horizontal",
+          "function": "minecraft:copy_state",
+          "properties": [
+            "color"
+          ]
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "assortedbuildingblocks:blocks/siding_horizontal"
+}

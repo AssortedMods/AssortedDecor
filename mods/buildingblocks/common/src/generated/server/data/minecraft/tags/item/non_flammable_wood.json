@@ -1,0 +1,20 @@
+{
+  "values": [
+    "assortedbuildingblocks:crimson_parquet",
+    "assortedbuildingblocks:crimson_parquet_slab",
+    "assortedbuildingblocks:crimson_parquet_stairs",
+    "assortedbuildingblocks:framed_crimson_planks",
+    "assortedbuildingblocks:framed_crimson_plank_slab",
+    "assortedbuildingblocks:framed_crimson_plank_stairs",
+    "assortedbuildingblocks:crimson_panel",
+    "assortedbuildingblocks:crimson_beam",
+    "assortedbuildingblocks:warped_parquet",
+    "assortedbuildingblocks:warped_parquet_slab",
+    "assortedbuildingblocks:warped_parquet_stairs",
+    "assortedbuildingblocks:framed_warped_planks",
+    "assortedbuildingblocks:framed_warped_plank_slab",
+    "assortedbuildingblocks:framed_warped_plank_stairs",
+    "assortedbuildingblocks:warped_panel",
+    "assortedbuildingblocks:warped_beam"
+  ]
+}

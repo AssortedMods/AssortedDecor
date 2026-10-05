@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:function",
+  "environment": "minecraft:default",
+  "function": "assortedgates:gate_activator_works_from_a_distance",
+  "structure": "assortedgates:test_box",
+  "max_ticks": 1,
+  "setup_ticks": 0,
+  "required": true
+}

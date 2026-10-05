@@ -1,0 +1,45 @@
+{
+  "links": [
+    {
+      "blocks": [
+        "assorteddisplays:cage"
+      ],
+      "page": "assorteddecor:displays/cage"
+    },
+    {
+      "blocks": [
+        "assorteddisplays:wooden_display_case",
+        "assorteddisplays:stone_display_case",
+        "assorteddisplays:iron_display_case",
+        "assorteddisplays:gold_display_case",
+        "assorteddisplays:diamond_display_case"
+      ],
+      "page": "assorteddecor:displays/display_cases"
+    },
+    {
+      "items": [
+        "assorteddisplays:resizing_tool"
+      ],
+      "page": "assorteddecor:displays/resizing_tool"
+    },
+    {
+      "blocks": [
+        "assorteddisplays:copper_display_case",
+        "assorteddisplays:exposed_copper_display_case",
+        "assorteddisplays:weathered_copper_display_case",
+        "assorteddisplays:oxidized_copper_display_case",
+        "assorteddisplays:waxed_copper_display_case",
+        "assorteddisplays:waxed_exposed_copper_display_case",
+        "assorteddisplays:waxed_weathered_copper_display_case",
+        "assorteddisplays:waxed_oxidized_copper_display_case"
+      ],
+      "page": "assorteddecor:displays/copper_display_cases"
+    },
+    {
+      "blocks": [
+        "assorteddisplays:museum_display_case"
+      ],
+      "page": "assorteddecor:displays/museum_display_case"
+    }
+  ]
+}

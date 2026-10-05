@@ -1,0 +1,39 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:item_tag_populated",
+      "tag": "c:ingots/steel"
+    },
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "assortedbuildingblocks"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:ingots/steel"
+      ]
+    },
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "assortedbuildingblocks"
+    }
+  ],
+  "key": {
+    "N": "#c:nuggets/steel",
+    "X": "#c:ingots/steel"
+  },
+  "pattern": [
+    " N ",
+    "NXN",
+    " N "
+  ],
+  "result": {
+    "count": 4,
+    "id": "assortedbuildingblocks:chain_link"
+  }
+}

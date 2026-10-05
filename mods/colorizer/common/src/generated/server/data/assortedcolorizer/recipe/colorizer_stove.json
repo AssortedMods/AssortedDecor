@@ -1,0 +1,29 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "assortedcolorizer"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "assortedcolorizer"
+    }
+  ],
+  "key": {
+    "I": "minecraft:iron_bars",
+    "P": "#minecraft:planks",
+    "X": "assortedcolorizer:colorizer"
+  },
+  "pattern": [
+    "XXX",
+    "IPI",
+    "XXX"
+  ],
+  "result": {
+    "count": 4,
+    "id": "assortedcolorizer:colorizer_stove"
+  }
+}

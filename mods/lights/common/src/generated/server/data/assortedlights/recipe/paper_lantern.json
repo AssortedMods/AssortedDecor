@@ -1,0 +1,26 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "assortedlights"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "assortedlights"
+    }
+  ],
+  "key": {
+    "C": "#assortedlights:lantern_source",
+    "P": "minecraft:paper"
+  },
+  "pattern": [
+    " P ",
+    "PCP"
+  ],
+  "result": {
+    "id": "assortedlights:paper_lantern"
+  }
+}

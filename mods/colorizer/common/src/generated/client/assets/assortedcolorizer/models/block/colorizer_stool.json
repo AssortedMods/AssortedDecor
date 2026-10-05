@@ -1,0 +1,11 @@
+{
+  "parent": "assortedcolorizer:block/stool",
+  "colorizer": {
+    "parent": "assortedcolorizer:block/stool"
+  },
+  "fabric:type": "assortedcolorizer:colorizer",
+  "loader": "assortedcolorizer:colorizer",
+  "textures": {
+    "particle": "assortedcolorizer:block/colorizer"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "assortedbuildingblocks:block/polished_redstone_slab"
+    },
+    "type=double": {
+      "model": "assortedbuildingblocks:block/polished_redstone"
+    },
+    "type=top": {
+      "model": "assortedbuildingblocks:block/polished_redstone_slab_top"
+    }
+  }
+}

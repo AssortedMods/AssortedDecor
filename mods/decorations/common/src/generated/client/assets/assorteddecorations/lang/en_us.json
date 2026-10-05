@@ -1,0 +1,20 @@
+{
+  "block.assorteddecorations.bone_decoration": "Bone Decoration",
+  "block.assorteddecorations.clay_decoration": "Clay Decoration",
+  "block.assorteddecorations.fountain": "Fountain",
+  "block.assorteddecorations.planter_pot": "Planter Pot",
+  "item.assorteddecorations.unfired_clay_decoration": "Unfired Clay Decoration",
+  "item.assorteddecorations.unfired_planter_pot": "Unfired Planter Pot",
+  "itemGroup.assorteddecor": "Assorted Decor",
+  "manual.assorteddecor.chapter.decorations": "Decorations",
+  "manual.assorteddecor.chapter.decorations.bone": "A bone decoration needs no firing. Place it and right click to cycle through the shapes.",
+  "manual.assorteddecor.chapter.decorations.bone.title": "Bone Decorations",
+  "manual.assorteddecor.chapter.decorations.clay": "Clay decorations are crafted unfired and have to go through a furnace before they are any use.\n\nOnce placed, right click to cycle through the options.",
+  "manual.assorteddecor.chapter.decorations.clay.title": "Clay Decorations",
+  "manual.assorteddecor.chapter.decorations.fountain": "A fountain block pushes water up out of itself, for a courtyard that needed a middle.",
+  "manual.assorteddecor.chapter.decorations.fountain.title": "Fountain",
+  "manual.assorteddecor.chapter.decorations.planter_pot": "A planter pot is crafted unfired and has to go through a furnace before it will hold anything.\n\nOnce placed, right click to cycle through the filling material. The pot supports whichever plants suit the filling material it is set to.",
+  "manual.assorteddecor.chapter.decorations.planter_pot.title": "Planter Pots",
+  "manual.assorteddecor.description": "Blocks that take on the look of other blocks, plus furniture, lights, decorations, wall art, roads and more.",
+  "manual.assorteddecor.title": "Assorted Decor"
+}

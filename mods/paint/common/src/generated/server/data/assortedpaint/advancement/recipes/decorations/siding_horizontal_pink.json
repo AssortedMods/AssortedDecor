@@ -1,0 +1,54 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "assortedbuildingblocks"
+    },
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "assortedpaint"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_binder": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#assortedpaint:siding_binders"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "assortedpaint:siding_horizontal_pink"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "assortedbuildingblocks"
+      ]
+    },
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "assortedpaint"
+    }
+  ],
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_binder"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "assortedpaint:siding_horizontal_pink"
+    ]
+  }
+}

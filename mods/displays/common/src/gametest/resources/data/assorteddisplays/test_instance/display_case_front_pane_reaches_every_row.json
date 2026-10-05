@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:function",
+  "environment": "minecraft:default",
+  "function": "assorteddisplays:display_case_front_pane_reaches_every_row",
+  "structure": "assorteddisplays:test_box",
+  "max_ticks": 40,
+  "setup_ticks": 0,
+  "required": true
+}

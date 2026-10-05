@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cross",
-  "textures": {
-    "cross": "assorteddecor:block/decorations/bone_decoration_6"
-  }
-}

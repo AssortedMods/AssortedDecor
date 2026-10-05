@@ -1,0 +1,244 @@
+{
+  "values": {
+    "assortedbuildingblocks:acacia_beam": {
+      "burn_time": 75
+    },
+    "assortedbuildingblocks:acacia_panel": {
+      "burn_time": 37
+    },
+    "assortedbuildingblocks:acacia_parquet": {
+      "burn_time": 300
+    },
+    "assortedbuildingblocks:acacia_parquet_slab": {
+      "burn_time": 150
+    },
+    "assortedbuildingblocks:acacia_parquet_stairs": {
+      "burn_time": 300
+    },
+    "assortedbuildingblocks:bamboo_beam": {
+      "burn_time": 75
+    },
+    "assortedbuildingblocks:bamboo_panel": {
+      "burn_time": 37
+    },
+    "assortedbuildingblocks:bamboo_parquet": {
+      "burn_time": 300
+    },
+    "assortedbuildingblocks:bamboo_parquet_slab": {
+      "burn_time": 150
+    },
+    "assortedbuildingblocks:bamboo_parquet_stairs": {
+      "burn_time": 300
+    },
+    "assortedbuildingblocks:birch_beam": {
+      "burn_time": 75
+    },
+    "assortedbuildingblocks:birch_panel": {
+      "burn_time": 37
+    },
+    "assortedbuildingblocks:birch_parquet": {
+      "burn_time": 300
+    },
+    "assortedbuildingblocks:birch_parquet_slab": {
+      "burn_time": 150
+    },
+    "assortedbuildingblocks:birch_parquet_stairs": {
+      "burn_time": 300
+    },
+    "assortedbuildingblocks:cherry_beam": {
+      "burn_time": 75
+    },
+    "assortedbuildingblocks:cherry_panel": {
+      "burn_time": 37
+    },
+    "assortedbuildingblocks:cherry_parquet": {
+      "burn_time": 300
+    },
+    "assortedbuildingblocks:cherry_parquet_slab": {
+      "burn_time": 150
+    },
+    "assortedbuildingblocks:cherry_parquet_stairs": {
+      "burn_time": 300
+    },
+    "assortedbuildingblocks:dark_oak_beam": {
+      "burn_time": 75
+    },
+    "assortedbuildingblocks:dark_oak_panel": {
+      "burn_time": 37
+    },
+    "assortedbuildingblocks:dark_oak_parquet": {
+      "burn_time": 300
+    },
+    "assortedbuildingblocks:dark_oak_parquet_slab": {
+      "burn_time": 150
+    },
+    "assortedbuildingblocks:dark_oak_parquet_stairs": {
+      "burn_time": 300
+    },
+    "assortedbuildingblocks:framed_acacia_plank_slab": {
+      "burn_time": 150
+    },
+    "assortedbuildingblocks:framed_acacia_plank_stairs": {
+      "burn_time": 300
+    },
+    "assortedbuildingblocks:framed_acacia_planks": {
+      "burn_time": 300
+    },
+    "assortedbuildingblocks:framed_bamboo_plank_slab": {
+      "burn_time": 150
+    },
+    "assortedbuildingblocks:framed_bamboo_plank_stairs": {
+      "burn_time": 300
+    },
+    "assortedbuildingblocks:framed_bamboo_planks": {
+      "burn_time": 300
+    },
+    "assortedbuildingblocks:framed_birch_plank_slab": {
+      "burn_time": 150
+    },
+    "assortedbuildingblocks:framed_birch_plank_stairs": {
+      "burn_time": 300
+    },
+    "assortedbuildingblocks:framed_birch_planks": {
+      "burn_time": 300
+    },
+    "assortedbuildingblocks:framed_cherry_plank_slab": {
+      "burn_time": 150
+    },
+    "assortedbuildingblocks:framed_cherry_plank_stairs": {
+      "burn_time": 300
+    },
+    "assortedbuildingblocks:framed_cherry_planks": {
+      "burn_time": 300
+    },
+    "assortedbuildingblocks:framed_dark_oak_plank_slab": {
+      "burn_time": 150
+    },
+    "assortedbuildingblocks:framed_dark_oak_plank_stairs": {
+      "burn_time": 300
+    },
+    "assortedbuildingblocks:framed_dark_oak_planks": {
+      "burn_time": 300
+    },
+    "assortedbuildingblocks:framed_jungle_plank_slab": {
+      "burn_time": 150
+    },
+    "assortedbuildingblocks:framed_jungle_plank_stairs": {
+      "burn_time": 300
+    },
+    "assortedbuildingblocks:framed_jungle_planks": {
+      "burn_time": 300
+    },
+    "assortedbuildingblocks:framed_mangrove_plank_slab": {
+      "burn_time": 150
+    },
+    "assortedbuildingblocks:framed_mangrove_plank_stairs": {
+      "burn_time": 300
+    },
+    "assortedbuildingblocks:framed_mangrove_planks": {
+      "burn_time": 300
+    },
+    "assortedbuildingblocks:framed_oak_plank_slab": {
+      "burn_time": 150
+    },
+    "assortedbuildingblocks:framed_oak_plank_stairs": {
+      "burn_time": 300
+    },
+    "assortedbuildingblocks:framed_oak_planks": {
+      "burn_time": 300
+    },
+    "assortedbuildingblocks:framed_pale_oak_plank_slab": {
+      "burn_time": 150
+    },
+    "assortedbuildingblocks:framed_pale_oak_plank_stairs": {
+      "burn_time": 300
+    },
+    "assortedbuildingblocks:framed_pale_oak_planks": {
+      "burn_time": 300
+    },
+    "assortedbuildingblocks:framed_spruce_plank_slab": {
+      "burn_time": 150
+    },
+    "assortedbuildingblocks:framed_spruce_plank_stairs": {
+      "burn_time": 300
+    },
+    "assortedbuildingblocks:framed_spruce_planks": {
+      "burn_time": 300
+    },
+    "assortedbuildingblocks:jungle_beam": {
+      "burn_time": 75
+    },
+    "assortedbuildingblocks:jungle_panel": {
+      "burn_time": 37
+    },
+    "assortedbuildingblocks:jungle_parquet": {
+      "burn_time": 300
+    },
+    "assortedbuildingblocks:jungle_parquet_slab": {
+      "burn_time": 150
+    },
+    "assortedbuildingblocks:jungle_parquet_stairs": {
+      "burn_time": 300
+    },
+    "assortedbuildingblocks:mangrove_beam": {
+      "burn_time": 75
+    },
+    "assortedbuildingblocks:mangrove_panel": {
+      "burn_time": 37
+    },
+    "assortedbuildingblocks:mangrove_parquet": {
+      "burn_time": 300
+    },
+    "assortedbuildingblocks:mangrove_parquet_slab": {
+      "burn_time": 150
+    },
+    "assortedbuildingblocks:mangrove_parquet_stairs": {
+      "burn_time": 300
+    },
+    "assortedbuildingblocks:oak_beam": {
+      "burn_time": 75
+    },
+    "assortedbuildingblocks:oak_panel": {
+      "burn_time": 37
+    },
+    "assortedbuildingblocks:oak_parquet": {
+      "burn_time": 300
+    },
+    "assortedbuildingblocks:oak_parquet_slab": {
+      "burn_time": 150
+    },
+    "assortedbuildingblocks:oak_parquet_stairs": {
+      "burn_time": 300
+    },
+    "assortedbuildingblocks:pale_oak_beam": {
+      "burn_time": 75
+    },
+    "assortedbuildingblocks:pale_oak_panel": {
+      "burn_time": 37
+    },
+    "assortedbuildingblocks:pale_oak_parquet": {
+      "burn_time": 300
+    },
+    "assortedbuildingblocks:pale_oak_parquet_slab": {
+      "burn_time": 150
+    },
+    "assortedbuildingblocks:pale_oak_parquet_stairs": {
+      "burn_time": 300
+    },
+    "assortedbuildingblocks:spruce_beam": {
+      "burn_time": 75
+    },
+    "assortedbuildingblocks:spruce_panel": {
+      "burn_time": 37
+    },
+    "assortedbuildingblocks:spruce_parquet": {
+      "burn_time": 300
+    },
+    "assortedbuildingblocks:spruce_parquet_slab": {
+      "burn_time": 150
+    },
+    "assortedbuildingblocks:spruce_parquet_stairs": {
+      "burn_time": 300
+    }
+  }
+}

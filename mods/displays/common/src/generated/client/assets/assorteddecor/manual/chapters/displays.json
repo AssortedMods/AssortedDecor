@@ -1,0 +1,63 @@
+{
+  "conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "assorteddisplays"
+    }
+  ],
+  "pages": [
+    {
+      "type": "assortedlib:recipe",
+      "id": "cage",
+      "recipes": [
+        "assorteddisplays:cage"
+      ],
+      "text": "manual.assorteddecor.chapter.displays.cage",
+      "title": "manual.assorteddecor.chapter.displays.cage.title"
+    },
+    {
+      "type": "assortedlib:recipe",
+      "id": "display_cases",
+      "interval": 50,
+      "recipes": [
+        "assorteddisplays:wooden_display_case",
+        "assorteddisplays:stone_display_case",
+        "assorteddisplays:copper_display_case",
+        "assorteddisplays:iron_display_case",
+        "assorteddisplays:gold_display_case",
+        "assorteddisplays:diamond_display_case"
+      ],
+      "text": "manual.assorteddecor.chapter.displays.display_cases",
+      "title": "manual.assorteddecor.chapter.displays.display_cases.title"
+    },
+    {
+      "type": "assortedlib:recipe",
+      "id": "resizing_tool",
+      "recipes": [
+        "assorteddisplays:resizing_tool"
+      ],
+      "text": "manual.assorteddecor.chapter.displays.resizing_tool",
+      "title": "manual.assorteddecor.chapter.displays.resizing_tool.title"
+    },
+    {
+      "type": "assortedlib:recipe",
+      "id": "copper_display_cases",
+      "interval": 50,
+      "recipes": [
+        "assorteddisplays:waxed_copper_display_case"
+      ],
+      "text": "manual.assorteddecor.chapter.displays.copper_display_cases",
+      "title": "manual.assorteddecor.chapter.displays.copper_display_cases.title"
+    },
+    {
+      "type": "assortedlib:recipe",
+      "id": "museum_display_case",
+      "recipes": [
+        "assorteddisplays:museum_display_case"
+      ],
+      "text": "manual.assorteddecor.chapter.displays.museum_display_case",
+      "title": "manual.assorteddecor.chapter.displays.museum_display_case.title"
+    }
+  ],
+  "sort_order": 10
+}

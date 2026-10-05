@@ -1,0 +1,34 @@
+{
+  "links": [
+    {
+      "blocks": [
+        "assorteddecorations:clay_decoration"
+      ],
+      "items": [
+        "assorteddecorations:unfired_clay_decoration"
+      ],
+      "page": "assorteddecor:decorations/clay"
+    },
+    {
+      "blocks": [
+        "assorteddecorations:planter_pot"
+      ],
+      "items": [
+        "assorteddecorations:unfired_planter_pot"
+      ],
+      "page": "assorteddecor:decorations/planter_pot"
+    },
+    {
+      "blocks": [
+        "assorteddecorations:bone_decoration"
+      ],
+      "page": "assorteddecor:decorations/bone"
+    },
+    {
+      "blocks": [
+        "assorteddecorations:fountain"
+      ],
+      "page": "assorteddecor:decorations/fountain"
+    }
+  ]
+}

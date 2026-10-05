@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "open=false": {
+      "model": "assortedroads:block/roadway_manhole_closed"
+    },
+    "open=true": {
+      "model": "assortedroads:block/roadway_manhole_open"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "parent": "assortedcolorizer:item/brush",
+  "colorizer": {
+    "parent": "assortedcolorizer:item/brush",
+    "textures": {
+      "handle": "assortedcolorizer:block/brush_handle"
+    }
+  },
+  "fabric:type": "assortedcolorizer:colorizer",
+  "loader": "assortedcolorizer:colorizer",
+  "textures": {
+    "particle": "assortedcolorizer:block/colorizer"
+  }
+}

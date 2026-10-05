@@ -1,0 +1,20 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "assortedlib:part_enabled",
+      "part": "assortedcolorizer"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "fabric:load_conditions": [
+    {
+      "condition": "assortedlib:part_enabled",
+      "part": "assortedcolorizer"
+    }
+  ],
+  "ingredient": "assortedcolorizer:colorizer",
+  "result": {
+    "count": 4,
+    "id": "assortedcolorizer:colorizer_beam"
+  }
+}

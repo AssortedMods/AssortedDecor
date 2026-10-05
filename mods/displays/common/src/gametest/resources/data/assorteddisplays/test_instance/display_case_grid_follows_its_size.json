@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:function",
+  "environment": "minecraft:default",
+  "function": "assorteddisplays:display_case_grid_follows_its_size",
+  "structure": "assorteddisplays:test_box",
+  "max_ticks": 60,
+  "setup_ticks": 0,
+  "required": true
+}

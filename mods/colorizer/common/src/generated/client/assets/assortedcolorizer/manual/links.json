@@ -1,0 +1,112 @@
+{
+  "links": [
+    {
+      "blocks": [
+        "assortedcolorizer:colorizer"
+      ],
+      "page": "assorteddecor:colorizer/colorizer"
+    },
+    {
+      "items": [
+        "assortedcolorizer:colorizer_brush"
+      ],
+      "page": "assorteddecor:colorizer/brush"
+    },
+    {
+      "blocks": [
+        "assortedcolorizer:colorizer_slab",
+        "assortedcolorizer:colorizer_vertical_slab",
+        "assortedcolorizer:colorizer_stairs",
+        "assortedcolorizer:colorizer_wall",
+        "assortedcolorizer:colorizer_fence",
+        "assortedcolorizer:colorizer_fence_gate"
+      ],
+      "page": "assorteddecor:colorizer/shapes"
+    },
+    {
+      "blocks": [
+        "assortedcolorizer:colorizer_slope",
+        "assortedcolorizer:colorizer_oblique_slope",
+        "assortedcolorizer:colorizer_slanted_corner",
+        "assortedcolorizer:colorizer_sloped_angle",
+        "assortedcolorizer:colorizer_sloped_intersection",
+        "assortedcolorizer:colorizer_sloped_post",
+        "assortedcolorizer:colorizer_corner"
+      ],
+      "page": "assorteddecor:colorizer/slopes"
+    },
+    {
+      "blocks": [
+        "assortedcolorizer:colorizer_pyramid",
+        "assortedcolorizer:colorizer_full_pyramid"
+      ],
+      "page": "assorteddecor:colorizer/pyramids"
+    },
+    {
+      "blocks": [
+        "assortedcolorizer:colorizer_door",
+        "assortedcolorizer:colorizer_trap_door"
+      ],
+      "page": "assorteddecor:colorizer/doors"
+    },
+    {
+      "blocks": [
+        "assortedcolorizer:colorizer_panel",
+        "assortedcolorizer:colorizer_beam",
+        "assortedcolorizer:colorizer_column"
+      ],
+      "page": "assorteddecor:colorizer/building"
+    },
+    {
+      "blocks": [
+        "assortedcolorizer:colorizer_table",
+        "assortedcolorizer:colorizer_counter"
+      ],
+      "page": "assorteddecor:furniture/tables"
+    },
+    {
+      "blocks": [
+        "assortedcolorizer:colorizer_chair",
+        "assortedcolorizer:colorizer_stool"
+      ],
+      "page": "assorteddecor:furniture/seats"
+    },
+    {
+      "blocks": [
+        "assortedcolorizer:colorizer_lamp_post"
+      ],
+      "page": "assorteddecor:furniture/lamp_post"
+    },
+    {
+      "blocks": [
+        "assortedcolorizer:colorizer_fireplace"
+      ],
+      "page": "assorteddecor:fires/fireplace"
+    },
+    {
+      "blocks": [
+        "assortedcolorizer:colorizer_stove"
+      ],
+      "page": "assorteddecor:fires/stove"
+    },
+    {
+      "blocks": [
+        "assortedcolorizer:colorizer_firepit",
+        "assortedcolorizer:colorizer_firepit_covered"
+      ],
+      "page": "assorteddecor:fires/firepit"
+    },
+    {
+      "blocks": [
+        "assortedcolorizer:colorizer_firering"
+      ],
+      "page": "assorteddecor:fires/firering"
+    },
+    {
+      "blocks": [
+        "assortedcolorizer:colorizer_chimney"
+      ],
+      "page": "assorteddecor:fires/chimney"
+    }
+  ]
+}
