@@ -8,11 +8,14 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.FloatTag;
+import net.minecraft.nbt.ListTag;
 import net.minecraft.gametest.framework.GameTestHelper;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityTypes;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
@@ -78,12 +81,23 @@ final class CageTests {
 
         ItemStack stick = new ItemStack(Items.STICK);
         helper.assertTrue(CageBlockEntity.isValidCage(stick) == null, "cage took a stick with no mob in it");
-        stick.set(DataComponents.ENTITY_DATA, TypedEntityData.of(EntityTypes.PIG, new CompoundTag()));
+        // Saved facing east, the way a mob caught mid-turn is.
+        CompoundTag pig = new CompoundTag();
+        ListTag rotation = new ListTag();
+        rotation.add(FloatTag.valueOf(90.0F));
+        rotation.add(FloatTag.valueOf(0.0F));
+        pig.put("Rotation", rotation);
+        stick.set(DataComponents.ENTITY_DATA, TypedEntityData.of(EntityTypes.PIG, pig));
         helper.assertTrue(CageBlockEntity.isValidCage(stick) != null, "cage rejected an item holding a mob in a tagged component");
 
         cage.getItemStackStorageHandler().setStackInSlot(0, stick);
         Entity caged = cage.getCachedEntity();
         helper.assertTrue(caged != null && caged.getType() == EntityTypes.PIG, "cage did not build a pig out of the tagged component");
+        // A body a frame behind its own turn is drawn swinging between the two angles.
+        LivingEntity living = (LivingEntity) caged;
+        helper.assertValueEqual(living.yBodyRotO, living.yBodyRot, "the caged mob's body angle a frame ago");
+        helper.assertValueEqual(living.yHeadRotO, living.yHeadRot, "the caged mob's head angle a frame ago");
+        helper.assertValueEqual(living.yBodyRot, 0.0F, "the caged mob's body angle, which faces forward like a spawn egg's,");
         helper.succeed();
     }
 

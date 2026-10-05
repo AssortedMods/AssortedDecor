@@ -32,6 +32,7 @@ import net.minecraft.world.MenuProvider;
 import net.minecraft.world.Nameable;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -244,8 +245,21 @@ public class CageBlockEntity extends BlockEntity implements IInventoryBlockEntit
 
         try (ProblemReporter.ScopedCollector reporter = new ProblemReporter.ScopedCollector(this.problemPath(), LOGGER)) {
             ValueInput storedEntity = TagValueInput.create(reporter, this.level.registryAccess(), entityData(stack, tag));
-            this.cachedEntity = EntityType.loadEntityRecursive(storedEntity, this.level, new EntitySpawnRequest(EntitySpawnReason.LOAD, false), BaseSpawner.SET_DISPLAY_ENTITY_ID);
+            this.cachedEntity = faceForward(EntityType.loadEntityRecursive(storedEntity, this.level, new EntitySpawnRequest(EntitySpawnReason.LOAD, false), BaseSpawner.SET_DISPLAY_ENTITY_ID));
         }
+    }
+
+    /** A loaded mob keeps the way it faced but its body and head start a frame behind at zero, which draws as a twitch. */
+    private static Entity faceForward(Entity entity) {
+        if (entity == null) {
+            return null;
+        }
+        entity.snapTo(entity.position(), 0.0F, 0.0F);
+        if (entity instanceof LivingEntity living) {
+            living.yBodyRot = living.yBodyRotO = 0.0F;
+            living.yHeadRot = living.yHeadRotO = 0.0F;
+        }
+        return entity;
     }
 
     private static CompoundTag entityData(ItemStack stack, String tag) {
