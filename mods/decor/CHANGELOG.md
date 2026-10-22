@@ -1,5 +1,12 @@
 # Changelog
 
+## 13.0.0
+
+Updated to Minecraft 26.3, for NeoForge and Fabric.
+
+- Added Poplar versions of the Building Blocks wood blocks
+- Requires Assorted Lib 5.0.0
+
 ## 12.0.0
 
 - Split into nine mods that can also be installed on their own. Assorted Colorizer, Assorted Building Blocks, Assorted Lights, Assorted Roads, Assorted Displays, Assorted Gates, Assorted Hangeables, Assorted Decorations and Assorted Paint
