@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:function",
+  "environment": "minecraft:default",
+  "function": "assorteddecorations:planter_pot_top_cycles_with_an_empty_hand",
+  "structure": "assorteddecorations:test_box",
+  "max_ticks": 40,
+  "setup_ticks": 0,
+  "required": true
+}

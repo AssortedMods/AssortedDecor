@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:function",
+  "environment": "minecraft:default",
+  "function": "assorteddecorations:fountain_runs_only_while_powered",
+  "structure": "assorteddecorations:test_box",
+  "max_ticks": 60,
+  "setup_ticks": 0,
+  "required": true
+}

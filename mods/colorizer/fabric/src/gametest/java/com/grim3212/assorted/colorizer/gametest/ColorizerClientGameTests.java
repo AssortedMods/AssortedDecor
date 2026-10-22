@@ -1,5 +1,7 @@
 package com.grim3212.assorted.colorizer.gametest;
 
+import com.grim3212.assorted.colorizer.Constants;
+import com.grim3212.assorted.lib.test.ClientChecks;
 import com.grim3212.assorted.colorizer.common.blocks.ColorizerBlocks;
 import com.grim3212.assorted.colorizer.common.blocks.blockentity.ColorizerBlockEntity;
 import com.grim3212.assorted.colorizer.common.items.ColorizerItems;
@@ -42,6 +44,7 @@ public class ColorizerClientGameTests implements FabricClientGameTest {
         // Inside a world: an ItemStack cannot be made on the title screen, because an item's default
         // components are only bound once a world's registries have loaded.
         try (TestSingleplayerContext world = context.worldBuilder().create()) {
+            ClientChecks.assertDrawsRight(context, Constants.MOD_ID);
             context.runOnClient(client -> {
                 // A colorizer item holding gold throws gold particles when it is dropped, broken or
                 // eaten by lava - the particle comes from what the item draws, not the empty colorizer.

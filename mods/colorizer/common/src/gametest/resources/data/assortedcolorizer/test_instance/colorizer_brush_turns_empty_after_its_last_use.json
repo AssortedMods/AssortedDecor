@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:function",
+  "environment": "minecraft:default",
+  "function": "assortedcolorizer:colorizer_brush_turns_empty_after_its_last_use",
+  "structure": "assortedcolorizer:test_box",
+  "max_ticks": 40,
+  "setup_ticks": 0,
+  "required": true
+}

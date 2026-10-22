@@ -272,6 +272,8 @@ final class LightTests {
                 // it. A lower bound, so light from a neighbouring test can only raise it.
                 .thenWaitUntil(() -> helper.assertTrue(level.getBrightness(LightLayer.BLOCK, pos) >= lightEmission(helper, MAIN),
                         "a lit fireplace's light emission never reached the light engine"))
+                // Asserted rather than assumed, so a test cut short by a stall fails instead of crashing the server.
+                .thenExecute(() -> helper.assertBlockPresent(ColorizerBlocks.COLORIZER_FIREPLACE.get(), MAIN))
                 .thenExecute(() -> level.setBlockAndUpdate(pos, level.getBlockState(pos).setValue(ColorizerFireplaceBaseBlock.ACTIVE, false)))
                 .thenExecute(() -> helper.assertValueEqual(lightEmission(helper, MAIN), 0, "an extinguished fireplace kept claiming to emit light"))
                 .thenSucceed();

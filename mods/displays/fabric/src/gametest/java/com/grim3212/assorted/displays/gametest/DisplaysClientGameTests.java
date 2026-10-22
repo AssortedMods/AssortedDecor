@@ -1,5 +1,7 @@
 package com.grim3212.assorted.displays.gametest;
 
+import com.grim3212.assorted.displays.Constants;
+import com.grim3212.assorted.lib.test.ClientChecks;
 import com.grim3212.assorted.displays.common.blocks.DisplaysBlocks;
 import com.grim3212.assorted.displays.client.blockentity.DisplayCaseBlockEntityRenderer;
 import com.grim3212.assorted.displays.common.blocks.MuseumDisplayCaseBlock;
@@ -28,6 +30,7 @@ public class DisplaysClientGameTests implements FabricClientGameTest {
         // Inside a world: an ItemStack cannot be made on the title screen, because an item's default
         // components are only bound once a world's registries have loaded.
         try (TestSingleplayerContext world = context.worldBuilder().create()) {
+            ClientChecks.assertDrawsRight(context, Constants.MOD_ID);
             // A caged mob is built on the client and drawn without ever being added to the level, so
             // it is never given an entity id there - Level#getNextEntityId answers 0 off the server.
             // Extracting a living entity's render state reads the id for its head slot whether or not

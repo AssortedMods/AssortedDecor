@@ -22,7 +22,8 @@ public class LightsManualProvider extends LibManualProvider {
 
         ChapterBuilder lights = this.chapter("lights", 4);
         lights.recipes("fluro", fluro).every(30).opens(fluro);
-        lights.recipes("illumination", illumination).every(50).opens(illumination);
+        // The tube and plate take aluminum, so their page waits for a mod that adds it.
+        lights.optionalRecipes("illumination", illumination).every(50).opens(illumination);
         lights.recipes("lanterns", lanterns).every(50).opens(lanterns);
     }
 }

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:function",
+  "environment": "minecraft:default",
+  "function": "assortedhangeables:wallpaper_takes_the_dye_of_its_neighbour",
+  "structure": "assortedhangeables:test_box",
+  "max_ticks": 40,
+  "setup_ticks": 0,
+  "required": true
+}

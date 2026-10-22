@@ -1,6 +1,6 @@
 {
   "type": "minecraft:function",
-  "environment": "minecraft:default",
+  "environment": "assortedcolorizer:lighting",
   "function": "assortedcolorizer:light_benchmark",
   "structure": "assortedcolorizer:test_box",
   "max_ticks": 400,

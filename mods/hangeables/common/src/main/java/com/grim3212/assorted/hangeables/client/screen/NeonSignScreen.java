@@ -89,6 +89,8 @@ public class NeonSignScreen extends Screen {
         int x = (width - bgWidth) / 2;
         int y = (height - bgHeight) / 2;
 
+        // 26.3 only sends typed characters to a screen that asks for them, as vanilla's sign screen does.
+        this.minecraft.textInputManager().startTextInput(this);
         this.cursorBlinkStartTime = Util.getMillis();
 
         this.textInputUtil = new TextFieldHelper(() -> {
@@ -169,6 +171,12 @@ public class NeonSignScreen extends Screen {
     public void removed() {
         // Update lines on server side
         Services.NETWORK.sendToServer(new NeonUpdatePacket(this.tileSign.getBlockPos(), this.tileSign.signText));
+        this.minecraft.textInputManager().stopTextInput(this);
+    }
+
+    @Override
+    public boolean isInputCaptured() {
+        return true;
     }
 
     @Override

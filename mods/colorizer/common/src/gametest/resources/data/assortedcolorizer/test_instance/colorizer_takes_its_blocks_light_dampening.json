@@ -1,6 +1,6 @@
 {
   "type": "minecraft:function",
-  "environment": "minecraft:default",
+  "environment": "assortedcolorizer:lighting",
   "function": "assortedcolorizer:colorizer_takes_its_blocks_light_dampening",
   "structure": "assortedcolorizer:test_box",
   "max_ticks": 100,

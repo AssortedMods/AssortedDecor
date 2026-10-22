@@ -33,6 +33,15 @@
     },
     {
       "type": "assortedlib:recipe",
+      "conditions": [
+        {
+          "type": "assortedlib:recipe_exists",
+          "recipes": [
+            "assortedlights:illumination_tube",
+            "assortedlights:illumination_plate"
+          ]
+        }
+      ],
       "id": "illumination",
       "interval": 50,
       "recipes": [

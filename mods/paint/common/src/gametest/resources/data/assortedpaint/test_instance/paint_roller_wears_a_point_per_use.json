@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:function",
+  "environment": "minecraft:default",
+  "function": "assortedpaint:paint_roller_wears_a_point_per_use",
+  "structure": "assortedpaint:test_box",
+  "max_ticks": 40,
+  "setup_ticks": 0,
+  "required": true
+}

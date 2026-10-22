@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:function",
+  "environment": "minecraft:default",
+  "function": "assortedhangeables:frame_stays_when_its_wall_is_removed",
+  "structure": "assortedhangeables:test_box",
+  "max_ticks": 200,
+  "setup_ticks": 0,
+  "required": true
+}

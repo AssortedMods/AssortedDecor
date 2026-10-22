@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:function",
+  "environment": "minecraft:default",
+  "function": "assorteddecorations:decorations_cycle_their_design_on_a_right_click",
+  "structure": "assorteddecorations:test_box",
+  "max_ticks": 40,
+  "setup_ticks": 0,
+  "required": true
+}

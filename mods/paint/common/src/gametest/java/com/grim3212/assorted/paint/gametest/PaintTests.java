@@ -44,6 +44,7 @@ final class PaintTests {
 
     static void register(BiConsumer<String, Consumer<GameTestHelper>> out) {
         out.accept("paint_roller_recolors_blocks", PaintTests::paintRollerRecolorsBlocks);
+        out.accept("paint_roller_wears_a_point_per_use", PaintTests::paintRollerWearsAPointPerUse);
         out.accept("paint_rollers_recolor_every_color", PaintTests::paintRollersRecolorEveryColor);
         out.accept("paint_roller_dyes_a_sheep", PaintTests::paintRollerDyesASheep);
         out.accept("paint_rollers_are_dyes_of_their_color", PaintTests::paintRollersAreDyesOfTheirColor);
@@ -54,6 +55,20 @@ final class PaintTests {
      * A paint roller repaints both kinds of target: a vanilla dyed block, which it swaps for the
      * matching block of its own colour, and every {@code ICanColor} block of whichever mods are installed.
      */
+    /** Sixty-four uses, as the site says: each block it paints costs one. */
+    private static void paintRollerWearsAPointPerUse(GameTestHelper helper) {
+        BlockPos wool = new BlockPos(2, 1, 4);
+        helper.setBlock(wool, DyeHelper.WOOL_BY_DYE.get(DyeColor.WHITE));
+        Player player = helper.makeMockPlayer(GameType.SURVIVAL);
+        ItemStack roller = new ItemStack(PaintItems.PAINT_ROLLER_COLORS.get(DyeColor.RED).get());
+        helper.assertValueEqual(roller.getMaxDamage(), 64, "a paint roller's uses");
+        player.setItemInHand(InteractionHand.MAIN_HAND, roller);
+
+        roller.useOn(new UseOnContext(player, InteractionHand.MAIN_HAND, hitTop(helper.absolutePos(wool))));
+        helper.assertValueEqual(player.getItemInHand(InteractionHand.MAIN_HAND).getDamageValue(), 1, "wear on the roller after painting one block");
+        helper.succeed();
+    }
+
     private static void paintRollerRecolorsBlocks(GameTestHelper helper) {
         ServerLevel level = helper.getLevel();
         BlockPos wool = new BlockPos(2, 1, 4);

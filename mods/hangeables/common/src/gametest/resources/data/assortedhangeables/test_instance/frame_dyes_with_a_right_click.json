@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:function",
+  "environment": "minecraft:default",
+  "function": "assortedhangeables:frame_dyes_with_a_right_click",
+  "structure": "assortedhangeables:test_box",
+  "max_ticks": 40,
+  "setup_ticks": 0,
+  "required": true
+}

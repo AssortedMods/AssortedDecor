@@ -1,5 +1,7 @@
 package com.grim3212.assorted.roads.gametest;
 
+import com.grim3212.assorted.roads.Constants;
+import com.grim3212.assorted.lib.test.CommonTests;
 import net.minecraft.gametest.framework.GameTestHelper;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
@@ -20,5 +22,7 @@ public final class RoadsGameTests {
         AssetTests.register(out);
         AliasTests.register(out);
         FamilyTests.register(out);
+        SurfaceTests.register(out);
+        CommonTests.register(out, Constants.MOD_ID);
     }
 }

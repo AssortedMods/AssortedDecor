@@ -6,6 +6,8 @@ Updated to Minecraft 26.3, for NeoForge and Fabric.
 
 - Added Poplar versions of the Building Blocks wood blocks
 - Requires Assorted Lib 5.0.0
+- Frames now stay on the wall when the block behind them is broken, as they always said they would
+- The manual's illumination tube and plate page only shows once a mod that adds aluminum is installed, instead of saying the recipes are missing
 
 ## 12.0.0
 

@@ -43,6 +43,9 @@ public abstract class FrameEntity extends HangingEntity {
     private static final EntityDataAccessor<Integer> COLOR_GREEN = SynchedEntityData.defineId(FrameEntity.class, EntityDataSerializers.INT);
     private static final EntityDataAccessor<Integer> COLOR_BLUE = SynchedEntityData.defineId(FrameEntity.class, EntityDataSerializers.INT);
 
+    /** Set while vanilla's periodic check asks whether a hung frame may stay. */
+    private boolean rechecking;
+
     public FrameEntity(EntityType<? extends FrameEntity> type, Level world) {
         super(type, world);
     }
@@ -253,7 +256,21 @@ public abstract class FrameEntity extends HangingEntity {
             }
         }
 
-        super.tick();
+        this.rechecking = true;
+        try {
+            super.tick();
+        } finally {
+            this.rechecking = false;
+        }
+    }
+
+    /** A hung frame outlasts the block behind it, unlike a painting, but still needs a wall to be hung or resized on. */
+    @Override
+    public boolean survives() {
+        if (this.rechecking) {
+            return !this.hasLevelCollision(this.getPopBox()) && this.canCoexist(false);
+        }
+        return super.survives();
     }
 
     public FrameType getCurrentFrame() {
