@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:mangrove_parquet_slab_from_mangrove_planks_lumber_mill"
+        "recipes": "assortedbuildingblocks:mangrove_parquet_slab_from_mangrove_planks_lumber_mill"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

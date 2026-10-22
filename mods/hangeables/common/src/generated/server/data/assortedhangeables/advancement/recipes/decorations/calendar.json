@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedhangeables:calendar"
+        "recipes": "assortedhangeables:calendar"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

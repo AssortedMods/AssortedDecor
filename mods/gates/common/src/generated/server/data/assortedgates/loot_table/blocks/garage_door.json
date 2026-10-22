@@ -2,27 +2,23 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ],
+      "condition": {
+        "type": "minecraft:survives_explosion"
+      },
       "entries": [
         {
           "type": "minecraft:item",
-          "conditions": [
-            {
-              "block": "assortedgates:garage_door",
-              "condition": "minecraft:block_state_property",
-              "properties": {
-                "top": "true"
-              }
+          "condition": {
+            "type": "minecraft:match_block",
+            "blocks": "assortedgates:garage_door",
+            "state": {
+              "top": "true"
             }
-          ],
+          },
           "name": "assortedgates:garage_door"
         }
       ],
-      "rolls": 1.0
+      "rolls": 1
     }
   ],
   "random_sequence": "assortedgates:blocks/garage_door"

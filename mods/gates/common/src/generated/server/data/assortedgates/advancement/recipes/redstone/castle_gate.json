@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedgates:castle_gate"
+        "recipes": "assortedgates:castle_gate"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:checkered_stone_stairs_from_checkered_stone_stonecutting"
+        "recipes": "assortedbuildingblocks:checkered_stone_stairs_from_checkered_stone_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

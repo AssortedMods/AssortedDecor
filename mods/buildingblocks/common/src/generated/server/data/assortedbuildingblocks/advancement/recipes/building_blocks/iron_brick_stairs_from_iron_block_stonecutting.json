@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:iron_brick_stairs_from_iron_block_stonecutting"
+        "recipes": "assortedbuildingblocks:iron_brick_stairs_from_iron_block_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

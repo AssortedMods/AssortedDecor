@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedgates:garage_remote"
+        "recipes": "assortedgates:garage_remote"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

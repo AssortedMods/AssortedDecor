@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:redstone_brick_slab_from_redstone_block_stonecutting"
+        "recipes": "assortedbuildingblocks:redstone_brick_slab_from_redstone_block_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

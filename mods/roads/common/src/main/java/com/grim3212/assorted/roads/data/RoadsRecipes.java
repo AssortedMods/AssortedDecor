@@ -6,17 +6,14 @@ import com.grim3212.assorted.roads.common.blocks.RoadsBlocks;
 import com.grim3212.assorted.roads.common.items.RoadsItems;
 import com.grim3212.assorted.lib.core.conditions.ConditionalRecipeProvider;
 import com.grim3212.assorted.lib.util.LibCommonTags;
-import net.minecraft.core.HolderGetter;
-import net.minecraft.core.HolderLookup;
+import net.minecraft.advancements.Advancement;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.RecipeOutput;
-import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
 import net.minecraft.data.recipes.SingleItemRecipeBuilder;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.FluidTags;
@@ -28,19 +25,14 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.block.Blocks;
 
-import java.util.concurrent.CompletableFuture;
-
 public class RoadsRecipes extends ConditionalRecipeProvider {
 
     private static final String LIGHTS_MOD_ID = "assortedlights";
     // Assorted Lights' plate, named by its tag so this mod needs none of its code.
     private static final TagKey<Item> ILLUMINATION_PLATES = TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(LIGHTS_MOD_ID, "illumination_plates"));
 
-    private final HolderGetter<Item> items;
-
-    public RoadsRecipes(HolderLookup.Provider registries, RecipeOutput output) {
-        super(registries, output, Constants.MOD_ID);
-        this.items = registries.lookupOrThrow(Registries.ITEM);
+    public RoadsRecipes(BootstrapContext<Recipe<?>> recipes, BootstrapContext<Advancement> advancements) {
+        super(recipes, advancements, Constants.MOD_ID);
     }
 
     @Override
@@ -76,26 +68,5 @@ public class RoadsRecipes extends ConditionalRecipeProvider {
 
     private static ResourceKey<Recipe<?>> key(Identifier id) {
         return ResourceKey.create(Registries.RECIPE, id);
-    }
-
-    /**
-     * Recipe providers are not data providers any more - a {@link RecipeProvider.Runner} owns the
-     * file writing and builds a fresh provider around the {@link RecipeOutput} it hands out.
-     */
-    public static class Runner extends ConditionalRecipeProvider.Runner {
-
-        public Runner(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
-            super(output, registries, Constants.MOD_ID);
-        }
-
-        @Override
-        protected RecipeProvider createRecipeProvider(HolderLookup.Provider registries, RecipeOutput output) {
-            return new RoadsRecipes(registries, output);
-        }
-
-        @Override
-        public String getName() {
-            return "Recipes: " + Constants.MOD_ID;
-        }
     }
 }

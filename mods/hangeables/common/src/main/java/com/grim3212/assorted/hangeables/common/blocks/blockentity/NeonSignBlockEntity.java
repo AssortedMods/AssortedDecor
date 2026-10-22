@@ -69,9 +69,10 @@ public class NeonSignBlockEntity extends BlockEntity {
     }
 
     public CommandSourceStack getCommandSource(@Nullable ServerPlayer playerIn) {
-        String s = playerIn == null ? "Sign" : playerIn.getPlainTextName();
-        Component itextcomponent = playerIn == null ? Component.literal("Sign") : playerIn.getDisplayName();
-        return new CommandSourceStack(CommandSource.NULL, Vec3.atCenterOf(this.worldPosition), Vec2.ZERO, (ServerLevel) this.level, LevelBasedPermissionSet.GAMEMASTER, s, itextcomponent, this.level.getServer(), playerIn);
+        ServerLevel level = (ServerLevel) this.level;
+        return playerIn != null
+                ? new CommandSourceStack(CommandSource.NULL, Vec3.atCenterOf(this.worldPosition), Vec2.ZERO, level, LevelBasedPermissionSet.GAMEMASTER, level.getServer(), playerIn)
+                : new CommandSourceStack(CommandSource.NULL, Vec3.atCenterOf(this.worldPosition), Vec2.ZERO, level, LevelBasedPermissionSet.GAMEMASTER, Component.literal("Sign"), level.getServer());
     }
 
     @Override

@@ -5,14 +5,14 @@ import com.grim3212.assorted.colorizer.common.blocks.ColorizerBlocks;
 import com.grim3212.assorted.colorizer.common.blocks.colorizer.ColorizerVerticalSlabBlock;
 import com.grim3212.assorted.lib.data.LibBlockLootProvider;
 import net.minecraft.advancements.predicates.StatePropertiesPredicate;
-import net.minecraft.core.HolderLookup;
+import net.minecraft.data.loot.LootTableSubProvider;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
-import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
-import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
+import net.minecraft.world.level.storage.loot.predicates.MatchBlock;
+import net.minecraft.world.level.storage.loot.providers.number.ints.ContextIntProviders;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,46 +21,45 @@ import java.util.stream.Collectors;
 
 public class ColorizerBlockLoot extends LibBlockLootProvider {
 
-    private final List<Block> blocks = new ArrayList<>();
+    private final List<Block> selfDrops = new ArrayList<>();
 
-    // Loot sub providers are handed the registry lookup at construction now.
-    public ColorizerBlockLoot(HolderLookup.Provider registries) {
-        super(registries, () -> ColorizerBlocks.BLOCKS.getEntries().stream().map(Supplier::get).collect(Collectors.toList()));
+    public ColorizerBlockLoot(LootTableSubProvider.Context context) {
+        super(context, () -> ColorizerBlocks.BLOCKS.getEntries().stream().map(Supplier::get).collect(Collectors.toList()));
 
-        blocks.add(ColorizerBlocks.COLORIZER.get());
-        blocks.add(ColorizerBlocks.COLORIZER_CHAIR.get());
-        blocks.add(ColorizerBlocks.COLORIZER_TABLE.get());
-        blocks.add(ColorizerBlocks.COLORIZER_STOOL.get());
-        blocks.add(ColorizerBlocks.COLORIZER_COUNTER.get());
-        blocks.add(ColorizerBlocks.COLORIZER_FENCE.get());
-        blocks.add(ColorizerBlocks.COLORIZER_FENCE_GATE.get());
-        blocks.add(ColorizerBlocks.COLORIZER_WALL.get());
-        blocks.add(ColorizerBlocks.COLORIZER_STAIRS.get());
-        blocks.add(ColorizerBlocks.COLORIZER_TRAP_DOOR.get());
-        blocks.add(ColorizerBlocks.COLORIZER_LAMP_POST.get());
-        blocks.add(ColorizerBlocks.COLORIZER_SLOPE.get());
-        blocks.add(ColorizerBlocks.COLORIZER_SLOPED_ANGLE.get());
-        blocks.add(ColorizerBlocks.COLORIZER_SLOPED_INTERSECTION.get());
-        blocks.add(ColorizerBlocks.COLORIZER_SLOPED_POST.get());
-        blocks.add(ColorizerBlocks.COLORIZER_OBLIQUE_SLOPE.get());
-        blocks.add(ColorizerBlocks.COLORIZER_CORNER.get());
-        blocks.add(ColorizerBlocks.COLORIZER_SLANTED_CORNER.get());
-        blocks.add(ColorizerBlocks.COLORIZER_PYRAMID.get());
-        blocks.add(ColorizerBlocks.COLORIZER_FULL_PYRAMID.get());
+        selfDrops.add(ColorizerBlocks.COLORIZER.get());
+        selfDrops.add(ColorizerBlocks.COLORIZER_CHAIR.get());
+        selfDrops.add(ColorizerBlocks.COLORIZER_TABLE.get());
+        selfDrops.add(ColorizerBlocks.COLORIZER_STOOL.get());
+        selfDrops.add(ColorizerBlocks.COLORIZER_COUNTER.get());
+        selfDrops.add(ColorizerBlocks.COLORIZER_FENCE.get());
+        selfDrops.add(ColorizerBlocks.COLORIZER_FENCE_GATE.get());
+        selfDrops.add(ColorizerBlocks.COLORIZER_WALL.get());
+        selfDrops.add(ColorizerBlocks.COLORIZER_STAIRS.get());
+        selfDrops.add(ColorizerBlocks.COLORIZER_TRAP_DOOR.get());
+        selfDrops.add(ColorizerBlocks.COLORIZER_LAMP_POST.get());
+        selfDrops.add(ColorizerBlocks.COLORIZER_SLOPE.get());
+        selfDrops.add(ColorizerBlocks.COLORIZER_SLOPED_ANGLE.get());
+        selfDrops.add(ColorizerBlocks.COLORIZER_SLOPED_INTERSECTION.get());
+        selfDrops.add(ColorizerBlocks.COLORIZER_SLOPED_POST.get());
+        selfDrops.add(ColorizerBlocks.COLORIZER_OBLIQUE_SLOPE.get());
+        selfDrops.add(ColorizerBlocks.COLORIZER_CORNER.get());
+        selfDrops.add(ColorizerBlocks.COLORIZER_SLANTED_CORNER.get());
+        selfDrops.add(ColorizerBlocks.COLORIZER_PYRAMID.get());
+        selfDrops.add(ColorizerBlocks.COLORIZER_FULL_PYRAMID.get());
 
-        blocks.add(ColorizerBlocks.COLORIZER_CHIMNEY.get());
-        blocks.add(ColorizerBlocks.COLORIZER_FIREPLACE.get());
-        blocks.add(ColorizerBlocks.COLORIZER_FIREPIT.get());
-        blocks.add(ColorizerBlocks.COLORIZER_FIREPIT_COVERED.get());
-        blocks.add(ColorizerBlocks.COLORIZER_FIRERING.get());
-        blocks.add(ColorizerBlocks.COLORIZER_STOVE.get());
-        blocks.add(ColorizerBlocks.COLORIZER_BEAM.get());
-        blocks.add(ColorizerBlocks.COLORIZER_COLUMN.get());
+        selfDrops.add(ColorizerBlocks.COLORIZER_CHIMNEY.get());
+        selfDrops.add(ColorizerBlocks.COLORIZER_FIREPLACE.get());
+        selfDrops.add(ColorizerBlocks.COLORIZER_FIREPIT.get());
+        selfDrops.add(ColorizerBlocks.COLORIZER_FIREPIT_COVERED.get());
+        selfDrops.add(ColorizerBlocks.COLORIZER_FIRERING.get());
+        selfDrops.add(ColorizerBlocks.COLORIZER_STOVE.get());
+        selfDrops.add(ColorizerBlocks.COLORIZER_BEAM.get());
+        selfDrops.add(ColorizerBlocks.COLORIZER_COLUMN.get());
     }
 
     @Override
     public void generate() {
-        for (Block b : blocks) {
+        for (Block b : selfDrops) {
             this.dropSelf(b);
         }
 
@@ -71,6 +70,6 @@ public class ColorizerBlockLoot extends LibBlockLootProvider {
     }
 
     private LootTable.Builder createVerticalSlabItemTable(Block b) {
-        return LootTable.lootTable().withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).add(applyExplosionDecay(b, LootItem.lootTableItem(b).apply(SetItemCountFunction.setCount(ConstantValue.exactly(2.0F)).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(b).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(ColorizerVerticalSlabBlock.TYPE, VerticalSlabType.DOUBLE)))))));
+        return LootTable.lootTable().withPool(LootPool.lootPool().setRolls(ContextIntProviders.exactly(1)).add(applyExplosionDecay(b, LootItem.lootTableItem(b).apply(SetItemCountFunction.setCount(ContextIntProviders.exactly(2)).when(MatchBlock.blockMatches(this.blocks, b, StatePropertiesPredicate.Builder.properties().hasProperty(ColorizerVerticalSlabBlock.TYPE, VerticalSlabType.DOUBLE)))))));
     }
 }

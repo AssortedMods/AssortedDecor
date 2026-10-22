@@ -5,26 +5,20 @@ import com.grim3212.assorted.displays.common.blocks.DisplaysBlocks;
 import com.grim3212.assorted.displays.common.items.DisplaysItems;
 import com.grim3212.assorted.lib.core.conditions.ConditionalRecipeProvider;
 import com.grim3212.assorted.lib.util.LibCommonTags;
-import net.minecraft.core.HolderGetter;
-import net.minecraft.core.HolderLookup;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.data.PackOutput;
+import net.minecraft.advancements.Advancement;
 import net.minecraft.data.recipes.*;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.block.Block;
-
-import java.util.concurrent.CompletableFuture;
 
 public class DisplaysRecipes extends ConditionalRecipeProvider {
 
-    private final HolderGetter<Item> items;
-
-    public DisplaysRecipes(HolderLookup.Provider registries, RecipeOutput output) {
-        super(registries, output, Constants.MOD_ID);
-        this.items = registries.lookupOrThrow(Registries.ITEM);
+    public DisplaysRecipes(BootstrapContext<Recipe<?>> recipes, BootstrapContext<Advancement> advancements) {
+        super(recipes, advancements, Constants.MOD_ID);
     }
 
     @Override
@@ -58,26 +52,5 @@ public class DisplaysRecipes extends ConditionalRecipeProvider {
         displayCase(DisplaysBlocks.DIAMOND_DISPLAY_CASE.get(), LibCommonTags.Items.GEMS_DIAMOND, "has_diamond");
         // The museum case keeps the sign the 1.4.6 recipe asked for, as the plinth's placard.
         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.DECORATIONS, DisplaysBlocks.MUSEUM_DISPLAY_CASE.get()).define('G', LibCommonTags.Items.GLASS).define('I', LibCommonTags.Items.INGOTS_GOLD).define('S', LibCommonTags.Items.STONE).define('P', ItemTags.SIGNS).pattern("GGG").pattern("SIS").pattern("SPS").unlockedBy("has_sign", has(ItemTags.SIGNS)).save(this.output);
-    }
-
-    /**
-     * Recipe providers are not data providers any more - a {@link RecipeProvider.Runner} owns the
-     * file writing and builds a fresh provider around the {@link RecipeOutput} it hands out.
-     */
-    public static class Runner extends ConditionalRecipeProvider.Runner {
-
-        public Runner(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
-            super(output, registries, Constants.MOD_ID);
-        }
-
-        @Override
-        protected RecipeProvider createRecipeProvider(HolderLookup.Provider registries, RecipeOutput output) {
-            return new DisplaysRecipes(registries, output);
-        }
-
-        @Override
-        public String getName() {
-            return "Recipes: " + Constants.MOD_ID;
-        }
     }
 }

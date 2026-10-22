@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedcolorizer:colorizer_chair"
+        "recipes": "assortedcolorizer:colorizer_chair"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

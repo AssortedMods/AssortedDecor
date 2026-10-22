@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:pale_oak_parquet_slab_from_pale_oak_logs_lumber_mill"
+        "recipes": "assortedbuildingblocks:pale_oak_parquet_slab_from_pale_oak_logs_lumber_mill"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:birch_parquet_stairs_from_birch_parquet_lumber_mill"
+        "recipes": "assortedbuildingblocks:birch_parquet_stairs_from_birch_parquet_lumber_mill"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

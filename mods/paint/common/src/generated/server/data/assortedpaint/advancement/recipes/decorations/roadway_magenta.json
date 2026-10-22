@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedpaint:roadway_magenta"
+        "recipes": "assortedpaint:roadway_magenta"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

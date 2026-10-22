@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:carved_deepslate_from_cobbled_deepslate_stonecutting"
+        "recipes": "assortedbuildingblocks:carved_deepslate_from_cobbled_deepslate_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -11,7 +11,6 @@ import com.grim3212.assorted.lib.platform.Services;
 import com.grim3212.assorted.lib.registry.IRegistryObject;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.Holder;
 import net.minecraft.gametest.framework.GameTestHelper;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.MinecraftServer;
@@ -36,15 +35,16 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FireBlock;
 import net.minecraft.world.level.block.MultifaceBlock;
 import net.minecraft.world.level.block.WallBlock;
+import net.minecraft.world.level.block.entity.FurnaceBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.WallSide;
+import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
@@ -179,11 +179,15 @@ final class BuildingBlockTests {
     private static void woodBuildingBlocksBurnAsTheirPlanksDo(GameTestHelper helper) {
         List<String> wrong = new ArrayList<>();
         BlockPos block = new BlockPos(1, 2, 1);
+        // Burn times resolve against the furnace they burn in.
+        BlockPos furnace = new BlockPos(4, 2, 4);
+        helper.setBlock(furnace, Blocks.FURNACE);
+        LootContext inFurnace = Services.PLATFORM.containerProcessContext(helper.getLevel(), helper.getBlockEntity(furnace, FurnaceBlockEntity.class), List.of());
         for (WoodSet wood : BuildingBlocks.woods()) {
             for (Block made : BuildingBlocks.blocksOf(wood)) {
                 helper.setBlock(block, made);
                 boolean catches = BaseFireBlock.getState(helper.getLevel(), helper.absolutePos(block.east())).getValueOrElse(FireBlock.WEST, false);
-                int burnTime = Services.PLATFORM.getFuelTime(helper.getLevel(), new ItemStack(made));
+                int burnTime = Services.PLATFORM.getFuelTime(new ItemStack(made), inFurnace);
                 if (catches != wood.flammable()) {
                     wrong.add(made + (catches ? " catches fire" : " does not catch fire"));
                 }

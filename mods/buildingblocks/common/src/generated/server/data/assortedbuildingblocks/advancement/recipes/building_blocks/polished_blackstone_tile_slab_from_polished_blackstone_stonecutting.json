@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:polished_blackstone_tile_slab_from_polished_blackstone_stonecutting"
+        "recipes": "assortedbuildingblocks:polished_blackstone_tile_slab_from_polished_blackstone_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

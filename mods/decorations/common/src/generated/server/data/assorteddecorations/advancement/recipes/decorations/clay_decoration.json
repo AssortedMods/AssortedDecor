@@ -9,7 +9,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assorteddecorations:clay_decoration"
+        "recipes": "assorteddecorations:clay_decoration"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

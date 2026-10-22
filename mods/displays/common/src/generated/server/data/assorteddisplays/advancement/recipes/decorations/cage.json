@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assorteddisplays:cage"
+        "recipes": "assorteddisplays:cage"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

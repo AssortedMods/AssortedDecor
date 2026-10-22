@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:cracked_andesite_bricks"
+        "recipes": "assortedbuildingblocks:cracked_andesite_bricks"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

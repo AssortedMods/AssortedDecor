@@ -69,7 +69,7 @@ public class WallpaperRenderer extends EntityRenderer<WallpaperEntity, Wallpaper
 
         poseStack.pushPose();
 
-        poseStack.mulPose(Axis.YP.rotationDegrees(180 - state.direction.get2DDataValue() * 90));
+        poseStack.rotate(Axis.YP.rotationDegrees(180 - state.direction.get2DDataValue() * 90));
         poseStack.scale(0.03125F, 0.03125F, 0.03125F);
         submitWallpaper(state, poseStack, submitNodeCollector);
 

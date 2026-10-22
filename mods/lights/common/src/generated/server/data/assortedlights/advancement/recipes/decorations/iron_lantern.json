@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedlights:iron_lantern"
+        "recipes": "assortedlights:iron_lantern"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

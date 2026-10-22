@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedcolorizer:colorizer_panel_stonecutting"
+        "recipes": "assortedcolorizer:colorizer_panel_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

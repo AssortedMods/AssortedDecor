@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assorteddecorations:fountain"
+        "recipes": "assorteddecorations:fountain"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

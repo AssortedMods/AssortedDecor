@@ -1,7 +1,6 @@
 package com.grim3212.assorted.hangeables.common.blocks;
 
 import com.grim3212.assorted.hangeables.common.blocks.blockentity.CalendarBlockEntity;
-import com.mojang.serialization.MapCodec;
 import net.minecraft.world.level.redstone.Orientation;
 import org.jetbrains.annotations.Nullable;
 
@@ -22,8 +21,6 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class CalendarBlock extends HorizontalDirectionalBlock implements EntityBlock {
 
-	public static final MapCodec<CalendarBlock> CODEC = simpleCodec(CalendarBlock::new);
-
 	protected static final VoxelShape CALENDAR_NORTH_AABB = Block.box(4f, 2.08f, 14.96f, 12f, 14.96f, 16f);
 	protected static final VoxelShape CALENDAR_SOUTH_AABB = Block.box(4f, 2.08f, 0f, 12f, 14.96f, 1.04f);
 	protected static final VoxelShape CALENDAR_WEST_AABB = Block.box(14.96f, 2.08f, 4f, 16f, 14.96f, 12f);
@@ -32,11 +29,6 @@ public class CalendarBlock extends HorizontalDirectionalBlock implements EntityB
 	public CalendarBlock(Properties builder) {
 		super(builder);
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
-	}
-
-	@Override
-	protected MapCodec<? extends CalendarBlock> codec() {
-		return CODEC;
 	}
 
 	@Override

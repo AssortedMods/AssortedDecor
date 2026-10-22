@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:stripped_bamboo_block_from_bamboo_block_lumber_mill"
+        "recipes": "assortedbuildingblocks:stripped_bamboo_block_from_bamboo_block_lumber_mill"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

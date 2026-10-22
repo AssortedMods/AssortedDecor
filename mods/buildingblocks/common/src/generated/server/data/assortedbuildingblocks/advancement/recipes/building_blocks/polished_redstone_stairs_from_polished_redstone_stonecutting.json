@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:polished_redstone_stairs_from_polished_redstone_stonecutting"
+        "recipes": "assortedbuildingblocks:polished_redstone_stairs_from_polished_redstone_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -55,6 +55,10 @@ public class GatesBlocks {
         return false;
     }
 
+    private static <A> boolean never(BlockState state, BlockGetter getter, BlockPos pos, A argument) {
+        return false;
+    }
+
     public static void init() {
     }
 }

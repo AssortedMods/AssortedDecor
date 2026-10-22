@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedcolorizer:colorizer_fence"
+        "recipes": "assortedcolorizer:colorizer_fence"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

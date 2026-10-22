@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:polished_obsidian_from_obsidian_stonecutting"
+        "recipes": "assortedbuildingblocks:polished_obsidian_from_obsidian_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:fluted_deepslate_from_polished_deepslate_stonecutting"
+        "recipes": "assortedbuildingblocks:fluted_deepslate_from_polished_deepslate_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

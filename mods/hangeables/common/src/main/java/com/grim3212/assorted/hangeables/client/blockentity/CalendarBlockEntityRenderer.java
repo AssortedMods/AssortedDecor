@@ -58,7 +58,7 @@ public class CalendarBlockEntityRenderer implements BlockEntityRenderer<Calendar
         float f1 = 0.6666667F;
 
         poseStack.translate(0.5F, 0.5F, 0.5F);
-        poseStack.mulPose(Axis.YP.rotationDegrees(-state.yRot));
+        poseStack.rotate(Axis.YP.rotationDegrees(-state.yRot));
         poseStack.translate(0.0F, -0.3125F, -0.4375F);
 
         float f3 = 0.015F * f1;

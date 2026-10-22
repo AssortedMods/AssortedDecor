@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:porkchop_from_meat_block"
+        "recipes": "assortedbuildingblocks:porkchop_from_meat_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

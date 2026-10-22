@@ -16,6 +16,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.SwingAnimation;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -61,7 +62,7 @@ public class ColorizerEvents {
                 NBTHelper.putTag(stack, "stored_state", NbtUtils.writeBlockState(hit));
                 // Reset damage after grabbing a new block
                 stack.setDamageValue(0);
-                player.swing(hand);
+                player.swing(hand, SwingAnimation.DEFAULT, false);
                 return InteractionResult.SUCCESS;
             }
         } else {
@@ -76,7 +77,7 @@ public class ColorizerEvents {
 
                 SoundType placeSound = Services.LEVEL_PROPERTIES.getSoundType(world, pos, player);
                 world.playSound(player, pos, placeSound.getPlaceSound(), SoundSource.BLOCKS, (placeSound.getVolume() + 1.0F) / 2.0F, placeSound.getPitch() * 0.8F);
-                player.swing(hand);
+                player.swing(hand, SwingAnimation.DEFAULT, false);
 
                 if (!player.isCreative()) {
                     int dmg = stack.getDamageValue() + 1;

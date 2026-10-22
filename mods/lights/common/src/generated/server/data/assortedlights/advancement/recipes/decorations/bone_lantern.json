@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedlights:bone_lantern"
+        "recipes": "assortedlights:bone_lantern"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

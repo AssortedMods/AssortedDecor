@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:gold_brick_slab_from_gold_bricks_stonecutting"
+        "recipes": "assortedbuildingblocks:gold_brick_slab_from_gold_bricks_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

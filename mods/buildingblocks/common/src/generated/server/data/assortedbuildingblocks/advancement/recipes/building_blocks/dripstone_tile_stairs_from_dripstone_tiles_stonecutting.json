@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:dripstone_tile_stairs_from_dripstone_tiles_stonecutting"
+        "recipes": "assortedbuildingblocks:dripstone_tile_stairs_from_dripstone_tiles_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

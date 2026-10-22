@@ -66,7 +66,7 @@ public class GateBlock extends Block {
     private final SoundEvent closeSound;
 
     public GateBlock(Properties properties, Supplier<? extends Item> activator, SoundEvent openSound, SoundEvent closeSound) {
-        super(properties.pushReaction(PushReaction.BLOCK));
+        super(properties.pushReaction(PushReaction.IMMOVEABLE));
         this.activator = activator;
         this.openSound = openSound;
         this.closeSound = closeSound;

@@ -76,7 +76,7 @@ public class CageBlockEntityRenderer implements BlockEntityRenderer<CageBlockEnt
         poseStack.pushPose();
         poseStack.translate(0.5D, 0.0D, 0.5D);
         poseStack.translate(0.0D, (double) 0.4F, 0.0D);
-        poseStack.mulPose(Axis.YP.rotationDegrees(state.spin));
+        poseStack.rotate(Axis.YP.rotationDegrees(state.spin));
         poseStack.translate(0.0D, (double) -0.2F, 0.0D);
         poseStack.scale(state.scale, state.scale, state.scale);
 

@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedcolorizer:colorizer_fireplace"
+        "recipes": "assortedcolorizer:colorizer_fireplace"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:chain_link_aluminum"
+        "recipes": "assortedbuildingblocks:chain_link_aluminum"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

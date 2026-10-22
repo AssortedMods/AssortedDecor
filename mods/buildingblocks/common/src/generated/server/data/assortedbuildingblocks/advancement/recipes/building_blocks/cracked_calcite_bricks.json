@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:cracked_calcite_bricks"
+        "recipes": "assortedbuildingblocks:cracked_calcite_bricks"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

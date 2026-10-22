@@ -1,244 +1,356 @@
 {
   "values": {
     "assortedbuildingblocks:acacia_beam": {
-      "burn_time": 75
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:acacia_panel": {
-      "burn_time": 37
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:acacia_parquet": {
-      "burn_time": 300
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:acacia_parquet_slab": {
-      "burn_time": 150
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:acacia_parquet_stairs": {
-      "burn_time": 300
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:bamboo_beam": {
-      "burn_time": 75
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:bamboo_panel": {
-      "burn_time": 37
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:bamboo_parquet": {
-      "burn_time": 300
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:bamboo_parquet_slab": {
-      "burn_time": 150
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:bamboo_parquet_stairs": {
-      "burn_time": 300
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:birch_beam": {
-      "burn_time": 75
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:birch_panel": {
-      "burn_time": 37
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:birch_parquet": {
-      "burn_time": 300
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:birch_parquet_slab": {
-      "burn_time": 150
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:birch_parquet_stairs": {
-      "burn_time": 300
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:cherry_beam": {
-      "burn_time": 75
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:cherry_panel": {
-      "burn_time": 37
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:cherry_parquet": {
-      "burn_time": 300
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:cherry_parquet_slab": {
-      "burn_time": 150
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:cherry_parquet_stairs": {
-      "burn_time": 300
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:dark_oak_beam": {
-      "burn_time": 75
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:dark_oak_panel": {
-      "burn_time": 37
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:dark_oak_parquet": {
-      "burn_time": 300
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:dark_oak_parquet_slab": {
-      "burn_time": 150
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:dark_oak_parquet_stairs": {
-      "burn_time": 300
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:framed_acacia_plank_slab": {
-      "burn_time": 150
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:framed_acacia_plank_stairs": {
-      "burn_time": 300
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:framed_acacia_planks": {
-      "burn_time": 300
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:framed_bamboo_plank_slab": {
-      "burn_time": 150
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:framed_bamboo_plank_stairs": {
-      "burn_time": 300
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:framed_bamboo_planks": {
-      "burn_time": 300
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:framed_birch_plank_slab": {
-      "burn_time": 150
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:framed_birch_plank_stairs": {
-      "burn_time": 300
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:framed_birch_planks": {
-      "burn_time": 300
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:framed_cherry_plank_slab": {
-      "burn_time": 150
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:framed_cherry_plank_stairs": {
-      "burn_time": 300
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:framed_cherry_planks": {
-      "burn_time": 300
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:framed_dark_oak_plank_slab": {
-      "burn_time": 150
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:framed_dark_oak_plank_stairs": {
-      "burn_time": 300
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:framed_dark_oak_planks": {
-      "burn_time": 300
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:framed_jungle_plank_slab": {
-      "burn_time": 150
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:framed_jungle_plank_stairs": {
-      "burn_time": 300
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:framed_jungle_planks": {
-      "burn_time": 300
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:framed_mangrove_plank_slab": {
-      "burn_time": 150
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:framed_mangrove_plank_stairs": {
-      "burn_time": 300
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:framed_mangrove_planks": {
-      "burn_time": 300
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:framed_oak_plank_slab": {
-      "burn_time": 150
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:framed_oak_plank_stairs": {
-      "burn_time": 300
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:framed_oak_planks": {
-      "burn_time": 300
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:framed_pale_oak_plank_slab": {
-      "burn_time": 150
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:framed_pale_oak_plank_stairs": {
-      "burn_time": 300
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:framed_pale_oak_planks": {
-      "burn_time": 300
+      "burn_odds": 20,
+      "ignite_odds": 5
+    },
+    "assortedbuildingblocks:framed_poplar_plank_slab": {
+      "burn_odds": 20,
+      "ignite_odds": 5
+    },
+    "assortedbuildingblocks:framed_poplar_plank_stairs": {
+      "burn_odds": 20,
+      "ignite_odds": 5
+    },
+    "assortedbuildingblocks:framed_poplar_planks": {
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:framed_spruce_plank_slab": {
-      "burn_time": 150
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:framed_spruce_plank_stairs": {
-      "burn_time": 300
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:framed_spruce_planks": {
-      "burn_time": 300
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:jungle_beam": {
-      "burn_time": 75
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:jungle_panel": {
-      "burn_time": 37
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:jungle_parquet": {
-      "burn_time": 300
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:jungle_parquet_slab": {
-      "burn_time": 150
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:jungle_parquet_stairs": {
-      "burn_time": 300
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:mangrove_beam": {
-      "burn_time": 75
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:mangrove_panel": {
-      "burn_time": 37
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:mangrove_parquet": {
-      "burn_time": 300
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:mangrove_parquet_slab": {
-      "burn_time": 150
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:mangrove_parquet_stairs": {
-      "burn_time": 300
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:oak_beam": {
-      "burn_time": 75
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:oak_panel": {
-      "burn_time": 37
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:oak_parquet": {
-      "burn_time": 300
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:oak_parquet_slab": {
-      "burn_time": 150
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:oak_parquet_stairs": {
-      "burn_time": 300
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:pale_oak_beam": {
-      "burn_time": 75
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:pale_oak_panel": {
-      "burn_time": 37
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:pale_oak_parquet": {
-      "burn_time": 300
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:pale_oak_parquet_slab": {
-      "burn_time": 150
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:pale_oak_parquet_stairs": {
-      "burn_time": 300
+      "burn_odds": 20,
+      "ignite_odds": 5
+    },
+    "assortedbuildingblocks:poplar_beam": {
+      "burn_odds": 20,
+      "ignite_odds": 5
+    },
+    "assortedbuildingblocks:poplar_panel": {
+      "burn_odds": 20,
+      "ignite_odds": 5
+    },
+    "assortedbuildingblocks:poplar_parquet": {
+      "burn_odds": 20,
+      "ignite_odds": 5
+    },
+    "assortedbuildingblocks:poplar_parquet_slab": {
+      "burn_odds": 20,
+      "ignite_odds": 5
+    },
+    "assortedbuildingblocks:poplar_parquet_stairs": {
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:spruce_beam": {
-      "burn_time": 75
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:spruce_panel": {
-      "burn_time": 37
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:spruce_parquet": {
-      "burn_time": 300
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:spruce_parquet_slab": {
-      "burn_time": 150
+      "burn_odds": 20,
+      "ignite_odds": 5
     },
     "assortedbuildingblocks:spruce_parquet_stairs": {
-      "burn_time": 300
+      "burn_odds": 20,
+      "ignite_odds": 5
     }
   }
 }

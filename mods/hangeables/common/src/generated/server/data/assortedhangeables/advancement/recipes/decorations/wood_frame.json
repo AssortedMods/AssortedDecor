@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedhangeables:wood_frame"
+        "recipes": "assortedhangeables:wood_frame"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

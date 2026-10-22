@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:polished_lapis_from_lapis_block_stonecutting"
+        "recipes": "assortedbuildingblocks:polished_lapis_from_lapis_block_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedroads:stone_path_stonecutting"
+        "recipes": "assortedroads:stone_path_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

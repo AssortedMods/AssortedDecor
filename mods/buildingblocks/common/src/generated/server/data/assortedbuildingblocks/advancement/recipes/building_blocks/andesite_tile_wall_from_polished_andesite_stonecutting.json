@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:andesite_tile_wall_from_polished_andesite_stonecutting"
+        "recipes": "assortedbuildingblocks:andesite_tile_wall_from_polished_andesite_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

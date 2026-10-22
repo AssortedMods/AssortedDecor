@@ -7,12 +7,15 @@ import com.grim3212.assorted.hangeables.common.network.NeonOpenPacket;
 import com.grim3212.assorted.lib.platform.Services;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.StandingAndWallBlockItem;
+import net.minecraft.world.item.component.TypedEntityData;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import org.jetbrains.annotations.Nullable;
 
 public class NeonSignItem extends StandingAndWallBlockItem {
@@ -29,14 +32,28 @@ public class NeonSignItem extends StandingAndWallBlockItem {
         return !stack.has(DataComponents.BLOCK_ENTITY_DATA) || player != null && player.canUseGameMasterBlocks();
     }
 
+    /**
+     * Vanilla applies a stack's block entity data inside place now, with no hook, so data a player may not apply
+     * is held back across it. A sign that took no data opens its editor, as it did before.
+     */
     @Override
-    protected boolean updateCustomBlockEntityTag(BlockPos pos, Level worldIn, @Nullable Player player, ItemStack stack, BlockState state) {
-        boolean flag = mayApplyBlockEntityData(player, stack) && super.updateCustomBlockEntityTag(pos, worldIn, player, stack, state);
-        if (!worldIn.isClientSide() && !flag && player != null) {
-            ((NeonSignBlockEntity) worldIn.getBlockEntity(pos)).setOwner(player);
+    public InteractionResult place(BlockPlaceContext context) {
+        Player player = context.getPlayer();
+        ItemStack stack = context.getItemInHand();
+        boolean applies = stack.has(DataComponents.BLOCK_ENTITY_DATA) && mayApplyBlockEntityData(player, stack);
+        TypedEntityData<BlockEntityType<?>> withheld = applies ? null : stack.remove(DataComponents.BLOCK_ENTITY_DATA);
+        InteractionResult result = super.place(context);
+        if (withheld != null && !stack.isEmpty()) {
+            stack.set(DataComponents.BLOCK_ENTITY_DATA, withheld);
+        }
+
+        Level level = context.getLevel();
+        BlockPos pos = context.getClickedPos();
+        if (result.consumesAction() && !level.isClientSide() && !applies && player != null && level.getBlockEntity(pos) instanceof NeonSignBlockEntity sign) {
+            sign.setOwner(player);
             Services.NETWORK.sendTo(player, new NeonOpenPacket(pos));
         }
 
-        return flag;
+        return result;
     }
 }

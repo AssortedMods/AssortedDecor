@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedlights:paper_lantern"
+        "recipes": "assortedlights:paper_lantern"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

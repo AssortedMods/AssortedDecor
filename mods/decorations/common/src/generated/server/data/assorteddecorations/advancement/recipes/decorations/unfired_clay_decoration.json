@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assorteddecorations:unfired_clay_decoration"
+        "recipes": "assorteddecorations:unfired_clay_decoration"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

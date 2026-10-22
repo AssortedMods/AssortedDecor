@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:carved_andesite_from_andesite_stonecutting"
+        "recipes": "assortedbuildingblocks:carved_andesite_from_andesite_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

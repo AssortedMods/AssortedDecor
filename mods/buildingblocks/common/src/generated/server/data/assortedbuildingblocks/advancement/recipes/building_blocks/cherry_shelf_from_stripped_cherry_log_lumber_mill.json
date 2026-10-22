@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:cherry_shelf_from_stripped_cherry_log_lumber_mill"
+        "recipes": "assortedbuildingblocks:cherry_shelf_from_stripped_cherry_log_lumber_mill"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

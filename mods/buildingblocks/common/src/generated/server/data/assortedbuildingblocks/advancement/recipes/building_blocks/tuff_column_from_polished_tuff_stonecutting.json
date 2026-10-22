@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:tuff_column_from_polished_tuff_stonecutting"
+        "recipes": "assortedbuildingblocks:tuff_column_from_polished_tuff_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

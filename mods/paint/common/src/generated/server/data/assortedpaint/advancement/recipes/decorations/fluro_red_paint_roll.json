@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedpaint:fluro_red_paint_roll"
+        "recipes": "assortedpaint:fluro_red_paint_roll"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

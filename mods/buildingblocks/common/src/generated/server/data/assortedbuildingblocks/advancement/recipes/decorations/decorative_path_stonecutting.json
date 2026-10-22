@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:decorative_path_stonecutting"
+        "recipes": "assortedbuildingblocks:decorative_path_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

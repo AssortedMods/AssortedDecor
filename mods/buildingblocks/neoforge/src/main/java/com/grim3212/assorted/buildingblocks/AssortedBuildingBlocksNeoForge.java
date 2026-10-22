@@ -4,24 +4,21 @@ import com.grim3212.assorted.buildingblocks.client.data.BuildingBlocksLanguagePr
 import com.grim3212.assorted.buildingblocks.client.data.BuildingBlocksManualProvider;
 import com.grim3212.assorted.buildingblocks.client.data.BuildingBlocksBlockstateProvider;
 import com.grim3212.assorted.buildingblocks.client.data.BuildingBlocksItemModelProvider;
+import com.grim3212.assorted.buildingblocks.common.blocks.building.BuildingBlocks;
 import com.grim3212.assorted.buildingblocks.data.BuildingBlocksBlockLoot;
 import com.grim3212.assorted.buildingblocks.data.BuildingBlocksBlockTagProvider;
 import com.grim3212.assorted.buildingblocks.data.BuildingBlocksItemTagProvider;
-import com.grim3212.assorted.buildingblocks.data.BuildingBlocksDataMapProvider;
 import com.grim3212.assorted.buildingblocks.data.BuildingBlocksRecipes;
 import com.grim3212.assorted.lib.data.ForgeBlockTagProvider;
 import com.grim3212.assorted.lib.data.ForgeItemTagProvider;
+import com.grim3212.assorted.lib.data.ForgeRegistryEntries;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.loot.LootTableProvider;
-import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 
-import java.util.Collections;
-import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 @Mod(Constants.MOD_ID)
@@ -44,14 +41,12 @@ public class AssortedBuildingBlocksNeoForge {
      */
     private void gatherServerData(final GatherDataEvent.Server event) {
         PackOutput packOutput = event.getGenerator().getPackOutput();
-        CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
+        CompletableFuture<HolderLookup.Provider> lookupProvider = event.getWorldLookupProvider();
 
-        // Recipe providers are not data providers any more - the Runner owns the output.
-        event.addProvider(new BuildingBlocksRecipes.Runner(packOutput, lookupProvider));
-        event.addProvider(new BuildingBlocksDataMapProvider(packOutput, lookupProvider));
+        ForgeRegistryEntries.of(Constants.MOD_ID).recipes(BuildingBlocksRecipes::new).blockLoot(BuildingBlocksBlockLoot::new)
+                .burnTimes(BuildingBlocks.fuels().values()).addTo(event);
         ForgeBlockTagProvider blockTagProvider = event.addProvider(new ForgeBlockTagProvider(packOutput, lookupProvider, Constants.MOD_ID, new BuildingBlocksBlockTagProvider(packOutput, lookupProvider)));
         event.addProvider(new ForgeItemTagProvider(packOutput, lookupProvider, blockTagProvider.contentsGetter(), Constants.MOD_ID, new BuildingBlocksItemTagProvider(packOutput, lookupProvider, blockTagProvider.contentsGetter())));
-        event.addProvider(new LootTableProvider(packOutput, Collections.emptySet(), List.of(new LootTableProvider.SubProviderEntry(BuildingBlocksBlockLoot::new, LootContextParamSets.BLOCK)), lookupProvider));
     }
 
     /**

@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:carved_stone_from_stone_stonecutting"
+        "recipes": "assortedbuildingblocks:carved_stone_from_stone_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedroads:roadway_wash"
+        "recipes": "assortedroads:roadway_wash"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

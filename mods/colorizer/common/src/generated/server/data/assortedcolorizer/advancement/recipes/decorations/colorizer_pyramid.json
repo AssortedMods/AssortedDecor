@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedcolorizer:colorizer_pyramid"
+        "recipes": "assortedcolorizer:colorizer_pyramid"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

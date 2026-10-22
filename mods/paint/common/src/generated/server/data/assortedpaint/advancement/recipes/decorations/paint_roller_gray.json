@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedpaint:paint_roller_gray"
+        "recipes": "assortedpaint:paint_roller_gray"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

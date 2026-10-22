@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:quartz_door"
+        "recipes": "assortedbuildingblocks:quartz_door"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

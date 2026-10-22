@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assorteddisplays:wooden_display_case"
+        "recipes": "assorteddisplays:wooden_display_case"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

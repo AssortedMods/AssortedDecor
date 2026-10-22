@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedpaint:pink_concrete_powder_paint_roll"
+        "recipes": "assortedpaint:pink_concrete_powder_paint_roll"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

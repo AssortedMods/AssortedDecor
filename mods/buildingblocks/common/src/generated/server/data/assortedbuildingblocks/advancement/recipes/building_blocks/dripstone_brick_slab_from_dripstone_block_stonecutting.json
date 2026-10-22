@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:dripstone_brick_slab_from_dripstone_block_stonecutting"
+        "recipes": "assortedbuildingblocks:dripstone_brick_slab_from_dripstone_block_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

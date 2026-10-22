@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:stripped_acacia_log_from_acacia_log_lumber_mill"
+        "recipes": "assortedbuildingblocks:stripped_acacia_log_from_acacia_log_lumber_mill"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -7,7 +7,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
@@ -110,7 +109,7 @@ public class DisplaysBlocks {
         return cases;
     }
 
-    private static boolean never(BlockState state, BlockGetter getter, BlockPos pos, EntityType<?> type) {
+    private static <A> boolean never(BlockState state, BlockGetter getter, BlockPos pos, A argument) {
         return false;
     }
 

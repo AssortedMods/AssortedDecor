@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:cherry_door_from_cherry_logs_lumber_mill"
+        "recipes": "assortedbuildingblocks:cherry_door_from_cherry_logs_lumber_mill"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

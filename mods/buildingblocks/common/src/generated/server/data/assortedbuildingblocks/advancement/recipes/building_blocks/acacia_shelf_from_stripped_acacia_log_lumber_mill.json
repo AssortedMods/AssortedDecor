@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:acacia_shelf_from_stripped_acacia_log_lumber_mill"
+        "recipes": "assortedbuildingblocks:acacia_shelf_from_stripped_acacia_log_lumber_mill"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

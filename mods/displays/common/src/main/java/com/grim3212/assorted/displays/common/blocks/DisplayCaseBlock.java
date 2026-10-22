@@ -1,7 +1,6 @@
 package com.grim3212.assorted.displays.common.blocks;
 
 import com.grim3212.assorted.displays.common.blocks.blockentity.DisplayCaseBlockEntity;
-import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.component.DataComponents;
@@ -27,6 +26,7 @@ import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.util.Mth;
+import net.minecraft.util.Prediction;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
@@ -41,7 +41,6 @@ import java.util.OptionalInt;
  */
 public class DisplayCaseBlock extends Block implements EntityBlock {
 
-    public static final MapCodec<DisplayCaseBlock> CODEC = simpleCodec(DisplayCaseBlock::new);
     public static final EnumProperty<Direction> FACING = HorizontalDirectionalBlock.FACING;
 
     /** Items to a side. The storage stays three by three at every size, so indices are stable. */
@@ -56,11 +55,6 @@ public class DisplayCaseBlock extends Block implements EntityBlock {
     public DisplayCaseBlock(Properties props) {
         super(props);
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(SIZE, 1));
-    }
-
-    @Override
-    protected MapCodec<? extends DisplayCaseBlock> codec() {
-        return CODEC;
     }
 
     @Override
@@ -144,7 +138,7 @@ public class DisplayCaseBlock extends Block implements EntityBlock {
             ItemStack taken = displayCase.removeItem(slot.getAsInt());
             level.playSound(null, pos, SoundEvents.ITEM_FRAME_REMOVE_ITEM, SoundSource.BLOCKS, 1.0F, 1.0F);
             if (!player.getInventory().add(taken)) {
-                player.drop(taken, false);
+                player.drop(taken, false, Prediction.SERVER_ONLY);
             }
             level.gameEvent(player, GameEvent.BLOCK_CHANGE, pos);
         }

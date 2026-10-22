@@ -7,6 +7,7 @@ import com.grim3212.assorted.lib.crafting.SyncedRecipes;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.Prediction;
 import net.minecraft.world.Container;
 import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Inventory;
@@ -209,7 +210,7 @@ public class LumberMillMenu extends AbstractContainerMenu {
 
             slot.onTake(player, stack);
             if (slotIndex == 1) {
-                player.drop(stack, false);
+                player.drop(stack, false, Prediction.PREDICTED);
             }
 
             this.broadcastChanges();

@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:bamboo_shelf_from_stripped_bamboo_block_lumber_mill"
+        "recipes": "assortedbuildingblocks:bamboo_shelf_from_stripped_bamboo_block_lumber_mill"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:basketweave_brick_stairs_from_basketweave_bricks_stonecutting"
+        "recipes": "assortedbuildingblocks:basketweave_brick_stairs_from_basketweave_bricks_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

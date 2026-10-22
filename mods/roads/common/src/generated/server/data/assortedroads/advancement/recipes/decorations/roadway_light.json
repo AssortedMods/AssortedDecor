@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedroads:roadway_light"
+        "recipes": "assortedroads:roadway_light"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

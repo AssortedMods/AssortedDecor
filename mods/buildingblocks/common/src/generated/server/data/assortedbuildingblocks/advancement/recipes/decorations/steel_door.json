@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:steel_door"
+        "recipes": "assortedbuildingblocks:steel_door"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

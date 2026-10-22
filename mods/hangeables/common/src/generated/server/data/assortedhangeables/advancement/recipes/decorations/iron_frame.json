@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedhangeables:iron_frame"
+        "recipes": "assortedhangeables:iron_frame"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

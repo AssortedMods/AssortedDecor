@@ -29,7 +29,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedlights:illumination_plate_iron"
+        "recipes": "assortedlights:illumination_plate_iron"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

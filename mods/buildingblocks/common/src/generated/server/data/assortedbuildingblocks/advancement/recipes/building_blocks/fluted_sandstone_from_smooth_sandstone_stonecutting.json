@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:fluted_sandstone_from_smooth_sandstone_stonecutting"
+        "recipes": "assortedbuildingblocks:fluted_sandstone_from_smooth_sandstone_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

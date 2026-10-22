@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedgates:garage_door"
+        "recipes": "assortedgates:garage_door"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

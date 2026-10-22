@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:acacia_parquet_from_acacia_logs_lumber_mill"
+        "recipes": "assortedbuildingblocks:acacia_parquet_from_acacia_logs_lumber_mill"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

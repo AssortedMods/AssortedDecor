@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedroads:steel_roadway_manhole"
+        "recipes": "assortedroads:steel_roadway_manhole"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

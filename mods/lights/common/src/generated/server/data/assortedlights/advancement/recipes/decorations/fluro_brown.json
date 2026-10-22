@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedlights:fluro_brown"
+        "recipes": "assortedlights:fluro_brown"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

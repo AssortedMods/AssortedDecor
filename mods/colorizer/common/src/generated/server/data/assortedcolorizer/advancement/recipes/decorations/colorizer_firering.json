@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedcolorizer:colorizer_firering"
+        "recipes": "assortedcolorizer:colorizer_firering"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedgates:gate_grating"
+        "recipes": "assortedgates:gate_grating"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

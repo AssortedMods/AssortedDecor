@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedpaint:siding_vertical_purple"
+        "recipes": "assortedpaint:siding_vertical_purple"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

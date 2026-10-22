@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:cracked_dripstone_bricks"
+        "recipes": "assortedbuildingblocks:cracked_dripstone_bricks"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

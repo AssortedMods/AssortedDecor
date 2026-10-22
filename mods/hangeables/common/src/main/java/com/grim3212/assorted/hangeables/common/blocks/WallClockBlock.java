@@ -1,7 +1,6 @@
 package com.grim3212.assorted.hangeables.common.blocks;
 
 import com.grim3212.assorted.hangeables.common.blocks.blockentity.WallClockBlockEntity;
-import com.mojang.serialization.MapCodec;
 import net.minecraft.world.level.redstone.Orientation;
 import org.jetbrains.annotations.Nullable;
 
@@ -25,8 +24,6 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class WallClockBlock extends HorizontalDirectionalBlock implements EntityBlock {
 
-	public static final MapCodec<WallClockBlock> CODEC = simpleCodec(WallClockBlock::new);
-
 	protected static final VoxelShape CLOCK_NORTH_AABB = Block.box(0f, 0f, 14f, 16f, 16f, 16f);
 	protected static final VoxelShape CLOCK_SOUTH_AABB = Block.box(0f, 0f, 0f, 16f, 16f, 2f);
 	protected static final VoxelShape CLOCK_WEST_AABB = Block.box(14f, 0f, 0f, 16f, 16f, 16f);
@@ -36,11 +33,6 @@ public class WallClockBlock extends HorizontalDirectionalBlock implements Entity
 	public WallClockBlock(Properties builder) {
 		super(builder);
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(TIME, 0));
-	}
-
-	@Override
-	protected MapCodec<? extends WallClockBlock> codec() {
-		return CODEC;
 	}
 
 	@Override

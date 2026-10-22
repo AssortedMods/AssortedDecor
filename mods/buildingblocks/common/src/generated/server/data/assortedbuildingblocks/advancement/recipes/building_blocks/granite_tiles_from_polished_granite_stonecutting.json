@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:granite_tiles_from_polished_granite_stonecutting"
+        "recipes": "assortedbuildingblocks:granite_tiles_from_polished_granite_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

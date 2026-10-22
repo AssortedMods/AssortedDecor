@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedcolorizer:clean_colorizer_brush"
+        "recipes": "assortedcolorizer:clean_colorizer_brush"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

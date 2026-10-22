@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:crimson_pressure_plate_from_crimson_stems_lumber_mill"
+        "recipes": "assortedbuildingblocks:crimson_pressure_plate_from_crimson_stems_lumber_mill"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

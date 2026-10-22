@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedpaint:white_concrete_paint_roll"
+        "recipes": "assortedpaint:white_concrete_paint_roll"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

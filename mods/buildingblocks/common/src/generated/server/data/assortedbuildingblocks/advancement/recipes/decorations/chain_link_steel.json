@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:chain_link_steel"
+        "recipes": "assortedbuildingblocks:chain_link_steel"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

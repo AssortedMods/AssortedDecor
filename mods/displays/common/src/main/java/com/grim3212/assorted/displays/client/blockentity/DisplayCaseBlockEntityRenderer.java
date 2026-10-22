@@ -100,7 +100,7 @@ public class DisplayCaseBlockEntityRenderer implements BlockEntityRenderer<Displ
             poseStack.translate(DisplayCaseBlock.localX(state.facing, across, depth),
                     state.floorY + DisplayCaseBlock.shelfY(state.size, DisplayCaseBlock.row(slot)) + scale / 2.0F,
                     DisplayCaseBlock.localZ(state.facing, across, depth));
-            poseStack.mulPose(Axis.YP.rotationDegrees(-state.facing.toYRot()));
+            poseStack.rotate(Axis.YP.rotationDegrees(-state.facing.toYRot()));
             poseStack.scale(scale, scale, scale);
             item.submit(poseStack, submitNodeCollector, state.itemLightCoords, OverlayTexture.NO_OVERLAY, 0);
             poseStack.popPose();
@@ -109,7 +109,7 @@ public class DisplayCaseBlockEntityRenderer implements BlockEntityRenderer<Displ
         if (state.placard != null) {
             poseStack.pushPose();
             poseStack.translate(0.5F, PLACARD_Y, 0.5F);
-            poseStack.mulPose(Axis.YP.rotationDegrees(-state.facing.toYRot()));
+            poseStack.rotate(Axis.YP.rotationDegrees(-state.facing.toYRot()));
             poseStack.translate(0.0F, 0.0F, PLACARD_Z);
             // Negative Y because the font draws downwards.
             poseStack.scale(state.placardScale, -state.placardScale, state.placardScale);

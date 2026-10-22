@@ -2,6 +2,7 @@ package com.grim3212.assorted.buildingblocks.common.blocks;
 
 import com.grim3212.assorted.buildingblocks.Constants;
 import com.grim3212.assorted.buildingblocks.common.items.ColorChangingItem;
+import com.grim3212.assorted.lib.crafting.BurnTimes;
 import com.grim3212.assorted.lib.registry.IRegistryObject;
 import com.grim3212.assorted.lib.registry.RegistryProvider;
 import net.minecraft.core.registries.Registries;
@@ -38,7 +39,12 @@ public class BuildingBlocksBlocks {
     public static final IRegistryObject<ColorChangingBlock> SIDING_HORIZONTAL = registerColorChanging("siding_horizontal", props -> new ColorChangingBlock(props.mapColor(MapColor.METAL).sound(SoundType.STONE).strength(1.0F, 10.0F).requiresCorrectToolForDrops()));
 
     public static <T extends Block> IRegistryObject<T> register(String name, Function<BlockBehaviour.Properties, ? extends T> factory) {
-        return register(name, factory, block -> item(name, block));
+        return register(name, factory, 0);
+    }
+
+    /** With an item that burns in a furnace for {@code burnTicks}, or not at all for 0. */
+    public static <T extends Block> IRegistryObject<T> register(String name, Function<BlockBehaviour.Properties, ? extends T> factory, int burnTicks) {
+        return register(name, factory, block -> item(name, block, burnTicks));
     }
 
     private static <T extends Block> IRegistryObject<T> register(String name, Function<BlockBehaviour.Properties, ? extends T> factory, Function<IRegistryObject<T>, Supplier<? extends Item>> itemCreator) {
@@ -54,9 +60,12 @@ public class BuildingBlocksBlocks {
         return BLOCKS.register(name, () -> factory.apply(BlockBehaviour.Properties.of().setId(key)));
     }
 
-    private static Supplier<BlockItem> item(final String name, final IRegistryObject<? extends Block> block) {
+    private static Supplier<BlockItem> item(final String name, final IRegistryObject<? extends Block> block, final int burnTicks) {
         final ResourceKey<Item> key = itemKey(name);
-        return () -> new BlockItem(block.get(), new Item.Properties().useBlockDescriptionPrefix().setId(key));
+        return () -> {
+            Item.Properties props = new Item.Properties().useBlockDescriptionPrefix().setId(key);
+            return new BlockItem(block.get(), burnTicks > 0 ? props.cookingFuel(BurnTimes.key(Constants.MOD_ID, burnTicks)) : props);
+        };
     }
 
     private static <T extends Block> IRegistryObject<T> registerColorChanging(String name, Function<BlockBehaviour.Properties, ? extends T> factory) {

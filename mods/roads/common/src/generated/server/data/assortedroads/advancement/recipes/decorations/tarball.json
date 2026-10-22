@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedroads:tarball"
+        "recipes": "assortedroads:tarball"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -1,6 +1,7 @@
 package com.grim3212.assorted.gates.common.items;
 
 import com.grim3212.assorted.gates.common.blocks.GateBlock;
+import com.grim3212.assorted.lib.util.BlockPosUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
@@ -67,7 +68,7 @@ public class GateActivatorItem extends Item {
     private @Nullable BlockPos find(Level level, Vec3 eye, Vec3 look) {
         for (double distance = STEP; distance <= RANGE; distance += STEP) {
             BlockPos center = BlockPos.containing(eye.add(look.scale(distance)));
-            for (BlockPos pos : BlockPos.withinManhattan(center, 1, 1, 1)) {
+            for (BlockPos pos : BlockPosUtil.withinManhattan(center, 1, 1, 1)) {
                 if (level.getBlockState(pos).is(this.gate.get())) {
                     return pos.immutable();
                 }

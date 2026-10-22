@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedhangeables:wall_clock"
+        "recipes": "assortedhangeables:wall_clock"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

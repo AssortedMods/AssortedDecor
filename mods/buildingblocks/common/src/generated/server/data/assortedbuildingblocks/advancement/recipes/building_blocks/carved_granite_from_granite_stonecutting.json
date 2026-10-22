@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:carved_granite_from_granite_stonecutting"
+        "recipes": "assortedbuildingblocks:carved_granite_from_granite_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

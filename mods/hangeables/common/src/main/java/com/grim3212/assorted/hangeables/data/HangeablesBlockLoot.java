@@ -2,16 +2,15 @@ package com.grim3212.assorted.hangeables.data;
 
 import com.grim3212.assorted.hangeables.common.blocks.HangeablesBlocks;
 import com.grim3212.assorted.lib.data.LibBlockLootProvider;
-import net.minecraft.core.HolderLookup;
+import net.minecraft.data.loot.LootTableSubProvider;
 
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 public class HangeablesBlockLoot extends LibBlockLootProvider {
 
-    // Loot sub providers are handed the registry lookup at construction now.
-    public HangeablesBlockLoot(HolderLookup.Provider registries) {
-        super(registries, () -> HangeablesBlocks.BLOCKS.getEntries().stream().map(Supplier::get).collect(Collectors.toList()));
+    public HangeablesBlockLoot(LootTableSubProvider.Context context) {
+        super(context, () -> HangeablesBlocks.BLOCKS.getEntries().stream().map(Supplier::get).collect(Collectors.toList()));
     }
 
     @Override

@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedcolorizer:colorizer_sloped_post"
+        "recipes": "assortedcolorizer:colorizer_sloped_post"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

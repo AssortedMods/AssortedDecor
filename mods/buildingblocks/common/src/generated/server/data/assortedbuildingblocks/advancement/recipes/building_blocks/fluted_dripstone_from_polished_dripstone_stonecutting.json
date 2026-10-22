@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:fluted_dripstone_from_polished_dripstone_stonecutting"
+        "recipes": "assortedbuildingblocks:fluted_dripstone_from_polished_dripstone_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

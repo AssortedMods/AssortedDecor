@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:carved_calcite_from_polished_calcite_stonecutting"
+        "recipes": "assortedbuildingblocks:carved_calcite_from_polished_calcite_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

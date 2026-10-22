@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:framed_cobblestone"
+        "recipes": "assortedbuildingblocks:framed_cobblestone"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

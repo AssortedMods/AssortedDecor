@@ -56,7 +56,7 @@ public class FrameRenderer extends EntityRenderer<FrameEntity, FrameRenderer.Fra
     public void submit(FrameRenderState state, PoseStack poseStack, SubmitNodeCollector submitNodeCollector, CameraRenderState camera) {
         poseStack.pushPose();
 
-        poseStack.mulPose(Axis.YP.rotationDegrees(180 - state.direction.get2DDataValue() * 90));
+        poseStack.rotate(Axis.YP.rotationDegrees(180 - state.direction.get2DDataValue() * 90));
         submitBeams(state, poseStack, submitNodeCollector);
 
         poseStack.popPose();

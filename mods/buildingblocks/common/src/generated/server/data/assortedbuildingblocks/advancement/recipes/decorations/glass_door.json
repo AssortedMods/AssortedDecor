@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:glass_door"
+        "recipes": "assortedbuildingblocks:glass_door"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

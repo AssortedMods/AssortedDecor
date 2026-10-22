@@ -9,7 +9,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedpaint:paint_roller"
+        "recipes": "assortedpaint:paint_roller"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

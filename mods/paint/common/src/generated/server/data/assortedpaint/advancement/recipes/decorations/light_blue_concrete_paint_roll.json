@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedpaint:light_blue_concrete_paint_roll"
+        "recipes": "assortedpaint:light_blue_concrete_paint_roll"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

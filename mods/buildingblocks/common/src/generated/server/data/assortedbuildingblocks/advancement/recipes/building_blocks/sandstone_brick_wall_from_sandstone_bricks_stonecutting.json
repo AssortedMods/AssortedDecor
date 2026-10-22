@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:sandstone_brick_wall_from_sandstone_bricks_stonecutting"
+        "recipes": "assortedbuildingblocks:sandstone_brick_wall_from_sandstone_bricks_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

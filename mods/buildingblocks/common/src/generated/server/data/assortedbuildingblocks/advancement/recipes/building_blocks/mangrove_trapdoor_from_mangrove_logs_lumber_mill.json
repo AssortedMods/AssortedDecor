@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:mangrove_trapdoor_from_mangrove_logs_lumber_mill"
+        "recipes": "assortedbuildingblocks:mangrove_trapdoor_from_mangrove_logs_lumber_mill"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

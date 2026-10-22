@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assorteddisplays:waxed_exposed_copper_display_case"
+        "recipes": "assorteddisplays:waxed_exposed_copper_display_case"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

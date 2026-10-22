@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:mossy_andesite_bricks_from_moss_block"
+        "recipes": "assortedbuildingblocks:mossy_andesite_bricks_from_moss_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

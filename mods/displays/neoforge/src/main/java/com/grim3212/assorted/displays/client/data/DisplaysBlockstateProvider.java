@@ -61,7 +61,7 @@ public class DisplaysBlockstateProvider extends ModelProvider {
             .requiredTextureSlot(TextureSlot.TOP)
             .requiredTextureSlot(PLACARD)
             .element(e -> e.from(0, 0, 0).to(16, 16, 16).allFaces((dir, face) -> face.texture(dir == Direction.UP ? TextureSlot.TOP : TextureSlot.SIDE).cullface(dir)))
-            .element(e -> e.from(1, 4, -0.01F).to(15, 12, -0.01F).shade(false)
+            .element(e -> e.from(1, 4, -0.01F).to(15, 12, -0.01F).shadeDirectionOverride(Direction.UP)
                     .face(Direction.NORTH, face -> face.texture(PLACARD).uvs(1, 4, 15, 12)))
             .build();
 

@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedgates:gate_trumpet"
+        "recipes": "assortedgates:gate_trumpet"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

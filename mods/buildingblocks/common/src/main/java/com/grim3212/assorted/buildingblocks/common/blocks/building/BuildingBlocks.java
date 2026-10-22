@@ -88,6 +88,7 @@ public final class BuildingBlocks {
     public static final WoodSet MANGROVE = wood("mangrove", () -> Blocks.MANGROVE_PLANKS, () -> Blocks.MANGROVE_SLAB, MapColor.COLOR_RED, true);
     public static final WoodSet CHERRY = wood("cherry", () -> Blocks.CHERRY_PLANKS, () -> Blocks.CHERRY_SLAB, MapColor.TERRACOTTA_WHITE, true);
     public static final WoodSet PALE_OAK = wood("pale_oak", () -> Blocks.PALE_OAK_PLANKS, () -> Blocks.PALE_OAK_SLAB, MapColor.QUARTZ, true);
+    public static final WoodSet POPLAR = wood("poplar", () -> Blocks.POPLAR_PLANKS, () -> Blocks.POPLAR_SLAB, MapColor.COLOR_LIGHT_GRAY, true);
     public static final WoodSet BAMBOO = wood("bamboo", () -> Blocks.BAMBOO_PLANKS, () -> Blocks.BAMBOO_SLAB, MapColor.COLOR_YELLOW, true);
     public static final WoodSet CRIMSON = wood("crimson", () -> Blocks.CRIMSON_PLANKS, () -> Blocks.CRIMSON_SLAB, MapColor.CRIMSON_STEM, false);
     public static final WoodSet WARPED = wood("warped", () -> Blocks.WARPED_PLANKS, () -> Blocks.WARPED_SLAB, MapColor.WARPED_STEM, false);
@@ -176,9 +177,8 @@ public final class BuildingBlocks {
             if (!wood.flammable()) {
                 continue;
             }
-            // A plank's 300 ticks shared out over what the lumber mill cuts from one.
             for (Supplier<? extends Block> block : suppliersOf(wood)) {
-                int ticks = block == wood.panel() ? 37 : block == wood.beam() ? 75 : block.get() instanceof SlabBlock ? 150 : 300;
+                int ticks = block == wood.panel() ? PANEL_BURN : block == wood.beam() ? BEAM_BURN : block.get() instanceof SlabBlock ? PLANK_BURN / 2 : PLANK_BURN;
                 fuels.put(block, ticks);
             }
         }
@@ -213,38 +213,57 @@ public final class BuildingBlocks {
         return family;
     }
 
+    // A plank's 300 ticks shared out over what the lumber mill cuts from one.
+    private static final int PLANK_BURN = 300;
+    private static final int PANEL_BURN = PLANK_BURN / 8;
+    private static final int BEAM_BURN = PLANK_BURN / 4;
+
     private static WoodSet wood(String name, Supplier<Block> planks, Supplier<Block> slab, MapColor color, boolean flammable) {
         UnaryOperator<Properties> props = p -> {
             p.mapColor(color).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sound(name.equals("bamboo") ? SoundType.BAMBOO_WOOD : !flammable ? SoundType.NETHER_WOOD : name.equals("cherry") ? SoundType.CHERRY_WOOD : SoundType.WOOD);
             return flammable ? p.ignitedByLava() : p;
         };
+        // Burn times go in as each item is made: Fabric makes them while this set is still being built.
+        int burn = flammable ? PLANK_BURN : 0;
         WoodSet wood = new WoodSet(name, planks, slab, flammable,
-                cut(name + "_parquet", Cuts.STAIRS, props),
-                cut("framed_" + name + "_planks", Cuts.STAIRS, props),
-                shaped(name + "_panel", p -> new PanelBlock(props.apply(p))),
-                shaped(name + "_beam", p -> new BeamBlock(props.apply(p))));
+                cut(name + "_parquet", Cuts.STAIRS, props, burn),
+                cut("framed_" + name + "_planks", Cuts.STAIRS, props, burn),
+                shaped(name + "_panel", p -> new PanelBlock(props.apply(p)), flammable ? PANEL_BURN : 0),
+                shaped(name + "_beam", p -> new BeamBlock(props.apply(p)), flammable ? BEAM_BURN : 0));
         WOODS.add(wood);
         return wood;
     }
 
     static IRegistryObject<Block> cube(String name, UnaryOperator<Properties> props) {
-        IRegistryObject<Block> block = BuildingBlocksBlocks.register(name, p -> new Block(props.apply(p)));
+        return cube(name, props, 0);
+    }
+
+    static IRegistryObject<Block> cube(String name, UnaryOperator<Properties> props, int burnTicks) {
+        IRegistryObject<Block> block = BuildingBlocksBlocks.register(name, p -> new Block(props.apply(p)), burnTicks);
         ALL.add(block);
         CUBES.add(block);
         return block;
     }
 
     static IRegistryObject<Block> cut(String name, Cuts cuts, UnaryOperator<Properties> props) {
-        IRegistryObject<Block> block = cube(name, props);
-        IRegistryObject<SlabBlock> slab = shaped(cutName(name, "slab"), p -> new SlabBlock(props.apply(p)));
-        IRegistryObject<StairBlock> stairs = shaped(cutName(name, "stairs"), p -> new BuildingStairBlock(block.get().defaultBlockState(), props.apply(p)));
+        return cut(name, cuts, props, 0);
+    }
+
+    static IRegistryObject<Block> cut(String name, Cuts cuts, UnaryOperator<Properties> props, int burnTicks) {
+        IRegistryObject<Block> block = cube(name, props, burnTicks);
+        IRegistryObject<SlabBlock> slab = shaped(cutName(name, "slab"), p -> new SlabBlock(props.apply(p)), burnTicks / 2);
+        IRegistryObject<StairBlock> stairs = shaped(cutName(name, "stairs"), p -> new BuildingStairBlock(block.get().defaultBlockState(), props.apply(p)), burnTicks);
         IRegistryObject<WallBlock> wall = cuts == Cuts.WALL ? shaped(cutName(name, "wall"), p -> new WallBlock(props.apply(p).forceSolidOn())) : null;
         CUTS.put(block, new CutShapes(slab, stairs, wall));
         return block;
     }
 
     static <T extends Block> IRegistryObject<T> shaped(String name, Function<Properties, T> factory) {
-        IRegistryObject<T> block = BuildingBlocksBlocks.register(name, factory);
+        return shaped(name, factory, 0);
+    }
+
+    static <T extends Block> IRegistryObject<T> shaped(String name, Function<Properties, T> factory, int burnTicks) {
+        IRegistryObject<T> block = BuildingBlocksBlocks.register(name, factory, burnTicks);
         ALL.add(block);
         return block;
     }

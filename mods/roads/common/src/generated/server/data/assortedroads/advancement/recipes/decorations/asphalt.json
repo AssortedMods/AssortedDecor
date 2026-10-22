@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedroads:asphalt"
+        "recipes": "assortedroads:asphalt"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

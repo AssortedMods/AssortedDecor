@@ -29,7 +29,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedcolorizer:colorizer_firepit_covered"
+        "recipes": "assortedcolorizer:colorizer_firepit_covered"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

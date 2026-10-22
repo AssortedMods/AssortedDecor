@@ -9,7 +9,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assorteddecorations:planter_pot"
+        "recipes": "assorteddecorations:planter_pot"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

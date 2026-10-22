@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedcolorizer:colorizer_beam_stonecutting"
+        "recipes": "assortedcolorizer:colorizer_beam_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

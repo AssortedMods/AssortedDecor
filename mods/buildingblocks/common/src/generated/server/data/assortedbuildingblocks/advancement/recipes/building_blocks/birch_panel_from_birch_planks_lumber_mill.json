@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:birch_panel_from_birch_planks_lumber_mill"
+        "recipes": "assortedbuildingblocks:birch_panel_from_birch_planks_lumber_mill"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

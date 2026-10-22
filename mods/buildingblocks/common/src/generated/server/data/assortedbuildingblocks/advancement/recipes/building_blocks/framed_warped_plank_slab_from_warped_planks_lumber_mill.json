@@ -9,7 +9,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:framed_warped_plank_slab_from_warped_planks_lumber_mill"
+        "recipes": "assortedbuildingblocks:framed_warped_plank_slab_from_warped_planks_lumber_mill"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

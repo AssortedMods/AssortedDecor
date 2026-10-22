@@ -9,7 +9,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:tuff_tile_stairs_from_tuff_tiles_stonecutting"
+        "recipes": "assortedbuildingblocks:tuff_tile_stairs_from_tuff_tiles_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

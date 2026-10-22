@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assorteddecorations:bone_decoration"
+        "recipes": "assorteddecorations:bone_decoration"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

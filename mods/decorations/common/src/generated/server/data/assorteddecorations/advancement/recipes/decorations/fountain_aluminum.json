@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assorteddecorations:fountain_aluminum"
+        "recipes": "assorteddecorations:fountain_aluminum"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

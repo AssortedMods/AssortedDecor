@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:stone_tile_wall_from_smooth_stone_stonecutting"
+        "recipes": "assortedbuildingblocks:stone_tile_wall_from_smooth_stone_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

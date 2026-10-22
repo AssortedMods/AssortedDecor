@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:iron_beam_from_iron_ingot_stonecutting"
+        "recipes": "assortedbuildingblocks:iron_beam_from_iron_ingot_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedroads:sidewalk"
+        "recipes": "assortedroads:sidewalk"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

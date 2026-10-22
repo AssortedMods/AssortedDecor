@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:diorite_brick_wall_from_polished_diorite_stonecutting"
+        "recipes": "assortedbuildingblocks:diorite_brick_wall_from_polished_diorite_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

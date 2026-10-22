@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:framed_dark_oak_planks_from_dark_oak_logs_lumber_mill"
+        "recipes": "assortedbuildingblocks:framed_dark_oak_planks_from_dark_oak_logs_lumber_mill"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

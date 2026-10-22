@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedcolorizer:colorizer_full_pyramid_stonecutting"
+        "recipes": "assortedcolorizer:colorizer_full_pyramid_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

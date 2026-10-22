@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:glowstone_brick_wall_from_glowstone_bricks_stonecutting"
+        "recipes": "assortedbuildingblocks:glowstone_brick_wall_from_glowstone_bricks_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

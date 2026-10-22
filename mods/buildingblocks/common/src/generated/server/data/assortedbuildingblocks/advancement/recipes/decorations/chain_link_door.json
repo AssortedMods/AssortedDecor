@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:chain_link_door"
+        "recipes": "assortedbuildingblocks:chain_link_door"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -29,7 +29,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedcolorizer:colorizer_chimney"
+        "recipes": "assortedcolorizer:colorizer_chimney"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

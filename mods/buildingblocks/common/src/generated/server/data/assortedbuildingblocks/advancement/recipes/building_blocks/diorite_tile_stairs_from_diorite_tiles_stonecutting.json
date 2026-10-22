@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:diorite_tile_stairs_from_diorite_tiles_stonecutting"
+        "recipes": "assortedbuildingblocks:diorite_tile_stairs_from_diorite_tiles_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

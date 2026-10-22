@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedcolorizer:colorizer_slab"
+        "recipes": "assortedcolorizer:colorizer_slab"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

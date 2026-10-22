@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assorteddecorations:unfired_planter_pot"
+        "recipes": "assorteddecorations:unfired_planter_pot"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

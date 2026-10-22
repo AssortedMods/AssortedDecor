@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:mossy_polished_blackstone_brick_wall_from_mossy_polished_blackstone_bricks_stonecutting"
+        "recipes": "assortedbuildingblocks:mossy_polished_blackstone_brick_wall_from_mossy_polished_blackstone_bricks_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

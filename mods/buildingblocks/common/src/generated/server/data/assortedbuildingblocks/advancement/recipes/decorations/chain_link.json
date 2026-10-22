@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:chain_link"
+        "recipes": "assortedbuildingblocks:chain_link"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

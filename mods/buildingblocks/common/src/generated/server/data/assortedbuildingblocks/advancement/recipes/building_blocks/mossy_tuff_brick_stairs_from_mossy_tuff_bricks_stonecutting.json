@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:mossy_tuff_brick_stairs_from_mossy_tuff_bricks_stonecutting"
+        "recipes": "assortedbuildingblocks:mossy_tuff_brick_stairs_from_mossy_tuff_bricks_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

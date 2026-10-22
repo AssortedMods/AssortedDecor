@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedcolorizer:colorizer_door"
+        "recipes": "assortedcolorizer:colorizer_door"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -50,7 +50,7 @@
         4,
         -0.01
       ],
-      "shade": false,
+      "shade_direction_override": "up",
       "to": [
         15,
         12,

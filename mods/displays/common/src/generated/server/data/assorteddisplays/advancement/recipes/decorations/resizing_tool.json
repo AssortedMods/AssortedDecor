@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assorteddisplays:resizing_tool"
+        "recipes": "assorteddisplays:resizing_tool"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

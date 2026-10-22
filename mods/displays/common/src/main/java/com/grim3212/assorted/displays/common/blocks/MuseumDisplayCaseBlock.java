@@ -1,7 +1,6 @@
 package com.grim3212.assorted.displays.common.blocks;
 
 import com.grim3212.assorted.displays.common.blocks.blockentity.DisplayCaseBlockEntity;
-import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.component.DataComponents;
@@ -37,17 +36,11 @@ import java.util.OptionalInt;
  */
 public class MuseumDisplayCaseBlock extends DisplayCaseBlock {
 
-    public static final MapCodec<MuseumDisplayCaseBlock> CODEC = simpleCodec(MuseumDisplayCaseBlock::new);
     public static final EnumProperty<DoubleBlockHalf> HALF = BlockStateProperties.DOUBLE_BLOCK_HALF;
 
     public MuseumDisplayCaseBlock(Properties props) {
         super(props);
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(HALF, DoubleBlockHalf.LOWER));
-    }
-
-    @Override
-    protected MapCodec<? extends MuseumDisplayCaseBlock> codec() {
-        return CODEC;
     }
 
     @Override

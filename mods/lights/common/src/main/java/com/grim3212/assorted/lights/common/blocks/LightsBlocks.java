@@ -24,8 +24,8 @@ public class LightsBlocks {
     public static final RegistryProvider<Block> BLOCKS = RegistryProvider.create(Registries.BLOCK, Constants.MOD_ID).aliasFrom(Constants.FAMILY_ID);
     public static final RegistryProvider<Item> ITEMS = RegistryProvider.create(Registries.ITEM, Constants.MOD_ID).aliasFrom(Constants.FAMILY_ID);
 
-    public static final IRegistryObject<IlluminationTubeBlock> ILLUMINATION_TUBE = register("illumination_tube", props -> new IlluminationTubeBlock(props.pushReaction(PushReaction.DESTROY).isRedstoneConductor((state, getter, pos) -> false).noCollision().instabreak().lightLevel(state -> 15).sound(SoundType.GLASS)));
-    public static final IRegistryObject<IlluminationPlateBlock> ILLUMINATION_PLATE = register("illumination_plate", props -> new IlluminationPlateBlock(props.pushReaction(PushReaction.DESTROY).isRedstoneConductor((state, getter, pos) -> false).noCollision().strength(0.5F).lightLevel(state -> 15).sound(SoundType.GLASS)));
+    public static final IRegistryObject<IlluminationTubeBlock> ILLUMINATION_TUBE = register("illumination_tube", props -> new IlluminationTubeBlock(props.pushReaction(PushReaction.POPPED).isRedstoneConductor((state, getter, pos) -> false).noCollision().instabreak().lightLevel(state -> 15).sound(SoundType.GLASS)));
+    public static final IRegistryObject<IlluminationPlateBlock> ILLUMINATION_PLATE = register("illumination_plate", props -> new IlluminationPlateBlock(props.pushReaction(PushReaction.POPPED).isRedstoneConductor((state, getter, pos) -> false).noCollision().strength(0.5F).lightLevel(state -> 15).sound(SoundType.GLASS)));
 
     public static final IRegistryObject<FluroBlock> FLURO_WHITE = register("fluro_white", props -> new FluroBlock(DyeColor.WHITE, fluro(props)));
     public static final IRegistryObject<FluroBlock> FLURO_ORANGE = register("fluro_orange", props -> new FluroBlock(DyeColor.ORANGE, fluro(props)));

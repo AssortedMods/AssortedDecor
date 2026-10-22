@@ -107,7 +107,7 @@ public class NeonSignBlockEntityRenderer implements BlockEntityRenderer<NeonSign
     public void submit(NeonSignRenderState state, PoseStack poseStack, SubmitNodeCollector submitNodeCollector, CameraRenderState camera) {
         poseStack.pushPose();
         poseStack.translate(0.5D, 0.5D, 0.5D);
-        poseStack.mulPose(Axis.YP.rotationDegrees(state.yRot));
+        poseStack.rotate(Axis.YP.rotationDegrees(state.yRot));
         if (!state.standing) {
             poseStack.translate(0.0D, -0.3125D, -0.4375D);
         }
@@ -123,7 +123,7 @@ public class NeonSignBlockEntityRenderer implements BlockEntityRenderer<NeonSign
         // Clear sign renders text on both sides
         if (state.doubleSided) {
             poseStack.translate(0.0D, 0.0D, -9.0D);
-            poseStack.mulPose(Axis.YP.rotationDegrees(180.0F));
+            poseStack.rotate(Axis.YP.rotationDegrees(180.0F));
             submitText(state, poseStack, submitNodeCollector);
         }
 

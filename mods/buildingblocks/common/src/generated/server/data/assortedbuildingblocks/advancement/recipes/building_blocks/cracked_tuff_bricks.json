@@ -9,7 +9,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:cracked_tuff_bricks"
+        "recipes": "assortedbuildingblocks:cracked_tuff_bricks"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

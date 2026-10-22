@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:framed_bamboo_plank_slab_from_bamboo_blocks_lumber_mill"
+        "recipes": "assortedbuildingblocks:framed_bamboo_plank_slab_from_bamboo_blocks_lumber_mill"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

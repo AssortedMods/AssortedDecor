@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:oak_sign_from_oak_logs_lumber_mill"
+        "recipes": "assortedbuildingblocks:oak_sign_from_oak_logs_lumber_mill"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

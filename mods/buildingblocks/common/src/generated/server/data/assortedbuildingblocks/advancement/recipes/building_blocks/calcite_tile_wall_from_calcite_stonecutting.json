@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:calcite_tile_wall_from_calcite_stonecutting"
+        "recipes": "assortedbuildingblocks:calcite_tile_wall_from_calcite_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

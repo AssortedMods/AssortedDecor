@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:spruce_slab_from_spruce_logs_lumber_mill"
+        "recipes": "assortedbuildingblocks:spruce_slab_from_spruce_logs_lumber_mill"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -19,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assortedbuildingblocks:reinforced_cobblestone"
+        "recipes": "assortedbuildingblocks:reinforced_cobblestone"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
