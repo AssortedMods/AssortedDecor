@@ -5,7 +5,7 @@
 Updated to Minecraft 26.3, for NeoForge and Fabric.
 
 - Requires Assorted Lib 5.0.0
-- Frames now stay on the wall when the block behind them is broken, as they always said they would
+- Frames now stay where they were hung until something breaks them, even once the block behind them is gone
 
 ## 1.0.0
 

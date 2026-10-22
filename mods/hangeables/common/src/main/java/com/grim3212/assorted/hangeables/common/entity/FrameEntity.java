@@ -264,11 +264,11 @@ public abstract class FrameEntity extends HangingEntity {
         }
     }
 
-    /** A hung frame outlasts the block behind it, unlike a painting, but still needs a wall to be hung or resized on. */
+    /** A hung frame stays until something breaks it, unlike a painting, but still needs a wall to be hung or resized on. */
     @Override
     public boolean survives() {
         if (this.rechecking) {
-            return !this.hasLevelCollision(this.getPopBox()) && this.canCoexist(false);
+            return true;
         }
         return super.survives();
     }

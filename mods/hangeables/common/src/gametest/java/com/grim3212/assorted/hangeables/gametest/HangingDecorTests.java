@@ -77,13 +77,14 @@ final class HangingDecorTests {
         helper.succeed();
     }
 
-    /** The site's promise that frames are stronger than wallpaper; a hanging entity checks its wall every hundred ticks. */
+    /** The site's promise that frames are stronger than wallpaper: once hung, only breaking one takes it down, whatever its hundred tick check finds. */
     private static void frameStaysWhenItsWallIsRemoved(GameTestHelper helper) {
         Player player = helper.makeMockPlayer(GameType.SURVIVAL);
         hang(helper, player, HangeablesItems.IRON_FRAME.get(), WALL, FrameEntity.class);
         helper.setBlock(WALL, Blocks.AIR);
+        helper.setBlock(WALL.south(), Blocks.STONE);
         helper.runAfterDelay(120, () -> {
-            helper.assertTrue(!helper.getEntities(HangeablesEntityTypes.IRON_FRAME.get()).isEmpty(), "the iron frame fell once the block behind it was gone");
+            helper.assertTrue(!helper.getEntities(HangeablesEntityTypes.IRON_FRAME.get()).isEmpty(), "the iron frame fell once its wall was gone and a block took its space");
             helper.succeed();
         });
     }
