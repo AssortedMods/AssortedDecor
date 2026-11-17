@@ -5,6 +5,10 @@
       "tag": "c:ingots/steel"
     },
     {
+      "type": "assortedlib:item_tag_populated",
+      "tag": "c:nuggets/steel"
+    },
+    {
       "type": "assortedlib:part_enabled",
       "part": "assortedbuildingblocks"
     }
@@ -16,6 +20,13 @@
       "registry": "minecraft:item",
       "values": [
         "c:ingots/steel"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:nuggets/steel"
       ]
     },
     {

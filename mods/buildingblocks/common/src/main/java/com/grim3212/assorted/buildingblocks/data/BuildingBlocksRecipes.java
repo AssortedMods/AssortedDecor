@@ -30,6 +30,9 @@ public class BuildingBlocksRecipes extends ConditionalRecipeProvider {
         // Extra conditions for tag availability
         this.addConditions(itemTagExists(BuildingBlocksTags.Items.INGOTS_STEEL), BuildingBlocksBlocks.STEEL_DOOR.getId(), prefix("chain_link_steel"));
         this.addConditions(itemTagExists(BuildingBlocksTags.Items.INGOTS_ALUMINUM), prefix("chain_link_aluminum"));
+        // A pack can have the ingots without the nuggets, and a recipe naming a missing tag stops every world loading
+        this.addConditions(itemTagExists(BuildingBlocksTags.Items.NUGGETS_STEEL), prefix("chain_link_steel"));
+        this.addConditions(itemTagExists(BuildingBlocksTags.Items.NUGGETS_ALUMINUM), prefix("chain_link_aluminum"));
     }
 
     @Override

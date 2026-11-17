@@ -1,5 +1,7 @@
 package com.grim3212.assorted.buildingblocks.gametest;
 
+import com.google.gson.JsonObject;
+import com.grim3212.assorted.buildingblocks.Constants;
 import com.grim3212.assorted.buildingblocks.common.blocks.BuildingBlocksBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -31,6 +33,23 @@ final class DoorAndFenceTests {
     static void register(BiConsumer<String, Consumer<GameTestHelper>> out) {
         out.accept("chain_link_fence_connects", DoorAndFenceTests::chainLinkFenceConnects);
         out.accept("doors_open_on_redstone", DoorAndFenceTests::doorsOpenOnRedstone);
+        out.accept("chain_link_recipes_need_nuggets", DoorAndFenceTests::chainLinkRecipesNeedNuggets);
+    }
+
+    /** A pack can have an ingot tag without its nugget tag, and a recipe naming a missing tag stops every world loading. */
+    private static void chainLinkRecipesNeedNuggets(GameTestHelper helper) {
+        for (String metal : List.of("steel", "aluminum")) {
+            String name = "chain_link_" + metal;
+            JsonObject recipe = readJson("/data/" + Constants.MOD_ID + "/recipe/" + name + ".json");
+            helper.assertTrue(recipe != null, name + " has no recipe file");
+            for (String loader : List.of("neoforge:conditions", "fabric:load_conditions")) {
+                String conditions = recipe.get(loader).toString();
+                for (String tag : List.of("c:ingots/" + metal, "c:nuggets/" + metal)) {
+                    helper.assertTrue(conditions.contains('"' + tag + '"'), name + " uses #" + tag + " without a " + loader + " check for it");
+                }
+            }
+        }
+        helper.succeed();
     }
 
     /** The chain link fence joins up with its neighbours, and only with the sides that have one. */
