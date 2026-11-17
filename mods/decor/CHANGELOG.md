@@ -1,5 +1,10 @@
 # Changelog
 
+## 13.0.1
+
+- Includes Assorted Building Blocks 2.0.1, which fixes worlds not loading when another mod adds steel or
+  aluminum ingots without nuggets
+
 ## 13.0.0
 
 Updated to Minecraft 26.3, for NeoForge and Fabric.

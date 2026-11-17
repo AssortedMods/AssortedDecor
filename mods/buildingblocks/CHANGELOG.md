@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.1
+
+- Fixed worlds not loading when another mod adds steel or aluminum ingots without nuggets
+
 ## 2.0.0
 
 Updated to Minecraft 26.3, for NeoForge and Fabric.
